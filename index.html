@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="單字卡" />
+<meta name="theme-color" content="#1D9E75" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<title>AI 單字記憶系統</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f8f7f4; --bg2: #f0ede8; --surface: #ffffff;
+  --text: #1a1917; --text2: #6b6860; --text3: #a8a59f;
+  --accent: #1D9E75; --accent-light: #E1F5EE; --accent-dark: #0F6E56;
+  --border: rgba(0,0,0,0.1); --border2: rgba(0,0,0,0.18);
+  --again: #E24B4A; --hard: #EF9F27; --easy: #378ADD;
+  --radius: 10px; --radius-lg: 14px;
+  --font: 'Segoe UI', system-ui, sans-serif;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1917; --bg2: #222120; --surface: #2a2927;
+    --text: #f0ede8; --text2: #a8a59f; --text3: #6b6860;
+    --border: rgba(255,255,255,0.1); --border2: rgba(255,255,255,0.18);
+    --accent-light: #0a3d2a; --accent-dark: #5DCAA5;
+  }
+}
+html, body { height: 100%; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); }
+#app {
+  max-width: 680px; margin: 0 auto;
+  padding: calc(24px + var(--safe-top)) 16px calc(80px + var(--safe-bottom));
+  min-height: 100dvh;
+}
+
+/* Install Banner */
+#install-banner {
+  display: none; position: fixed; bottom: calc(16px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%); width: calc(100% - 32px); max-width: 640px;
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: var(--radius-lg); padding: 14px 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15); z-index: 999;
+  align-items: center; gap: 12px;
+}
+#install-banner.show { display: flex; }
+.install-icon { font-size: 28px; flex-shrink: 0; }
+.install-text { flex: 1; }
+.install-text strong { font-size: 14px; font-weight: 600; display: block; margin-bottom: 2px; }
+.install-text span { font-size: 12px; color: var(--text2); }
+.install-btn { background: var(--accent); color: white; border: none; border-radius: var(--radius); padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+.install-close { background: transparent; border: none; color: var(--text3); font-size: 18px; cursor: pointer; padding: 4px; }
+
+/* iOS install hint (Safari doesn't support beforeinstallprompt) */
+#ios-hint {
+  display: none; position: fixed; bottom: calc(16px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%); width: calc(100% - 32px); max-width: 640px;
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: var(--radius-lg); padding: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15); z-index: 999; text-align: center;
+}
+#ios-hint.show { display: block; }
+#ios-hint p { font-size: 13px; color: var(--text2); line-height: 1.8; margin-bottom: 10px; }
+#ios-hint strong { color: var(--text); }
+#ios-hint button { background: transparent; border: none; color: var(--accent); font-size: 13px; cursor: pointer; font-weight: 500; }
+
+/* Offline badge */
+#offline-badge {
+  display: none; position: fixed; top: calc(12px + var(--safe-top)); right: 16px;
+  background: var(--again); color: white; font-size: 11px; font-weight: 500;
+  padding: 4px 10px; border-radius: 20px; z-index: 998;
+}
+#offline-badge.show { display: block; }
+
+nav { display: flex; gap: 6px; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; flex-wrap: wrap; }
+.nav-btn { font-size: 13px; padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.2s; }
+.nav-btn:hover { border-color: var(--accent); color: var(--accent); }
+.nav-btn.active { background: var(--accent-light); color: var(--accent-dark); border-color: var(--accent); font-weight: 500; }
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* Dashboard */
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+.stat-card { background: var(--bg2); border-radius: var(--radius); padding: 16px 12px; text-align: center; }
+.stat-num { font-size: 28px; font-weight: 600; color: var(--text); }
+.stat-label { font-size: 12px; color: var(--text2); margin-top: 3px; }
+.mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mode-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 18px; cursor: pointer; transition: all 0.2s; }
+.mode-card:hover { border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.mode-icon { font-size: 26px; margin-bottom: 10px; }
+.mode-title { font-size: 15px; font-weight: 600; margin-bottom: 5px; }
+.mode-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+.badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px; margin-top: 8px; font-weight: 500; }
+.badge-due { background: #FCEBEB; color: #A32D2D; }
+.badge-ok { background: var(--accent-light); color: var(--accent-dark); }
+.badge-random { background: #E6F1FB; color: #185FA5; }
+
+/* Flashcard */
+.mode-toggle { display: flex; gap: 8px; margin-bottom: 14px; }
+.mode-pill { font-size: 13px; padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; cursor: pointer; color: var(--text2); transition: all 0.15s; }
+.mode-pill.active { background: var(--accent-light); color: var(--accent-dark); border-color: var(--accent); }
+.card-progress { font-size: 12px; color: var(--text2); text-align: center; margin-bottom: 6px; }
+.flip-hint { font-size: 12px; color: var(--text3); text-align: center; margin-bottom: 8px; }
+.card-area { perspective: 1200px; margin-bottom: 10px; }
+.card-inner { width: 100%; min-height: 340px; position: relative; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1); cursor: pointer; }
+.card-inner.flipped { transform: rotateY(180deg); }
+.card-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.card-back { transform: rotateY(180deg); }
+.card-word { font-size: 46px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; }
+.card-phonetic { font-size: 18px; color: var(--text2); margin-bottom: 18px; }
+.speak-btn { border: 1px solid var(--border2); background: transparent; border-radius: var(--radius); padding: 7px 16px; font-size: 13px; color: var(--text2); cursor: pointer; margin-bottom: 6px; }
+.speak-btn:hover { background: var(--bg2); }
+.card-hint-text { font-size: 12px; color: var(--text3); }
+.back-svg { margin-bottom: 10px; }
+.card-pos-badge { font-size: 11px; padding: 2px 10px; background: var(--accent-light); color: var(--accent-dark); border-radius: 20px; margin-bottom: 10px; }
+.card-def { font-size: 22px; font-weight: 600; text-align: center; margin-bottom: 8px; }
+.card-example { font-size: 13px; color: var(--text2); text-align: center; font-style: italic; line-height: 1.7; margin-bottom: 8px; max-width: 360px; }
+.card-memory { font-size: 12px; color: var(--text3); text-align: center; }
+.rating-area { margin-top: 4px; }
+.rating-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.rating-btn { padding: 11px 6px; border-radius: var(--radius); border: 1.5px solid; cursor: pointer; font-size: 13px; font-weight: 600; background: transparent; transition: all 0.15s; line-height: 1.3; }
+.rating-btn .sub { font-size: 10px; font-weight: 400; display: block; opacity: 0.7; margin-top: 2px; }
+.rating-btn.again { color: var(--again); border-color: var(--again); }
+.rating-btn.again:hover { background: #FCEBEB; }
+.rating-btn.hard { color: #854F0B; border-color: var(--hard); }
+.rating-btn.hard:hover { background: #FAEEDA; }
+.rating-btn.good { color: var(--accent-dark); border-color: var(--accent); }
+.rating-btn.good:hover { background: var(--accent-light); }
+.rating-btn.easy { color: #185FA5; border-color: var(--easy); }
+.rating-btn.easy:hover { background: #E6F1FB; }
+.session-done { text-align: center; padding: 4rem 1rem; }
+.session-done h3 { font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+.session-done p { color: var(--text2); font-size: 14px; margin-bottom: 24px; }
+.btn-primary { padding: 11px 28px; background: var(--accent); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-size: 14px; font-weight: 500; }
+.btn-primary:hover { background: var(--accent-dark); }
+
+/* AI Chat */
+.coach-header { font-size: 13px; color: var(--text2); margin-bottom: 14px; padding: 11px 16px; background: var(--bg2); border-radius: var(--radius); line-height: 1.6; }
+.word-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.word-chip { font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); cursor: pointer; color: var(--text2); transition: all 0.15s; background: transparent; }
+.word-chip:hover { border-color: var(--accent); }
+.word-chip.active { background: var(--accent-light); color: var(--accent-dark); border-color: var(--accent); font-weight: 500; }
+.offline-note { display: none; font-size: 12px; color: var(--again); background: #FCEBEB; padding: 8px 14px; border-radius: var(--radius); margin-bottom: 10px; }
+.offline-note.show { display: block; }
+.chat-box { height: 320px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 10px; background: var(--surface); }
+.msg { max-width: 85%; padding: 11px 16px; border-radius: var(--radius-lg); font-size: 14px; line-height: 1.65; white-space: pre-wrap; }
+.msg.ai { background: var(--bg2); color: var(--text); align-self: flex-start; border-bottom-left-radius: 4px; }
+.msg.user { background: var(--accent-light); color: var(--accent-dark); align-self: flex-end; border-bottom-right-radius: 4px; }
+.msg.loading { opacity: 0.55; font-style: italic; }
+.chat-input-row { display: flex; gap: 8px; }
+.chat-input-row input { flex: 1; padding: 11px 16px; border-radius: var(--radius); border: 1px solid var(--border2); background: var(--surface); color: var(--text); font-size: 14px; outline: none; }
+.chat-input-row input:focus { border-color: var(--accent); }
+.chat-send { padding: 11px 20px; background: var(--accent); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-size: 14px; font-weight: 500; white-space: nowrap; }
+.chat-send:hover { background: var(--accent-dark); }
+.chat-send:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* Word List */
+.upload-area { border: 2px dashed var(--border2); border-radius: var(--radius-lg); padding: 2rem; text-align: center; margin-bottom: 16px; cursor: pointer; color: var(--text2); font-size: 14px; transition: all 0.2s; }
+.upload-area:hover { border-color: var(--accent); color: var(--accent); }
+.search-box { width: 100%; padding: 10px 16px; border-radius: var(--radius); border: 1px solid var(--border2); background: var(--surface); color: var(--text); font-size: 14px; margin-bottom: 14px; outline: none; }
+.search-box:focus { border-color: var(--accent); }
+.word-list { display: flex; flex-direction: column; gap: 7px; }
+.word-row { display: flex; align-items: center; gap: 12px; padding: 11px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.word-row-name { font-size: 15px; font-weight: 600; min-width: 120px; }
+.word-row-def { font-size: 13px; color: var(--text2); flex: 1; }
+.prog-wrap { width: 72px; height: 5px; background: var(--bg2); border-radius: 3px; }
+.prog-bar { height: 5px; border-radius: 3px; background: var(--accent); transition: width 0.3s; }
+.mastery-pct { font-size: 11px; color: var(--text3); min-width: 28px; text-align: right; }
+</style>
+</head>
+<body>
+
+<div id="offline-badge">離線模式</div>
+
+<div id="install-banner">
+  <div class="install-icon">📚</div>
+  <div class="install-text">
+    <strong>安裝到主畫面</strong>
+    <span>離線使用，像 App 一樣開啟</span>
+  </div>
+  <button class="install-btn" id="install-btn">安裝</button>
+  <button class="install-close" id="install-close">✕</button>
+</div>
+
+<div id="ios-hint">
+  <p>在 Safari 點擊下方 <strong>分享按鈕</strong> 📤<br>選擇「<strong>加入主畫面</strong>」即可安裝</p>
+  <button onclick="document.getElementById('ios-hint').classList.remove('show')">知道了</button>
+</div>
+
+<div id="app">
+  <nav>
+    <button class="nav-btn active" onclick="showScreen('dashboard')">🏠 首頁</button>
+    <button class="nav-btn" onclick="showScreen('flashcard')">🗂 單字卡</button>
+    <button class="nav-btn" onclick="showScreen('ai-coach')">🤖 AI 教練</button>
+    <button class="nav-btn" onclick="showScreen('wordlist')">📚 單字庫</button>
+  </nav>
+
+  <!-- Dashboard -->
+  <div id="screen-dashboard" class="screen active">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-num" id="stat-due">—</div><div class="stat-label">今日到期</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-new">—</div><div class="stat-label">新單字</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-mastered">—</div><div class="stat-label">已熟練</div></div>
+      <div class="stat-card"><div class="stat-num" id="stat-total">—</div><div class="stat-label">總單字數</div></div>
+    </div>
+    <div class="mode-grid">
+      <div class="mode-card" onclick="startMode('srs')">
+        <div class="mode-icon">🗂</div>
+        <div class="mode-title">SRS 複習模式</div>
+        <div class="mode-desc">Anki 間隔重複演算法，優先清今日到期，新卡每次限量導入</div>
+        <span class="badge" id="dash-due-badge">載入中...</span>
+      </div>
+      <div class="mode-card" onclick="startMode('random')">
+        <div class="mode-icon">🎲</div>
+        <div class="mode-title">亂練模式</div>
+        <div class="mode-desc">全字庫 100% 隨機抽卡，評分不影響 SRS 數據，純粹練習</div>
+        <span class="badge badge-random">隨機練習</span>
+      </div>
+      <div class="mode-card" onclick="showScreen('ai-coach')">
+        <div class="mode-icon">🤖</div>
+        <div class="mode-title">AI 教練對話</div>
+        <div class="mode-desc">Claude 出題、造句、情境對話，即時糾錯，需要網路</div>
+      </div>
+      <div class="mode-card" onclick="showScreen('wordlist')">
+        <div class="mode-icon">📚</div>
+        <div class="mode-title">單字庫管理</div>
+        <div class="mode-desc">瀏覽全部單字、熟練度進度條、上傳自訂 CSV 擴充字庫</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flashcard -->
+  <div id="screen-flashcard" class="screen">
+    <div class="mode-toggle">
+      <button class="mode-pill active" id="pill-srs" onclick="setCardMode('srs')">SRS 模式</button>
+      <button class="mode-pill" id="pill-random" onclick="setCardMode('random')">亂練模式</button>
+    </div>
+    <div class="card-progress" id="card-progress"></div>
+    <div id="session-done-area" style="display:none" class="session-done">
+      <div style="font-size:48px;margin-bottom:12px">🎉</div>
+      <h3>今日完成！</h3>
+      <p id="session-done-msg">所有到期卡片已複習完畢</p>
+      <button class="btn-primary" onclick="startMode('random')">繼續亂練</button>
+    </div>
+    <div id="card-main">
+      <div class="flip-hint" id="flip-hint">點擊卡片翻面查看答案</div>
+      <div class="card-area">
+        <div class="card-inner" id="card-inner" onclick="flipCard()">
+          <div class="card-face">
+            <div class="card-word" id="card-word">—</div>
+            <div class="card-phonetic" id="card-phonetic"></div>
+            <button class="speak-btn" onclick="event.stopPropagation();speakWord()">🔊 發音</button>
+            <div class="card-hint-text">點擊卡片查看答案</div>
+          </div>
+          <div class="card-face card-back">
+            <div class="back-svg" id="back-svg"></div>
+            <div class="card-pos-badge" id="card-pos"></div>
+            <div class="card-def" id="card-def">—</div>
+            <div class="card-example" id="card-example"></div>
+            <div class="card-memory" id="card-memory"></div>
+          </div>
+        </div>
+      </div>
+      <div id="rating-area" style="display:none;margin-top:10px">
+        <div class="rating-row">
+          <button class="rating-btn again" onclick="rateCard(0)">Again<span class="sub">重新學</span></button>
+          <button class="rating-btn hard" onclick="rateCard(1)">Hard<span class="sub">有點難</span></button>
+          <button class="rating-btn good" onclick="rateCard(2)">Good<span class="sub">記得了</span></button>
+          <button class="rating-btn easy" onclick="rateCard(3)">Easy<span class="sub">很熟</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Coach -->
+  <div id="screen-ai-coach" class="screen">
+    <div class="coach-header">🤖 AI 教練根據你選的單字出題。支援：造句評分、填空、猜單字、情境對話、自由提問。需要網路連線。</div>
+    <div class="offline-note" id="ai-offline-note">⚠️ 目前離線，AI 教練功能無法使用。請連線後再試。</div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:8px">選擇練習單字：</div>
+    <div class="word-chips" id="word-chips"></div>
+    <div class="chat-box" id="chat-box"></div>
+    <div class="chat-input-row">
+      <input id="chat-input" type="text" placeholder="輸入回答或自由提問..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button class="chat-send" id="send-btn" onclick="sendChat()">送出 ↗</button>
+    </div>
+  </div>
+
+  <!-- Word List -->
+  <div id="screen-wordlist" class="screen">
+    <div class="upload-area" onclick="document.getElementById('csv-upload').click()">
+      📎 上傳 CSV 擴充字庫（格式：word,definition）<br>
+      <span style="font-size:12px;opacity:0.7">點擊或拖曳檔案至此</span>
+      <input type="file" id="csv-upload" accept=".csv,.txt" style="display:none" onchange="handleCSV(event)" />
+    </div>
+    <input class="search-box" type="text" placeholder="搜尋單字或釋義..." oninput="renderWordList(this.value)" />
+    <div class="word-list" id="word-list"></div>
+  </div>
+</div>
+
+<script>
+const VOCAB = [
+  {w:"eloquent",d:"雄辯的、口才流利的",p:"/ˈeləkwənt/",pos:"adj",ex:"She gave an eloquent speech.",h:"elo=口才，口才流利的人"},
+  {w:"resilient",d:"有韌性的、能迅速恢復的",p:"/rɪˈzɪliənt/",pos:"adj",ex:"Children are often more resilient.",h:"彈簧彈回來的特性"},
+  {w:"ambiguous",d:"模稜兩可的、含糊的",p:"/æmˈbɪɡjuəs/",pos:"adj",ex:"His answer was deliberately ambiguous.",h:"ambi=兩邊，兩邊都說得通"},
+  {w:"benevolent",d:"仁慈的、善意的",p:"/bəˈnevələnt/",pos:"adj",ex:"The benevolent king shared his wealth.",h:"bene=好，volent=意願"},
+  {w:"pragmatic",d:"務實的、實際的",p:"/præɡˈmætɪk/",pos:"adj",ex:"We need a pragmatic approach.",h:"pragma=行動，注重實效"},
+  {w:"meticulous",d:"一絲不苟的、極度細心的",p:"/məˈtɪkjələs/",pos:"adj",ex:"She was meticulous in her research.",h:"meti=怕/謹慎，非常小心"},
+  {w:"ephemeral",d:"短暫的、朝生暮死的",p:"/ɪˈfemərəl/",pos:"adj",ex:"Social media fame is often ephemeral.",h:"一天(hemera)就過去了"},
+  {w:"tenacious",d:"堅韌的、頑強的",p:"/təˈneɪʃəs/",pos:"adj",ex:"He was tenacious in pursuing his goals.",h:"tena=抓緊，抓住不放"},
+  {w:"inevitable",d:"不可避免的",p:"/ɪnˈevɪtəbl/",pos:"adj",ex:"Change is inevitable.",h:"in=不，evitable=可避免的"},
+  {w:"plausible",d:"看似合理的、可信的",p:"/ˈplɔːzɪbl/",pos:"adj",ex:"That's a plausible explanation.",h:"plaus=鼓掌，值得認可的"},
+  {w:"vehement",d:"強烈的、激烈的",p:"/ˈviːəmənt/",pos:"adj",ex:"She was vehement in her opposition.",h:"vehe=猛力，強烈衝動"},
+  {w:"scrutinize",d:"仔細審查、細看",p:"/ˈskruːtɪnaɪz/",pos:"v",ex:"The committee scrutinized every detail.",h:"scrut=垃圾堆，仔細翻找"},
+  {w:"mitigate",d:"減輕、緩和",p:"/ˈmɪtɪɡeɪt/",pos:"v",ex:"Trees help mitigate climate change.",h:"miti=溫和，使變溫和"},
+  {w:"alleviate",d:"緩解、減輕（痛苦）",p:"/əˈliːvieɪt/",pos:"v",ex:"Medicine can alleviate the pain.",h:"al+levia=輕，讓重變輕"},
+  {w:"exacerbate",d:"使惡化、加重",p:"/ɪɡˈzæsəbeɪt/",pos:"v",ex:"Stress can exacerbate health problems.",h:"ex=加強+acerb=苦，更苦"},
+  {w:"paradigm",d:"典範、思維框架",p:"/ˈpærədaɪm/",pos:"n",ex:"A paradigm shift changed science.",h:"para+model=旁邊的示範"},
+  {w:"conundrum",d:"難題、謎題",p:"/kəˈnʌndrəm/",pos:"n",ex:"This presents a real conundrum.",h:"con+drum=一個大鼓難題"},
+  {w:"anecdote",d:"軼事、趣聞",p:"/ˈænɪkdəʊt/",pos:"n",ex:"He shared a funny anecdote.",h:"an+ec+dote=未公開的故事"},
+  {w:"rhetoric",d:"修辭學、花言巧語",p:"/ˈretərɪk/",pos:"n",ex:"Political rhetoric can be misleading.",h:"rhetor=演講者的技巧"},
+  {w:"empathy",d:"同理心、共情",p:"/ˈempəθi/",pos:"n",ex:"Good leaders show empathy.",h:"em+pathy=感受他人的情感"},
+  {w:"diligent",d:"勤勉的、努力的",p:"/ˈdɪlɪdʒənt/",pos:"adj",ex:"She was a diligent student.",h:"dili=愛+gent=做，熱愛工作"},
+  {w:"feasible",d:"可行的、可實現的",p:"/ˈfiːzɪbl/",pos:"adj",ex:"Is this plan feasible?",h:"feas=做得到，able=能夠"},
+  {w:"ambivalent",d:"矛盾的、態度不明的",p:"/æmˈbɪvələnt/",pos:"adj",ex:"I feel ambivalent about this.",h:"ambi=兩邊+valent=價值"},
+  {w:"concise",d:"簡明扼要的",p:"/kənˈsaɪs/",pos:"adj",ex:"Please give a concise answer.",h:"con+cise=切，切得很短"},
+  {w:"fluctuate",d:"波動、起伏",p:"/ˈflʌktʃueɪt/",pos:"v",ex:"Prices fluctuate daily.",h:"fluct=流動，像水一樣起伏"},
+  {w:"leverage",d:"利用優勢、槓桿",p:"/ˈlevərɪdʒ/",pos:"v",ex:"We can leverage our network.",h:"lever=槓桿，以小博大"},
+  {w:"nuance",d:"細微差別、微妙之處",p:"/ˈnjuːɑːns/",pos:"n",ex:"The nuances of language matter.",h:"nua=雲，雲的細微色差"},
+  {w:"profound",d:"深刻的、意義深遠的",p:"/prəˈfaʊnd/",pos:"adj",ex:"A profound impact on society.",h:"pro=向前+found=底，深到底"},
+  {w:"redundant",d:"多餘的、冗餘的",p:"/rɪˈdʌndənt/",pos:"adj",ex:"This information is redundant.",h:"re+dund=波浪，重複的波"},
+  {w:"skeptical",d:"懷疑的",p:"/ˈskeptɪkl/",pos:"adj",ex:"I am skeptical of this claim.",h:"skept=看，多看幾眼才信"},
+  {w:"surplus",d:"剩餘、盈餘",p:"/ˈsɜːpləs/",pos:"n",ex:"A budget surplus this year.",h:"sur=超過+plus=更多"},
+  {w:"tangible",d:"有形的、可觸摸的",p:"/ˈtændʒɪbl/",pos:"adj",ex:"Tangible results are important.",h:"tang=觸摸，能摸到的"},
+  {w:"undermine",d:"削弱、破壞基礎",p:"/ˌʌndəˈmaɪn/",pos:"v",ex:"This will undermine trust.",h:"under+mine=從根基破壞"},
+  {w:"unanimous",d:"全體一致的",p:"/juːˈnænɪməs/",pos:"adj",ex:"A unanimous decision.",h:"uni=一+animus=心，一心一意"},
+  {w:"verbose",d:"囉嗦的、冗長的",p:"/vɜːˈbəʊs/",pos:"adj",ex:"His writing is too verbose.",h:"verb=話，話太多了"},
+  {w:"xenophobia",d:"排外心理、仇外",p:"/ˌzenəˈfəʊbiə/",pos:"n",ex:"Xenophobia is harmful.",h:"xeno=外國+phobia=恐懼"},
+  {w:"zealous",d:"熱心的、積極的",p:"/ˈzeləs/",pos:"adj",ex:"A zealous supporter.",h:"zeal=熱情，充滿熱情"},
+  {w:"arbitrary",d:"任意的、武斷的",p:"/ˈɑːbɪtrəri/",pos:"adj",ex:"An arbitrary decision.",h:"arbiter=仲裁者，隨意判斷"},
+  {w:"chronic",d:"慢性的、長期的",p:"/ˈkrɒnɪk/",pos:"adj",ex:"Chronic stress is dangerous.",h:"chron=時間，長時間持續"},
+  {w:"decisive",d:"果斷的、決定性的",p:"/dɪˈsaɪsɪv/",pos:"adj",ex:"A decisive leader.",h:"de+cis=切，果斷地切下去"},
+  {w:"elaborate",d:"詳細說明；精心設計的",p:"/ɪˈlæbərɪt/",pos:"v",ex:"Please elaborate on your point.",h:"e+labor=努力，精心費力"},
+  {w:"forthright",d:"直截了當的、坦率的",p:"/ˈfɔːθraɪt/",pos:"adj",ex:"She was forthright about issues.",h:"forth+right=直接向前走"},
+  {w:"genuine",d:"真誠的、真實的",p:"/ˈdʒenjuɪn/",pos:"adj",ex:"A genuine smile.",h:"genu=膝蓋，跪著發誓是真的"},
+  {w:"holistic",d:"整體的、全面的",p:"/həˈlɪstɪk/",pos:"adj",ex:"A holistic approach to health.",h:"hol=整體，whole整體觀"},
+  {w:"implicit",d:"隱含的、不言而喻的",p:"/ɪmˈplɪsɪt/",pos:"adj",ex:"There was an implicit agreement.",h:"im+plic=折疊，折疊在裡面"},
+  {w:"jeopardize",d:"危及、使陷入危險",p:"/ˈdʒepədaɪz/",pos:"v",ex:"Don't jeopardize your career.",h:"jeopar=危局，陷入危局"},
+  {w:"lucid",d:"清晰的、易懂的",p:"/ˈluːsɪd/",pos:"adj",ex:"A lucid explanation.",h:"luc=光，像光一樣清晰"},
+  {w:"meager",d:"貧乏的、不足的",p:"/ˈmiːɡər/",pos:"adj",ex:"A meager salary.",h:"meg=薄，不夠厚"},
+  {w:"nonchalant",d:"漠然的、若無其事的",p:"/ˈnɒnʃələnt/",pos:"adj",ex:"He seemed nonchalant about it.",h:"non+chalant=不熱心，不在乎"},
+  {w:"obstinate",d:"固執的、頑固的",p:"/ˈɒbstɪnɪt/",pos:"adj",ex:"She was obstinate in her refusal.",h:"ob+sti=站，站在那不動"},
+];
+
+let srsData = {};
+let deck = [], idx = 0, flipped = false, cardMode = 'srs';
+let chatHistory = [], coachWord = null;
+let isOnline = navigator.onLine;
+
+function today() { return new Date().toISOString().split('T')[0]; }
+
+function initSRS() {
+  try { const s = localStorage.getItem('vocab_srs_v2'); if (s) srsData = JSON.parse(s); } catch(e){}
+  VOCAB.forEach(v => { if (!srsData[v.w]) srsData[v.w] = {interval:0,ease:2.5,reps:0,due:today(),lapses:0}; });
+  save();
+}
+function save() { try { localStorage.setItem('vocab_srs_v2', JSON.stringify(srsData)); } catch(e){} }
+
+function mastery(word) {
+  const d = srsData[word]; if (!d) return 0;
+  if (d.interval >= 21) return 100;
+  if (d.interval >= 7) return 75;
+  if (d.interval >= 3) return 50;
+  if (d.reps > 0) return 25;
+  return 0;
+}
+
+function dueCards() { const t=today(); return VOCAB.filter(v=>srsData[v.w]&&srsData[v.w].due<=t); }
+function newCards() { return VOCAB.filter(v=>srsData[v.w]&&srsData[v.w].reps===0); }
+
+function shuffle(a) {
+  const b=[...a];
+  for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}
+  return b;
+}
+
+function updateDash() {
+  const due=dueCards(), nc=newCards();
+  const mastered=VOCAB.filter(v=>srsData[v.w]&&srsData[v.w].interval>=21).length;
+  document.getElementById('stat-due').textContent=due.length;
+  document.getElementById('stat-new').textContent=nc.length;
+  document.getElementById('stat-mastered').textContent=mastered;
+  document.getElementById('stat-total').textContent=VOCAB.length;
+  const badge=document.getElementById('dash-due-badge');
+  if(due.length>0){badge.textContent=`${due.length} 張待複習`;badge.className='badge badge-due';}
+  else{badge.textContent='今日已完成 ✓';badge.className='badge badge-ok';}
+}
+
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('screen-'+name).classList.add('active');
+  const map={dashboard:0,flashcard:1,'ai-coach':2,wordlist:3};
+  const btns=document.querySelectorAll('.nav-btn');
+  if(map[name]!==undefined) btns[map[name]].classList.add('active');
+  if(name==='dashboard') updateDash();
+  if(name==='wordlist') renderWordList('');
+  if(name==='ai-coach') initCoach();
+  if(name==='flashcard') loadDeck();
+}
+
+function startMode(mode) { cardMode=mode; showScreen('flashcard'); }
+function setCardMode(mode) {
+  cardMode=mode;
+  document.getElementById('pill-srs').classList.toggle('active',mode==='srs');
+  document.getElementById('pill-random').classList.toggle('active',mode==='random');
+  loadDeck();
+}
+
+function loadDeck() {
+  flipped=false;
+  document.getElementById('card-inner').classList.remove('flipped');
+  document.getElementById('rating-area').style.display='none';
+  document.getElementById('card-main').style.display='block';
+  document.getElementById('session-done-area').style.display='none';
+  document.getElementById('flip-hint').textContent='點擊卡片翻面查看答案';
+  if(cardMode==='srs') {
+    const due=dueCards();
+    const nc=newCards().slice(0,Math.max(0,10-due.length));
+    deck=shuffle([...due,...nc]);
+    if(deck.length===0){
+      document.getElementById('card-main').style.display='none';
+      document.getElementById('session-done-area').style.display='block';
+      document.getElementById('session-done-msg').textContent='今日 SRS 全部複習完成！明天繼續。';
+      return;
+    }
+  } else {
+    deck=shuffle([...VOCAB]);
+  }
+  idx=0; showCard();
+}
+
+function svgForPos(pos) {
+  if(pos==='v') return `<svg width="72" height="56" viewBox="0 0 72 56"><polygon points="36,6 66,50 6,50" fill="#FAEEDA" stroke="#EF9F27" stroke-width="1.5"/><text x="36" y="44" text-anchor="middle" font-size="18" fill="#854F0B">▶</text></svg>`;
+  if(pos==='n') return `<svg width="72" height="56" viewBox="0 0 72 56"><rect x="14" y="10" width="44" height="36" rx="5" fill="#E6F1FB" stroke="#378ADD" stroke-width="1.5"/><text x="36" y="34" text-anchor="middle" font-size="18" fill="#185FA5">◆</text></svg>`;
+  return `<svg width="72" height="56" viewBox="0 0 72 56"><circle cx="36" cy="28" r="22" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/><text x="36" y="34" text-anchor="middle" font-size="18" fill="#0F6E56">✦</text></svg>`;
+}
+
+function showCard() {
+  if(idx>=deck.length) {
+    if(cardMode==='random'){deck=shuffle([...VOCAB]);idx=0;}
+    else{
+      document.getElementById('card-main').style.display='none';
+      document.getElementById('session-done-area').style.display='block';
+      document.getElementById('session-done-msg').textContent='SRS 今日複習完成！';
+      return;
+    }
+  }
+  const v=deck[idx];
+  document.getElementById('card-word').textContent=v.w;
+  document.getElementById('card-phonetic').textContent=v.p||'';
+  document.getElementById('card-pos').textContent=v.pos||'';
+  document.getElementById('card-def').textContent=v.d;
+  document.getElementById('card-example').textContent=v.ex?`"${v.ex}"`:'' ;
+  document.getElementById('card-memory').textContent=v.h?`💡 ${v.h}`:'';
+  document.getElementById('back-svg').innerHTML=svgForPos(v.pos);
+  document.getElementById('card-progress').textContent=
+    cardMode==='srs'?`SRS 複習 ${idx+1} / ${deck.length}`:`亂練 ${idx+1} / ${deck.length}（不計入 SRS）`;
+  flipped=false;
+  document.getElementById('card-inner').classList.remove('flipped');
+  document.getElementById('rating-area').style.display='none';
+  document.getElementById('flip-hint').textContent='點擊卡片翻面查看答案';
+}
+
+function flipCard() {
+  if(!deck[idx]) return;
+  flipped=!flipped;
+  document.getElementById('card-inner').classList.toggle('flipped',flipped);
+  if(flipped){
+    document.getElementById('rating-area').style.display='block';
+    document.getElementById('flip-hint').textContent='選擇記憶程度：';
+    speakWord();
+  }
+}
+
+function speakWord() {
+  const word=deck[idx]?.w; if(!word||!window.speechSynthesis) return;
+  const u=new SpeechSynthesisUtterance(word);
+  u.lang='en-US'; u.rate=0.82;
+  const voices=speechSynthesis.getVoices();
+  const en=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
+  if(en) u.voice=en;
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+}
+
+function rateCard(grade) {
+  const v=deck[idx];
+  if(cardMode==='srs') sm2(v.w,grade);
+  idx++;
+  flipped=false;
+  document.getElementById('card-inner').classList.remove('flipped');
+  document.getElementById('rating-area').style.display='none';
+  setTimeout(showCard,60);
+}
+
+function sm2(word,grade) {
+  const d=srsData[word];
+  if(grade===0){d.interval=1;d.reps=0;d.lapses++;d.ease=Math.max(1.3,d.ease-0.2);}
+  else{
+    if(d.reps===0) d.interval=1;
+    else if(d.reps===1) d.interval=4;
+    else{const m=grade===1?1.2:grade===2?d.ease:d.ease*1.3;d.interval=Math.round(d.interval*m);}
+    if(grade===1) d.ease=Math.max(1.3,d.ease-0.15);
+    else if(grade===3) d.ease=Math.min(3.0,d.ease+0.15);
+    d.reps++;
+  }
+  const due=new Date();due.setDate(due.getDate()+d.interval);
+  d.due=due.toISOString().split('T')[0];
+  save();
+}
+
+function renderWordList(q) {
+  const query=(q||'').toLowerCase();
+  const filtered=VOCAB.filter(v=>v.w.includes(query)||v.d.includes(query));
+  const el=document.getElementById('word-list');
+  el.innerHTML=filtered.slice(0,60).map(v=>{
+    const m=mastery(v.w);
+    return `<div class="word-row"><div class="word-row-name">${v.w}</div><div class="word-row-def">${v.d}</div><div class="prog-wrap"><div class="prog-bar" style="width:${m}%"></div></div><div class="mastery-pct">${m}%</div></div>`;
+  }).join('');
+}
+
+function handleCSV(e) {
+  const file=e.target.files[0]; if(!file) return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    const lines=ev.target.result.split('\n').filter(l=>l.trim());
+    let added=0;
+    lines.forEach(line=>{
+      const parts=line.split(',');
+      if(parts.length>=2){
+        const word=parts[0].trim(),def=parts.slice(1).join(',').trim();
+        if(word&&def&&!VOCAB.find(v=>v.w===word)){
+          VOCAB.push({w:word,d:def,p:'',pos:'n',ex:'',h:''});
+          if(!srsData[word]) srsData[word]={interval:0,ease:2.5,reps:0,due:today(),lapses:0};
+          added++;
+        }
+      }
+    });
+    save();renderWordList('');
+    alert(`成功匯入 ${added} 個新單字`);
+  };
+  r.readAsText(file);
+}
+
+function initCoach() {
+  const chips=document.getElementById('word-chips');
+  const sample=shuffle(VOCAB).slice(0,14);
+  chips.innerHTML=sample.map(v=>`<button class="word-chip" onclick="selectWord('${v.w}',this)">${v.w}</button>`).join('');
+  if(!coachWord&&sample.length>0){coachWord=sample[0].w;chips.firstChild.classList.add('active');}
+  document.getElementById('ai-offline-note').classList.toggle('show',!isOnline);
+  if(chatHistory.length===0) addMsg('ai','你好！我是你的 AI 單字教練 🎯\n\n選擇上方一個單字，我會用造句、填空、情境對話幫你記住它。也可以直接問我任何問題！');
+}
+
+function selectWord(word,btn) {
+  coachWord=word;
+  document.querySelectorAll('.word-chip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  const v=VOCAB.find(x=>x.w===word);
+  if(v){
+    const intro=`好，來練「${word}」(${v.d})\n\n試著用這個單字造一個英文句子！`;
+    addMsg('ai',intro);chatHistory.push({role:'assistant',content:intro});
+  }
+}
+
+function addMsg(role,text) {
+  const box=document.getElementById('chat-box');
+  const div=document.createElement('div');div.className=`msg ${role}`;div.textContent=text;
+  box.appendChild(div);box.scrollTop=box.scrollHeight;return div;
+}
+
+async function sendChat() {
+  if(!isOnline){alert('目前離線，AI 教練需要網路連線');return;}
+  const input=document.getElementById('chat-input');
+  const msg=input.value.trim();if(!msg)return;
+  input.value='';addMsg('user',msg);chatHistory.push({role:'user',content:msg});
+  const btn=document.getElementById('send-btn');btn.disabled=true;
+  const loading=addMsg('ai','思考中...');loading.classList.add('loading');
+  const v=VOCAB.find(x=>x.w===coachWord)||{};
+  const sys=`你是英文單字記憶教練，說繁體中文，風格直接不廢話。當前單字：${coachWord||'自由問答'} 釋義：${v.d||''} 詞性：${v.pos||''} 例句：${v.ex||''} 記憶口訣：${v.h||''} 教學方式：造句評分、填空、猜單字、情境對話。學生答對給正面反饋，答錯解釋原因。回答控制150字內。`;
+  try {
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:sys,messages:chatHistory.slice(-12)})});
+    const data=await resp.json();
+    const reply=data.content?.map(c=>c.text||'').join('')||'抱歉，發生錯誤。';
+    loading.classList.remove('loading');loading.textContent=reply;
+    chatHistory.push({role:'assistant',content:reply});
+  } catch(err) {
+    loading.classList.remove('loading');loading.textContent='連線失敗，請稍後再試。';
+  }
+  btn.disabled=false;
+}
+
+// PWA: Service Worker
+if('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('SW registered:', reg.scope);
+    }).catch(err => console.log('SW error:', err));
+  });
+}
+
+// PWA: Install prompt (Android/Chrome)
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); deferredPrompt = e;
+  document.getElementById('install-banner').classList.add('show');
+});
+document.getElementById('install-btn').addEventListener('click', () => {
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(choice => {
+    document.getElementById('install-banner').classList.remove('show');
+    deferredPrompt = null;
+  });
+});
+document.getElementById('install-close').addEventListener('click', () => {
+  document.getElementById('install-banner').classList.remove('show');
+});
+
+// iOS Safari hint
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+if(isIOS && !isStandalone) {
+  setTimeout(() => document.getElementById('ios-hint').classList.add('show'), 2000);
+}
+
+// Offline detection
+function updateOnline(online) {
+  isOnline = online;
+  document.getElementById('offline-badge').classList.toggle('show', !online);
+  const note = document.getElementById('ai-offline-note');
+  if(note) note.classList.toggle('show', !online);
+}
+window.addEventListener('online', () => updateOnline(true));
+window.addEventListener('offline', () => updateOnline(false));
+updateOnline(navigator.onLine);
+
+speechSynthesis.onvoiceschanged = () => {};
+initSRS(); updateDash();
+</script>
+</body>
+</html>
