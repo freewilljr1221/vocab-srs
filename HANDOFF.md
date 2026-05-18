@@ -142,6 +142,56 @@ git push
 
 ---
 
+## Session 3 增量更新 (2026-05-18)
+
+### 已交付
+- **GH Pages 上線** → https://freewilljr1221.github.io/vocab-srs/ (main / docs)
+- `src/` → `docs/` 重命名 (GH Pages 子資料夾相容)
+- `.gitignore` 排除 `data/enriched/`, `logs/`, `.tmp/`, `.claude/`
+- **SRS v1 完成** in docs/index.html:
+  - 「複習 / 瀏覽」模式切換,預設複習
+  - SM-2 (Again/Hard/Good/Easy),4 顆評分鈕 + 下次間隔預覽
+  - localStorage 鍵 `vocab_srs_v1`,記錄 per card id
+  - 每日新卡上限 `DAILY_NEW_LIMIT = 15` (硬編,設定畫面下次做)
+  - 「今日完成」畫面
+  - Codex review → 修 5 HIGH:
+    1. Again 同卡多次不再重複扣 ease/lapses
+    2. 同卡 Again >3 次 → 強制畢業(避免 UX 卡死)
+    3. Again 預覽 `1d` 改正
+    4. srsData 載入時 schema sanitize (NaN/wrong-type 丟棄)
+    5. swipe→click 改用 `state.swipedAt` timestamp 旗標
+- Pass A L5 補滿 (97%),L6 跑到 ~60%
+
+### 資料現況 (Session 3 結束)
+| L | Cards | dict | zh_ok |
+|---|-------|------|-------|
+| 1 | 1018 | 96% | 31% (320) |
+| 2 | 1030 | 96% | 0 |
+| 3 | 1053 | 95% | 0 |
+| 4 | 1047 | 97% | 0 |
+| 5 | 1055 | 97% | 0 |
+| 6 | 1052 | ~62% | 0 |
+
+### Session 3 發現的問題 (待下次處理)
+1. **Pass B L1 大量 429** (503/1018 卡 = 50%):
+   - resume 機制正確(429 標 `retryable: true`,下次會重抓)
+   - 但目前 Nvidia API 持續節流 — 可能日配額用罄
+   - 下次先等 24 小時或測試 API 是否回穩,再重跑 Pass B
+   - 也應該確認 truncated_max_tokens (195 個) 用 `--batch 2` 重跑能不能救
+2. **設定畫面未做**:每日新卡量寫死 15,使用者改不了
+3. **docs/index.html 還有 4 個 Codex 標的 MED/LATENT 問題**(cosmetic):
+   - showDone 時 ratingArea.show 可能殘留 (已部分修)
+   - 跨 tab 競爭(同步寫 srsData)
+   - browse idx=-1 latent 邊界
+   - iOS speechSynthesis 在 PWA standalone 偶發空 voices
+4. **PWA 更新通知**:目前推新版本後使用者要關掉 PWA 重開才會載到新 index.html。可加 update prompt
+5. **Pass C (例句翻譯) 未做**
+
+### 重要設計決定追加
+9. **SRS state key = card id** (不是 word)。跨 level 同形字 SM-2 完全獨立。
+
+---
+
 ## 已知問題 / TODO 紀錄
 
 1. **小品質瑕疵**: 個別中翻不夠精準 (e.g. `above (adj.) → 天上的` 應 `上述的`)。Pass D 可做「品質審查」用 MiniMax 自我評分,我們再決定要不要做
