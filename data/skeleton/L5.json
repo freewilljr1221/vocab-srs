@@ -1,0 +1,7387 @@
+[
+  {
+    "id": "abide-L5",
+    "word": "abide",
+    "slug": "abide",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "abolish-L5",
+    "word": "abolish",
+    "slug": "abolish",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "abortion-L5",
+    "word": "abortion",
+    "slug": "abortion",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "abrupt-L5",
+    "word": "abrupt",
+    "slug": "abrupt",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "absurd-L5",
+    "word": "absurd",
+    "slug": "absurd",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "abundant-L5",
+    "word": "abundant",
+    "slug": "abundant",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "academy-L5",
+    "word": "academy",
+    "slug": "academy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "accustom-L5",
+    "word": "accustom",
+    "slug": "accustom",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "ace-L5",
+    "word": "ace",
+    "slug": "ace",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "acknowledge-L5",
+    "word": "acknowledge(ment)",
+    "slug": "acknowledge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "acne-L5",
+    "word": "acne",
+    "slug": "acne",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "admiral-L5",
+    "word": "admiral",
+    "slug": "admiral",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "adolescence-L5",
+    "word": "adolescence",
+    "slug": "adolescence",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "adolescent-L5",
+    "word": "adolescent",
+    "slug": "adolescent",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "adore-L5",
+    "word": "adore",
+    "slug": "adore",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "adulthood-L5",
+    "word": "adulthood",
+    "slug": "adulthood",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "advertiser-L5",
+    "word": "advertiser",
+    "slug": "advertiser",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "affection-L5",
+    "word": "affection",
+    "slug": "affection",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "agenda-L5",
+    "word": "agenda",
+    "slug": "agenda",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "agony-L5",
+    "word": "agony",
+    "slug": "agony",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "agricultural-L5",
+    "word": "agricultural",
+    "slug": "agricultural",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "ai-L5",
+    "word": "AI/artificial intelligence",
+    "slug": "ai",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "airtight-L5",
+    "word": "airtight",
+    "slug": "airtight",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "airway-L5",
+    "word": "airway",
+    "slug": "airway",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "aisle-L5",
+    "word": "aisle",
+    "slug": "aisle",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "algebra-L5",
+    "word": "algebra",
+    "slug": "algebra",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "alien-L5",
+    "word": "alien",
+    "slug": "alien",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "allergic-L5",
+    "word": "allergic",
+    "slug": "allergic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "allergy-L5",
+    "word": "allergy",
+    "slug": "allergy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "alligator-L5",
+    "word": "alligator",
+    "slug": "alligator",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ally-L5",
+    "word": "ally",
+    "slug": "ally",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "alter-L5",
+    "word": "alter",
+    "slug": "alter",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "alternate-L5",
+    "word": "alternate",
+    "slug": "alternate",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "altitude-L5",
+    "word": "altitude",
+    "slug": "altitude",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ample-L5",
+    "word": "ample",
+    "slug": "ample",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "anchor-L5",
+    "word": "anchor",
+    "slug": "anchor",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "anthem-L5",
+    "word": "anthem",
+    "slug": "anthem",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "antique-L5",
+    "word": "antique",
+    "slug": "antique",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "applaud-L5",
+    "word": "applaud",
+    "slug": "applaud",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "applause-L5",
+    "word": "applause",
+    "slug": "applause",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "apt-L5",
+    "word": "apt",
+    "slug": "apt",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "architect-L5",
+    "word": "architect",
+    "slug": "architect",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "architecture-L5",
+    "word": "architecture",
+    "slug": "architecture",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "arena-L5",
+    "word": "arena",
+    "slug": "arena",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "armor-L5",
+    "word": "armor",
+    "slug": "armor",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ascend-L5",
+    "word": "ascend",
+    "slug": "ascend",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "ass-L5",
+    "word": "ass",
+    "slug": "ass",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "assault-L5",
+    "word": "assault",
+    "slug": "assault",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "asset-L5",
+    "word": "asset",
+    "slug": "asset",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "astonish-L5",
+    "word": "astonish(ment)",
+    "slug": "astonish",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "astray-L5",
+    "word": "astray",
+    "slug": "astray",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "astronaut-L5",
+    "word": "astronaut",
+    "slug": "astronaut",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "astronomer-L5",
+    "word": "astronomer",
+    "slug": "astronomer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "astronomy-L5",
+    "word": "astronomy",
+    "slug": "astronomy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "attendance-L5",
+    "word": "attendance",
+    "slug": "attendance",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "auditorium-L5",
+    "word": "auditorium",
+    "slug": "auditorium",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "auxiliary-L5",
+    "word": "auxiliary",
+    "slug": "auxiliary",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "awe-L5",
+    "word": "awe",
+    "slug": "awe",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "awhile-L5",
+    "word": "awhile",
+    "slug": "awhile",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "bachelor-L5",
+    "word": "bachelor",
+    "slug": "bachelor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "backbone-L5",
+    "word": "backbone",
+    "slug": "backbone",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "badge-L5",
+    "word": "badge",
+    "slug": "badge",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ballot-L5",
+    "word": "ballot",
+    "slug": "ballot",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ban-L5",
+    "word": "ban",
+    "slug": "ban",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bandit-L5",
+    "word": "bandit",
+    "slug": "bandit",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "banner-L5",
+    "word": "banner",
+    "slug": "banner",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "banquet-L5",
+    "word": "banquet",
+    "slug": "banquet",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "barbarian-L5",
+    "word": "barbarian",
+    "slug": "barbarian",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "barbershop-L5",
+    "word": "barbershop",
+    "slug": "barbershop",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "barefoot-L5",
+    "word": "barefoot",
+    "slug": "barefoot",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "barren-L5",
+    "word": "barren",
+    "slug": "barren",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "bass-L5",
+    "word": "bass",
+    "slug": "bass",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "batch-L5",
+    "word": "batch",
+    "slug": "batch",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "batter-L5",
+    "word": "batter",
+    "slug": "batter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bazaar-L5",
+    "word": "bazaar",
+    "slug": "bazaar",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "beautify-L5",
+    "word": "beautify",
+    "slug": "beautify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "beforehand-L5",
+    "word": "beforehand",
+    "slug": "beforehand",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "behalf-L5",
+    "word": "behalf",
+    "slug": "behalf",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "belongings-L5",
+    "word": "belongings",
+    "slug": "belongings",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "beloved-L5",
+    "word": "beloved",
+    "slug": "beloved",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "beneficial-L5",
+    "word": "beneficial",
+    "slug": "beneficial",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "beware-L5",
+    "word": "beware",
+    "slug": "beware",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "bid-L5",
+    "word": "bid",
+    "slug": "bid",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "blacksmith-L5",
+    "word": "blacksmith",
+    "slug": "blacksmith",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "blast-L5",
+    "word": "blast",
+    "slug": "blast",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "blaze-L5",
+    "word": "blaze",
+    "slug": "blaze",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bleach-L5",
+    "word": "bleach",
+    "slug": "bleach",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "blizzard-L5",
+    "word": "blizzard",
+    "slug": "blizzard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "blond-L5",
+    "word": "blond/blonde",
+    "slug": "blond",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "blot-L5",
+    "word": "blot/stain",
+    "slug": "blot",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "blues-L5",
+    "word": "blues",
+    "slug": "blues",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "blur-L5",
+    "word": "blur",
+    "slug": "blur",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bodily-L5",
+    "word": "bodily",
+    "slug": "bodily",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "bodyguard-L5",
+    "word": "bodyguard",
+    "slug": "bodyguard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bog-L5",
+    "word": "bog",
+    "slug": "bog",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bolt-L5",
+    "word": "bolt",
+    "slug": "bolt",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bonus-L5",
+    "word": "bonus",
+    "slug": "bonus",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boom-L5",
+    "word": "boom",
+    "slug": "boom",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "booth-L5",
+    "word": "booth",
+    "slug": "booth",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boredom-L5",
+    "word": "boredom",
+    "slug": "boredom",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bosom-L5",
+    "word": "bosom",
+    "slug": "bosom",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "botany-L5",
+    "word": "botany",
+    "slug": "botany",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boulevard-L5",
+    "word": "boulevard",
+    "slug": "boulevard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bound-L5",
+    "word": "bound",
+    "slug": "bound",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "boundary-L5",
+    "word": "boundary",
+    "slug": "boundary",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bowel-L5",
+    "word": "bowel",
+    "slug": "bowel",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boxer-L5",
+    "word": "boxer",
+    "slug": "boxer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boxing-L5",
+    "word": "boxing",
+    "slug": "boxing",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "boyhood-L5",
+    "word": "boyhood",
+    "slug": "boyhood",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "brace-L5",
+    "word": "brace",
+    "slug": "brace",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "braid-L5",
+    "word": "braid",
+    "slug": "braid",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "breadth-L5",
+    "word": "breadth",
+    "slug": "breadth",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bribe-L5",
+    "word": "bribe",
+    "slug": "bribe",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "briefcase-L5",
+    "word": "briefcase",
+    "slug": "briefcase",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "broaden-L5",
+    "word": "broaden",
+    "slug": "broaden",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "bronze-L5",
+    "word": "bronze",
+    "slug": "bronze",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "brooch-L5",
+    "word": "brooch",
+    "slug": "brooch",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "brood-L5",
+    "word": "brood",
+    "slug": "brood",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "broth-L5",
+    "word": "broth",
+    "slug": "broth",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "brotherhood-L5",
+    "word": "brotherhood",
+    "slug": "brotherhood",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "browse-L5",
+    "word": "browse",
+    "slug": "browse",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bruise-L5",
+    "word": "bruise",
+    "slug": "bruise",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bulge-L5",
+    "word": "bulge",
+    "slug": "bulge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bulk-L5",
+    "word": "bulk",
+    "slug": "bulk",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "bully-L5",
+    "word": "bully",
+    "slug": "bully",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "bureau-L5",
+    "word": "bureau",
+    "slug": "bureau",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "butcher-L5",
+    "word": "butcher",
+    "slug": "butcher",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "cactus-L5",
+    "word": "cactus",
+    "slug": "cactus",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "calf-L5",
+    "word": "calf",
+    "slug": "calf",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "calligraphy-L5",
+    "word": "calligraphy",
+    "slug": "calligraphy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "canal-L5",
+    "word": "canal",
+    "slug": "canal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cannon-L5",
+    "word": "cannon",
+    "slug": "cannon",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "carbon-L5",
+    "word": "carbon",
+    "slug": "carbon",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cardboard-L5",
+    "word": "cardboard",
+    "slug": "cardboard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "carefree-L5",
+    "word": "carefree",
+    "slug": "carefree",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "caretaker-L5",
+    "word": "caretaker",
+    "slug": "caretaker",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "carnation-L5",
+    "word": "carnation",
+    "slug": "carnation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "carnival-L5",
+    "word": "carnival",
+    "slug": "carnival",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "carp-L5",
+    "word": "carp",
+    "slug": "carp",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "carton-L5",
+    "word": "carton",
+    "slug": "carton",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "category-L5",
+    "word": "category",
+    "slug": "category",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cathedral-L5",
+    "word": "cathedral",
+    "slug": "cathedral",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "caution-L5",
+    "word": "caution",
+    "slug": "caution",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "cautious-L5",
+    "word": "cautious",
+    "slug": "cautious",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "celebrity-L5",
+    "word": "celebrity",
+    "slug": "celebrity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "celery-L5",
+    "word": "celery",
+    "slug": "celery",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cell-phone-L5",
+    "word": "cell-phone/mobile phone",
+    "slug": "cell-phone",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cellar-L5",
+    "word": "cellar",
+    "slug": "cellar",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "cello-L5",
+    "word": "cello",
+    "slug": "cello",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "celsius-L5",
+    "word": "Celsius/Centigrade",
+    "slug": "celsius",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ceremony-L5",
+    "word": "ceremony",
+    "slug": "ceremony",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "certificate-L5",
+    "word": "certificate",
+    "slug": "certificate",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "chairperson-L5",
+    "word": "chairperson",
+    "slug": "chairperson",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chant-L5",
+    "word": "chant",
+    "slug": "chant",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "chatter-L5",
+    "word": "chatter",
+    "slug": "chatter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "check-in-L5",
+    "word": "check-in",
+    "slug": "check-in",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "check-out-L5",
+    "word": "check-out",
+    "slug": "check-out",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "checkbook-L5",
+    "word": "checkbook",
+    "slug": "checkbook",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "checkup-L5",
+    "word": "checkup",
+    "slug": "checkup",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chef-L5",
+    "word": "chef",
+    "slug": "chef",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chemist-L5",
+    "word": "chemist",
+    "slug": "chemist",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chestnut-L5",
+    "word": "chestnut",
+    "slug": "chestnut",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "chili-L5",
+    "word": "chili",
+    "slug": "chili",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chimpanzee-L5",
+    "word": "chimpanzee",
+    "slug": "chimpanzee",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "choir-L5",
+    "word": "choir",
+    "slug": "choir",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chord-L5",
+    "word": "chord",
+    "slug": "chord",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "chubby-L5",
+    "word": "chubby",
+    "slug": "chubby",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "circuit-L5",
+    "word": "circuit",
+    "slug": "circuit",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cite-L5",
+    "word": "cite",
+    "slug": "cite",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "civic-L5",
+    "word": "civic",
+    "slug": "civic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "clam-L5",
+    "word": "clam",
+    "slug": "clam",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "clan-L5",
+    "word": "clan",
+    "slug": "clan",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "clasp-L5",
+    "word": "clasp",
+    "slug": "clasp",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "clause-L5",
+    "word": "clause",
+    "slug": "clause",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cling-L5",
+    "word": "cling",
+    "slug": "cling",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "clockwise-L5",
+    "word": "clockwise",
+    "slug": "clockwise",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "clover-L5",
+    "word": "clover",
+    "slug": "clover",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cluster-L5",
+    "word": "cluster",
+    "slug": "cluster",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "clutch-L5",
+    "word": "clutch",
+    "slug": "clutch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "coastline-L5",
+    "word": "coastline",
+    "slug": "coastline",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cocoon-L5",
+    "word": "cocoon",
+    "slug": "cocoon",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "coil-L5",
+    "word": "coil",
+    "slug": "coil",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "colleague-L5",
+    "word": "colleague",
+    "slug": "colleague",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "colonel-L5",
+    "word": "colonel",
+    "slug": "colonel",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "colonial-L5",
+    "word": "colonial",
+    "slug": "colonial",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "combat-L5",
+    "word": "combat",
+    "slug": "combat",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "comedian-L5",
+    "word": "comedian",
+    "slug": "comedian",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "comet-L5",
+    "word": "comet",
+    "slug": "comet",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "commentator-L5",
+    "word": "commentator",
+    "slug": "commentator",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "commission-L5",
+    "word": "commission",
+    "slug": "commission",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "commodity-L5",
+    "word": "commodity",
+    "slug": "commodity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "commonplace-L5",
+    "word": "commonplace",
+    "slug": "commonplace",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "communism-L5",
+    "word": "communism",
+    "slug": "communism",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "communist-L5",
+    "word": "communist",
+    "slug": "communist",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "commute-L5",
+    "word": "commute",
+    "slug": "commute",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "commuter-L5",
+    "word": "commuter",
+    "slug": "commuter",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "compact-L5",
+    "word": "compact",
+    "slug": "compact",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "compass-L5",
+    "word": "compass",
+    "slug": "compass",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "compel-L5",
+    "word": "compel",
+    "slug": "compel",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "compliment-L5",
+    "word": "compliment",
+    "slug": "compliment",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "compound-L5",
+    "word": "compound",
+    "slug": "compound",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "comprehend-L5",
+    "word": "comprehend",
+    "slug": "comprehend",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "comprehension-L5",
+    "word": "comprehension",
+    "slug": "comprehension",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "compromise-L5",
+    "word": "compromise",
+    "slug": "compromise",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "compute-L5",
+    "word": "compute",
+    "slug": "compute",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "computerize-L5",
+    "word": "computerize",
+    "slug": "computerize",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "comrade-L5",
+    "word": "comrade",
+    "slug": "comrade",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "conceal-L5",
+    "word": "conceal",
+    "slug": "conceal",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "conceive-L5",
+    "word": "conceive",
+    "slug": "conceive",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "condemn-L5",
+    "word": "condemn",
+    "slug": "condemn",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "conduct-L5",
+    "word": "conduct",
+    "slug": "conduct",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "confession-L5",
+    "word": "confession",
+    "slug": "confession",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "confront-L5",
+    "word": "confront",
+    "slug": "confront",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "consent-L5",
+    "word": "consent",
+    "slug": "consent",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "conserve-L5",
+    "word": "conserve",
+    "slug": "conserve",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "considerate-L5",
+    "word": "considerate",
+    "slug": "considerate",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "console-L5",
+    "word": "console",
+    "slug": "console",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "constitutional-L5",
+    "word": "constitutional",
+    "slug": "constitutional",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "contagious-L5",
+    "word": "contagious",
+    "slug": "contagious",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "contaminate-L5",
+    "word": "contaminate",
+    "slug": "contaminate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "contemplate-L5",
+    "word": "contemplate",
+    "slug": "contemplate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "contemporary-L5",
+    "word": "contemporary",
+    "slug": "contemporary",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "contempt-L5",
+    "word": "contempt",
+    "slug": "contempt",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "contend-L5",
+    "word": "contend",
+    "slug": "contend",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "continental-L5",
+    "word": "continental",
+    "slug": "continental",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "continuity-L5",
+    "word": "continuity",
+    "slug": "continuity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "convert-L5",
+    "word": "convert",
+    "slug": "convert",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "convict-L5",
+    "word": "convict",
+    "slug": "convict",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "copyright-L5",
+    "word": "copyright",
+    "slug": "copyright",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "coral-L5",
+    "word": "coral",
+    "slug": "coral",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "corporation-L5",
+    "word": "corporation",
+    "slug": "corporation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "correspondence-L5",
+    "word": "correspondence",
+    "slug": "correspondence",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "corridor-L5",
+    "word": "corridor",
+    "slug": "corridor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "corrupt-L5",
+    "word": "corrupt",
+    "slug": "corrupt",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "counsel-L5",
+    "word": "counsel",
+    "slug": "counsel",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "counselor-L5",
+    "word": "counselor",
+    "slug": "counselor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "counterclockwise-L5",
+    "word": "counterclockwise",
+    "slug": "counterclockwise",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "coupon-L5",
+    "word": "coupon",
+    "slug": "coupon",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "courtyard-L5",
+    "word": "courtyard",
+    "slug": "courtyard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "cowardly-L5",
+    "word": "cowardly",
+    "slug": "cowardly",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "cozy-L5",
+    "word": "cozy",
+    "slug": "cozy",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "cracker-L5",
+    "word": "cracker",
+    "slug": "cracker",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "crater-L5",
+    "word": "crater",
+    "slug": "crater",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "creak-L5",
+    "word": "creak",
+    "slug": "creak",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "creek-L5",
+    "word": "creek",
+    "slug": "creek",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "crib-L5",
+    "word": "crib",
+    "slug": "crib",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "crocodile-L5",
+    "word": "crocodile",
+    "slug": "crocodile",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "crossing-L5",
+    "word": "crossing",
+    "slug": "crossing",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "crouch-L5",
+    "word": "crouch",
+    "slug": "crouch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "crunch-L5",
+    "word": "crunch",
+    "slug": "crunch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "crystal-L5",
+    "word": "crystal",
+    "slug": "crystal",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "cuisine-L5",
+    "word": "cuisine",
+    "slug": "cuisine",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "curb-L5",
+    "word": "curb",
+    "slug": "curb",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "currency-L5",
+    "word": "currency",
+    "slug": "currency",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "curriculum-L5",
+    "word": "curriculum",
+    "slug": "curriculum",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "curry-L5",
+    "word": "curry",
+    "slug": "curry",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "customs-L5",
+    "word": "customs",
+    "slug": "customs",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "dart-L5",
+    "word": "dart",
+    "slug": "dart",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "dazzle-L5",
+    "word": "dazzle",
+    "slug": "dazzle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "decay-L5",
+    "word": "decay",
+    "slug": "decay",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "deceive-L5",
+    "word": "deceive",
+    "slug": "deceive",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "declaration-L5",
+    "word": "declaration",
+    "slug": "declaration",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "delegate-L5",
+    "word": "delegate",
+    "slug": "delegate",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "delegation-L5",
+    "word": "delegation",
+    "slug": "delegation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "democrat-L5",
+    "word": "democrat",
+    "slug": "democrat",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "denial-L5",
+    "word": "denial",
+    "slug": "denial",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "descriptive-L5",
+    "word": "descriptive",
+    "slug": "descriptive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "despair-L5",
+    "word": "despair",
+    "slug": "despair",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "despise-L5",
+    "word": "despise",
+    "slug": "despise",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "destination-L5",
+    "word": "destination",
+    "slug": "destination",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "destiny-L5",
+    "word": "destiny",
+    "slug": "destiny",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "destructive-L5",
+    "word": "destructive",
+    "slug": "destructive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "detergent-L5",
+    "word": "detergent",
+    "slug": "detergent",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "devotion-L5",
+    "word": "devotion",
+    "slug": "devotion",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "devour-L5",
+    "word": "devour",
+    "slug": "devour",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "dialect-L5",
+    "word": "dialect",
+    "slug": "dialect",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "disbelief-L5",
+    "word": "disbelief",
+    "slug": "disbelief",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "discard-L5",
+    "word": "discard",
+    "slug": "discard",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "disciple-L5",
+    "word": "disciple",
+    "slug": "disciple",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "discriminate-L5",
+    "word": "discriminate",
+    "slug": "discriminate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "dispense-L5",
+    "word": "dispense",
+    "slug": "dispense",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "dispose-L5",
+    "word": "dispose",
+    "slug": "dispose",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "distinction-L5",
+    "word": "distinction",
+    "slug": "distinction",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "distinctive-L5",
+    "word": "distinctive",
+    "slug": "distinctive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "distress-L5",
+    "word": "distress",
+    "slug": "distress",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "document-L5",
+    "word": "document",
+    "slug": "document",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "doorstep-L5",
+    "word": "doorstep",
+    "slug": "doorstep",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "doorway-L5",
+    "word": "doorway",
+    "slug": "doorway",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "dough-L5",
+    "word": "dough",
+    "slug": "dough",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "downward-L5",
+    "word": "downward",
+    "slug": "downward",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "downward-L5-1",
+    "word": "downward(s)",
+    "slug": "downward",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "drape-L5",
+    "word": "drape",
+    "slug": "drape",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "dreadful-L5",
+    "word": "dreadful",
+    "slug": "dreadful",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "dresser-L5",
+    "word": "dresser",
+    "slug": "dresser",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "dressing-L5",
+    "word": "dressing",
+    "slug": "dressing",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "driveway-L5",
+    "word": "driveway",
+    "slug": "driveway",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "duration-L5",
+    "word": "duration",
+    "slug": "duration",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "dusk-L5",
+    "word": "dusk",
+    "slug": "dusk",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "dwarf-L5",
+    "word": "dwarf",
+    "slug": "dwarf",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "dwell-L5",
+    "word": "dwell",
+    "slug": "dwell",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "dwelling-L5",
+    "word": "dwelling",
+    "slug": "dwelling",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "eclipse-L5",
+    "word": "eclipse",
+    "slug": "eclipse",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "eel-L5",
+    "word": "eel",
+    "slug": "eel",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ego-L5",
+    "word": "ego",
+    "slug": "ego",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "elaborate-L5",
+    "word": "elaborate",
+    "slug": "elaborate",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "elevate-L5",
+    "word": "elevate",
+    "slug": "elevate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "embrace-L5",
+    "word": "embrace",
+    "slug": "embrace",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "endeavor-L5",
+    "word": "endeavor",
+    "slug": "endeavor",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "enroll-L5",
+    "word": "enroll(ment)",
+    "slug": "enroll",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ensure-L5",
+    "word": "ensure/insure",
+    "slug": "ensure",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "enterprise-L5",
+    "word": "enterprise",
+    "slug": "enterprise",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "enthusiastic-L5",
+    "word": "enthusiastic",
+    "slug": "enthusiastic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "entitle-L5",
+    "word": "entitle",
+    "slug": "entitle",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "equate-L5",
+    "word": "equate",
+    "slug": "equate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "erect-L5",
+    "word": "erect",
+    "slug": "erect",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "erupt-L5",
+    "word": "erupt",
+    "slug": "erupt",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "escort-L5",
+    "word": "escort",
+    "slug": "escort",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "estate-L5",
+    "word": "estate",
+    "slug": "estate",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "esteem-L5",
+    "word": "esteem",
+    "slug": "esteem",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "eternal-L5",
+    "word": "eternal",
+    "slug": "eternal",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "ethic-L5",
+    "word": "ethic(s)",
+    "slug": "ethic",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "evergreen-L5",
+    "word": "evergreen",
+    "slug": "evergreen",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "exaggeration-L5",
+    "word": "exaggeration",
+    "slug": "exaggeration",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "exceed-L5",
+    "word": "exceed",
+    "slug": "exceed",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "excel-L5",
+    "word": "excel",
+    "slug": "excel",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "exceptional-L5",
+    "word": "exceptional",
+    "slug": "exceptional",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "excess-L5",
+    "word": "excess",
+    "slug": "excess",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "exclaim-L5",
+    "word": "exclaim",
+    "slug": "exclaim",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "exclude-L5",
+    "word": "exclude",
+    "slug": "exclude",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "execute-L5",
+    "word": "execute",
+    "slug": "execute",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "executive-L5",
+    "word": "executive",
+    "slug": "executive",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "exile-L5",
+    "word": "exile",
+    "slug": "exile",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "extension-L5",
+    "word": "extension",
+    "slug": "extension",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "extensive-L5",
+    "word": "extensive",
+    "slug": "extensive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "exterior-L5",
+    "word": "exterior",
+    "slug": "exterior",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "external-L5",
+    "word": "external",
+    "slug": "external",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "extinct-L5",
+    "word": "extinct",
+    "slug": "extinct",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "extraordinary-L5",
+    "word": "extraordinary",
+    "slug": "extraordinary",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "eyelash-L5",
+    "word": "eyelash/lash",
+    "slug": "eyelash",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "eyelid-L5",
+    "word": "eyelid",
+    "slug": "eyelid",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fabric-L5",
+    "word": "fabric",
+    "slug": "fabric",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fad-L5",
+    "word": "fad",
+    "slug": "fad",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fahrenheit-L5",
+    "word": "Fahrenheit",
+    "slug": "fahrenheit",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "falter-L5",
+    "word": "falter",
+    "slug": "falter",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "fascinate-L5",
+    "word": "fascinate",
+    "slug": "fascinate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "fatigue-L5",
+    "word": "fatigue",
+    "slug": "fatigue",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "federal-L5",
+    "word": "federal",
+    "slug": "federal",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "feeble-L5",
+    "word": "feeble",
+    "slug": "feeble",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "feminine-L5",
+    "word": "feminine",
+    "slug": "feminine",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "fertilizer-L5",
+    "word": "fertilizer",
+    "slug": "fertilizer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fiance-L5",
+    "word": "fiance",
+    "slug": "fiance",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fiber-L5",
+    "word": "fiber",
+    "slug": "fiber",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fiddle-L5",
+    "word": "fiddle",
+    "slug": "fiddle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "filter-L5",
+    "word": "filter",
+    "slug": "filter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "fin-L5",
+    "word": "fin",
+    "slug": "fin",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fishery-L5",
+    "word": "fishery",
+    "slug": "fishery",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "flake-L5",
+    "word": "flake",
+    "slug": "flake",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "flap-L5",
+    "word": "flap",
+    "slug": "flap",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "flaw-L5",
+    "word": "flaw",
+    "slug": "flaw",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "flick-L5",
+    "word": "flick",
+    "slug": "flick",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "flip-L5",
+    "word": "flip",
+    "slug": "flip",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "flourish-L5",
+    "word": "flourish",
+    "slug": "flourish",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "fluency-L5",
+    "word": "fluency",
+    "slug": "fluency",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "foe-L5",
+    "word": "foe",
+    "slug": "foe",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "foil-L5",
+    "word": "foil",
+    "slug": "foil",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "folklore-L5",
+    "word": "folklore",
+    "slug": "folklore",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "forgetful-L5",
+    "word": "forgetful",
+    "slug": "forgetful",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "format-L5",
+    "word": "format",
+    "slug": "format",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "foul-L5",
+    "word": "foul",
+    "slug": "foul",
+    "pos": "n./v./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "fowl-L5",
+    "word": "fowl",
+    "slug": "fowl",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fraction-L5",
+    "word": "fraction",
+    "slug": "fraction",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "framework-L5",
+    "word": "framework",
+    "slug": "framework",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "frantic-L5",
+    "word": "frantic",
+    "slug": "frantic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "freight-L5",
+    "word": "freight",
+    "slug": "freight",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "frontier-L5",
+    "word": "frontier",
+    "slug": "frontier",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fume-L5",
+    "word": "fume",
+    "slug": "fume",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "fury-L5",
+    "word": "fury",
+    "slug": "fury",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "fuse-L5",
+    "word": "fuse",
+    "slug": "fuse",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "fuss-L5",
+    "word": "fuss",
+    "slug": "fuss",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gallop-L5",
+    "word": "gallop",
+    "slug": "gallop",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "garment-L5",
+    "word": "garment",
+    "slug": "garment",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "gasp-L5",
+    "word": "gasp",
+    "slug": "gasp",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gathering-L5",
+    "word": "gathering",
+    "slug": "gathering",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "gay-L5",
+    "word": "gay",
+    "slug": "gay",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "gender-L5",
+    "word": "gender",
+    "slug": "gender",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "geographical-L5",
+    "word": "geographical",
+    "slug": "geographical",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "geometry-L5",
+    "word": "geometry",
+    "slug": "geometry",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "glacier-L5",
+    "word": "glacier",
+    "slug": "glacier",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "glare-L5",
+    "word": "glare",
+    "slug": "glare",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gleam-L5",
+    "word": "gleam",
+    "slug": "gleam",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "glee-L5",
+    "word": "glee",
+    "slug": "glee",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "glitter-L5",
+    "word": "glitter",
+    "slug": "glitter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gloom-L5",
+    "word": "gloom",
+    "slug": "gloom",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gnaw-L5",
+    "word": "gnaw",
+    "slug": "gnaw",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "gobble-L5",
+    "word": "gobble",
+    "slug": "gobble",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "gorge-L5",
+    "word": "gorge",
+    "slug": "gorge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gorgeous-L5",
+    "word": "gorgeous",
+    "slug": "gorgeous",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "gorilla-L5",
+    "word": "gorilla",
+    "slug": "gorilla",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "gospel-L5",
+    "word": "gospel",
+    "slug": "gospel",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "grant-L5",
+    "word": "grant",
+    "slug": "grant",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gravity-L5",
+    "word": "gravity",
+    "slug": "gravity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "graze-L5",
+    "word": "graze",
+    "slug": "graze",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "grease-L5",
+    "word": "grease",
+    "slug": "grease",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "greed-L5",
+    "word": "greed",
+    "slug": "greed",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "grim-L5",
+    "word": "grim",
+    "slug": "grim",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "grip-L5",
+    "word": "grip",
+    "slug": "grip",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "groan-L5",
+    "word": "groan",
+    "slug": "groan",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gross-L5",
+    "word": "gross",
+    "slug": "gross",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "growl-L5",
+    "word": "growl",
+    "slug": "growl",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "grumble-L5",
+    "word": "grumble",
+    "slug": "grumble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "guideline-L5",
+    "word": "guideline",
+    "slug": "guideline",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "gulp-L5",
+    "word": "gulp",
+    "slug": "gulp",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gust-L5",
+    "word": "gust",
+    "slug": "gust",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gut-L5",
+    "word": "gut(s)",
+    "slug": "gut",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "gypsy-L5",
+    "word": "gypsy",
+    "slug": "gypsy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hail-L5",
+    "word": "hail (1)",
+    "slug": "hail",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hairstyle-L5",
+    "word": "hairstyle/hairdo",
+    "slug": "hairstyle",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "handicap-L5",
+    "word": "handicap",
+    "slug": "handicap",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "handicraft-L5",
+    "word": "handicraft",
+    "slug": "handicraft",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hardy-L5",
+    "word": "hardy",
+    "slug": "hardy",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "harness-L5",
+    "word": "harness",
+    "slug": "harness",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "haul-L5",
+    "word": "haul",
+    "slug": "haul",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "haunt-L5",
+    "word": "haunt",
+    "slug": "haunt",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hearty-L5",
+    "word": "hearty",
+    "slug": "hearty",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "heavenly-L5",
+    "word": "heavenly",
+    "slug": "heavenly",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "hedge-L5",
+    "word": "hedge",
+    "slug": "hedge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "heed-L5",
+    "word": "heed",
+    "slug": "heed",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "heighten-L5",
+    "word": "heighten",
+    "slug": "heighten",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "heir-L5",
+    "word": "heir",
+    "slug": "heir",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hence-L5",
+    "word": "hence",
+    "slug": "hence",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "herald-L5",
+    "word": "herald",
+    "slug": "herald",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "herb-L5",
+    "word": "herb",
+    "slug": "herb",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hermit-L5",
+    "word": "hermit",
+    "slug": "hermit",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "heroic-L5",
+    "word": "heroic",
+    "slug": "heroic",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "heterosexual-L5",
+    "word": "heterosexual",
+    "slug": "heterosexual",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "hi-fi-L5",
+    "word": "hi-fi/high fidelity",
+    "slug": "hi-fi",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hijack-L5",
+    "word": "hijack",
+    "slug": "hijack",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hiss-L5",
+    "word": "hiss",
+    "slug": "hiss",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hoarse-L5",
+    "word": "hoarse",
+    "slug": "hoarse",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "hockey-L5",
+    "word": "hockey",
+    "slug": "hockey",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "homosexual-L5",
+    "word": "homosexual",
+    "slug": "homosexual",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "honk-L5",
+    "word": "honk",
+    "slug": "honk",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hood-L5",
+    "word": "hood",
+    "slug": "hood",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hoof-L5",
+    "word": "hoof",
+    "slug": "hoof",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "horizontal-L5",
+    "word": "horizontal",
+    "slug": "horizontal",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "hostage-L5",
+    "word": "hostage",
+    "slug": "hostage",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hostile-L5",
+    "word": "hostile",
+    "slug": "hostile",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "hound-L5",
+    "word": "hound",
+    "slug": "hound",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "housing-L5",
+    "word": "housing",
+    "slug": "housing",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "hover-L5",
+    "word": "hover",
+    "slug": "hover",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "howl-L5",
+    "word": "howl",
+    "slug": "howl",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hurl-L5",
+    "word": "hurl",
+    "slug": "hurl",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "hymn-L5",
+    "word": "hymn",
+    "slug": "hymn",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "idiot-L5",
+    "word": "idiot",
+    "slug": "idiot",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "immense-L5",
+    "word": "immense",
+    "slug": "immense",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "imperial-L5",
+    "word": "imperial",
+    "slug": "imperial",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "impose-L5",
+    "word": "impose",
+    "slug": "impose",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "impulse-L5",
+    "word": "impulse",
+    "slug": "impulse",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "incense-L5",
+    "word": "incense",
+    "slug": "incense",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "index-L5",
+    "word": "index",
+    "slug": "index",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "indifference-L5",
+    "word": "indifference",
+    "slug": "indifference",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "indifferent-L5",
+    "word": "indifferent",
+    "slug": "indifferent",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "indignant-L5",
+    "word": "indignant",
+    "slug": "indignant",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "indispensable-L5",
+    "word": "indispensable",
+    "slug": "indispensable",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "induce-L5",
+    "word": "induce",
+    "slug": "induce",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "indulge-L5",
+    "word": "indulge",
+    "slug": "indulge",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "infinite-L5",
+    "word": "infinite",
+    "slug": "infinite",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "inherit-L5",
+    "word": "inherit",
+    "slug": "inherit",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "initiate-L5",
+    "word": "initiate",
+    "slug": "initiate",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "inland-L5",
+    "word": "inland",
+    "slug": "inland",
+    "pos": "n./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "innumerable-L5",
+    "word": "innumerable",
+    "slug": "innumerable",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "inquire-L5",
+    "word": "inquire",
+    "slug": "inquire",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "institute-L5",
+    "word": "institute",
+    "slug": "institute",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "insure-L5",
+    "word": "insure",
+    "slug": "insure",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "intent-L5",
+    "word": "intent",
+    "slug": "intent",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "interference-L5",
+    "word": "interference",
+    "slug": "interference",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "interior-L5",
+    "word": "interior",
+    "slug": "interior",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "interpretation-L5",
+    "word": "interpretation",
+    "slug": "interpretation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "interpreter-L5",
+    "word": "interpreter",
+    "slug": "interpreter",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "intuition-L5",
+    "word": "intuition",
+    "slug": "intuition",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "inward-L5",
+    "word": "inward",
+    "slug": "inward",
+    "pos": "adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "inward-L5-1",
+    "word": "inward(s)",
+    "slug": "inward",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "isle-L5",
+    "word": "isle",
+    "slug": "isle",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "issue-L5",
+    "word": "issue",
+    "slug": "issue",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ivy-L5",
+    "word": "ivy",
+    "slug": "ivy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "jack-L5",
+    "word": "jack",
+    "slug": "jack",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "jade-L5",
+    "word": "jade",
+    "slug": "jade",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "janitor-L5",
+    "word": "janitor",
+    "slug": "janitor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "jasmine-L5",
+    "word": "jasmine",
+    "slug": "jasmine",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "jaywalk-L5",
+    "word": "jaywalk",
+    "slug": "jaywalk",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "jeer-L5",
+    "word": "jeer",
+    "slug": "jeer",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "jingle-L5",
+    "word": "jingle",
+    "slug": "jingle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "jolly-L5",
+    "word": "jolly",
+    "slug": "jolly",
+    "pos": "n./v./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "journalism-L5",
+    "word": "journalism",
+    "slug": "journalism",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "journalist-L5",
+    "word": "journalist",
+    "slug": "journalist",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "jug-L5",
+    "word": "jug",
+    "slug": "jug",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "jury-L5",
+    "word": "jury",
+    "slug": "jury",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "justify-L5",
+    "word": "justify",
+    "slug": "justify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "juvenile-L5",
+    "word": "juvenile",
+    "slug": "juvenile",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "kin-L5",
+    "word": "kin",
+    "slug": "kin",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "kindle-L5",
+    "word": "kindle",
+    "slug": "kindle",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "knowledgeable-L5",
+    "word": "knowledgeable",
+    "slug": "knowledgeable",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "lad-L5",
+    "word": "lad",
+    "slug": "lad",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lame-L5",
+    "word": "lame",
+    "slug": "lame",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "landlady-L5",
+    "word": "landlady",
+    "slug": "landlady",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "landlord-L5",
+    "word": "landlord",
+    "slug": "landlord",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "laser-L5",
+    "word": "laser",
+    "slug": "laser",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "latitude-L5",
+    "word": "latitude",
+    "slug": "latitude",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lawmaker-L5",
+    "word": "lawmaker",
+    "slug": "lawmaker",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "layer-L5",
+    "word": "layer",
+    "slug": "layer",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "league-L5",
+    "word": "league",
+    "slug": "league",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "legislation-L5",
+    "word": "legislation",
+    "slug": "legislation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lessen-L5",
+    "word": "lessen",
+    "slug": "lessen",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "lest-L5",
+    "word": "lest",
+    "slug": "lest",
+    "pos": "conj.",
+    "level": 5
+  },
+  {
+    "id": "lieutenant-L5",
+    "word": "lieutenant",
+    "slug": "lieutenant",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lifelong-L5",
+    "word": "lifelong",
+    "slug": "lifelong",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "likelihood-L5",
+    "word": "likelihood",
+    "slug": "likelihood",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lime-L5",
+    "word": "lime",
+    "slug": "lime",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "limp-L5",
+    "word": "limp",
+    "slug": "limp",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "linger-L5",
+    "word": "linger",
+    "slug": "linger",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "livestock-L5",
+    "word": "livestock",
+    "slug": "livestock",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lizard-L5",
+    "word": "lizard",
+    "slug": "lizard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "locomotive-L5",
+    "word": "locomotive",
+    "slug": "locomotive",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "locust-L5",
+    "word": "locust",
+    "slug": "locust",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lodge-L5",
+    "word": "lodge",
+    "slug": "lodge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "lofty-L5",
+    "word": "lofty",
+    "slug": "lofty",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "logo-L5",
+    "word": "logo",
+    "slug": "logo",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lonesome-L5",
+    "word": "lonesome",
+    "slug": "lonesome",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "longitude-L5",
+    "word": "longitude",
+    "slug": "longitude",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lottery-L5",
+    "word": "lottery",
+    "slug": "lottery",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lotus-L5",
+    "word": "lotus",
+    "slug": "lotus",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "lumber-L5",
+    "word": "lumber",
+    "slug": "lumber",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "lump-L5",
+    "word": "lump",
+    "slug": "lump",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "magnify-L5",
+    "word": "magnify",
+    "slug": "magnify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "maiden-L5",
+    "word": "maiden",
+    "slug": "maiden",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "mainland-L5",
+    "word": "mainland",
+    "slug": "mainland",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mainstream-L5",
+    "word": "mainstream",
+    "slug": "mainstream",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "maintenance-L5",
+    "word": "maintenance",
+    "slug": "maintenance",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "majestic-L5",
+    "word": "majestic",
+    "slug": "majestic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "majesty-L5",
+    "word": "majesty",
+    "slug": "majesty",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mammal-L5",
+    "word": "mammal",
+    "slug": "mammal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "manifest-L5",
+    "word": "manifest",
+    "slug": "manifest",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "mansion-L5",
+    "word": "mansion",
+    "slug": "mansion",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "maple-L5",
+    "word": "maple",
+    "slug": "maple",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "marginal-L5",
+    "word": "marginal",
+    "slug": "marginal",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "marine-L5",
+    "word": "marine",
+    "slug": "marine",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "marshal-L5",
+    "word": "marshal",
+    "slug": "marshal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "martial-L5",
+    "word": "martial",
+    "slug": "martial",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "marvel-L5",
+    "word": "marvel",
+    "slug": "marvel",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "masculine-L5",
+    "word": "masculine",
+    "slug": "masculine",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "mash-L5",
+    "word": "mash",
+    "slug": "mash",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "massage-L5",
+    "word": "massage",
+    "slug": "massage",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "massive-L5",
+    "word": "massive",
+    "slug": "massive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "masterpiece-L5",
+    "word": "masterpiece",
+    "slug": "masterpiece",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mayonnaise-L5",
+    "word": "mayonnaise",
+    "slug": "mayonnaise",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "meantime-L5",
+    "word": "meantime",
+    "slug": "meantime",
+    "pos": "n./adv.",
+    "level": 5
+  },
+  {
+    "id": "mechanics-L5",
+    "word": "mechanics",
+    "slug": "mechanics",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mediate-L5",
+    "word": "mediate",
+    "slug": "mediate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "menace-L5",
+    "word": "menace",
+    "slug": "menace",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "mermaid-L5",
+    "word": "mermaid",
+    "slug": "mermaid",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "midst-L5",
+    "word": "midst",
+    "slug": "midst",
+    "pos": "n./prep.",
+    "level": 5
+  },
+  {
+    "id": "migrant-L5",
+    "word": "migrant",
+    "slug": "migrant",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "mileage-L5",
+    "word": "mileage",
+    "slug": "mileage",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "milestone-L5",
+    "word": "milestone",
+    "slug": "milestone",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mingle-L5",
+    "word": "mingle",
+    "slug": "mingle",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "minimal-L5",
+    "word": "minimal",
+    "slug": "minimal",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "mint-L5",
+    "word": "mint",
+    "slug": "mint",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mistress-L5",
+    "word": "mistress",
+    "slug": "mistress",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "moan-L5",
+    "word": "moan",
+    "slug": "moan",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "mock-L5",
+    "word": "mock",
+    "slug": "mock",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "mode-L5",
+    "word": "mode",
+    "slug": "mode",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "modernize-L5",
+    "word": "modernize",
+    "slug": "modernize",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "modify-L5",
+    "word": "modify",
+    "slug": "modify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "mold-L5",
+    "word": "mold",
+    "slug": "mold",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "molecule-L5",
+    "word": "molecule",
+    "slug": "molecule",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "monarch-L5",
+    "word": "monarch",
+    "slug": "monarch",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "monstrous-L5",
+    "word": "monstrous",
+    "slug": "monstrous",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "motive-L5",
+    "word": "motive",
+    "slug": "motive",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mound-L5",
+    "word": "mound",
+    "slug": "mound",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "mount-L5",
+    "word": "mount",
+    "slug": "mount",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "mourn-L5",
+    "word": "mourn",
+    "slug": "mourn",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "mower-L5",
+    "word": "mower",
+    "slug": "mower",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mumble-L5",
+    "word": "mumble",
+    "slug": "mumble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "muscular-L5",
+    "word": "muscular",
+    "slug": "muscular",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "muse-L5",
+    "word": "muse",
+    "slug": "muse",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mustard-L5",
+    "word": "mustard",
+    "slug": "mustard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "mutter-L5",
+    "word": "mutter",
+    "slug": "mutter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "mutton-L5",
+    "word": "mutton",
+    "slug": "mutton",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "myth-L5",
+    "word": "myth",
+    "slug": "myth",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "nag-L5",
+    "word": "nag",
+    "slug": "nag",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "naive-L5",
+    "word": "naive",
+    "slug": "naive",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "nasty-L5",
+    "word": "nasty",
+    "slug": "nasty",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "navigate-L5",
+    "word": "navigate",
+    "slug": "navigate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "newscast-L5",
+    "word": "newscast",
+    "slug": "newscast",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "nibble-L5",
+    "word": "nibble",
+    "slug": "nibble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "nickel-L5",
+    "word": "nickel",
+    "slug": "nickel",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "nightingale-L5",
+    "word": "nightingale",
+    "slug": "nightingale",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "nominate-L5",
+    "word": "nominate",
+    "slug": "nominate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "nonetheless-L5",
+    "word": "nonetheless",
+    "slug": "nonetheless",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "nonviolent-L5",
+    "word": "nonviolent",
+    "slug": "nonviolent",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "nostril-L5",
+    "word": "nostril",
+    "slug": "nostril",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "notable-L5",
+    "word": "notable",
+    "slug": "notable",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "noticeable-L5",
+    "word": "noticeable",
+    "slug": "noticeable",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "notify-L5",
+    "word": "notify",
+    "slug": "notify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "notion-L5",
+    "word": "notion",
+    "slug": "notion",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "novice-L5",
+    "word": "novice",
+    "slug": "novice",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "nowhere-L5",
+    "word": "nowhere",
+    "slug": "nowhere",
+    "pos": "adv./pron.",
+    "level": 5
+  },
+  {
+    "id": "nucleus-L5",
+    "word": "nucleus",
+    "slug": "nucleus",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "nude-L5",
+    "word": "nude",
+    "slug": "nude",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "oar-L5",
+    "word": "oar",
+    "slug": "oar",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "oasis-L5",
+    "word": "oasis",
+    "slug": "oasis",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "oath-L5",
+    "word": "oath",
+    "slug": "oath",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "oatmeal-L5",
+    "word": "oatmeal",
+    "slug": "oatmeal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "oblong-L5",
+    "word": "oblong",
+    "slug": "oblong",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "observer-L5",
+    "word": "observer",
+    "slug": "observer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "obstinate-L5",
+    "word": "obstinate",
+    "slug": "obstinate",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "occurrence-L5",
+    "word": "occurrence",
+    "slug": "occurrence",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "octopus-L5",
+    "word": "octopus",
+    "slug": "octopus",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "odds-L5",
+    "word": "odds",
+    "slug": "odds",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "odor-L5",
+    "word": "odor",
+    "slug": "odor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "olive-L5",
+    "word": "olive",
+    "slug": "olive",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "opponent-L5",
+    "word": "opponent",
+    "slug": "opponent",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "optimism-L5",
+    "word": "optimism",
+    "slug": "optimism",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "orchard-L5",
+    "word": "orchard",
+    "slug": "orchard",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "organizer-L5",
+    "word": "organizer",
+    "slug": "organizer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "orient-L5",
+    "word": "orient",
+    "slug": "orient",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "oriental-L5",
+    "word": "oriental",
+    "slug": "oriental",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "ornament-L5",
+    "word": "ornament",
+    "slug": "ornament",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "orphanage-L5",
+    "word": "orphanage",
+    "slug": "orphanage",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ostrich-L5",
+    "word": "ostrich",
+    "slug": "ostrich",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ounce-L5",
+    "word": "ounce",
+    "slug": "ounce",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "outdo-L5",
+    "word": "outdo",
+    "slug": "outdo",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "outgoing-L5",
+    "word": "outgoing",
+    "slug": "outgoing",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "output-L5",
+    "word": "output",
+    "slug": "output",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "outsider-L5",
+    "word": "outsider",
+    "slug": "outsider",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "outskirts-L5",
+    "word": "outskirts",
+    "slug": "outskirts",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "outward-L5",
+    "word": "outward",
+    "slug": "outward",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "outward-L5-1",
+    "word": "outward(s)",
+    "slug": "outward",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "overall-L5",
+    "word": "overall",
+    "slug": "overall",
+    "pos": "n./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "overdo-L5",
+    "word": "overdo",
+    "slug": "overdo",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "overeat-L5",
+    "word": "overeat",
+    "slug": "overeat",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "overflow-L5",
+    "word": "overflow",
+    "slug": "overflow",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "overhear-L5",
+    "word": "overhear",
+    "slug": "overhear",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "oversleep-L5",
+    "word": "oversleep",
+    "slug": "oversleep",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "overwhelm-L5",
+    "word": "overwhelm",
+    "slug": "overwhelm",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "overwork-L5",
+    "word": "overwork",
+    "slug": "overwork",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "oyster-L5",
+    "word": "oyster",
+    "slug": "oyster",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ozone-L5",
+    "word": "ozone",
+    "slug": "ozone",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pacific-L5",
+    "word": "pacific",
+    "slug": "pacific",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "packet-L5",
+    "word": "packet",
+    "slug": "packet",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "paddle-L5",
+    "word": "paddle",
+    "slug": "paddle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pane-L5",
+    "word": "pane",
+    "slug": "pane",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "paradox-L5",
+    "word": "paradox",
+    "slug": "paradox",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "parallel-L5",
+    "word": "parallel",
+    "slug": "parallel",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "parlor-L5",
+    "word": "parlor",
+    "slug": "parlor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "participant-L5",
+    "word": "participant",
+    "slug": "participant",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "particle-L5",
+    "word": "particle",
+    "slug": "particle",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "partly-L5",
+    "word": "partly",
+    "slug": "partly",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "passion-L5",
+    "word": "passion",
+    "slug": "passion",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "passionate-L5",
+    "word": "passionate",
+    "slug": "passionate",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "pastime-L5",
+    "word": "pastime",
+    "slug": "pastime",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pastry-L5",
+    "word": "pastry",
+    "slug": "pastry",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "patch-L5",
+    "word": "patch",
+    "slug": "patch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "patent-L5",
+    "word": "patent",
+    "slug": "patent",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "patriot-L5",
+    "word": "patriot",
+    "slug": "patriot",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "patrol-L5",
+    "word": "patrol",
+    "slug": "patrol",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "patron-L5",
+    "word": "patron",
+    "slug": "patron",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "peacock-L5",
+    "word": "peacock",
+    "slug": "peacock",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "peasant-L5",
+    "word": "peasant",
+    "slug": "peasant",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "peck-L5",
+    "word": "peck",
+    "slug": "peck",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "peddler-L5",
+    "word": "peddler",
+    "slug": "peddler",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "peek-L5",
+    "word": "peek",
+    "slug": "peek",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "peg-L5",
+    "word": "peg",
+    "slug": "peg",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "penetrate-L5",
+    "word": "penetrate",
+    "slug": "penetrate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "perceive-L5",
+    "word": "perceive",
+    "slug": "perceive",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "perch-L5",
+    "word": "perch",
+    "slug": "perch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "performer-L5",
+    "word": "performer",
+    "slug": "performer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "peril-L5",
+    "word": "peril",
+    "slug": "peril",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "perish-L5",
+    "word": "perish",
+    "slug": "perish",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "permissible-L5",
+    "word": "permissible",
+    "slug": "permissible",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "persist-L5",
+    "word": "persist",
+    "slug": "persist",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "personnel-L5",
+    "word": "personnel",
+    "slug": "personnel",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pessimism-L5",
+    "word": "pessimism",
+    "slug": "pessimism",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pier-L5",
+    "word": "pier",
+    "slug": "pier",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pilgrim-L5",
+    "word": "pilgrim",
+    "slug": "pilgrim",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pillar-L5",
+    "word": "pillar",
+    "slug": "pillar",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pimple-L5",
+    "word": "pimple",
+    "slug": "pimple",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "pinch-L5",
+    "word": "pinch",
+    "slug": "pinch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "piss-L5",
+    "word": "piss",
+    "slug": "piss",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pistol-L5",
+    "word": "pistol",
+    "slug": "pistol",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "plague-L5",
+    "word": "plague",
+    "slug": "plague",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "plantation-L5",
+    "word": "plantation",
+    "slug": "plantation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "playwright-L5",
+    "word": "playwright",
+    "slug": "playwright",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "plea-L5",
+    "word": "plea",
+    "slug": "plea",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "plead-L5",
+    "word": "plead",
+    "slug": "plead",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "pledge-L5",
+    "word": "pledge",
+    "slug": "pledge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "plow-L5",
+    "word": "plow",
+    "slug": "plow",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pluck-L5",
+    "word": "pluck",
+    "slug": "pluck",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "plunge-L5",
+    "word": "plunge",
+    "slug": "plunge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pocketbook-L5",
+    "word": "pocketbook",
+    "slug": "pocketbook",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "poetic-L5",
+    "word": "poetic",
+    "slug": "poetic",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "poke-L5",
+    "word": "poke",
+    "slug": "poke",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "polar-L5",
+    "word": "polar",
+    "slug": "polar",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "porch-L5",
+    "word": "porch",
+    "slug": "porch",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "potential-L5",
+    "word": "potential",
+    "slug": "potential",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "poultry-L5",
+    "word": "poultry",
+    "slug": "poultry",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "prairie-L5",
+    "word": "prairie",
+    "slug": "prairie",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "preach-L5",
+    "word": "preach",
+    "slug": "preach",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "precaution-L5",
+    "word": "precaution",
+    "slug": "precaution",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "preference-L5",
+    "word": "preference",
+    "slug": "preference",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "prehistoric-L5",
+    "word": "prehistoric",
+    "slug": "prehistoric",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "prevail-L5",
+    "word": "prevail",
+    "slug": "prevail",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "preview-L5",
+    "word": "preview",
+    "slug": "preview",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "prey-L5",
+    "word": "prey",
+    "slug": "prey",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "priceless-L5",
+    "word": "priceless",
+    "slug": "priceless",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "prick-L5",
+    "word": "prick",
+    "slug": "prick",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "prior-L5",
+    "word": "prior",
+    "slug": "prior",
+    "pos": "n./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "priority-L5",
+    "word": "priority",
+    "slug": "priority",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "procession-L5",
+    "word": "procession",
+    "slug": "procession",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "profile-L5",
+    "word": "profile",
+    "slug": "profile",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "prolong-L5",
+    "word": "prolong",
+    "slug": "prolong",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "prop-L5",
+    "word": "prop",
+    "slug": "prop",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "prophet-L5",
+    "word": "prophet",
+    "slug": "prophet",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "proportion-L5",
+    "word": "proportion",
+    "slug": "proportion",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "prospect-L5",
+    "word": "prospect",
+    "slug": "prospect",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "province-L5",
+    "word": "province",
+    "slug": "province",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "prune-L5",
+    "word": "prune",
+    "slug": "prune",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "publicize-L5",
+    "word": "publicize",
+    "slug": "publicize",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "puff-L5",
+    "word": "puff",
+    "slug": "puff",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pulse-L5",
+    "word": "pulse",
+    "slug": "pulse",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "purchase-L5",
+    "word": "purchase",
+    "slug": "purchase",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "pyramid-L5",
+    "word": "pyramid",
+    "slug": "pyramid",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "quack-L5",
+    "word": "quack",
+    "slug": "quack",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "qualify-L5",
+    "word": "qualify",
+    "slug": "qualify",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "quart-L5",
+    "word": "quart",
+    "slug": "quart",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "quest-L5",
+    "word": "quest",
+    "slug": "quest",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "quiver-L5",
+    "word": "quiver",
+    "slug": "quiver",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rack-L5",
+    "word": "rack",
+    "slug": "rack",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "radish-L5",
+    "word": "radish",
+    "slug": "radish",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "radius-L5",
+    "word": "radius",
+    "slug": "radius",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ragged-L5",
+    "word": "ragged",
+    "slug": "ragged",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "rail-L5",
+    "word": "rail",
+    "slug": "rail",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "rally-L5",
+    "word": "rally",
+    "slug": "rally",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ranch-L5",
+    "word": "ranch",
+    "slug": "ranch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rascal-L5",
+    "word": "rascal",
+    "slug": "rascal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "ratio-L5",
+    "word": "ratio",
+    "slug": "ratio",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "rattle-L5",
+    "word": "rattle",
+    "slug": "rattle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "realm-L5",
+    "word": "realm",
+    "slug": "realm",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "reap-L5",
+    "word": "reap",
+    "slug": "reap",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "rear-L5",
+    "word": "rear",
+    "slug": "rear",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "reckless-L5",
+    "word": "reckless",
+    "slug": "reckless",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "reckon-L5",
+    "word": "reckon",
+    "slug": "reckon",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "recommend-L5",
+    "word": "recommend",
+    "slug": "recommend",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "reef-L5",
+    "word": "reef",
+    "slug": "reef",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "reel-L5",
+    "word": "reel",
+    "slug": "reel",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "referee-L5",
+    "word": "referee/umpire",
+    "slug": "referee",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "refuge-L5",
+    "word": "refuge/sanctuary",
+    "slug": "refuge",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "refute-L5",
+    "word": "refute",
+    "slug": "refute",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "reign-L5",
+    "word": "reign",
+    "slug": "reign",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rejoice-L5",
+    "word": "rejoice",
+    "slug": "rejoice",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "relic-L5",
+    "word": "relic",
+    "slug": "relic",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "reminder-L5",
+    "word": "reminder",
+    "slug": "reminder",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "repay-L5",
+    "word": "repay",
+    "slug": "repay",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "reproduce-L5",
+    "word": "reproduce",
+    "slug": "reproduce",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "reptile-L5",
+    "word": "reptile",
+    "slug": "reptile",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "republican-L5",
+    "word": "republican",
+    "slug": "republican",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "resent-L5",
+    "word": "resent(ment)",
+    "slug": "resent",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "reside-L5",
+    "word": "reside",
+    "slug": "reside",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "residence-L5",
+    "word": "residence",
+    "slug": "residence",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "resident-L5",
+    "word": "resident",
+    "slug": "resident",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "resort-L5",
+    "word": "resort",
+    "slug": "resort",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "restrain-L5",
+    "word": "restrain",
+    "slug": "restrain",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "resume-L5",
+    "word": "resume",
+    "slug": "resume",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "retort-L5",
+    "word": "retort",
+    "slug": "retort",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "reverse-L5",
+    "word": "reverse",
+    "slug": "reverse",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "revive-L5",
+    "word": "revive",
+    "slug": "revive",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "revolt-L5",
+    "word": "revolt",
+    "slug": "revolt",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "revolve-L5",
+    "word": "revolve",
+    "slug": "revolve",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "rhinoceros-L5",
+    "word": "rhinoceros/rhino",
+    "slug": "rhinoceros",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "rib-L5",
+    "word": "rib",
+    "slug": "rib",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ridge-L5",
+    "word": "ridge",
+    "slug": "ridge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ridiculous-L5",
+    "word": "ridiculous",
+    "slug": "ridiculous",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "rifle-L5",
+    "word": "rifle",
+    "slug": "rifle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rigid-L5",
+    "word": "rigid",
+    "slug": "rigid",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "rim-L5",
+    "word": "rim",
+    "slug": "rim",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rip-L5",
+    "word": "rip",
+    "slug": "rip",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ripple-L5",
+    "word": "ripple",
+    "slug": "ripple",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rival-L5",
+    "word": "rival",
+    "slug": "rival",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "roam-L5",
+    "word": "roam",
+    "slug": "roam",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "robin-L5",
+    "word": "robin",
+    "slug": "robin",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "robust-L5",
+    "word": "robust",
+    "slug": "robust",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "rod-L5",
+    "word": "rod",
+    "slug": "rod",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "rubbish-L5",
+    "word": "rubbish",
+    "slug": "rubbish",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "rugged-L5",
+    "word": "rugged",
+    "slug": "rugged",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "rumble-L5",
+    "word": "rumble",
+    "slug": "rumble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "rustle-L5",
+    "word": "rustle",
+    "slug": "rustle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sacred-L5",
+    "word": "sacred",
+    "slug": "sacred",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "saddle-L5",
+    "word": "saddle",
+    "slug": "saddle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "saint-L5",
+    "word": "saint",
+    "slug": "saint",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "salmon-L5",
+    "word": "salmon",
+    "slug": "salmon",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "salute-L5",
+    "word": "salute",
+    "slug": "salute",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sandal-L5",
+    "word": "sandal",
+    "slug": "sandal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "savage-L5",
+    "word": "savage",
+    "slug": "savage",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "scan-L5",
+    "word": "scan",
+    "slug": "scan",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scandal-L5",
+    "word": "scandal",
+    "slug": "scandal",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "scar-L5",
+    "word": "scar",
+    "slug": "scar",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scent-L5",
+    "word": "scent",
+    "slug": "scent",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scheme-L5",
+    "word": "scheme",
+    "slug": "scheme",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scorn-L5",
+    "word": "scorn",
+    "slug": "scorn",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scramble-L5",
+    "word": "scramble",
+    "slug": "scramble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scrap-L5",
+    "word": "scrap",
+    "slug": "scrap",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scrape-L5",
+    "word": "scrape",
+    "slug": "scrape",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "scroll-L5",
+    "word": "scroll",
+    "slug": "scroll",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sculptor-L5",
+    "word": "sculptor",
+    "slug": "sculptor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "secure-L5",
+    "word": "secure",
+    "slug": "secure",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "segment-L5",
+    "word": "segment",
+    "slug": "segment",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sensation-L5",
+    "word": "sensation",
+    "slug": "sensation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sensitivity-L5",
+    "word": "sensitivity",
+    "slug": "sensitivity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sentiment-L5",
+    "word": "sentiment",
+    "slug": "sentiment",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sergeant-L5",
+    "word": "sergeant",
+    "slug": "sergeant",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "series-L5",
+    "word": "series",
+    "slug": "series",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sermon-L5",
+    "word": "sermon",
+    "slug": "sermon",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "server-L5",
+    "word": "server",
+    "slug": "server",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "setting-L5",
+    "word": "setting",
+    "slug": "setting",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shabby-L5",
+    "word": "shabby",
+    "slug": "shabby",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "sharpen-L5",
+    "word": "sharpen",
+    "slug": "sharpen",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "shatter-L5",
+    "word": "shatter",
+    "slug": "shatter",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "sheriff-L5",
+    "word": "sheriff",
+    "slug": "sheriff",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shield-L5",
+    "word": "shield",
+    "slug": "shield",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shiver-L5",
+    "word": "shiver",
+    "slug": "shiver",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shortage-L5",
+    "word": "shortage",
+    "slug": "shortage",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shortcoming-L5",
+    "word": "shortcoming",
+    "slug": "shortcoming",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shove-L5",
+    "word": "shove",
+    "slug": "shove",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shred-L5",
+    "word": "shred",
+    "slug": "shred",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shriek-L5",
+    "word": "shriek",
+    "slug": "shriek",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shrine-L5",
+    "word": "shrine",
+    "slug": "shrine",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shrub-L5",
+    "word": "shrub",
+    "slug": "shrub",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "shudder-L5",
+    "word": "shudder",
+    "slug": "shudder",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "shutter-L5",
+    "word": "shutter",
+    "slug": "shutter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "silkworm-L5",
+    "word": "silkworm",
+    "slug": "silkworm",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "simmer-L5",
+    "word": "simmer",
+    "slug": "simmer",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "skeleton-L5",
+    "word": "skeleton",
+    "slug": "skeleton",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "skull-L5",
+    "word": "skull",
+    "slug": "skull",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "slam-L5",
+    "word": "slam",
+    "slug": "slam",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "slap-L5",
+    "word": "slap",
+    "slug": "slap",
+    "pos": "n./v./adv.",
+    "level": 5
+  },
+  {
+    "id": "slaughter-L5",
+    "word": "slaughter",
+    "slug": "slaughter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "slay-L5",
+    "word": "slay",
+    "slug": "slay",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "sloppy-L5",
+    "word": "sloppy",
+    "slug": "sloppy",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "slump-L5",
+    "word": "slump",
+    "slug": "slump",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sly-L5",
+    "word": "sly",
+    "slug": "sly",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "smash-L5",
+    "word": "smash",
+    "slug": "smash",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "snarl-L5",
+    "word": "snarl",
+    "slug": "snarl",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "snatch-L5",
+    "word": "snatch",
+    "slug": "snatch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sneak-L5",
+    "word": "sneak",
+    "slug": "sneak",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sneaker-L5",
+    "word": "sneaker(s)",
+    "slug": "sneaker",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sniff-L5",
+    "word": "sniff",
+    "slug": "sniff",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "snore-L5",
+    "word": "snore",
+    "slug": "snore",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "snort-L5",
+    "word": "snort",
+    "slug": "snort",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "soak-L5",
+    "word": "soak",
+    "slug": "soak",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sober-L5",
+    "word": "sober",
+    "slug": "sober",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "soften-L5",
+    "word": "soften",
+    "slug": "soften",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "sole-L5",
+    "word": "sole",
+    "slug": "sole",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "solemn-L5",
+    "word": "solemn",
+    "slug": "solemn",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "solitary-L5",
+    "word": "solitary",
+    "slug": "solitary",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "solo-L5",
+    "word": "solo",
+    "slug": "solo",
+    "pos": "n./v./adv.",
+    "level": 5
+  },
+  {
+    "id": "sovereign-L5",
+    "word": "sovereign",
+    "slug": "sovereign",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "sow-L5",
+    "word": "sow",
+    "slug": "sow",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "spacecraft-L5",
+    "word": "spacecraft",
+    "slug": "spacecraft",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "specialist-L5",
+    "word": "specialist",
+    "slug": "specialist",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "specimen-L5",
+    "word": "specimen",
+    "slug": "specimen",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "spectacle-L5",
+    "word": "spectacle",
+    "slug": "spectacle",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "spectator-L5",
+    "word": "spectator",
+    "slug": "spectator",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "spine-L5",
+    "word": "spine",
+    "slug": "spine",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "splendor-L5",
+    "word": "splendor",
+    "slug": "splendor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sponge-L5",
+    "word": "sponge",
+    "slug": "sponge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "spotlight-L5",
+    "word": "spotlight",
+    "slug": "spotlight",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sprint-L5",
+    "word": "sprint",
+    "slug": "sprint",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "spur-L5",
+    "word": "spur",
+    "slug": "spur",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "squash-L5",
+    "word": "squash",
+    "slug": "squash",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "squat-L5",
+    "word": "squat",
+    "slug": "squat",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "stack-L5",
+    "word": "stack",
+    "slug": "stack",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stagger-L5",
+    "word": "stagger",
+    "slug": "stagger",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stain-L5",
+    "word": "stain",
+    "slug": "stain",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stake-L5",
+    "word": "stake",
+    "slug": "stake",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stalk-L5",
+    "word": "stalk",
+    "slug": "stalk",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "stall-L5",
+    "word": "stall",
+    "slug": "stall",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stanza-L5",
+    "word": "stanza",
+    "slug": "stanza",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "startle-L5",
+    "word": "startle",
+    "slug": "startle",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "statesman-L5",
+    "word": "statesman",
+    "slug": "statesman",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "statistic-L5",
+    "word": "statistic(s)",
+    "slug": "statistic",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "statistical-L5",
+    "word": "statistical",
+    "slug": "statistical",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "steamer-L5",
+    "word": "steamer",
+    "slug": "steamer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "steer-L5",
+    "word": "steer",
+    "slug": "steer",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stereotype-L5",
+    "word": "stereotype",
+    "slug": "stereotype",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stern-L5",
+    "word": "stern",
+    "slug": "stern",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "stew-L5",
+    "word": "stew",
+    "slug": "stew",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "steward-L5",
+    "word": "steward/ess",
+    "slug": "steward",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "stink-L5",
+    "word": "stink",
+    "slug": "stink",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stock-L5",
+    "word": "stock",
+    "slug": "stock",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "stoop-L5",
+    "word": "stoop",
+    "slug": "stoop",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "storage-L5",
+    "word": "storage",
+    "slug": "storage",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "stout-L5",
+    "word": "stout",
+    "slug": "stout",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "straighten-L5",
+    "word": "straighten",
+    "slug": "straighten",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "straightforward-L5",
+    "word": "straightforward",
+    "slug": "straightforward",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "strain-L5",
+    "word": "strain",
+    "slug": "strain",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "strait-L5",
+    "word": "strait",
+    "slug": "strait",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "strand-L5",
+    "word": "strand",
+    "slug": "strand",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "strap-L5",
+    "word": "strap",
+    "slug": "strap",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stray-L5",
+    "word": "stray",
+    "slug": "stray",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "streak-L5",
+    "word": "streak",
+    "slug": "streak",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stride-L5",
+    "word": "stride",
+    "slug": "stride",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stripe-L5",
+    "word": "stripe",
+    "slug": "stripe",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "stroll-L5",
+    "word": "stroll",
+    "slug": "stroll",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "structural-L5",
+    "word": "structural",
+    "slug": "structural",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "stumble-L5",
+    "word": "stumble",
+    "slug": "stumble",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stump-L5",
+    "word": "stump",
+    "slug": "stump",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stun-L5",
+    "word": "stun",
+    "slug": "stun",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "sturdy-L5",
+    "word": "sturdy",
+    "slug": "sturdy",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "stutter-L5",
+    "word": "stutter",
+    "slug": "stutter",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "stylish-L5",
+    "word": "stylish",
+    "slug": "stylish",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "submit-L5",
+    "word": "submit",
+    "slug": "submit",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "substantial-L5",
+    "word": "substantial",
+    "slug": "substantial",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "substitute-L5",
+    "word": "substitute",
+    "slug": "substitute",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "suitcase-L5",
+    "word": "suitcase",
+    "slug": "suitcase",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "sulfur-L5",
+    "word": "sulfur",
+    "slug": "sulfur",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "summon-L5",
+    "word": "summon",
+    "slug": "summon",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "superficial-L5",
+    "word": "superficial",
+    "slug": "superficial",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "superstition-L5",
+    "word": "superstition",
+    "slug": "superstition",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "supervise-L5",
+    "word": "supervise",
+    "slug": "supervise",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "supervisor-L5",
+    "word": "supervisor",
+    "slug": "supervisor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "suppress-L5",
+    "word": "suppress",
+    "slug": "suppress",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "supreme-L5",
+    "word": "supreme",
+    "slug": "supreme",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "surge-L5",
+    "word": "surge",
+    "slug": "surge",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "suspend-L5",
+    "word": "suspend",
+    "slug": "suspend",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "sustain-L5",
+    "word": "sustain",
+    "slug": "sustain",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "swamp-L5",
+    "word": "swamp",
+    "slug": "swamp",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "swarm-L5",
+    "word": "swarm",
+    "slug": "swarm",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "sympathize-L5",
+    "word": "sympathize",
+    "slug": "sympathize",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "tackle-L5",
+    "word": "tackle",
+    "slug": "tackle",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "tan-L5",
+    "word": "tan",
+    "slug": "tan",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "tangle-L5",
+    "word": "tangle",
+    "slug": "tangle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tar-L5",
+    "word": "tar",
+    "slug": "tar",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tart-L5",
+    "word": "tart",
+    "slug": "tart",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "taunt-L5",
+    "word": "taunt",
+    "slug": "taunt",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tavern-L5",
+    "word": "tavern",
+    "slug": "tavern",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "thigh-L5",
+    "word": "thigh",
+    "slug": "thigh",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "thorn-L5",
+    "word": "thorn",
+    "slug": "thorn",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "thrill-L5",
+    "word": "thrill",
+    "slug": "thrill",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "thriller-L5",
+    "word": "thriller",
+    "slug": "thriller",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "throne-L5",
+    "word": "throne",
+    "slug": "throne",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "throng-L5",
+    "word": "throng",
+    "slug": "throng",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "thrust-L5",
+    "word": "thrust",
+    "slug": "thrust",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tick-L5",
+    "word": "tick",
+    "slug": "tick",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tile-L5",
+    "word": "tile",
+    "slug": "tile",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tilt-L5",
+    "word": "tilt",
+    "slug": "tilt",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tin-L5",
+    "word": "tin",
+    "slug": "tin",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tiptoe-L5",
+    "word": "tiptoe",
+    "slug": "tiptoe",
+    "pos": "n./v./adv.",
+    "level": 5
+  },
+  {
+    "id": "toad-L5",
+    "word": "toad",
+    "slug": "toad",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "toil-L5",
+    "word": "toil",
+    "slug": "toil",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "token-L5",
+    "word": "token",
+    "slug": "token",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "torch-L5",
+    "word": "torch",
+    "slug": "torch",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "torment-L5",
+    "word": "torment",
+    "slug": "torment",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "torrent-L5",
+    "word": "torrent",
+    "slug": "torrent",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "torture-L5",
+    "word": "torture",
+    "slug": "torture",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tournament-L5",
+    "word": "tournament",
+    "slug": "tournament",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "treasury-L5",
+    "word": "treasury",
+    "slug": "treasury",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "treaty-L5",
+    "word": "treaty",
+    "slug": "treaty",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "trench-L5",
+    "word": "trench",
+    "slug": "trench",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tribute-L5",
+    "word": "tribute",
+    "slug": "tribute",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "trifle-L5",
+    "word": "trifle",
+    "slug": "trifle",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "trim-L5",
+    "word": "trim",
+    "slug": "trim",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "triple-L5",
+    "word": "triple",
+    "slug": "triple",
+    "pos": "n./v./adj.",
+    "level": 5
+  },
+  {
+    "id": "trot-L5",
+    "word": "trot",
+    "slug": "trot",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "trout-L5",
+    "word": "trout",
+    "slug": "trout",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "tuck-L5",
+    "word": "tuck",
+    "slug": "tuck",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "tuition-L5",
+    "word": "tuition",
+    "slug": "tuition",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "tuna-L5",
+    "word": "tuna",
+    "slug": "tuna",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "tyrant-L5",
+    "word": "tyrant",
+    "slug": "tyrant",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "umpire-L5",
+    "word": "umpire",
+    "slug": "umpire",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "undergraduate-L5",
+    "word": "undergraduate",
+    "slug": "undergraduate",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "underline-L5",
+    "word": "underline",
+    "slug": "underline",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "underneath-L5",
+    "word": "underneath",
+    "slug": "underneath",
+    "pos": "n./adj./adv./prep.",
+    "level": 5
+  },
+  {
+    "id": "understandable-L5",
+    "word": "understandable",
+    "slug": "understandable",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "undoubtedly-L5",
+    "word": "undoubtedly",
+    "slug": "undoubtedly",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "update-L5",
+    "word": "update",
+    "slug": "update",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "upright-L5",
+    "word": "upright",
+    "slug": "upright",
+    "pos": "n./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "upward-L5",
+    "word": "upward",
+    "slug": "upward",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "upward-L5-1",
+    "word": "upward(s)",
+    "slug": "upward",
+    "pos": "adv.",
+    "level": 5
+  },
+  {
+    "id": "utter-L5",
+    "word": "utter",
+    "slug": "utter",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "vacancy-L5",
+    "word": "vacancy",
+    "slug": "vacancy",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vacuum-L5",
+    "word": "vacuum",
+    "slug": "vacuum",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "vague-L5",
+    "word": "vague",
+    "slug": "vague",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "vanity-L5",
+    "word": "vanity",
+    "slug": "vanity",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vapor-L5",
+    "word": "vapor",
+    "slug": "vapor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vegetation-L5",
+    "word": "vegetation",
+    "slug": "vegetation",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "veil-L5",
+    "word": "veil",
+    "slug": "veil",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "vein-L5",
+    "word": "vein",
+    "slug": "vein",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "velvet-L5",
+    "word": "velvet",
+    "slug": "velvet",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "venture-L5",
+    "word": "venture",
+    "slug": "venture",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "verbal-L5",
+    "word": "verbal",
+    "slug": "verbal",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "versus-L5",
+    "word": "versus",
+    "slug": "versus",
+    "pos": "prep.",
+    "level": 5
+  },
+  {
+    "id": "vertical-L5",
+    "word": "vertical",
+    "slug": "vertical",
+    "pos": "n./adj.",
+    "level": 5
+  },
+  {
+    "id": "veto-L5",
+    "word": "veto",
+    "slug": "veto",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "via-L5",
+    "word": "via",
+    "slug": "via",
+    "pos": "prep.",
+    "level": 5
+  },
+  {
+    "id": "vibrate-L5",
+    "word": "vibrate",
+    "slug": "vibrate",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "videotape-L5",
+    "word": "videotape",
+    "slug": "videotape",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "viewer-L5",
+    "word": "viewer",
+    "slug": "viewer",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vigor-L5",
+    "word": "vigor",
+    "slug": "vigor",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vigorous-L5",
+    "word": "vigorous",
+    "slug": "vigorous",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "villain-L5",
+    "word": "villain",
+    "slug": "villain",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vine-L5",
+    "word": "vine",
+    "slug": "vine",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "violinist-L5",
+    "word": "violinist",
+    "slug": "violinist",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "visa-L5",
+    "word": "visa",
+    "slug": "visa",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "vow-L5",
+    "word": "vow",
+    "slug": "vow",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "wade-L5",
+    "word": "wade",
+    "slug": "wade",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "wail-L5",
+    "word": "wail",
+    "slug": "wail",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ward-L5",
+    "word": "ward",
+    "slug": "ward",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "ware-L5",
+    "word": "ware",
+    "slug": "ware",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "warehouse-L5",
+    "word": "warehouse",
+    "slug": "warehouse",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "warrior-L5",
+    "word": "warrior",
+    "slug": "warrior",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wary-L5",
+    "word": "wary",
+    "slug": "wary",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "weary-L5",
+    "word": "weary",
+    "slug": "weary",
+    "pos": "v./adj.",
+    "level": 5
+  },
+  {
+    "id": "weird-L5",
+    "word": "weird",
+    "slug": "weird",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "wharf-L5",
+    "word": "wharf",
+    "slug": "wharf",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "wheelchair-L5",
+    "word": "wheelchair",
+    "slug": "wheelchair",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "whereabouts-L5",
+    "word": "whereabouts",
+    "slug": "whereabouts",
+    "pos": "n./adv.",
+    "level": 5
+  },
+  {
+    "id": "whereas-L5",
+    "word": "whereas",
+    "slug": "whereas",
+    "pos": "conj.",
+    "level": 5
+  },
+  {
+    "id": "whine-L5",
+    "word": "whine",
+    "slug": "whine",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "whirl-L5",
+    "word": "whirl",
+    "slug": "whirl",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "whisk-L5",
+    "word": "whisk",
+    "slug": "whisk",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "whiskey-L5",
+    "word": "whiskey/whisky",
+    "slug": "whiskey",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wholesale-L5",
+    "word": "wholesale",
+    "slug": "wholesale",
+    "pos": "n./v./adj./adv.",
+    "level": 5
+  },
+  {
+    "id": "wholesome-L5",
+    "word": "wholesome",
+    "slug": "wholesome",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "widespread-L5",
+    "word": "widespread",
+    "slug": "widespread",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "widow-L5",
+    "word": "widow/widower",
+    "slug": "widow",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "wig-L5",
+    "word": "wig",
+    "slug": "wig",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wilderness-L5",
+    "word": "wilderness",
+    "slug": "wilderness",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wildlife-L5",
+    "word": "wildlife",
+    "slug": "wildlife",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wither-L5",
+    "word": "wither",
+    "slug": "wither",
+    "pos": "v.",
+    "level": 5
+  },
+  {
+    "id": "woe-L5",
+    "word": "woe",
+    "slug": "woe",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "woodpecker-L5",
+    "word": "woodpecker",
+    "slug": "woodpecker",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "workshop-L5",
+    "word": "workshop",
+    "slug": "workshop",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "worship-L5",
+    "word": "worship",
+    "slug": "worship",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "worthwhile-L5",
+    "word": "worthwhile",
+    "slug": "worthwhile",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "worthy-L5",
+    "word": "worthy",
+    "slug": "worthy",
+    "pos": "adj.",
+    "level": 5
+  },
+  {
+    "id": "wreath-L5",
+    "word": "wreath",
+    "slug": "wreath",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "wring-L5",
+    "word": "wring",
+    "slug": "wring",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "yacht-L5",
+    "word": "yacht",
+    "slug": "yacht",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "yarn-L5",
+    "word": "yarn",
+    "slug": "yarn",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "yeast-L5",
+    "word": "yeast",
+    "slug": "yeast",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "yield-L5",
+    "word": "yield",
+    "slug": "yield",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "yoga-L5",
+    "word": "yoga",
+    "slug": "yoga",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "zinc-L5",
+    "word": "zinc",
+    "slug": "zinc",
+    "pos": "n.",
+    "level": 5
+  },
+  {
+    "id": "zip-L5",
+    "word": "zip/zone/zip code",
+    "slug": "zip",
+    "pos": "n./v.",
+    "level": 5
+  },
+  {
+    "id": "zoom-L5",
+    "word": "zoom",
+    "slug": "zoom",
+    "pos": "n./v.",
+    "level": 5
+  }
+]

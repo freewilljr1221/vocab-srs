@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-18T13:40:10.344Z",
+  "levels": {
+    "L1": {
+      "raw_lines": 1054,
+      "cards": 1018,
+      "merged_down": 36,
+      "parse_fails": 0
+    },
+    "L2": {
+      "raw_lines": 1053,
+      "cards": 1030,
+      "merged_down": 23,
+      "parse_fails": 0
+    },
+    "L3": {
+      "raw_lines": 1055,
+      "cards": 1053,
+      "merged_down": 2,
+      "parse_fails": 0
+    },
+    "L4": {
+      "raw_lines": 1058,
+      "cards": 1047,
+      "merged_down": 11,
+      "parse_fails": 0
+    },
+    "L5": {
+      "raw_lines": 1061,
+      "cards": 1055,
+      "merged_down": 6,
+      "parse_fails": 0
+    },
+    "L6": {
+      "raw_lines": 1054,
+      "cards": 1052,
+      "merged_down": 2,
+      "parse_fails": 0
+    }
+  },
+  "total_cards": 6255,
+  "total_raw_lines": 6335
+}

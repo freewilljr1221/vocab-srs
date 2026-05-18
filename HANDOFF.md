@@ -1,0 +1,218 @@
+# Vocab-SRS Handoff (Session 2 → 3)
+
+> **下一次 session 開頭直接讀這檔,所有 context 都在這。**
+
+## 目標
+單字複習 PWA,**6255 字** (L1-L6),iPhone/iPad/Android 通用,GH Pages 部署。
+- 正面:單字 + 美式 IPA + MP3 發音
+- 背面:詞性 (多 POS 並列) + 中文翻譯 (繁中,多義) + 英英定義 + 英文例句
+- SRS (間隔重複) — **下次 session 才做**
+
+## 目前狀態 (2026-05-18 session 2 結束時)
+
+### 資料管線
+| Pass | 內容 | 狀態 | 檔案 |
+|------|------|------|------|
+| **01 CSV→Skeleton** | 6255 卡,id/word/slug/pos/level | ✅ 完成 | `data/skeleton/L{1..6}.json` |
+| **02 Pass A Dictionary** | IPA / MP3 / 英英 / 英例 | 🟡 L1✅ L2✅ L3🟡進行中 L4-L6⏸ | `data/enriched/L{1..6}.json` |
+| **03 Pass B 中文翻譯** | zh_by_pos / zh_main | 🟡 L1進行中 (~9%) | 同上,加 `zh_b` 欄位 |
+| **Pass C 中文例句** | 還沒寫腳本 | ⏸ 規劃中 | (未做) |
+| **10 Build Ship** | 壓縮 + 複製到 src/data/ | ✅ 工具好了 | `src/data/L{1..6}.json` |
+
+### 前端
+| 檔案 | 狀態 |
+|------|------|
+| `src/index.html` | ✅ 完成 (vanilla JS, iOS-safe, 翻卡 + 流覽,**無 SRS**) |
+| `src/sw.js` | ✅ 完成 (cache-first shell, stale-while-revalidate data) |
+| `src/manifest.json` | ✅ 完成 (相對路徑,GH Pages 友善) |
+| `src/icons/` | ✅ 從原專案複製 |
+| **SRS 演算法** | ⏸ 下次做 |
+| **設定畫面** (level / 每日新卡量 / TTS 速度) | ⏸ 下次做 |
+| **匯入/匯出 SRS state** | ⏸ 下次做 |
+
+### Pass A 覆蓋率 (L1, L2 完成)
+- L1: 1018 卡 → 981 dict found (96.4%), 4 真 404, 33 transient err (下次 resume 會重打)
+- L2: 1030 卡 → 987 dict found (95.8%), 4 真 404, 39 transient err
+
+### Pass B 翻譯品質實測 (L1 前 10 字)
+```
+able          adj.        能夠的; 能幹的; 有能力的
+about         adv./prep.  大約; 到處; 四處 / 關於; 在...周圍
+according to  prep.       根據; 按照; 依據 (dict 404 也救回來)
+actor/actress n.          演員; 演藝人員 (斜線字 OK)
+address       n./v.       地址; 住址 / 準備; 處理; 應對 (多 POS 分離)
+```
+品質可用,個別字略不精準 (`above (adj.)→天上的` 應是 `上述的`),v1 接受。
+
+---
+
+## 下次 Session 第一件事
+
+```bash
+cd C:\HansDB\Vocab-SRS
+
+# 1. 看看背景 job 跑完沒
+ls -la data/enriched/
+
+# 2. 確認 L1 Pass B 完成 (應該有 ~1000 cards zh_b ok)
+node -e "const c=require('./data/enriched/L1.json');console.log('zh_b ok:', c.filter(x=>x.zh_b?.ok).length, '/', c.length)"
+
+# 3. 看看上次未完的 Pass A L3-L6 跑到哪
+node -e "for(let i=3;i<=6;i++){try{const c=require('./data/enriched/L'+i+'.json');console.log('L'+i+':',c.filter(x=>x.dict_a?.found).length,'/',c.length)}catch{console.log('L'+i+': missing')}}"
+```
+
+## 下次 Session 待辦清單
+
+### 階段 1:把資料補完 (~3-4 小時背景,大部分不消耗 Claude token)
+
+```bash
+# A. 把上次沒跑完的 Pass A 補齊 (L3-L6 + L1-L2 的 transient err 重試)
+for lv in 3 4 5 6; do
+  node scripts/02-pass-a-dict.mjs --level $lv --concurrency 5
+done
+
+# B. 把所有 transient err 重試一輪 (resume 邏輯會自動只打沒成功的)
+for lv in 1 2; do
+  node scripts/02-pass-a-dict.mjs --level $lv --concurrency 5
+done
+
+# C. Pass B 中文翻譯 - 所有 levels
+#    L1 上次 session 跑了一部分,resume 會接續
+for lv in 1 2 3 4 5 6; do
+  node scripts/03-pass-b-zh.mjs --level $lv --batch 5 --concurrency 5
+done
+```
+
+**估時** (Nvidia NIM 60 RPM,我們 concurrency=5 ~ 20 RPM):
+- Pass A 剩 L3-L6: ~30 分鐘
+- Pass B 全 6 levels: ~6-8 小時 (可分多次)
+
+### 階段 2:Pass C — 中文例句翻譯 (新腳本)
+
+抓 `dict_a.meanings[].examples` 裡的英文例句,送 MiniMax 翻成中文。
+schema 設計:每張卡加 `examples_zh` 欄位,跟 `dict_a.meanings[].examples` 索引對齊。
+
+預估腳本 ~200 行,結構跟 `03-pass-b-zh.mjs` 高度相似。仿造寫:
+- 同樣的 retry/atomic-write/flush-mutex/pool pattern
+- 同樣的 partial coverage → retryable 規則
+- 同樣的 sanitize hint (例句裡可能有用戶輸入)
+
+### 階段 3:SRS 演算法 + 設定畫面
+
+從原 `index.html` (audit-index.md 已分析) 偷 SM-2 演算法 (~15 行):
+```js
+function sm2(card, grade) { /* 0=Again, 1=Hard, 2=Good, 3=Easy */ }
+```
+
+加進 `src/index.html`:
+- 評分 4 鍵 (Again/Hard/Good/Easy)
+- localStorage 存 SRS state per card
+- 「今日到期」/「新卡」首頁
+- 設定:每日新卡量、TTS 速度、level 篩選、深淺色手動切換
+
+### 階段 4:部署 GH Pages
+
+```bash
+# 1. 把資料 build 進 src/data/
+node scripts/10-build-ship.mjs
+
+# 2. Commit
+git add src/ data/skeleton/ data/enriched/ scripts/
+git commit -m "Initial vocab-srs build"
+git push
+
+# 3. 在 GitHub repo settings → Pages → Source: branch main / folder /src
+# 4. 訪問 https://<user>.github.io/vocab-srs/
+```
+
+**注意**:GH Pages 部署在子路徑 (`/vocab-srs/`),所有路徑用相對 (`./manifest.json`),已處理。
+
+---
+
+## 重要設計決定 (不要改)
+
+1. **多 POS 一張卡** (Q1-A): `tear,n./v.` 一張卡,背面分開顯示 n. 和 v. 的中文
+2. **字根+衍生一張卡** (Q2-A): `accomplish(ment)` 一張卡,word 保留 `(ment)`,slug `accomplish` 給 dict API
+3. **跨 level 同形異義字保留多張卡** (Q3-A): `tear` 出現在 L2 一張、`lead` 出現在 L1+L4 兩張
+4. **斜線並列字** (slug fix): `actor/actress` → display 保留斜線,slug 取 `actor` 一個拼法做 dict 查
+5. **資料分檔**: 不合併成單一檔,**lazy load by level**,iOS PWA 開機更快
+6. **無 AI 教練**: 拿掉了,因為前端直呼 Anthropic API 不可行 (沒 key + CORS),需要 backend proxy。日後想加就部署 Cloudflare Worker
+7. **TTS + MP3 雙軌**: MP3 first (從 dictionaryapi.dev),失敗 fallback `speechSynthesis`
+8. **無付費 API**: Free Dictionary (公開 CC BY-SA 3.0) + Nvidia NIM 免費 (60 RPM)
+
+---
+
+## 已知問題 / TODO 紀錄
+
+1. **小品質瑕疵**: 個別中翻不夠精準 (e.g. `above (adj.) → 天上的` 應 `上述的`)。Pass D 可做「品質審查」用 MiniMax 自我評分,我們再決定要不要做
+2. **Free Dict 13 字真 404** (L1): `for`, `kite`, `touch`, `Mrs.`, `o'clock`, `every`, `look`, `be`, `is` 等。MiniMax 可以填中翻但沒英英、沒英例。Pass C 想想要不要也讓 MiniMax 生英例
+3. **MP3 license**: dictionaryapi.dev 的音檔是 wiktionary 來的,**CC BY-SA 3.0**。商用上要在 about 頁面標 attribution
+4. **iPad split-view**: 沒測過,可能要再加 `@media (orientation: landscape)` breakpoint
+5. **localStorage 不會跨裝置同步**: 之後想跨機同步 SRS 進度,要寫 export/import JSON
+6. **資料體積**: L1 ship = 718 KB (含完整 dict)。6 levels 全 ship ~4 MB。gzip 後 ~700 KB。iOS PWA 首屏只載 L1,可以接受
+7. **`finish_reason: length` 邊緣狀況**: 03 script 把它標 retryable=false 且給 hint「下次用 --batch 較小」。下次發現有 truncated_max_tokens 錯誤,re-run 時加 `--batch 2`
+
+---
+
+## 檔案地圖
+
+```
+C:\HansDB\Vocab-SRS\
+├── HANDOFF.md                  ← 你正在讀的這個
+├── audit-index.md              ← Opus 4.7 對舊 index.html 的審查 (參考)
+├── index.html                  ← 舊版,留作參考,**不要部署**
+├── manifest.json, sw.js        ← 舊版,**不要部署**
+├── icons/                      ← 圖示 (兩個尺寸,夠用)
+│
+├── scripts/                    ← 資料管線 (Node.js, no deps)
+│   ├── 01-csv-to-skeleton.mjs  ← CSV → 骨架 JSON
+│   ├── 02-pass-a-dict.mjs      ← Free Dictionary 抓 IPA/MP3/英英/英例
+│   ├── 03-pass-b-zh.mjs        ← MiniMax M2.7 翻中文
+│   └── 10-build-ship.mjs       ← enriched → src/data (slim)
+│
+├── data/
+│   ├── skeleton/L{1..6}.json   ← 不動,基準
+│   └── enriched/L{1..6}.json   ← 跑 Pass A/B/C 後的全量資料 (含 log 欄位)
+│
+├── src/                        ← **部署目標**
+│   ├── index.html              ← PWA 入口
+│   ├── sw.js                   ← Service Worker
+│   ├── manifest.json
+│   ├── icons/
+│   └── data/L{1..6}.json       ← 由 10-build-ship.mjs 產生 (slim)
+│
+└── logs/                       ← 每張卡每個 Pass 的成敗紀錄
+    ├── passA.jsonl
+    └── passB.jsonl
+```
+
+---
+
+## 重要環境
+
+- Node v24.15.0 (有 built-in fetch)
+- `NVIDIA_API_KEY` 在環境變數 (MiniMax M2.7 via Nvidia NIM,OpenAI 相容)
+- API endpoint: `https://integrate.api.nvidia.com/v1/chat/completions`
+- Model: `minimaxai/minimax-m2.7` (注意 `.7`)
+- Reasoning model,有 `reasoning_content` 欄位,要給 `max_tokens >= 1500`
+- 60 RPM 免費額度,目前用 concurrency=5 ~ 20 RPM,有安全裕度
+
+## 本地測試 PWA
+
+```bash
+cd src
+# 任何 static server 都可以,例如:
+python -m http.server 8000
+# 或
+npx serve .
+# 然後開 http://localhost:8000
+```
+
+iOS 真機測:必須 HTTPS。可用 `ngrok http 8000` 暫時打洞,或 push 上 GH Pages 看。
+
+## 已交付給 Codex review 的程式碼
+- `02-pass-a-dict.mjs` — 修了 4 HIGH + 4 MED + 2 LOW
+- `03-pass-b-zh.mjs` — 修了 3 HIGH + 4 MED
+- `01-csv-to-skeleton.mjs` — 簡單,沒送 review
+- `10-build-ship.mjs` — 簡單,沒送 review
+- `src/index.html`, `sw.js`, `manifest.json` — **下次 session 送 Codex review!**

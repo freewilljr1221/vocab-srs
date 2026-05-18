@@ -1,0 +1,7212 @@
+[
+  {
+    "id": "ability-L2",
+    "word": "ability",
+    "slug": "ability",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "abroad-L2",
+    "word": "abroad",
+    "slug": "abroad",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "absence-L2",
+    "word": "absence",
+    "slug": "absence",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "absent-L2",
+    "word": "absent",
+    "slug": "absent",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "accept-L2",
+    "word": "accept",
+    "slug": "accept",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "active-L2",
+    "word": "active",
+    "slug": "active",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "addition-L2",
+    "word": "addition",
+    "slug": "addition",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "advance-L2",
+    "word": "advance",
+    "slug": "advance",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "affair-L2",
+    "word": "affair",
+    "slug": "affair",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "aid-L2",
+    "word": "aid",
+    "slug": "aid",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "aim-L2",
+    "word": "aim",
+    "slug": "aim",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "aircraft-L2",
+    "word": "aircraft",
+    "slug": "aircraft",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "airline-L2",
+    "word": "airline",
+    "slug": "airline",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "alarm-L2",
+    "word": "alarm",
+    "slug": "alarm",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "album-L2",
+    "word": "album",
+    "slug": "album",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "alike-L2",
+    "word": "alike",
+    "slug": "alike",
+    "pos": "adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "alive-L2",
+    "word": "alive",
+    "slug": "alive",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "almond-L2",
+    "word": "almond",
+    "slug": "almond",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "aloud-L2",
+    "word": "aloud",
+    "slug": "aloud",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "alphabet-L2",
+    "word": "alphabet",
+    "slug": "alphabet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "although-L2",
+    "word": "although",
+    "slug": "although",
+    "pos": "conj.",
+    "level": 2
+  },
+  {
+    "id": "altogether-L2",
+    "word": "altogether",
+    "slug": "altogether",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "amount-L2",
+    "word": "amount",
+    "slug": "amount",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "ancient-L2",
+    "word": "ancient",
+    "slug": "ancient",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "ankle-L2",
+    "word": "ankle",
+    "slug": "ankle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "anybody-L2",
+    "word": "anybody/anyone",
+    "slug": "anybody",
+    "pos": "pron.",
+    "level": 2
+  },
+  {
+    "id": "anyhow-L2",
+    "word": "anyhow",
+    "slug": "anyhow",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "anytime-L2",
+    "word": "anytime",
+    "slug": "anytime",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "anyway-L2",
+    "word": "anyway",
+    "slug": "anyway",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "anywhere-L2",
+    "word": "anywhere/anyplace",
+    "slug": "anywhere",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "apartment-L2",
+    "word": "apartment",
+    "slug": "apartment",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "appearance-L2",
+    "word": "appearance",
+    "slug": "appearance",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "appetite-L2",
+    "word": "appetite",
+    "slug": "appetite",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "apply-L2",
+    "word": "apply",
+    "slug": "apply",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "apron-L2",
+    "word": "apron",
+    "slug": "apron",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "argue-L2",
+    "word": "argue(argument)",
+    "slug": "argue",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "armchair-L2",
+    "word": "armchair",
+    "slug": "armchair",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "arrange-L2",
+    "word": "arrange(ment)",
+    "slug": "arrange",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "arrest-L2",
+    "word": "arrest",
+    "slug": "arrest",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "arrive-L2",
+    "word": "arrive",
+    "slug": "arrive",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "arrow-L2",
+    "word": "arrow",
+    "slug": "arrow",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "artist-L2",
+    "word": "artist",
+    "slug": "artist",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "asleep-L2",
+    "word": "asleep",
+    "slug": "asleep",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "assistant-L2",
+    "word": "assistant",
+    "slug": "assistant",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "attack-L2",
+    "word": "attack",
+    "slug": "attack",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "attend-L2",
+    "word": "attend",
+    "slug": "attend",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "attention-L2",
+    "word": "attention",
+    "slug": "attention",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "avoid-L2",
+    "word": "avoid",
+    "slug": "avoid",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "baby-sit-L2",
+    "word": "baby-sit",
+    "slug": "baby-sit",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "baby-sitter-L2",
+    "word": "baby-sitter",
+    "slug": "baby-sitter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "backward-L2",
+    "word": "backward",
+    "slug": "backward",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "backward-L2-1",
+    "word": "backward(s)",
+    "slug": "backward",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "bake-L2",
+    "word": "bake",
+    "slug": "bake",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "bakery-L2",
+    "word": "bakery",
+    "slug": "bakery",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "balcony-L2",
+    "word": "balcony",
+    "slug": "balcony",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "bamboo-L2",
+    "word": "bamboo",
+    "slug": "bamboo",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "banker-L2",
+    "word": "banker",
+    "slug": "banker",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "barbecue-L2",
+    "word": "barbecue/BBQ",
+    "slug": "barbecue",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bark-L2",
+    "word": "bark",
+    "slug": "bark",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "basement-L2",
+    "word": "basement",
+    "slug": "basement",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "basics-L2",
+    "word": "basics",
+    "slug": "basics",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "basis-L2",
+    "word": "basis",
+    "slug": "basis",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "battle-L2",
+    "word": "battle",
+    "slug": "battle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bead-L2",
+    "word": "bead",
+    "slug": "bead",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bean-L2",
+    "word": "bean",
+    "slug": "bean",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "beard-L2",
+    "word": "beard",
+    "slug": "beard",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "bedroom-L2",
+    "word": "bedroom",
+    "slug": "bedroom",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "beef-L2",
+    "word": "beef",
+    "slug": "beef",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "beep-L2",
+    "word": "beep",
+    "slug": "beep",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "beer-L2",
+    "word": "beer",
+    "slug": "beer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "beetle-L2",
+    "word": "beetle",
+    "slug": "beetle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "beg-L2",
+    "word": "beg",
+    "slug": "beg",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "beginner-L2",
+    "word": "beginner",
+    "slug": "beginner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "belief-L2",
+    "word": "belief",
+    "slug": "belief",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "believable-L2",
+    "word": "believable",
+    "slug": "believable",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "belt-L2",
+    "word": "belt",
+    "slug": "belt",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bench-L2",
+    "word": "bench",
+    "slug": "bench",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "bend-L2",
+    "word": "bend",
+    "slug": "bend",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "besides-L2",
+    "word": "besides",
+    "slug": "besides",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "bet-L2",
+    "word": "bet",
+    "slug": "bet",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "beyond-L2",
+    "word": "beyond",
+    "slug": "beyond",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "bill-L2",
+    "word": "bill",
+    "slug": "bill",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bind-L2",
+    "word": "bind",
+    "slug": "bind",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "bitter-L2",
+    "word": "bitter",
+    "slug": "bitter",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "blackboard-L2",
+    "word": "blackboard",
+    "slug": "blackboard",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "blank-L2",
+    "word": "blank",
+    "slug": "blank",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "blind-L2",
+    "word": "blind",
+    "slug": "blind",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "bloody-L2",
+    "word": "bloody",
+    "slug": "bloody",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "board-L2",
+    "word": "board",
+    "slug": "board",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "boil-L2",
+    "word": "boil",
+    "slug": "boil",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bomb-L2",
+    "word": "bomb",
+    "slug": "bomb",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bony-L2",
+    "word": "bony",
+    "slug": "bony",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "bookcase-L2",
+    "word": "bookcase",
+    "slug": "bookcase",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "borrow-L2",
+    "word": "borrow",
+    "slug": "borrow",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "boss-L2",
+    "word": "boss",
+    "slug": "boss",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bother-L2",
+    "word": "bother",
+    "slug": "bother",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bottle-L2",
+    "word": "bottle",
+    "slug": "bottle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bow-L2",
+    "word": "bow",
+    "slug": "bow",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bowling-L2",
+    "word": "bowling",
+    "slug": "bowling",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "brain-L2",
+    "word": "brain",
+    "slug": "brain",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "branch-L2",
+    "word": "branch",
+    "slug": "branch",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "brand-L2",
+    "word": "brand",
+    "slug": "brand",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "brick-L2",
+    "word": "brick",
+    "slug": "brick",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "brief-L2",
+    "word": "brief",
+    "slug": "brief",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "broad-L2",
+    "word": "broad",
+    "slug": "broad",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "broadcast-L2",
+    "word": "broadcast",
+    "slug": "broadcast",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "brunch-L2",
+    "word": "brunch",
+    "slug": "brunch",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "brush-L2",
+    "word": "brush",
+    "slug": "brush",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "bun-L2",
+    "word": "bun/roll",
+    "slug": "bun",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "bundle-L2",
+    "word": "bundle",
+    "slug": "bundle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "burn-L2",
+    "word": "burn",
+    "slug": "burn",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "burst-L2",
+    "word": "burst",
+    "slug": "burst",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "business-L2",
+    "word": "business",
+    "slug": "business",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "button-L2",
+    "word": "button",
+    "slug": "button",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cabbage-L2",
+    "word": "cabbage",
+    "slug": "cabbage",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cable-L2",
+    "word": "cable",
+    "slug": "cable",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cafeteria-L2",
+    "word": "cafeteria",
+    "slug": "cafeteria",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "calendar-L2",
+    "word": "calendar",
+    "slug": "calendar",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "calm-L2",
+    "word": "calm",
+    "slug": "calm",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "cancel-L2",
+    "word": "cancel",
+    "slug": "cancel",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "cancer-L2",
+    "word": "cancer",
+    "slug": "cancer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "candle-L2",
+    "word": "candle",
+    "slug": "candle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "captain-L2",
+    "word": "captain",
+    "slug": "captain",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "carpet-L2",
+    "word": "carpet",
+    "slug": "carpet",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "carrot-L2",
+    "word": "carrot",
+    "slug": "carrot",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cart-L2",
+    "word": "cart",
+    "slug": "cart",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cartoon-L2",
+    "word": "cartoon",
+    "slug": "cartoon",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cash-L2",
+    "word": "cash",
+    "slug": "cash",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cassette-L2",
+    "word": "cassette",
+    "slug": "cassette",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "castle-L2",
+    "word": "castle",
+    "slug": "castle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cave-L2",
+    "word": "cave",
+    "slug": "cave",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "ceiling-L2",
+    "word": "ceiling",
+    "slug": "ceiling",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cell-L2",
+    "word": "cell",
+    "slug": "cell",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "central-L2",
+    "word": "central",
+    "slug": "central",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "century-L2",
+    "word": "century",
+    "slug": "century",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cereal-L2",
+    "word": "cereal",
+    "slug": "cereal",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "chalk-L2",
+    "word": "chalk",
+    "slug": "chalk",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "change-L2",
+    "word": "change",
+    "slug": "change",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "character-L2",
+    "word": "character",
+    "slug": "character",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "charge-L2",
+    "word": "charge",
+    "slug": "charge",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cheap-L2",
+    "word": "cheap",
+    "slug": "cheap",
+    "pos": "adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "cheat-L2",
+    "word": "cheat",
+    "slug": "cheat",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "chemical-L2",
+    "word": "chemical",
+    "slug": "chemical",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "chess-L2",
+    "word": "chess",
+    "slug": "chess",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "childish-L2",
+    "word": "childish",
+    "slug": "childish",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "childlike-L2",
+    "word": "childlike",
+    "slug": "childlike",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "chin-L2",
+    "word": "chin",
+    "slug": "chin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "chocolate-L2",
+    "word": "chocolate",
+    "slug": "chocolate",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "choice-L2",
+    "word": "choice",
+    "slug": "choice",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "choose-L2",
+    "word": "choose",
+    "slug": "choose",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "chopstick-L2",
+    "word": "chopstick(s)",
+    "slug": "chopstick",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "circle-L2",
+    "word": "circle",
+    "slug": "circle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "citizen-L2",
+    "word": "citizen",
+    "slug": "citizen",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "claim-L2",
+    "word": "claim",
+    "slug": "claim",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "clap-L2",
+    "word": "clap",
+    "slug": "clap",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "classic-L2",
+    "word": "classic",
+    "slug": "classic",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "claw-L2",
+    "word": "claw",
+    "slug": "claw",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "clay-L2",
+    "word": "clay",
+    "slug": "clay",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cleaner-L2",
+    "word": "cleaner",
+    "slug": "cleaner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "clerk-L2",
+    "word": "clerk",
+    "slug": "clerk",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "clever-L2",
+    "word": "clever",
+    "slug": "clever",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "climate-L2",
+    "word": "climate",
+    "slug": "climate",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "closet-L2",
+    "word": "closet",
+    "slug": "closet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cloth-L2",
+    "word": "cloth",
+    "slug": "cloth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "clothe-L2",
+    "word": "clothe",
+    "slug": "clothe",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "clothes-L2",
+    "word": "clothes",
+    "slug": "clothes",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "clothing-L2",
+    "word": "clothing",
+    "slug": "clothing",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cloudy-L2",
+    "word": "cloudy",
+    "slug": "cloudy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "clown-L2",
+    "word": "clown",
+    "slug": "clown",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "club-L2",
+    "word": "club",
+    "slug": "club",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "coach-L2",
+    "word": "coach",
+    "slug": "coach",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "coal-L2",
+    "word": "coal",
+    "slug": "coal",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cock-L2",
+    "word": "cock",
+    "slug": "cock",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cockroach-L2",
+    "word": "cockroach/roach",
+    "slug": "cockroach",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "coin-L2",
+    "word": "coin",
+    "slug": "coin",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "collect-L2",
+    "word": "collect",
+    "slug": "collect",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "colorful-L2",
+    "word": "colorful",
+    "slug": "colorful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "comb-L2",
+    "word": "comb",
+    "slug": "comb",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "comfortable-L2",
+    "word": "comfortable",
+    "slug": "comfortable",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "company-L2",
+    "word": "company",
+    "slug": "company",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "compare-L2",
+    "word": "compare",
+    "slug": "compare",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "complain-L2",
+    "word": "complain",
+    "slug": "complain",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "complete-L2",
+    "word": "complete",
+    "slug": "complete",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "computer-L2",
+    "word": "computer",
+    "slug": "computer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "confirm-L2",
+    "word": "confirm",
+    "slug": "confirm",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "conflict-L2",
+    "word": "conflict",
+    "slug": "conflict",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "confucius-L2",
+    "word": "Confucius",
+    "slug": "confucius",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "congratulation-L2",
+    "word": "congratulation(s)",
+    "slug": "congratulation",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "consider-L2",
+    "word": "consider",
+    "slug": "consider",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "contact-L2",
+    "word": "contact",
+    "slug": "contact",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "contain-L2",
+    "word": "contain",
+    "slug": "contain",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "control-L2",
+    "word": "control",
+    "slug": "control",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "controller-L2",
+    "word": "controller",
+    "slug": "controller",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "convenient-L2",
+    "word": "convenient",
+    "slug": "convenient",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "conversation-L2",
+    "word": "conversation",
+    "slug": "conversation",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cooker-L2",
+    "word": "cooker",
+    "slug": "cooker",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "copy-L2",
+    "word": "copy/Xerox/xerox",
+    "slug": "copy",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "corner-L2",
+    "word": "corner",
+    "slug": "corner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "costly-L2",
+    "word": "costly",
+    "slug": "costly",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "cotton-L2",
+    "word": "cotton",
+    "slug": "cotton",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cough-L2",
+    "word": "cough",
+    "slug": "cough",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "countryside-L2",
+    "word": "countryside",
+    "slug": "countryside",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "county-L2",
+    "word": "county",
+    "slug": "county",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "couple-L2",
+    "word": "couple",
+    "slug": "couple",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "courage-L2",
+    "word": "courage",
+    "slug": "courage",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "court-L2",
+    "word": "court",
+    "slug": "court",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cousin-L2",
+    "word": "cousin",
+    "slug": "cousin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "crab-L2",
+    "word": "crab",
+    "slug": "crab",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "crane-L2",
+    "word": "crane",
+    "slug": "crane",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "crayon-L2",
+    "word": "crayon",
+    "slug": "crayon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "crazy-L2",
+    "word": "crazy",
+    "slug": "crazy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "cream-L2",
+    "word": "cream",
+    "slug": "cream",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "create-L2",
+    "word": "create",
+    "slug": "create",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "crime-L2",
+    "word": "crime",
+    "slug": "crime",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "crisis-L2",
+    "word": "crisis",
+    "slug": "crisis",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "crop-L2",
+    "word": "crop",
+    "slug": "crop",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cross-L2",
+    "word": "cross",
+    "slug": "cross",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "crow-L2",
+    "word": "crow",
+    "slug": "crow",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "crowd-L2",
+    "word": "crowd",
+    "slug": "crowd",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "cruel-L2",
+    "word": "cruel",
+    "slug": "cruel",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "culture-L2",
+    "word": "culture",
+    "slug": "culture",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "cure-L2",
+    "word": "cure",
+    "slug": "cure",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "curious-L2",
+    "word": "curious",
+    "slug": "curious",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "curtain-L2",
+    "word": "curtain/drape",
+    "slug": "curtain",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "custom-L2",
+    "word": "custom",
+    "slug": "custom",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "customer-L2",
+    "word": "customer",
+    "slug": "customer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "daily-L2",
+    "word": "daily",
+    "slug": "daily",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "damage-L2",
+    "word": "damage",
+    "slug": "damage",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "dangerous-L2",
+    "word": "dangerous",
+    "slug": "dangerous",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "data-L2",
+    "word": "data",
+    "slug": "data",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dawn-L2",
+    "word": "dawn",
+    "slug": "dawn",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "deaf-L2",
+    "word": "deaf",
+    "slug": "deaf",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "debate-L2",
+    "word": "debate",
+    "slug": "debate",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "debt-L2",
+    "word": "debt",
+    "slug": "debt",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "decision-L2",
+    "word": "decision",
+    "slug": "decision",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "decorate-L2",
+    "word": "decorate",
+    "slug": "decorate",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "degree-L2",
+    "word": "degree",
+    "slug": "degree",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "delay-L2",
+    "word": "delay",
+    "slug": "delay",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "delicious-L2",
+    "word": "delicious",
+    "slug": "delicious",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "deliver-L2",
+    "word": "deliver",
+    "slug": "deliver",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "dentist-L2",
+    "word": "dentist",
+    "slug": "dentist",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "deny-L2",
+    "word": "deny",
+    "slug": "deny",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "department-L2",
+    "word": "department",
+    "slug": "department",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "depend-L2",
+    "word": "depend",
+    "slug": "depend",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "depth-L2",
+    "word": "depth",
+    "slug": "depth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "describe-L2",
+    "word": "describe",
+    "slug": "describe",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "desert-L2",
+    "word": "desert",
+    "slug": "desert",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "design-L2",
+    "word": "design",
+    "slug": "design",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "desire-L2",
+    "word": "desire",
+    "slug": "desire",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "dessert-L2",
+    "word": "dessert",
+    "slug": "dessert",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "detect-L2",
+    "word": "detect",
+    "slug": "detect",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "develop-L2",
+    "word": "develop(ment)",
+    "slug": "develop",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "dew-L2",
+    "word": "dew",
+    "slug": "dew",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dial-L2",
+    "word": "dial",
+    "slug": "dial",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "diamond-L2",
+    "word": "diamond",
+    "slug": "diamond",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "diary-L2",
+    "word": "diary",
+    "slug": "diary",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dictionary-L2",
+    "word": "dictionary",
+    "slug": "dictionary",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "difference-L2",
+    "word": "difference",
+    "slug": "difference",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "difficulty-L2",
+    "word": "difficulty",
+    "slug": "difficulty",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dinosaur-L2",
+    "word": "dinosaur",
+    "slug": "dinosaur",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "direction-L2",
+    "word": "direction",
+    "slug": "direction",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "director-L2",
+    "word": "director",
+    "slug": "director",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "disagree-L2",
+    "word": "disagree(ment)",
+    "slug": "disagree",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "disappear-L2",
+    "word": "disappear",
+    "slug": "disappear",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "discuss-L2",
+    "word": "discuss",
+    "slug": "discuss",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "discussion-L2",
+    "word": "discussion",
+    "slug": "discussion",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dishonest-L2",
+    "word": "dishonest",
+    "slug": "dishonest",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "display-L2",
+    "word": "display",
+    "slug": "display",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "distance-L2",
+    "word": "distance",
+    "slug": "distance",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "distant-L2",
+    "word": "distant",
+    "slug": "distant",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "divide-L2",
+    "word": "divide",
+    "slug": "divide",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "division-L2",
+    "word": "division",
+    "slug": "division",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dizzy-L2",
+    "word": "dizzy",
+    "slug": "dizzy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "dolphin-L2",
+    "word": "dolphin",
+    "slug": "dolphin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "donkey-L2",
+    "word": "donkey",
+    "slug": "donkey",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dot-L2",
+    "word": "dot",
+    "slug": "dot",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "double-L2",
+    "word": "double",
+    "slug": "double",
+    "pos": "n./v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "doubt-L2",
+    "word": "doubt",
+    "slug": "doubt",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "doughnut-L2",
+    "word": "doughnut",
+    "slug": "doughnut",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "downtown-L2",
+    "word": "downtown",
+    "slug": "downtown",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "dr-L2",
+    "word": "Dr.",
+    "slug": "dr.",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "drag-L2",
+    "word": "drag",
+    "slug": "drag",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "dragon-L2",
+    "word": "dragon",
+    "slug": "dragon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dragonfly-L2",
+    "word": "dragonfly",
+    "slug": "dragonfly",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "drama-L2",
+    "word": "drama",
+    "slug": "drama",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "drawer-L2",
+    "word": "drawer",
+    "slug": "drawer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "drawing-L2",
+    "word": "drawing",
+    "slug": "drawing",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dress-L2",
+    "word": "dress",
+    "slug": "dress",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "drop-L2",
+    "word": "drop",
+    "slug": "drop",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "drug-L2",
+    "word": "drug",
+    "slug": "drug",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "drugstore-L2",
+    "word": "drugstore",
+    "slug": "drugstore",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "drum-L2",
+    "word": "drum",
+    "slug": "drum",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "dryer-L2",
+    "word": "dryer",
+    "slug": "dryer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "dull-L2",
+    "word": "dull",
+    "slug": "dull",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "dumb-L2",
+    "word": "dumb",
+    "slug": "dumb",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "dumpling-L2",
+    "word": "dumpling",
+    "slug": "dumpling",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "duty-L2",
+    "word": "duty",
+    "slug": "duty",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "earn-L2",
+    "word": "earn",
+    "slug": "earn",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "earthquake-L2",
+    "word": "earthquake",
+    "slug": "earthquake",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "eastern-L2",
+    "word": "eastern",
+    "slug": "eastern",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "education-L2",
+    "word": "education",
+    "slug": "education",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "effect-L2",
+    "word": "effect",
+    "slug": "effect",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "effective-L2",
+    "word": "effective",
+    "slug": "effective",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "effort-L2",
+    "word": "effort",
+    "slug": "effort",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "elder-L2",
+    "word": "elder",
+    "slug": "elder",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "elect-L2",
+    "word": "elect",
+    "slug": "elect",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "element-L2",
+    "word": "element",
+    "slug": "element",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "elevator-L2",
+    "word": "elevator",
+    "slug": "elevator",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "emotion-L2",
+    "word": "emotion",
+    "slug": "emotion",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "encourage-L2",
+    "word": "encourage(ment)",
+    "slug": "encourage",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "ending-L2",
+    "word": "ending",
+    "slug": "ending",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "enemy-L2",
+    "word": "enemy",
+    "slug": "enemy",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "energy-L2",
+    "word": "energy",
+    "slug": "energy",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "enjoy-L2",
+    "word": "enjoy(ment)",
+    "slug": "enjoy",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "entire-L2",
+    "word": "entire",
+    "slug": "entire",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "entrance-L2",
+    "word": "entrance",
+    "slug": "entrance",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "envelope-L2",
+    "word": "envelope",
+    "slug": "envelope",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "environment-L2",
+    "word": "environment",
+    "slug": "environment",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "eraser-L2",
+    "word": "eraser",
+    "slug": "eraser",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "error-L2",
+    "word": "error",
+    "slug": "error",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "especially-L2",
+    "word": "especially",
+    "slug": "especially",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "event-L2",
+    "word": "event",
+    "slug": "event",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "exact-L2",
+    "word": "exact",
+    "slug": "exact",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "excellent-L2",
+    "word": "excellent",
+    "slug": "excellent",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "excite-L2",
+    "word": "excite(ment)",
+    "slug": "excite",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "excuse-L2",
+    "word": "excuse",
+    "slug": "excuse",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "exercise-L2",
+    "word": "exercise",
+    "slug": "exercise",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "exist-L2",
+    "word": "exist",
+    "slug": "exist",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "expect-L2",
+    "word": "expect",
+    "slug": "expect",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "expensive-L2",
+    "word": "expensive",
+    "slug": "expensive",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "experience-L2",
+    "word": "experience",
+    "slug": "experience",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "expert-L2",
+    "word": "expert",
+    "slug": "expert",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "explain-L2",
+    "word": "explain",
+    "slug": "explain",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "express-L2",
+    "word": "express",
+    "slug": "express",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "extra-L2",
+    "word": "extra",
+    "slug": "extra",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "eyebrow-L2",
+    "word": "eyebrow/brow",
+    "slug": "eyebrow",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fail-L2",
+    "word": "fail",
+    "slug": "fail",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "failure-L2",
+    "word": "failure",
+    "slug": "failure",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fair-L2",
+    "word": "fair",
+    "slug": "fair",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "famous-L2",
+    "word": "famous",
+    "slug": "famous",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "fault-L2",
+    "word": "fault",
+    "slug": "fault",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "favor-L2",
+    "word": "favor",
+    "slug": "favor",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "favorite-L2",
+    "word": "favorite",
+    "slug": "favorite",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "fearful-L2",
+    "word": "fearful",
+    "slug": "fearful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "fee-L2",
+    "word": "fee",
+    "slug": "fee",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fellow-L2",
+    "word": "fellow",
+    "slug": "fellow",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "female-L2",
+    "word": "female",
+    "slug": "female",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "fence-L2",
+    "word": "fence",
+    "slug": "fence",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "festival-L2",
+    "word": "festival",
+    "slug": "festival",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fever-L2",
+    "word": "fever",
+    "slug": "fever",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "field-L2",
+    "word": "field",
+    "slug": "field",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fighter-L2",
+    "word": "fighter",
+    "slug": "fighter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "figure-L2",
+    "word": "figure",
+    "slug": "figure",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "film-L2",
+    "word": "film",
+    "slug": "film",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "fireman-L2",
+    "word": "fireman/firewoman",
+    "slug": "fireman",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "firm-L2",
+    "word": "firm",
+    "slug": "firm",
+    "pos": "v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "fisherman-L2",
+    "word": "fisherman",
+    "slug": "fisherman",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "fit-L2",
+    "word": "fit",
+    "slug": "fit",
+    "pos": "n./v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "fix-L2",
+    "word": "fix",
+    "slug": "fix",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flag-L2",
+    "word": "flag",
+    "slug": "flag",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flash-L2",
+    "word": "flash",
+    "slug": "flash",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flashlight-L2",
+    "word": "flashlight/flash",
+    "slug": "flashlight",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "flat-L2",
+    "word": "flat",
+    "slug": "flat",
+    "pos": "n./v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "flight-L2",
+    "word": "flight",
+    "slug": "flight",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "flood-L2",
+    "word": "flood",
+    "slug": "flood",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flour-L2",
+    "word": "flour",
+    "slug": "flour",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flow-L2",
+    "word": "flow",
+    "slug": "flow",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "flu-L2",
+    "word": "flu",
+    "slug": "flu",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "flute-L2",
+    "word": "flute",
+    "slug": "flute",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "focus-L2",
+    "word": "focus",
+    "slug": "focus",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "foggy-L2",
+    "word": "foggy",
+    "slug": "foggy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "following-L2",
+    "word": "following",
+    "slug": "following",
+    "pos": "n./adj./prep.",
+    "level": 2
+  },
+  {
+    "id": "fool-L2",
+    "word": "fool",
+    "slug": "fool",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "foolish-L2",
+    "word": "foolish",
+    "slug": "foolish",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "football-L2",
+    "word": "football",
+    "slug": "football",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "foreigner-L2",
+    "word": "foreigner",
+    "slug": "foreigner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "forgive-L2",
+    "word": "forgive",
+    "slug": "forgive",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "form-L2",
+    "word": "form",
+    "slug": "form",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "formal-L2",
+    "word": "formal",
+    "slug": "formal",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "former-L2",
+    "word": "former",
+    "slug": "former",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "forward-L2",
+    "word": "forward",
+    "slug": "forward",
+    "pos": "n./v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "forward-L2-1",
+    "word": "forward(s)",
+    "slug": "forward",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "fox-L2",
+    "word": "fox",
+    "slug": "fox",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "frank-L2",
+    "word": "frank",
+    "slug": "frank",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "freedom-L2",
+    "word": "freedom",
+    "slug": "freedom",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "freezer-L2",
+    "word": "freezer",
+    "slug": "freezer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "friendly-L2",
+    "word": "friendly",
+    "slug": "friendly",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "fright-L2",
+    "word": "fright",
+    "slug": "fright",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "frighten-L2",
+    "word": "frighten",
+    "slug": "frighten",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "function-L2",
+    "word": "function",
+    "slug": "function",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "further-L2",
+    "word": "further",
+    "slug": "further",
+    "pos": "v./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "future-L2",
+    "word": "future",
+    "slug": "future",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "gain-L2",
+    "word": "gain",
+    "slug": "gain",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "garage-L2",
+    "word": "garage",
+    "slug": "garage",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "garbage-L2",
+    "word": "garbage",
+    "slug": "garbage",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "gardener-L2",
+    "word": "gardener",
+    "slug": "gardener",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "gate-L2",
+    "word": "gate",
+    "slug": "gate",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "gather-L2",
+    "word": "gather",
+    "slug": "gather",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "general-L2",
+    "word": "general",
+    "slug": "general",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "generous-L2",
+    "word": "generous",
+    "slug": "generous",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "gentle-L2",
+    "word": "gentle",
+    "slug": "gentle",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "gentleman-L2",
+    "word": "gentleman",
+    "slug": "gentleman",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "geography-L2",
+    "word": "geography",
+    "slug": "geography",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "giant-L2",
+    "word": "giant",
+    "slug": "giant",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "giraffe-L2",
+    "word": "giraffe",
+    "slug": "giraffe",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "glove-L2",
+    "word": "glove(s)",
+    "slug": "glove",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "glue-L2",
+    "word": "glue",
+    "slug": "glue",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "goal-L2",
+    "word": "goal",
+    "slug": "goal",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "goat-L2",
+    "word": "goat",
+    "slug": "goat",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "golden-L2",
+    "word": "golden",
+    "slug": "golden",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "golf-L2",
+    "word": "golf",
+    "slug": "golf",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "govern-L2",
+    "word": "govern",
+    "slug": "govern",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "government-L2",
+    "word": "government",
+    "slug": "government",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "grade-L2",
+    "word": "grade",
+    "slug": "grade",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "grape-L2",
+    "word": "grape",
+    "slug": "grape",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "grassy-L2",
+    "word": "grassy",
+    "slug": "grassy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "greedy-L2",
+    "word": "greedy",
+    "slug": "greedy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "greet-L2",
+    "word": "greet",
+    "slug": "greet",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "growth-L2",
+    "word": "growth",
+    "slug": "growth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "guard-L2",
+    "word": "guard",
+    "slug": "guard",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "guava-L2",
+    "word": "guava",
+    "slug": "guava",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "guitar-L2",
+    "word": "guitar",
+    "slug": "guitar",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "guy-L2",
+    "word": "guy",
+    "slug": "guy",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "habit-L2",
+    "word": "habit",
+    "slug": "habit",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hall-L2",
+    "word": "hall",
+    "slug": "hall",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hamburger-L2",
+    "word": "hamburger/burger",
+    "slug": "hamburger",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hammer-L2",
+    "word": "hammer",
+    "slug": "hammer",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "handkerchief-L2",
+    "word": "handkerchief",
+    "slug": "handkerchief",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "handle-L2",
+    "word": "handle",
+    "slug": "handle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "handsome-L2",
+    "word": "handsome",
+    "slug": "handsome",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "hang-L2",
+    "word": "hang",
+    "slug": "hang",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "hanger-L2",
+    "word": "hanger",
+    "slug": "hanger",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hardly-L2",
+    "word": "hardly",
+    "slug": "hardly",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "hateful-L2",
+    "word": "hateful",
+    "slug": "hateful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "healthy-L2",
+    "word": "healthy",
+    "slug": "healthy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "heater-L2",
+    "word": "heater",
+    "slug": "heater",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "height-L2",
+    "word": "height",
+    "slug": "height",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "helpful-L2",
+    "word": "helpful",
+    "slug": "helpful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "hen-L2",
+    "word": "hen",
+    "slug": "hen",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hero-L2",
+    "word": "hero/heroine",
+    "slug": "hero",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hide-L2",
+    "word": "hide",
+    "slug": "hide",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "highway-L2",
+    "word": "highway",
+    "slug": "highway",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hip-L2",
+    "word": "hip",
+    "slug": "hip",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hippopotamus-L2",
+    "word": "hippopotamus/hippo",
+    "slug": "hippopotamus",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hire-L2",
+    "word": "hire",
+    "slug": "hire",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "hobby-L2",
+    "word": "hobby",
+    "slug": "hobby",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "holder-L2",
+    "word": "holder",
+    "slug": "holder",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "homesick-L2",
+    "word": "homesick",
+    "slug": "homesick",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "honest-L2",
+    "word": "honest",
+    "slug": "honest",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "honey-L2",
+    "word": "honey",
+    "slug": "honey",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hop-L2",
+    "word": "hop",
+    "slug": "hop",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "hospital-L2",
+    "word": "hospital",
+    "slug": "hospital",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "host-L2",
+    "word": "host",
+    "slug": "host",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hotel-L2",
+    "word": "hotel",
+    "slug": "hotel",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "however-L2",
+    "word": "however",
+    "slug": "however",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "hum-L2",
+    "word": "hum",
+    "slug": "hum",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "humble-L2",
+    "word": "humble",
+    "slug": "humble",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "humid-L2",
+    "word": "humid",
+    "slug": "humid",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "humor-L2",
+    "word": "humor",
+    "slug": "humor",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hunger-L2",
+    "word": "hunger",
+    "slug": "hunger",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hunt-L2",
+    "word": "hunt",
+    "slug": "hunt",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "hunter-L2",
+    "word": "hunter",
+    "slug": "hunter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "hurry-L2",
+    "word": "hurry",
+    "slug": "hurry",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "ignore-L2",
+    "word": "ignore",
+    "slug": "ignore",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "ill-L2",
+    "word": "ill",
+    "slug": "ill",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "imagine-L2",
+    "word": "imagine",
+    "slug": "imagine",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "importance-L2",
+    "word": "importance",
+    "slug": "importance",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "improve-L2",
+    "word": "improve(ment)",
+    "slug": "improve",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "include-L2",
+    "word": "include",
+    "slug": "include",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "income-L2",
+    "word": "income",
+    "slug": "income",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "increase-L2",
+    "word": "increase",
+    "slug": "increase",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "independence-L2",
+    "word": "independence",
+    "slug": "independence",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "independent-L2",
+    "word": "independent",
+    "slug": "independent",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "indicate-L2",
+    "word": "indicate",
+    "slug": "indicate",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "industry-L2",
+    "word": "industry",
+    "slug": "industry",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "influence-L2",
+    "word": "influence",
+    "slug": "influence",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "ink-L2",
+    "word": "ink",
+    "slug": "ink",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "insect-L2",
+    "word": "insect",
+    "slug": "insect",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "insist-L2",
+    "word": "insist",
+    "slug": "insist",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "instance-L2",
+    "word": "instance",
+    "slug": "instance",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "instant-L2",
+    "word": "instant",
+    "slug": "instant",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "instrument-L2",
+    "word": "instrument",
+    "slug": "instrument",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "international-L2",
+    "word": "international",
+    "slug": "international",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "interview-L2",
+    "word": "interview",
+    "slug": "interview",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "introduce-L2",
+    "word": "introduce",
+    "slug": "introduce",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "invent-L2",
+    "word": "invent",
+    "slug": "invent",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "invitation-L2",
+    "word": "invitation",
+    "slug": "invitation",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "invite-L2",
+    "word": "invite",
+    "slug": "invite",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "island-L2",
+    "word": "island",
+    "slug": "island",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "item-L2",
+    "word": "item",
+    "slug": "item",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "jacket-L2",
+    "word": "jacket",
+    "slug": "jacket",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "jam-L2",
+    "word": "jam",
+    "slug": "jam",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "jazz-L2",
+    "word": "jazz",
+    "slug": "jazz",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "jeans-L2",
+    "word": "jeans",
+    "slug": "jeans",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "jeep-L2",
+    "word": "jeep",
+    "slug": "jeep",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "jog-L2",
+    "word": "jog",
+    "slug": "jog",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "joint-L2",
+    "word": "joint",
+    "slug": "joint",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "judge-L2",
+    "word": "judge",
+    "slug": "judge",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "judge-L2-1",
+    "word": "judge(ment/judgment)",
+    "slug": "judge",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "juicy-L2",
+    "word": "juicy",
+    "slug": "juicy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "ketchup-L2",
+    "word": "ketchup/catsup",
+    "slug": "ketchup",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "kindergarten-L2",
+    "word": "kindergarten",
+    "slug": "kindergarten",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "kingdom-L2",
+    "word": "kingdom",
+    "slug": "kingdom",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "knock-L2",
+    "word": "knock",
+    "slug": "knock",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "knowledge-L2",
+    "word": "knowledge",
+    "slug": "knowledge",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "koala-L2",
+    "word": "koala",
+    "slug": "koala",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "ladybug-L2",
+    "word": "ladybug/ladybird",
+    "slug": "ladybug",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lane-L2",
+    "word": "lane",
+    "slug": "lane",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "language-L2",
+    "word": "language",
+    "slug": "language",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lantern-L2",
+    "word": "lantern",
+    "slug": "lantern",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lap-L2",
+    "word": "lap",
+    "slug": "lap",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "latest-L2",
+    "word": "latest",
+    "slug": "latest",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "lawyer-L2",
+    "word": "lawyer",
+    "slug": "lawyer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "leadership-L2",
+    "word": "leadership",
+    "slug": "leadership",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "legal-L2",
+    "word": "legal",
+    "slug": "legal",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "lemon-L2",
+    "word": "lemon",
+    "slug": "lemon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lemonade-L2",
+    "word": "lemonade",
+    "slug": "lemonade",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lend-L2",
+    "word": "lend",
+    "slug": "lend",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "length-L2",
+    "word": "length",
+    "slug": "length",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "leopard-L2",
+    "word": "leopard",
+    "slug": "leopard",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lettuce-L2",
+    "word": "lettuce",
+    "slug": "lettuce",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "library-L2",
+    "word": "library",
+    "slug": "library",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lick-L2",
+    "word": "lick",
+    "slug": "lick",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "lid-L2",
+    "word": "lid",
+    "slug": "lid",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lightning-L2",
+    "word": "lightning",
+    "slug": "lightning",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "limit-L2",
+    "word": "limit",
+    "slug": "limit",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "link-L2",
+    "word": "link",
+    "slug": "link",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "liquid-L2",
+    "word": "liquid",
+    "slug": "liquid",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "listener-L2",
+    "word": "listener",
+    "slug": "listener",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "loaf-L2",
+    "word": "loaf",
+    "slug": "loaf",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "local-L2",
+    "word": "local",
+    "slug": "local",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "locate-L2",
+    "word": "locate",
+    "slug": "locate",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "lock-L2",
+    "word": "lock",
+    "slug": "lock",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "log-L2",
+    "word": "log",
+    "slug": "log",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "lone-L2",
+    "word": "lone",
+    "slug": "lone",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "lonely-L2",
+    "word": "lonely",
+    "slug": "lonely",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "lose-L2",
+    "word": "lose",
+    "slug": "lose",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "loser-L2",
+    "word": "loser",
+    "slug": "loser",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "loss-L2",
+    "word": "loss",
+    "slug": "loss",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lovely-L2",
+    "word": "lovely",
+    "slug": "lovely",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "lover-L2",
+    "word": "lover",
+    "slug": "lover",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "lower-L2",
+    "word": "lower",
+    "slug": "lower",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "luck-L2",
+    "word": "luck",
+    "slug": "luck",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "magazine-L2",
+    "word": "magazine",
+    "slug": "magazine",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "magic-L2",
+    "word": "magic",
+    "slug": "magic",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "magician-L2",
+    "word": "magician",
+    "slug": "magician",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "main-L2",
+    "word": "main",
+    "slug": "main",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "maintain-L2",
+    "word": "maintain",
+    "slug": "maintain",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "male-L2",
+    "word": "male",
+    "slug": "male",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "mandarin-L2",
+    "word": "Mandarin",
+    "slug": "mandarin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mango-L2",
+    "word": "mango",
+    "slug": "mango",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "manner-L2",
+    "word": "manner",
+    "slug": "manner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mark-L2",
+    "word": "mark",
+    "slug": "mark",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "marriage-L2",
+    "word": "marriage",
+    "slug": "marriage",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mask-L2",
+    "word": "mask",
+    "slug": "mask",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "mass-L2",
+    "word": "mass",
+    "slug": "mass",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mat-L2",
+    "word": "mat",
+    "slug": "mat",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "match-L2",
+    "word": "match",
+    "slug": "match",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "mate-L2",
+    "word": "mate",
+    "slug": "mate",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "material-L2",
+    "word": "material",
+    "slug": "material",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "meal-L2",
+    "word": "meal",
+    "slug": "meal",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "meaning-L2",
+    "word": "meaning",
+    "slug": "meaning",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "means-L2",
+    "word": "means",
+    "slug": "means",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "measurable-L2",
+    "word": "measurable",
+    "slug": "measurable",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "measure-L2",
+    "word": "measure(ment)",
+    "slug": "measure",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "medicine-L2",
+    "word": "medicine",
+    "slug": "medicine",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "meeting-L2",
+    "word": "meeting",
+    "slug": "meeting",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "melody-L2",
+    "word": "melody",
+    "slug": "melody",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "melon-L2",
+    "word": "melon",
+    "slug": "melon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "member-L2",
+    "word": "member",
+    "slug": "member",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "memory-L2",
+    "word": "memory",
+    "slug": "memory",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "menu-L2",
+    "word": "menu",
+    "slug": "menu",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "message-L2",
+    "word": "message",
+    "slug": "message",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "metal-L2",
+    "word": "metal",
+    "slug": "metal",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "meter-L2",
+    "word": "meter",
+    "slug": "meter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "method-L2",
+    "word": "method",
+    "slug": "method",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "military-L2",
+    "word": "military",
+    "slug": "military",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "million-L2",
+    "word": "million",
+    "slug": "million",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mine-L2",
+    "word": "mine",
+    "slug": "mine",
+    "pos": "n./v./pron.",
+    "level": 2
+  },
+  {
+    "id": "minus-L2",
+    "word": "minus",
+    "slug": "minus",
+    "pos": "n./adj./prep.",
+    "level": 2
+  },
+  {
+    "id": "mix-L2",
+    "word": "mix",
+    "slug": "mix",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "model-L2",
+    "word": "model",
+    "slug": "model",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "modern-L2",
+    "word": "modern",
+    "slug": "modern",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "monster-L2",
+    "word": "monster",
+    "slug": "monster",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "motion-L2",
+    "word": "motion",
+    "slug": "motion",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "motorcycle-L2",
+    "word": "motorcycle",
+    "slug": "motorcycle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "movable-L2",
+    "word": "movable",
+    "slug": "movable",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "mrt-L2",
+    "word": "MRT/subway",
+    "slug": "mrt",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "mule-L2",
+    "word": "mule",
+    "slug": "mule",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "multiply-L2",
+    "word": "multiply",
+    "slug": "multiply",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "museum-L2",
+    "word": "museum",
+    "slug": "museum",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "musician-L2",
+    "word": "musician",
+    "slug": "musician",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "nail-L2",
+    "word": "nail",
+    "slug": "nail",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "naked-L2",
+    "word": "naked",
+    "slug": "naked",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "napkin-L2",
+    "word": "napkin",
+    "slug": "napkin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "narrow-L2",
+    "word": "narrow",
+    "slug": "narrow",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "national-L2",
+    "word": "national",
+    "slug": "national",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "natural-L2",
+    "word": "natural",
+    "slug": "natural",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "naughty-L2",
+    "word": "naughty",
+    "slug": "naughty",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "nearby-L2",
+    "word": "nearby",
+    "slug": "nearby",
+    "pos": "adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "nearly-L2",
+    "word": "nearly",
+    "slug": "nearly",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "neat-L2",
+    "word": "neat",
+    "slug": "neat",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "necessary-L2",
+    "word": "necessary",
+    "slug": "necessary",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "necklace-L2",
+    "word": "necklace",
+    "slug": "necklace",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "needle-L2",
+    "word": "needle",
+    "slug": "needle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "negative-L2",
+    "word": "negative",
+    "slug": "negative",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "neighbor-L2",
+    "word": "neighbor",
+    "slug": "neighbor",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "neither-L2",
+    "word": "neither",
+    "slug": "neither",
+    "pos": "adj./adv./pron./conj.",
+    "level": 2
+  },
+  {
+    "id": "nephew-L2",
+    "word": "nephew",
+    "slug": "nephew",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "nest-L2",
+    "word": "nest",
+    "slug": "nest",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "net-L2",
+    "word": "net",
+    "slug": "net",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "niece-L2",
+    "word": "niece",
+    "slug": "niece",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "nobody-L2",
+    "word": "nobody",
+    "slug": "nobody",
+    "pos": "n./pron.",
+    "level": 2
+  },
+  {
+    "id": "nod-L2",
+    "word": "nod",
+    "slug": "nod",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "none-L2",
+    "word": "none",
+    "slug": "none",
+    "pos": "adv./pron.",
+    "level": 2
+  },
+  {
+    "id": "noodle-L2",
+    "word": "noodle",
+    "slug": "noodle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "northern-L2",
+    "word": "northern",
+    "slug": "northern",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "notebook-L2",
+    "word": "notebook",
+    "slug": "notebook",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "novel-L2",
+    "word": "novel",
+    "slug": "novel",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "nut-L2",
+    "word": "nut",
+    "slug": "nut",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "obey-L2",
+    "word": "obey",
+    "slug": "obey",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "object-L2",
+    "word": "object",
+    "slug": "object",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "occur-L2",
+    "word": "occur",
+    "slug": "occur",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "offer-L2",
+    "word": "offer",
+    "slug": "offer",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "official-L2",
+    "word": "official",
+    "slug": "official",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "omit-L2",
+    "word": "omit",
+    "slug": "omit",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "onion-L2",
+    "word": "onion",
+    "slug": "onion",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "operate-L2",
+    "word": "operate",
+    "slug": "operate",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "opinion-L2",
+    "word": "opinion",
+    "slug": "opinion",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "ordinary-L2",
+    "word": "ordinary",
+    "slug": "ordinary",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "organ-L2",
+    "word": "organ",
+    "slug": "organ",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "organization-L2",
+    "word": "organization",
+    "slug": "organization",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "organize-L2",
+    "word": "organize",
+    "slug": "organize",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "oven-L2",
+    "word": "oven",
+    "slug": "oven",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "overpass-L2",
+    "word": "overpass",
+    "slug": "overpass",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "overseas-L2",
+    "word": "overseas",
+    "slug": "overseas",
+    "pos": "adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "owl-L2",
+    "word": "owl",
+    "slug": "owl",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "owner-L2",
+    "word": "owner",
+    "slug": "owner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "ox-L2",
+    "word": "ox",
+    "slug": "ox",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pack-L2",
+    "word": "pack",
+    "slug": "pack",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "package-L2",
+    "word": "package",
+    "slug": "package",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pain-L2",
+    "word": "pain",
+    "slug": "pain",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "painful-L2",
+    "word": "painful",
+    "slug": "painful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "painter-L2",
+    "word": "painter",
+    "slug": "painter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "painting-L2",
+    "word": "painting",
+    "slug": "painting",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pajamas-L2",
+    "word": "pajamas",
+    "slug": "pajamas",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "palm-L2",
+    "word": "palm",
+    "slug": "palm",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pan-L2",
+    "word": "pan",
+    "slug": "pan",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "panda-L2",
+    "word": "panda",
+    "slug": "panda",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "papaya-L2",
+    "word": "papaya",
+    "slug": "papaya",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pardon-L2",
+    "word": "pardon",
+    "slug": "pardon",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "parrot-L2",
+    "word": "parrot",
+    "slug": "parrot",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "particular-L2",
+    "word": "particular",
+    "slug": "particular",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "partner-L2",
+    "word": "partner",
+    "slug": "partner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "passenger-L2",
+    "word": "passenger",
+    "slug": "passenger",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "paste-L2",
+    "word": "paste",
+    "slug": "paste",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pat-L2",
+    "word": "pat",
+    "slug": "pat",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "path-L2",
+    "word": "path",
+    "slug": "path",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "patient-L2",
+    "word": "patient",
+    "slug": "patient",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "pattern-L2",
+    "word": "pattern",
+    "slug": "pattern",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "peace-L2",
+    "word": "peace",
+    "slug": "peace",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "peaceful-L2",
+    "word": "peaceful",
+    "slug": "peaceful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "peach-L2",
+    "word": "peach",
+    "slug": "peach",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "peanut-L2",
+    "word": "peanut",
+    "slug": "peanut",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pear-L2",
+    "word": "pear",
+    "slug": "pear",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "penguin-L2",
+    "word": "penguin",
+    "slug": "penguin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pepper-L2",
+    "word": "pepper",
+    "slug": "pepper",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "per-L2",
+    "word": "per",
+    "slug": "per",
+    "pos": "prep.",
+    "level": 2
+  },
+  {
+    "id": "perfect-L2",
+    "word": "perfect",
+    "slug": "perfect",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "period-L2",
+    "word": "period",
+    "slug": "period",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "personal-L2",
+    "word": "personal",
+    "slug": "personal",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "photograph-L2",
+    "word": "photograph/photo",
+    "slug": "photograph",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "photographer-L2",
+    "word": "photographer",
+    "slug": "photographer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "phrase-L2",
+    "word": "phrase",
+    "slug": "phrase",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pick-L2",
+    "word": "pick",
+    "slug": "pick",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "picnic-L2",
+    "word": "picnic",
+    "slug": "picnic",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pigeon-L2",
+    "word": "pigeon",
+    "slug": "pigeon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pile-L2",
+    "word": "pile",
+    "slug": "pile",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pillow-L2",
+    "word": "pillow",
+    "slug": "pillow",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pin-L2",
+    "word": "pin",
+    "slug": "pin",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pineapple-L2",
+    "word": "pineapple",
+    "slug": "pineapple",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "ping-pong-L2",
+    "word": "ping-pong",
+    "slug": "ping-pong",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pink-L2",
+    "word": "pink",
+    "slug": "pink",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "pipe-L2",
+    "word": "pipe",
+    "slug": "pipe",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pitch-L2",
+    "word": "pitch",
+    "slug": "pitch",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pizza-L2",
+    "word": "pizza",
+    "slug": "pizza",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "plain-L2",
+    "word": "plain",
+    "slug": "plain",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "planet-L2",
+    "word": "planet",
+    "slug": "planet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "plate-L2",
+    "word": "plate",
+    "slug": "plate",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "platform-L2",
+    "word": "platform",
+    "slug": "platform",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "playful-L2",
+    "word": "playful",
+    "slug": "playful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "pleasant-L2",
+    "word": "pleasant",
+    "slug": "pleasant",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "pleasure-L2",
+    "word": "pleasure",
+    "slug": "pleasure",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "plus-L2",
+    "word": "plus",
+    "slug": "plus",
+    "pos": "n./adj./prep.",
+    "level": 2
+  },
+  {
+    "id": "poem-L2",
+    "word": "poem",
+    "slug": "poem",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "poet-L2",
+    "word": "poet",
+    "slug": "poet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "poison-L2",
+    "word": "poison",
+    "slug": "poison",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "policy-L2",
+    "word": "policy",
+    "slug": "policy",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "polite-L2",
+    "word": "polite",
+    "slug": "polite",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "popular-L2",
+    "word": "popular",
+    "slug": "popular",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "population-L2",
+    "word": "population",
+    "slug": "population",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pork-L2",
+    "word": "pork",
+    "slug": "pork",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "port-L2",
+    "word": "port",
+    "slug": "port",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pose-L2",
+    "word": "pose",
+    "slug": "pose",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "positive-L2",
+    "word": "positive",
+    "slug": "positive",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "possibility-L2",
+    "word": "possibility",
+    "slug": "possibility",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "post-L2",
+    "word": "post",
+    "slug": "post",
+    "pos": "n./v./adv.",
+    "level": 2
+  },
+  {
+    "id": "post-L2-1",
+    "word": "post (mailing)",
+    "slug": "post",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "postcard-L2",
+    "word": "postcard",
+    "slug": "postcard",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pot-L2",
+    "word": "pot",
+    "slug": "pot",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "potato-L2",
+    "word": "potato",
+    "slug": "potato",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pound-L2-1",
+    "word": "pound",
+    "slug": "pound",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "pound-L2",
+    "word": "pound(weight)",
+    "slug": "pound",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "powerful-L2",
+    "word": "powerful",
+    "slug": "powerful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "praise-L2",
+    "word": "praise",
+    "slug": "praise",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pray-L2",
+    "word": "pray",
+    "slug": "pray",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "prefer-L2",
+    "word": "prefer",
+    "slug": "prefer",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "presence-L2",
+    "word": "presence",
+    "slug": "presence",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "present-L2",
+    "word": "present",
+    "slug": "present",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "present-L2-1",
+    "word": "present(gift)",
+    "slug": "present",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "president-L2",
+    "word": "president",
+    "slug": "president",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "press-L2",
+    "word": "press",
+    "slug": "press",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pride-L2",
+    "word": "pride",
+    "slug": "pride",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "prince-L2",
+    "word": "prince",
+    "slug": "prince",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "princess-L2",
+    "word": "princess",
+    "slug": "princess",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "principal-L2",
+    "word": "principal",
+    "slug": "principal",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "principle-L2",
+    "word": "principle",
+    "slug": "principle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "printer-L2",
+    "word": "printer",
+    "slug": "printer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "prison-L2",
+    "word": "prison",
+    "slug": "prison",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "prisoner-L2",
+    "word": "prisoner",
+    "slug": "prisoner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "private-L2",
+    "word": "private",
+    "slug": "private",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "prize-L2",
+    "word": "prize",
+    "slug": "prize",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "produce-L2",
+    "word": "produce",
+    "slug": "produce",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "producer-L2",
+    "word": "producer",
+    "slug": "producer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "progress-L2",
+    "word": "progress",
+    "slug": "progress",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "project-L2",
+    "word": "project",
+    "slug": "project",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "promise-L2",
+    "word": "promise",
+    "slug": "promise",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pronounce-L2",
+    "word": "pronounce",
+    "slug": "pronounce",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "propose-L2",
+    "word": "propose",
+    "slug": "propose",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "protect-L2",
+    "word": "protect",
+    "slug": "protect",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "proud-L2",
+    "word": "proud",
+    "slug": "proud",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "provide-L2",
+    "word": "provide",
+    "slug": "provide",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "pudding-L2",
+    "word": "pudding",
+    "slug": "pudding",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "pump-L2",
+    "word": "pump",
+    "slug": "pump",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pumpkin-L2",
+    "word": "pumpkin",
+    "slug": "pumpkin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "punish-L2",
+    "word": "punish(ment)",
+    "slug": "punish",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "pupil-L2",
+    "word": "pupil",
+    "slug": "pupil",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "puppet-L2",
+    "word": "puppet",
+    "slug": "puppet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "puppy-L2",
+    "word": "puppy",
+    "slug": "puppy",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "purse-L2",
+    "word": "purse",
+    "slug": "purse",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "puzzle-L2",
+    "word": "puzzle",
+    "slug": "puzzle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "quality-L2",
+    "word": "quality",
+    "slug": "quality",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "quantity-L2",
+    "word": "quantity",
+    "slug": "quantity",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "quarter-L2",
+    "word": "quarter",
+    "slug": "quarter",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "quit-L2",
+    "word": "quit",
+    "slug": "quit",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "quiz-L2",
+    "word": "quiz",
+    "slug": "quiz",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "rabbit-L2",
+    "word": "rabbit",
+    "slug": "rabbit",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "rainy-L2",
+    "word": "rainy",
+    "slug": "rainy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "range-L2",
+    "word": "range",
+    "slug": "range",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "rapid-L2",
+    "word": "rapid",
+    "slug": "rapid",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "rare-L2",
+    "word": "rare",
+    "slug": "rare",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "rather-L2",
+    "word": "rather",
+    "slug": "rather",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "reality-L2",
+    "word": "reality",
+    "slug": "reality",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "realize-L2",
+    "word": "realize",
+    "slug": "realize",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "recent-L2",
+    "word": "recent",
+    "slug": "recent",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "record-L2",
+    "word": "record",
+    "slug": "record",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "rectangle-L2",
+    "word": "rectangle",
+    "slug": "rectangle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "refrigerator-L2",
+    "word": "refrigerator/fridge",
+    "slug": "refrigerator",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "refuse-L2",
+    "word": "refuse",
+    "slug": "refuse",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "regard-L2",
+    "word": "regard",
+    "slug": "regard",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "region-L2",
+    "word": "region",
+    "slug": "region",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "regular-L2",
+    "word": "regular",
+    "slug": "regular",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "reject-L2",
+    "word": "reject",
+    "slug": "reject",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "relation-L2",
+    "word": "relation",
+    "slug": "relation",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "relationship-L2",
+    "word": "relationship",
+    "slug": "relationship",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "repeat-L2",
+    "word": "repeat",
+    "slug": "repeat",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "reply-L2",
+    "word": "reply",
+    "slug": "reply",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "reporter-L2",
+    "word": "reporter",
+    "slug": "reporter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "require-L2",
+    "word": "require(ment)",
+    "slug": "require",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "respect-L2",
+    "word": "respect",
+    "slug": "respect",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "responsible-L2",
+    "word": "responsible",
+    "slug": "responsible",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "restaurant-L2",
+    "word": "restaurant",
+    "slug": "restaurant",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "restroom-L2",
+    "word": "restroom",
+    "slug": "restroom",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "result-L2",
+    "word": "result",
+    "slug": "result",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "review-L2",
+    "word": "review",
+    "slug": "review",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "riches-L2",
+    "word": "riches",
+    "slug": "riches",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "rock-L2",
+    "word": "rock",
+    "slug": "rock",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "rocky-L2",
+    "word": "rocky",
+    "slug": "rocky",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "role-L2",
+    "word": "role",
+    "slug": "role",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "royal-L2",
+    "word": "royal",
+    "slug": "royal",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "rude-L2",
+    "word": "rude",
+    "slug": "rude",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "ruler-L2",
+    "word": "ruler",
+    "slug": "ruler",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "runner-L2",
+    "word": "runner",
+    "slug": "runner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "rush-L2",
+    "word": "rush",
+    "slug": "rush",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "safety-L2",
+    "word": "safety",
+    "slug": "safety",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sailor-L2",
+    "word": "sailor",
+    "slug": "sailor",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "salad-L2",
+    "word": "salad",
+    "slug": "salad",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "salty-L2",
+    "word": "salty",
+    "slug": "salty",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "sample-L2",
+    "word": "sample",
+    "slug": "sample",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "sandwich-L2",
+    "word": "sandwich",
+    "slug": "sandwich",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "satisfy-L2",
+    "word": "satisfy",
+    "slug": "satisfy",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "sauce-L2",
+    "word": "sauce",
+    "slug": "sauce",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "science-L2",
+    "word": "science",
+    "slug": "science",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "scientist-L2",
+    "word": "scientist",
+    "slug": "scientist",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "scissors-L2",
+    "word": "scissors",
+    "slug": "scissors",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "score-L2",
+    "word": "score",
+    "slug": "score",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "screen-L2",
+    "word": "screen",
+    "slug": "screen",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "search-L2",
+    "word": "search",
+    "slug": "search",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "secret-L2",
+    "word": "secret",
+    "slug": "secret",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "secretary-L2",
+    "word": "secretary",
+    "slug": "secretary",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "section-L2",
+    "word": "section",
+    "slug": "section",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "select-L2",
+    "word": "select",
+    "slug": "select",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "selection-L2",
+    "word": "selection",
+    "slug": "selection",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "semester-L2",
+    "word": "semester",
+    "slug": "semester",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "separate-L2",
+    "word": "separate",
+    "slug": "separate",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "serious-L2",
+    "word": "serious",
+    "slug": "serious",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "servant-L2",
+    "word": "servant",
+    "slug": "servant",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "settle-L2",
+    "word": "settle(ment)",
+    "slug": "settle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "share-L2",
+    "word": "share",
+    "slug": "share",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "shelf-L2",
+    "word": "shelf",
+    "slug": "shelf",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "shell-L2",
+    "word": "shell",
+    "slug": "shell",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "shock-L2",
+    "word": "shock",
+    "slug": "shock",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "shoot-L2",
+    "word": "shoot",
+    "slug": "shoot",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "shorts-L2",
+    "word": "shorts",
+    "slug": "shorts",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "shower-L2",
+    "word": "shower",
+    "slug": "shower",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "shrimp-L2",
+    "word": "shrimp",
+    "slug": "shrimp",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sidewalk-L2",
+    "word": "sidewalk",
+    "slug": "sidewalk",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sign-L2",
+    "word": "sign",
+    "slug": "sign",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "silence-L2",
+    "word": "silence",
+    "slug": "silence",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "silent-L2",
+    "word": "silent",
+    "slug": "silent",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "silk-L2",
+    "word": "silk",
+    "slug": "silk",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "similar-L2",
+    "word": "similar",
+    "slug": "similar",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "simply-L2",
+    "word": "simply",
+    "slug": "simply",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "single-L2",
+    "word": "single",
+    "slug": "single",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "sink-L2",
+    "word": "sink",
+    "slug": "sink",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "skillful-L2",
+    "word": "skillful/skilled",
+    "slug": "skillful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "skinny-L2",
+    "word": "skinny",
+    "slug": "skinny",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "skirt-L2",
+    "word": "skirt",
+    "slug": "skirt",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "sleepy-L2",
+    "word": "sleepy",
+    "slug": "sleepy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "slender-L2",
+    "word": "slender",
+    "slug": "slender",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "slide-L2",
+    "word": "slide",
+    "slug": "slide",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "slim-L2",
+    "word": "slim",
+    "slug": "slim",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "slip-L2",
+    "word": "slip",
+    "slug": "slip",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "slipper-L2",
+    "word": "slipper(s)",
+    "slug": "slipper",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "snack-L2",
+    "word": "snack",
+    "slug": "snack",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "snail-L2",
+    "word": "snail",
+    "slug": "snail",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "snowy-L2",
+    "word": "snowy",
+    "slug": "snowy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "soccer-L2",
+    "word": "soccer",
+    "slug": "soccer",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "social-L2",
+    "word": "social",
+    "slug": "social",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "society-L2",
+    "word": "society",
+    "slug": "society",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sock-L2",
+    "word": "sock(s)",
+    "slug": "sock",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "soldier-L2",
+    "word": "soldier",
+    "slug": "soldier",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "solution-L2",
+    "word": "solution",
+    "slug": "solution",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "solve-L2",
+    "word": "solve",
+    "slug": "solve",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "somebody-L2",
+    "word": "somebody",
+    "slug": "somebody",
+    "pos": "n./pron.",
+    "level": 2
+  },
+  {
+    "id": "somewhere-L2",
+    "word": "somewhere",
+    "slug": "somewhere",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "sort-L2",
+    "word": "sort",
+    "slug": "sort",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "source-L2",
+    "word": "source",
+    "slug": "source",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "southern-L2",
+    "word": "southern",
+    "slug": "southern",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "soybean-L2",
+    "word": "soybean/soy",
+    "slug": "soybean",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "speaker-L2",
+    "word": "speaker",
+    "slug": "speaker",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "speed-L2",
+    "word": "speed",
+    "slug": "speed",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "spelling-L2",
+    "word": "spelling",
+    "slug": "spelling",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "spider-L2",
+    "word": "spider",
+    "slug": "spider",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "spinach-L2",
+    "word": "spinach",
+    "slug": "spinach",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "spirit-L2",
+    "word": "spirit",
+    "slug": "spirit",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "spot-L2",
+    "word": "spot",
+    "slug": "spot",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "spread-L2",
+    "word": "spread",
+    "slug": "spread",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "spring-L2",
+    "word": "spring",
+    "slug": "spring",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "square-L2",
+    "word": "square",
+    "slug": "square",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "squirrel-L2",
+    "word": "squirrel",
+    "slug": "squirrel",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "stage-L2",
+    "word": "stage",
+    "slug": "stage",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stamp-L2",
+    "word": "stamp",
+    "slug": "stamp",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "standard-L2",
+    "word": "standard",
+    "slug": "standard",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "steak-L2",
+    "word": "steak",
+    "slug": "steak",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "steal-L2",
+    "word": "steal",
+    "slug": "steal",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "steam-L2",
+    "word": "steam",
+    "slug": "steam",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "steel-L2",
+    "word": "steel",
+    "slug": "steel",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stick-L2",
+    "word": "stick",
+    "slug": "stick",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stomach-L2",
+    "word": "stomach",
+    "slug": "stomach",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "storm-L2",
+    "word": "storm",
+    "slug": "storm",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stove-L2",
+    "word": "stove",
+    "slug": "stove",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "straight-L2",
+    "word": "straight",
+    "slug": "straight",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "stranger-L2",
+    "word": "stranger",
+    "slug": "stranger",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "straw-L2",
+    "word": "straw",
+    "slug": "straw",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "strawberry-L2",
+    "word": "strawberry",
+    "slug": "strawberry",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "stream-L2",
+    "word": "stream",
+    "slug": "stream",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stress-L2",
+    "word": "stress",
+    "slug": "stress",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "stretch-L2",
+    "word": "stretch",
+    "slug": "stretch",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "strict-L2",
+    "word": "strict",
+    "slug": "strict",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "strike-L2",
+    "word": "strike",
+    "slug": "strike",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "string-L2",
+    "word": "string",
+    "slug": "string",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "struggle-L2",
+    "word": "struggle",
+    "slug": "struggle",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "subject-L2",
+    "word": "subject",
+    "slug": "subject",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "subtract-L2",
+    "word": "subtract",
+    "slug": "subtract",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "subway-L2",
+    "word": "subway",
+    "slug": "subway",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "succeed-L2",
+    "word": "succeed",
+    "slug": "succeed",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "success-L2",
+    "word": "success",
+    "slug": "success",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "successful-L2",
+    "word": "successful",
+    "slug": "successful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "sudden-L2",
+    "word": "sudden",
+    "slug": "sudden",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "suit-L2",
+    "word": "suit",
+    "slug": "suit",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "sunny-L2",
+    "word": "sunny",
+    "slug": "sunny",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "supermarket-L2",
+    "word": "supermarket",
+    "slug": "supermarket",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "supply-L2",
+    "word": "supply",
+    "slug": "supply",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "support-L2",
+    "word": "support",
+    "slug": "support",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "surface-L2",
+    "word": "surface",
+    "slug": "surface",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "survive-L2",
+    "word": "survive",
+    "slug": "survive",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "swallow-L2",
+    "word": "swallow",
+    "slug": "swallow",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "swan-L2",
+    "word": "swan",
+    "slug": "swan",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sweater-L2",
+    "word": "sweater",
+    "slug": "sweater",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "sweep-L2",
+    "word": "sweep",
+    "slug": "sweep",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "swing-L2",
+    "word": "swing",
+    "slug": "swing",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "symbol-L2",
+    "word": "symbol",
+    "slug": "symbol",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "talent-L2",
+    "word": "talent",
+    "slug": "talent",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "talkative-L2",
+    "word": "talkative",
+    "slug": "talkative",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "tangerine-L2",
+    "word": "tangerine",
+    "slug": "tangerine",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tank-L2",
+    "word": "tank",
+    "slug": "tank",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tape-L2",
+    "word": "tape",
+    "slug": "tape",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "target-L2",
+    "word": "target",
+    "slug": "target",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "task-L2",
+    "word": "task",
+    "slug": "task",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tasty-L2",
+    "word": "tasty",
+    "slug": "tasty",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "team-L2",
+    "word": "team",
+    "slug": "team",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tear-L2",
+    "word": "tear",
+    "slug": "tear",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "teen-L2",
+    "word": "teen(s)",
+    "slug": "teen",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "teenage-L2",
+    "word": "teenage",
+    "slug": "teenage",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "teenager-L2",
+    "word": "teenager",
+    "slug": "teenager",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "telephone-L2",
+    "word": "telephone/phone",
+    "slug": "telephone",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "television-L2",
+    "word": "television/TV",
+    "slug": "television",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "therefore-L2",
+    "word": "therefore",
+    "slug": "therefore",
+    "pos": "adv.",
+    "level": 2
+  },
+  {
+    "id": "thick-L2",
+    "word": "thick",
+    "slug": "thick",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "thief-L2",
+    "word": "thief",
+    "slug": "thief",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "thin-L2",
+    "word": "thin",
+    "slug": "thin",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "thirsty-L2",
+    "word": "thirsty",
+    "slug": "thirsty",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "throat-L2",
+    "word": "throat",
+    "slug": "throat",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "through-L2",
+    "word": "through",
+    "slug": "through",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "throughout-L2",
+    "word": "throughout",
+    "slug": "throughout",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "thumb-L2",
+    "word": "thumb",
+    "slug": "thumb",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "thunder-L2",
+    "word": "thunder",
+    "slug": "thunder",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tip-L2",
+    "word": "tip",
+    "slug": "tip",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "title-L2",
+    "word": "title",
+    "slug": "title",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "toast-L2",
+    "word": "toast",
+    "slug": "toast",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "toe-L2",
+    "word": "toe",
+    "slug": "toe",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tofu-L2",
+    "word": "tofu/bean curd",
+    "slug": "tofu",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "toilet-L2",
+    "word": "toilet",
+    "slug": "toilet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tomato-L2",
+    "word": "tomato",
+    "slug": "tomato",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tongue-L2",
+    "word": "tongue",
+    "slug": "tongue",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tooth-L2",
+    "word": "tooth",
+    "slug": "tooth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "topic-L2",
+    "word": "topic",
+    "slug": "topic",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tour-L2",
+    "word": "tour",
+    "slug": "tour",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "towel-L2",
+    "word": "towel",
+    "slug": "towel",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "tower-L2",
+    "word": "tower",
+    "slug": "tower",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "treasure-L2",
+    "word": "treasure",
+    "slug": "treasure",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "treat-L2-1",
+    "word": "treat",
+    "slug": "treat",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "treat-L2",
+    "word": "treat(ment)",
+    "slug": "treat",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "trial-L2",
+    "word": "trial",
+    "slug": "trial",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "triangle-L2",
+    "word": "triangle",
+    "slug": "triangle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "trick-L2",
+    "word": "trick",
+    "slug": "trick",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "trousers-L2",
+    "word": "trousers",
+    "slug": "trousers",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "truck-L2",
+    "word": "truck",
+    "slug": "truck",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "trumpet-L2",
+    "word": "trumpet",
+    "slug": "trumpet",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "trust-L2",
+    "word": "trust",
+    "slug": "trust",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "truth-L2",
+    "word": "truth",
+    "slug": "truth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tube-L2",
+    "word": "tube",
+    "slug": "tube",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "tunnel-L2",
+    "word": "tunnel",
+    "slug": "tunnel",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "turkey-L2",
+    "word": "turkey",
+    "slug": "turkey",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "turtle-L2",
+    "word": "turtle",
+    "slug": "turtle",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "type-L2",
+    "word": "type",
+    "slug": "type",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "typhoon-L2",
+    "word": "typhoon",
+    "slug": "typhoon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "ugly-L2",
+    "word": "ugly",
+    "slug": "ugly",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "umbrella-L2",
+    "word": "umbrella",
+    "slug": "umbrella",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "underwear-L2",
+    "word": "underwear",
+    "slug": "underwear",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "uniform-L2",
+    "word": "uniform",
+    "slug": "uniform",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "upon-L2",
+    "word": "upon",
+    "slug": "upon",
+    "pos": "prep.",
+    "level": 2
+  },
+  {
+    "id": "upper-L2",
+    "word": "upper",
+    "slug": "upper",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "used-L2",
+    "word": "used",
+    "slug": "used",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "used-to-L2",
+    "word": "used to",
+    "slug": "used to",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "user-L2",
+    "word": "user",
+    "slug": "user",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "usual-L2",
+    "word": "usual",
+    "slug": "usual",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "vacation-L2",
+    "word": "vacation",
+    "slug": "vacation",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "valley-L2",
+    "word": "valley",
+    "slug": "valley",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "value-L2",
+    "word": "value",
+    "slug": "value",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "victory-L2",
+    "word": "victory",
+    "slug": "victory",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "video-L2",
+    "word": "video",
+    "slug": "video",
+    "pos": "n./v./adj.",
+    "level": 2
+  },
+  {
+    "id": "village-L2",
+    "word": "village",
+    "slug": "village",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "violin-L2",
+    "word": "violin",
+    "slug": "violin",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "visitor-L2",
+    "word": "visitor",
+    "slug": "visitor",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "vocabulary-L2",
+    "word": "vocabulary",
+    "slug": "vocabulary",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "volleyball-L2",
+    "word": "volleyball",
+    "slug": "volleyball",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "vote-L2",
+    "word": "vote",
+    "slug": "vote",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "voter-L2",
+    "word": "voter",
+    "slug": "voter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "waist-L2",
+    "word": "waist",
+    "slug": "waist",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "waiter-L2",
+    "word": "waiter/waitress",
+    "slug": "waiter",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wake-L2",
+    "word": "wake",
+    "slug": "wake",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "wallet-L2",
+    "word": "wallet",
+    "slug": "wallet",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "waterfall-L2",
+    "word": "waterfall",
+    "slug": "waterfall",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "watermelon-L2",
+    "word": "watermelon",
+    "slug": "watermelon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wave-L2",
+    "word": "wave",
+    "slug": "wave",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "weapon-L2",
+    "word": "weapon",
+    "slug": "weapon",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wed-L2",
+    "word": "wed",
+    "slug": "wed",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "weekday-L2",
+    "word": "weekday",
+    "slug": "weekday",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "western-L2",
+    "word": "western",
+    "slug": "western",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "wet-L2",
+    "word": "wet",
+    "slug": "wet",
+    "pos": "v./adj.",
+    "level": 2
+  },
+  {
+    "id": "whale-L2",
+    "word": "whale",
+    "slug": "whale",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "whatever-L2",
+    "word": "whatever",
+    "slug": "whatever",
+    "pos": "adj./pron.",
+    "level": 2
+  },
+  {
+    "id": "wheel-L2",
+    "word": "wheel",
+    "slug": "wheel",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "whenever-L2",
+    "word": "whenever",
+    "slug": "whenever",
+    "pos": "adv./conj.",
+    "level": 2
+  },
+  {
+    "id": "wherever-L2",
+    "word": "wherever",
+    "slug": "wherever",
+    "pos": "adv./conj.",
+    "level": 2
+  },
+  {
+    "id": "whisper-L2",
+    "word": "whisper",
+    "slug": "whisper",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "whoever-L2",
+    "word": "whoever",
+    "slug": "whoever",
+    "pos": "pron.",
+    "level": 2
+  },
+  {
+    "id": "widen-L2",
+    "word": "widen",
+    "slug": "widen",
+    "pos": "v.",
+    "level": 2
+  },
+  {
+    "id": "width-L2",
+    "word": "width",
+    "slug": "width",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wild-L2",
+    "word": "wild",
+    "slug": "wild",
+    "pos": "n./adj./adv.",
+    "level": 2
+  },
+  {
+    "id": "willing-L2",
+    "word": "willing",
+    "slug": "willing",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "windy-L2",
+    "word": "windy",
+    "slug": "windy",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "wing-L2",
+    "word": "wing",
+    "slug": "wing",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "winner-L2",
+    "word": "winner",
+    "slug": "winner",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wire-L2",
+    "word": "wire",
+    "slug": "wire",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "wise-L2",
+    "word": "wise",
+    "slug": "wise",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "within-L2",
+    "word": "within",
+    "slug": "within",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "without-L2",
+    "word": "without",
+    "slug": "without",
+    "pos": "adv./prep.",
+    "level": 2
+  },
+  {
+    "id": "wolf-L2",
+    "word": "wolf",
+    "slug": "wolf",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "wonder-L2",
+    "word": "wonder",
+    "slug": "wonder",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "wonderful-L2",
+    "word": "wonderful",
+    "slug": "wonderful",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "wooden-L2",
+    "word": "wooden",
+    "slug": "wooden",
+    "pos": "adj.",
+    "level": 2
+  },
+  {
+    "id": "wool-L2",
+    "word": "wool",
+    "slug": "wool",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "worth-L2",
+    "word": "worth",
+    "slug": "worth",
+    "pos": "n./adj.",
+    "level": 2
+  },
+  {
+    "id": "wound-L2",
+    "word": "wound",
+    "slug": "wound",
+    "pos": "n./v.",
+    "level": 2
+  },
+  {
+    "id": "yard-L2",
+    "word": "yard",
+    "slug": "yard",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "youth-L2",
+    "word": "youth",
+    "slug": "youth",
+    "pos": "n.",
+    "level": 2
+  },
+  {
+    "id": "zebra-L2",
+    "word": "zebra",
+    "slug": "zebra",
+    "pos": "n.",
+    "level": 2
+  }
+]

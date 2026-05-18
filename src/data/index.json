@@ -1,0 +1,45 @@
+{
+  "built_at": "2026-05-18T14:10:17.552Z",
+  "levels": [
+    {
+      "level": 1,
+      "cards": 1018,
+      "with_dict": 981,
+      "with_zh": 145,
+      "with_partial_zh": 0,
+      "bytes": 742728
+    },
+    {
+      "level": 2,
+      "cards": 1030,
+      "with_dict": 987,
+      "with_zh": 0,
+      "with_partial_zh": 0,
+      "bytes": 634250
+    },
+    {
+      "level": 3,
+      "cards": 1053,
+      "with_dict": 1000,
+      "with_zh": 0,
+      "with_partial_zh": 0,
+      "bytes": 622556
+    },
+    {
+      "level": 4,
+      "cards": 1047,
+      "with_dict": 1019,
+      "with_zh": 0,
+      "with_partial_zh": 0,
+      "bytes": 566773
+    },
+    {
+      "level": 5,
+      "cards": 1055,
+      "with_dict": 24,
+      "with_zh": 0,
+      "with_partial_zh": 0,
+      "bytes": 99416
+    }
+  ]
+}

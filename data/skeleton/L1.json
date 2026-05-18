@@ -1,0 +1,7128 @@
+[
+  {
+    "id": "able-L1",
+    "word": "able",
+    "slug": "able",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "about-L1",
+    "word": "about",
+    "slug": "about",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "above-L1",
+    "word": "above",
+    "slug": "above",
+    "pos": "adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "according-to-L1",
+    "word": "according to",
+    "slug": "according to",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "across-L1",
+    "word": "across",
+    "slug": "across",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "act-L1",
+    "word": "act",
+    "slug": "act",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "action-L1",
+    "word": "action",
+    "slug": "action",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "actor-L1",
+    "word": "actor/actress",
+    "slug": "actor",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "add-L1",
+    "word": "add",
+    "slug": "add",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "address-L1",
+    "word": "address",
+    "slug": "address",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "adult-L1",
+    "word": "adult",
+    "slug": "adult",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "afraid-L1",
+    "word": "afraid",
+    "slug": "afraid",
+    "pos": "Adj.",
+    "level": 1
+  },
+  {
+    "id": "after-L1",
+    "word": "after",
+    "slug": "after",
+    "pos": "adv./prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "afternoon-L1",
+    "word": "afternoon",
+    "slug": "afternoon",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "again-L1",
+    "word": "again",
+    "slug": "again",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "against-L1",
+    "word": "against",
+    "slug": "against",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "age-L1",
+    "word": "age",
+    "slug": "age",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "ago-L1",
+    "word": "ago",
+    "slug": "ago",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "agree-L1",
+    "word": "agree(ment)",
+    "slug": "agree",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "ahead-L1",
+    "word": "ahead",
+    "slug": "ahead",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "air-L1",
+    "word": "air",
+    "slug": "air",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "airmail-L1",
+    "word": "airmail",
+    "slug": "airmail",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "airplane-L1",
+    "word": "airplane/plane",
+    "slug": "airplane",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "airport-L1",
+    "word": "airport",
+    "slug": "airport",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "all-L1",
+    "word": "all",
+    "slug": "all",
+    "pos": "n./adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "allow-L1",
+    "word": "allow",
+    "slug": "allow",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "almost-L1",
+    "word": "almost",
+    "slug": "almost",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "alone-L1",
+    "word": "alone",
+    "slug": "alone",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "along-L1",
+    "word": "along",
+    "slug": "along",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "already-L1",
+    "word": "already",
+    "slug": "already",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "also-L1",
+    "word": "also",
+    "slug": "also",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "always-L1",
+    "word": "always",
+    "slug": "always",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "am-L1",
+    "word": "am",
+    "slug": "am",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "among-L1",
+    "word": "among",
+    "slug": "among",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "and-L1",
+    "word": "and",
+    "slug": "and",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "anger-L1",
+    "word": "anger",
+    "slug": "anger",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "angry-L1",
+    "word": "angry",
+    "slug": "angry",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "animal-L1",
+    "word": "animal",
+    "slug": "animal",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "another-L1",
+    "word": "another",
+    "slug": "another",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "answer-L1",
+    "word": "answer",
+    "slug": "answer",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "ant-L1",
+    "word": "ant",
+    "slug": "ant",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "any-L1",
+    "word": "any",
+    "slug": "any",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "anything-L1",
+    "word": "anything",
+    "slug": "anything",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "ape-L1",
+    "word": "ape",
+    "slug": "ape",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "appear-L1",
+    "word": "appear",
+    "slug": "appear",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "apple-L1",
+    "word": "apple",
+    "slug": "apple",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "april-L1",
+    "word": "April/Apr.",
+    "slug": "april",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "are-L1",
+    "word": "are",
+    "slug": "are",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "area-L1",
+    "word": "area",
+    "slug": "area",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "arm-L1",
+    "word": "arm",
+    "slug": "arm",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "army-L1",
+    "word": "army",
+    "slug": "army",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "around-L1",
+    "word": "around",
+    "slug": "around",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "art-L1",
+    "word": "art",
+    "slug": "art",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "as-L1",
+    "word": "as",
+    "slug": "as",
+    "pos": "adv./prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "ask-L1",
+    "word": "ask",
+    "slug": "ask",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "at-L1",
+    "word": "at",
+    "slug": "at",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "august-L1",
+    "word": "August/Aug.",
+    "slug": "august",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "aunt-L1",
+    "word": "aunt/auntie/aunty",
+    "slug": "aunt",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "autumn-L1",
+    "word": "autumn/fall",
+    "slug": "autumn",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "away-L1",
+    "word": "away",
+    "slug": "away",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "baby-L1",
+    "word": "baby",
+    "slug": "baby",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "back-L1",
+    "word": "back",
+    "slug": "back",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "bad-L1",
+    "word": "bad",
+    "slug": "bad",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "bag-L1",
+    "word": "bag",
+    "slug": "bag",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ball-L1",
+    "word": "ball",
+    "slug": "ball",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "balloon-L1",
+    "word": "balloon",
+    "slug": "balloon",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "banana-L1",
+    "word": "banana",
+    "slug": "banana",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "band-L1",
+    "word": "band",
+    "slug": "band",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bank-L1",
+    "word": "bank",
+    "slug": "bank",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bar-L1",
+    "word": "bar",
+    "slug": "bar",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "barber-L1",
+    "word": "barber",
+    "slug": "barber",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "base-L1",
+    "word": "base",
+    "slug": "base",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "baseball-L1",
+    "word": "baseball",
+    "slug": "baseball",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "basic-L1",
+    "word": "basic",
+    "slug": "basic",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "basket-L1",
+    "word": "basket",
+    "slug": "basket",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "basketball-L1",
+    "word": "basketball",
+    "slug": "basketball",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bat-L1",
+    "word": "bat",
+    "slug": "bat",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "bath-L1",
+    "word": "bath",
+    "slug": "bath",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bathe-L1",
+    "word": "bathe",
+    "slug": "bathe",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "bathroom-L1",
+    "word": "bathroom",
+    "slug": "bathroom",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "be-L1",
+    "word": "be",
+    "slug": "be",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "beach-L1",
+    "word": "beach",
+    "slug": "beach",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "bear-L1",
+    "word": "bear",
+    "slug": "bear",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "beat-L1",
+    "word": "beat",
+    "slug": "beat",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "beautiful-L1",
+    "word": "beautiful",
+    "slug": "beautiful",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "beauty-L1",
+    "word": "beauty",
+    "slug": "beauty",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "because-L1",
+    "word": "because",
+    "slug": "because",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "become-L1",
+    "word": "become",
+    "slug": "become",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "bed-L1",
+    "word": "bed",
+    "slug": "bed",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bee-L1",
+    "word": "bee",
+    "slug": "bee",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "before-L1",
+    "word": "before",
+    "slug": "before",
+    "pos": "adv./prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "begin-L1",
+    "word": "begin",
+    "slug": "begin",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "behind-L1",
+    "word": "behind",
+    "slug": "behind",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "believe-L1",
+    "word": "believe",
+    "slug": "believe",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "bell-L1",
+    "word": "bell",
+    "slug": "bell",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "belong-L1",
+    "word": "belong",
+    "slug": "belong",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "below-L1",
+    "word": "below",
+    "slug": "below",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "beside-L1",
+    "word": "beside",
+    "slug": "beside",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "best-L1",
+    "word": "best",
+    "slug": "best",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "better-L1",
+    "word": "better",
+    "slug": "better",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "between-L1",
+    "word": "between",
+    "slug": "between",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "bicycle-L1",
+    "word": "bicycle/bike",
+    "slug": "bicycle",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "big-L1",
+    "word": "big",
+    "slug": "big",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "bird-L1",
+    "word": "bird",
+    "slug": "bird",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "birth-L1",
+    "word": "birth",
+    "slug": "birth",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bit-L1",
+    "word": "bit",
+    "slug": "bit",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bite-L1",
+    "word": "bite",
+    "slug": "bite",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "black-L1",
+    "word": "black",
+    "slug": "black",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "block-L1",
+    "word": "block",
+    "slug": "block",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "blood-L1",
+    "word": "blood",
+    "slug": "blood",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "blow-L1",
+    "word": "blow",
+    "slug": "blow",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "blue-L1",
+    "word": "blue",
+    "slug": "blue",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "boat-L1",
+    "word": "boat",
+    "slug": "boat",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "body-L1",
+    "word": "body",
+    "slug": "body",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bone-L1",
+    "word": "bone",
+    "slug": "bone",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "book-L1",
+    "word": "book",
+    "slug": "book",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "born-L1",
+    "word": "born",
+    "slug": "born",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "both-L1",
+    "word": "both",
+    "slug": "both",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "bottom-L1",
+    "word": "bottom",
+    "slug": "bottom",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "bowl-L1",
+    "word": "bowl",
+    "slug": "bowl",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "box-L1",
+    "word": "box",
+    "slug": "box",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "boy-L1",
+    "word": "boy",
+    "slug": "boy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "brave-L1",
+    "word": "brave",
+    "slug": "brave",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "bread-L1",
+    "word": "bread",
+    "slug": "bread",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "break-L1",
+    "word": "break",
+    "slug": "break",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "breakfast-L1",
+    "word": "breakfast",
+    "slug": "breakfast",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "bridge-L1",
+    "word": "bridge",
+    "slug": "bridge",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "bright-L1",
+    "word": "bright",
+    "slug": "bright",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "bring-L1",
+    "word": "bring",
+    "slug": "bring",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "brother-L1",
+    "word": "brother",
+    "slug": "brother",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "brown-L1",
+    "word": "brown",
+    "slug": "brown",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "bug-L1",
+    "word": "bug",
+    "slug": "bug",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "build-L1",
+    "word": "build",
+    "slug": "build",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "building-L1",
+    "word": "building",
+    "slug": "building",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "bus-L1",
+    "word": "bus",
+    "slug": "bus",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "busy-L1",
+    "word": "busy",
+    "slug": "busy",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "but-L1",
+    "word": "but",
+    "slug": "but",
+    "pos": "adv./prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "butter-L1",
+    "word": "butter",
+    "slug": "butter",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "butterfly-L1",
+    "word": "butterfly",
+    "slug": "butterfly",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "buy-L1",
+    "word": "buy",
+    "slug": "buy",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "by-L1",
+    "word": "by",
+    "slug": "by",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "cage-L1",
+    "word": "cage",
+    "slug": "cage",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cake-L1",
+    "word": "cake",
+    "slug": "cake",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "call-L1",
+    "word": "call",
+    "slug": "call",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "camel-L1",
+    "word": "camel",
+    "slug": "camel",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "camera-L1",
+    "word": "camera",
+    "slug": "camera",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "camp-L1",
+    "word": "camp",
+    "slug": "camp",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "can-L1",
+    "word": "can",
+    "slug": "can",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "can-L1-1",
+    "word": "can (container)",
+    "slug": "can",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "candy-L1",
+    "word": "candy/sweet",
+    "slug": "candy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cap-L1",
+    "word": "cap",
+    "slug": "cap",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "car-L1",
+    "word": "car",
+    "slug": "car",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "card-L1",
+    "word": "card",
+    "slug": "card",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "care-L1",
+    "word": "care",
+    "slug": "care",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "careful-L1",
+    "word": "careful",
+    "slug": "careful",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "carry-L1",
+    "word": "carry",
+    "slug": "carry",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "case-L1",
+    "word": "case",
+    "slug": "case",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cat-L1",
+    "word": "cat",
+    "slug": "cat",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "catch-L1",
+    "word": "catch",
+    "slug": "catch",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cause-L1",
+    "word": "cause",
+    "slug": "cause",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cent-L1",
+    "word": "cent",
+    "slug": "cent",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "center-L1",
+    "word": "center",
+    "slug": "center",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "certain-L1",
+    "word": "certain",
+    "slug": "certain",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "chair-L1",
+    "word": "chair",
+    "slug": "chair",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "chance-L1",
+    "word": "chance",
+    "slug": "chance",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "chart-L1",
+    "word": "chart",
+    "slug": "chart",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "chase-L1",
+    "word": "chase",
+    "slug": "chase",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "check-L1",
+    "word": "check",
+    "slug": "check",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "chick-L1",
+    "word": "chick",
+    "slug": "chick",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "chicken-L1",
+    "word": "chicken",
+    "slug": "chicken",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "chief-L1",
+    "word": "chief",
+    "slug": "chief",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "child-L1",
+    "word": "child",
+    "slug": "child",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "christmas-L1",
+    "word": "Christmas/Xmas",
+    "slug": "christmas",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "church-L1",
+    "word": "church",
+    "slug": "church",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "city-L1",
+    "word": "city",
+    "slug": "city",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "class-L1",
+    "word": "class",
+    "slug": "class",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "clean-L1",
+    "word": "clean",
+    "slug": "clean",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "clear-L1",
+    "word": "clear",
+    "slug": "clear",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "climb-L1",
+    "word": "climb",
+    "slug": "climb",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "clock-L1",
+    "word": "clock",
+    "slug": "clock",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "close-L1",
+    "word": "close",
+    "slug": "close",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "cloud-L1",
+    "word": "cloud",
+    "slug": "cloud",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "coast-L1",
+    "word": "coast",
+    "slug": "coast",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "coat-L1",
+    "word": "coat",
+    "slug": "coat",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cocoa-L1",
+    "word": "cocoa",
+    "slug": "cocoa",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "coffee-L1",
+    "word": "coffee",
+    "slug": "coffee",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cola-L1",
+    "word": "cola/Coke",
+    "slug": "cola",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cold-L1",
+    "word": "cold",
+    "slug": "cold",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "color-L1",
+    "word": "color",
+    "slug": "color",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "come-L1",
+    "word": "come",
+    "slug": "come",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "common-L1",
+    "word": "common",
+    "slug": "common",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "continue-L1",
+    "word": "continue",
+    "slug": "continue",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "cook-L1",
+    "word": "cook",
+    "slug": "cook",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cookie-L1",
+    "word": "cookie/cooky",
+    "slug": "cookie",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cool-L1",
+    "word": "cool",
+    "slug": "cool",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "corn-L1",
+    "word": "corn",
+    "slug": "corn",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "correct-L1",
+    "word": "correct",
+    "slug": "correct",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "cost-L1",
+    "word": "cost",
+    "slug": "cost",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "count-L1",
+    "word": "count",
+    "slug": "count",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "country-L1",
+    "word": "country",
+    "slug": "country",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "course-L1",
+    "word": "course",
+    "slug": "course",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cover-L1",
+    "word": "cover",
+    "slug": "cover",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cow-L1",
+    "word": "cow",
+    "slug": "cow",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cowboy-L1",
+    "word": "cowboy",
+    "slug": "cowboy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "crow-L1",
+    "word": "crow",
+    "slug": "crow",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cry-L1",
+    "word": "cry",
+    "slug": "cry",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cub-L1",
+    "word": "cub",
+    "slug": "cub",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "cup-L1",
+    "word": "cup",
+    "slug": "cup",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cut-L1",
+    "word": "cut",
+    "slug": "cut",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "cute-L1",
+    "word": "cute",
+    "slug": "cute",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "daddy-L1",
+    "word": "daddy/dad",
+    "slug": "daddy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dance-L1",
+    "word": "dance",
+    "slug": "dance",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "dancer-L1",
+    "word": "dancer",
+    "slug": "dancer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "danger-L1",
+    "word": "danger",
+    "slug": "danger",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dark-L1",
+    "word": "dark",
+    "slug": "dark",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "date-L1",
+    "word": "date",
+    "slug": "date",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "daughter-L1",
+    "word": "daughter",
+    "slug": "daughter",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "day-L1",
+    "word": "day",
+    "slug": "day",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dead-L1",
+    "word": "dead",
+    "slug": "dead",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "deal-L1",
+    "word": "deal",
+    "slug": "deal",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "dear-L1",
+    "word": "dear",
+    "slug": "dear",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "death-L1",
+    "word": "death",
+    "slug": "death",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "december-L1",
+    "word": "December/Dec.",
+    "slug": "december",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "decide-L1",
+    "word": "decide",
+    "slug": "decide",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "deep-L1",
+    "word": "deep",
+    "slug": "deep",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "deer-L1",
+    "word": "deer",
+    "slug": "deer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "desk-L1",
+    "word": "desk",
+    "slug": "desk",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "die-L1",
+    "word": "die",
+    "slug": "die",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "different-L1",
+    "word": "different",
+    "slug": "different",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "difficult-L1",
+    "word": "difficult",
+    "slug": "difficult",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "dig-L1",
+    "word": "dig",
+    "slug": "dig",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "dinner-L1",
+    "word": "dinner",
+    "slug": "dinner",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "direct-L1",
+    "word": "direct",
+    "slug": "direct",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "dirty-L1",
+    "word": "dirty",
+    "slug": "dirty",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "discover-L1",
+    "word": "discover",
+    "slug": "discover",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "dish-L1",
+    "word": "dish",
+    "slug": "dish",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "do-L1",
+    "word": "do",
+    "slug": "do",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "doctor-L1",
+    "word": "doctor/doc",
+    "slug": "doctor",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dog-L1",
+    "word": "dog",
+    "slug": "dog",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "doll-L1",
+    "word": "doll",
+    "slug": "doll",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dollar-L1",
+    "word": "dollar/buck",
+    "slug": "dollar",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "door-L1",
+    "word": "door",
+    "slug": "door",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dove-L1",
+    "word": "dove",
+    "slug": "dove",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "down-L1",
+    "word": "down",
+    "slug": "down",
+    "pos": "n./v./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "downstairs-L1",
+    "word": "downstairs",
+    "slug": "downstairs",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "dozen-L1",
+    "word": "dozen",
+    "slug": "dozen",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "draw-L1",
+    "word": "draw",
+    "slug": "draw",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "dream-L1",
+    "word": "dream",
+    "slug": "dream",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "drink-L1",
+    "word": "drink",
+    "slug": "drink",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "drive-L1",
+    "word": "drive",
+    "slug": "drive",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "driver-L1",
+    "word": "driver",
+    "slug": "driver",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "dry-L1",
+    "word": "dry",
+    "slug": "dry",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "duck-L1",
+    "word": "duck",
+    "slug": "duck",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "duckling-L1",
+    "word": "duckling",
+    "slug": "duckling",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "during-L1",
+    "word": "during",
+    "slug": "during",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "each-L1",
+    "word": "each",
+    "slug": "each",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "eagle-L1",
+    "word": "eagle",
+    "slug": "eagle",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ear-L1",
+    "word": "ear",
+    "slug": "ear",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "early-L1",
+    "word": "early",
+    "slug": "early",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "earth-L1",
+    "word": "earth",
+    "slug": "earth",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ease-L1",
+    "word": "ease",
+    "slug": "ease",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "east-L1",
+    "word": "east",
+    "slug": "east",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "easy-L1",
+    "word": "easy",
+    "slug": "easy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "eat-L1",
+    "word": "eat",
+    "slug": "eat",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "edge-L1",
+    "word": "edge",
+    "slug": "edge",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "egg-L1",
+    "word": "egg",
+    "slug": "egg",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "eight-L1",
+    "word": "eight",
+    "slug": "eight",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "eighteen-L1",
+    "word": "eighteen",
+    "slug": "eighteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "eighty-L1",
+    "word": "eighty",
+    "slug": "eighty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "either-L1",
+    "word": "either",
+    "slug": "either",
+    "pos": "adj./pron./conj.",
+    "level": 1
+  },
+  {
+    "id": "elephant-L1",
+    "word": "elephant",
+    "slug": "elephant",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "eleven-L1",
+    "word": "eleven",
+    "slug": "eleven",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "else-L1",
+    "word": "else",
+    "slug": "else",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "end-L1",
+    "word": "end",
+    "slug": "end",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "english-L1",
+    "word": "English",
+    "slug": "english",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "enough-L1",
+    "word": "enough",
+    "slug": "enough",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "enter-L1",
+    "word": "enter",
+    "slug": "enter",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "equal-L1",
+    "word": "equal",
+    "slug": "equal",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "even-L1",
+    "word": "even",
+    "slug": "even",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "evening-L1",
+    "word": "evening",
+    "slug": "evening",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ever-L1",
+    "word": "ever",
+    "slug": "ever",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "every-L1",
+    "word": "every",
+    "slug": "every",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "examination-L1",
+    "word": "examination/exam",
+    "slug": "examination",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "examine-L1",
+    "word": "examine",
+    "slug": "examine",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "example-L1",
+    "word": "example",
+    "slug": "example",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "except-L1",
+    "word": "except/excepting",
+    "slug": "except",
+    "pos": "v./prep.",
+    "level": 1
+  },
+  {
+    "id": "eye-L1",
+    "word": "eye",
+    "slug": "eye",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "face-L1",
+    "word": "face",
+    "slug": "face",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fact-L1",
+    "word": "fact",
+    "slug": "fact",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "factory-L1",
+    "word": "factory",
+    "slug": "factory",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "fall-L1",
+    "word": "fall",
+    "slug": "fall",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "family-L1",
+    "word": "family",
+    "slug": "family",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "fan-L1",
+    "word": "fan",
+    "slug": "fan",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "far-L1",
+    "word": "far",
+    "slug": "far",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "farm-L1",
+    "word": "farm",
+    "slug": "farm",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "farmer-L1",
+    "word": "farmer",
+    "slug": "farmer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "fast-L1",
+    "word": "fast",
+    "slug": "fast",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "fat-L1",
+    "word": "fat",
+    "slug": "fat",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "father-L1",
+    "word": "father",
+    "slug": "father",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fear-L1",
+    "word": "fear",
+    "slug": "fear",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "february-L1",
+    "word": "February/Feb.",
+    "slug": "february",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "feed-L1",
+    "word": "feed",
+    "slug": "feed",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "feel-L1",
+    "word": "feel",
+    "slug": "feel",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "feeling-L1",
+    "word": "feeling",
+    "slug": "feeling",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "feelings-L1",
+    "word": "feelings",
+    "slug": "feelings",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "few-L1",
+    "word": "few",
+    "slug": "few",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "fifteen-L1",
+    "word": "fifteen",
+    "slug": "fifteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "fifty-L1",
+    "word": "fifty",
+    "slug": "fifty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "fight-L1",
+    "word": "fight",
+    "slug": "fight",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fill-L1",
+    "word": "fill",
+    "slug": "fill",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "final-L1",
+    "word": "final",
+    "slug": "final",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "find-L1",
+    "word": "find",
+    "slug": "find",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fine-L1",
+    "word": "fine",
+    "slug": "fine",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "finger-L1",
+    "word": "finger",
+    "slug": "finger",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "finish-L1",
+    "word": "finish",
+    "slug": "finish",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fire-L1",
+    "word": "fire",
+    "slug": "fire",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "first-L1",
+    "word": "first",
+    "slug": "first",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "fish-L1",
+    "word": "fish",
+    "slug": "fish",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "five-L1",
+    "word": "five",
+    "slug": "five",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "floor-L1",
+    "word": "floor",
+    "slug": "floor",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "flower-L1",
+    "word": "flower",
+    "slug": "flower",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fly-L1",
+    "word": "fly",
+    "slug": "fly",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "fog-L1",
+    "word": "fog",
+    "slug": "fog",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "follow-L1",
+    "word": "follow",
+    "slug": "follow",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "food-L1",
+    "word": "food",
+    "slug": "food",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "foot-L1",
+    "word": "foot",
+    "slug": "foot",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "for-L1",
+    "word": "for",
+    "slug": "for",
+    "pos": "prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "force-L1",
+    "word": "force",
+    "slug": "force",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "foreign-L1",
+    "word": "foreign",
+    "slug": "foreign",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "forest-L1",
+    "word": "forest",
+    "slug": "forest",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "forget-L1",
+    "word": "forget",
+    "slug": "forget",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "fork-L1",
+    "word": "fork",
+    "slug": "fork",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "forty-L1",
+    "word": "forty",
+    "slug": "forty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "four-L1",
+    "word": "four",
+    "slug": "four",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "fourteen-L1",
+    "word": "fourteen",
+    "slug": "fourteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "free-L1",
+    "word": "free",
+    "slug": "free",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "fresh-L1",
+    "word": "fresh",
+    "slug": "fresh",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "friday-L1",
+    "word": "Friday/Fri.",
+    "slug": "friday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "friend-L1",
+    "word": "friend",
+    "slug": "friend",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "frog-L1",
+    "word": "frog",
+    "slug": "frog",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "from-L1",
+    "word": "from",
+    "slug": "from",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "front-L1",
+    "word": "front",
+    "slug": "front",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "fruit-L1",
+    "word": "fruit",
+    "slug": "fruit",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "full-L1",
+    "word": "full",
+    "slug": "full",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "fun-L1",
+    "word": "fun",
+    "slug": "fun",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "funny-L1",
+    "word": "funny",
+    "slug": "funny",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "game-L1",
+    "word": "game",
+    "slug": "game",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "garden-L1",
+    "word": "garden",
+    "slug": "garden",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "gas-L1",
+    "word": "gas",
+    "slug": "gas",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "general-L1",
+    "word": "general",
+    "slug": "general",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "get-L1",
+    "word": "get",
+    "slug": "get",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "ghost-L1",
+    "word": "ghost",
+    "slug": "ghost",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "gift-L1",
+    "word": "gift",
+    "slug": "gift",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "girl-L1",
+    "word": "girl",
+    "slug": "girl",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "give-L1",
+    "word": "give",
+    "slug": "give",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "glad-L1",
+    "word": "glad",
+    "slug": "glad",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "glass-L1",
+    "word": "glass",
+    "slug": "glass",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "glasses-L1",
+    "word": "glasses",
+    "slug": "glasses",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "go-L1",
+    "word": "go",
+    "slug": "go",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "god-L1",
+    "word": "god/goddess",
+    "slug": "god",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "gold-L1",
+    "word": "gold",
+    "slug": "gold",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "good-L1",
+    "word": "good",
+    "slug": "good",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "good-bye-L1",
+    "word": "good-bye/goodbye",
+    "slug": "good-bye",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "goose-L1",
+    "word": "goose",
+    "slug": "goose",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "grand-L1",
+    "word": "grand",
+    "slug": "grand",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "grandchild-L1",
+    "word": "grandchild",
+    "slug": "grandchild",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "granddaughter-L1",
+    "word": "granddaughter",
+    "slug": "granddaughter",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "grandfather-L1",
+    "word": "grandfather/grandpa",
+    "slug": "grandfather",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "grandmother-L1",
+    "word": "grandmother/grandma",
+    "slug": "grandmother",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "grandson-L1",
+    "word": "grandson",
+    "slug": "grandson",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "grass-L1",
+    "word": "grass",
+    "slug": "grass",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "gray-L1",
+    "word": "gray/grey",
+    "slug": "gray",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "great-L1",
+    "word": "great",
+    "slug": "great",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "green-L1",
+    "word": "green",
+    "slug": "green",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "ground-L1",
+    "word": "ground",
+    "slug": "ground",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "group-L1",
+    "word": "group",
+    "slug": "group",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "grow-L1",
+    "word": "grow",
+    "slug": "grow",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "guess-L1",
+    "word": "guess",
+    "slug": "guess",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "guest-L1",
+    "word": "guest",
+    "slug": "guest",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "guide-L1",
+    "word": "guide",
+    "slug": "guide",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "gun-L1",
+    "word": "gun",
+    "slug": "gun",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "hair-L1",
+    "word": "hair",
+    "slug": "hair",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "haircut-L1",
+    "word": "haircut",
+    "slug": "haircut",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "half-L1",
+    "word": "half",
+    "slug": "half",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "ham-L1",
+    "word": "ham",
+    "slug": "ham",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hand-L1",
+    "word": "hand",
+    "slug": "hand",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "happen-L1",
+    "word": "happen",
+    "slug": "happen",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "happy-L1",
+    "word": "happy",
+    "slug": "happy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "hard-L1",
+    "word": "hard",
+    "slug": "hard",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "hat-L1",
+    "word": "hat",
+    "slug": "hat",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hate-L1",
+    "word": "hate",
+    "slug": "hate",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "have-L1",
+    "word": "have",
+    "slug": "have",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "he-L1",
+    "word": "he",
+    "slug": "he",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "head-L1",
+    "word": "head",
+    "slug": "head",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "health-L1",
+    "word": "health",
+    "slug": "health",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hear-L1",
+    "word": "hear",
+    "slug": "hear",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "heart-L1",
+    "word": "heart",
+    "slug": "heart",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "heat-L1",
+    "word": "heat",
+    "slug": "heat",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "heavy-L1",
+    "word": "heavy",
+    "slug": "heavy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "hello-L1",
+    "word": "hello",
+    "slug": "hello",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "help-L1",
+    "word": "help",
+    "slug": "help",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "her-L1",
+    "word": "her(s)",
+    "slug": "her",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "here-L1",
+    "word": "here",
+    "slug": "here",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "high-L1",
+    "word": "high",
+    "slug": "high",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "hill-L1",
+    "word": "hill",
+    "slug": "hill",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "him-L1",
+    "word": "him",
+    "slug": "him",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "his-L1",
+    "word": "his",
+    "slug": "his",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "history-L1",
+    "word": "history",
+    "slug": "history",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hit-L1",
+    "word": "hit",
+    "slug": "hit",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "hold-L1",
+    "word": "hold",
+    "slug": "hold",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "hole-L1",
+    "word": "hole",
+    "slug": "hole",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "holiday-L1",
+    "word": "holiday",
+    "slug": "holiday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "home-L1",
+    "word": "home",
+    "slug": "home",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "homework-L1",
+    "word": "homework",
+    "slug": "homework",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hope-L1",
+    "word": "hope",
+    "slug": "hope",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "horse-L1",
+    "word": "horse",
+    "slug": "horse",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "hot-L1",
+    "word": "hot",
+    "slug": "hot",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "hour-L1",
+    "word": "hour",
+    "slug": "hour",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "house-L1",
+    "word": "house",
+    "slug": "house",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "how-L1",
+    "word": "how",
+    "slug": "how",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "huge-L1",
+    "word": "huge",
+    "slug": "huge",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "human-L1",
+    "word": "human",
+    "slug": "human",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "hundred-L1",
+    "word": "hundred",
+    "slug": "hundred",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "hungry-L1",
+    "word": "hungry",
+    "slug": "hungry",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "hurt-L1",
+    "word": "hurt",
+    "slug": "hurt",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "husband-L1",
+    "word": "husband",
+    "slug": "husband",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "i-L1",
+    "word": "I",
+    "slug": "i",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "ice-L1",
+    "word": "ice",
+    "slug": "ice",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "idea-L1",
+    "word": "idea",
+    "slug": "idea",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "if-L1",
+    "word": "if",
+    "slug": "if",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "important-L1",
+    "word": "important",
+    "slug": "important",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "in-L1",
+    "word": "in",
+    "slug": "in",
+    "pos": "adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "inch-L1",
+    "word": "inch",
+    "slug": "inch",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "inside-L1",
+    "word": "inside",
+    "slug": "inside",
+    "pos": "n./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "interest-L1",
+    "word": "interest",
+    "slug": "interest",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "into-L1",
+    "word": "into",
+    "slug": "into",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "iron-L1",
+    "word": "iron",
+    "slug": "iron",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "is-L1",
+    "word": "is",
+    "slug": "is",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "it-L1",
+    "word": "it",
+    "slug": "it",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "its-L1",
+    "word": "its",
+    "slug": "its",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "jam-L1",
+    "word": "jam",
+    "slug": "jam",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "january-L1",
+    "word": "January/Jan.",
+    "slug": "january",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "job-L1",
+    "word": "job",
+    "slug": "job",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "join-L1",
+    "word": "join",
+    "slug": "join",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "joke-L1",
+    "word": "joke",
+    "slug": "joke",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "joy-L1",
+    "word": "joy",
+    "slug": "joy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "juice-L1",
+    "word": "juice",
+    "slug": "juice",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "july-L1",
+    "word": "July/Jul.",
+    "slug": "july",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "jump-L1",
+    "word": "jump",
+    "slug": "jump",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "june-L1",
+    "word": "June/Jun.",
+    "slug": "june",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "just-L1",
+    "word": "just",
+    "slug": "just",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "keep-L1",
+    "word": "keep",
+    "slug": "keep",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "keeper-L1",
+    "word": "keeper",
+    "slug": "keeper",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "key-L1",
+    "word": "key",
+    "slug": "key",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "kick-L1",
+    "word": "kick",
+    "slug": "kick",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "kid-L1",
+    "word": "kid",
+    "slug": "kid",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "kill-L1",
+    "word": "kill",
+    "slug": "kill",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "kind-L1",
+    "word": "kind",
+    "slug": "kind",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "king-L1",
+    "word": "king",
+    "slug": "king",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "kiss-L1",
+    "word": "kiss",
+    "slug": "kiss",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "kitchen-L1",
+    "word": "kitchen",
+    "slug": "kitchen",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "kite-L1",
+    "word": "kite",
+    "slug": "kite",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "kitten-L1",
+    "word": "kitten/kitty",
+    "slug": "kitten",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "knee-L1",
+    "word": "knee",
+    "slug": "knee",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "knife-L1",
+    "word": "knife",
+    "slug": "knife",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "know-L1",
+    "word": "know",
+    "slug": "know",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "lack-L1",
+    "word": "lack",
+    "slug": "lack",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "lady-L1",
+    "word": "lady",
+    "slug": "lady",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "lake-L1",
+    "word": "lake",
+    "slug": "lake",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "lamb-L1",
+    "word": "lamb",
+    "slug": "lamb",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "lamp-L1",
+    "word": "lamp",
+    "slug": "lamp",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "land-L1",
+    "word": "land",
+    "slug": "land",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "large-L1",
+    "word": "large",
+    "slug": "large",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "last-L1",
+    "word": "last",
+    "slug": "last",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "late-L1",
+    "word": "late",
+    "slug": "late",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "laugh-L1",
+    "word": "laugh",
+    "slug": "laugh",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "law-L1",
+    "word": "law",
+    "slug": "law",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "lay-L1",
+    "word": "lay",
+    "slug": "lay",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "lazy-L1",
+    "word": "lazy",
+    "slug": "lazy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "lead-L1",
+    "word": "lead",
+    "slug": "lead",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "leader-L1",
+    "word": "leader",
+    "slug": "leader",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "leaf-L1",
+    "word": "leaf",
+    "slug": "leaf",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "learn-L1",
+    "word": "learn",
+    "slug": "learn",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "least-L1",
+    "word": "least",
+    "slug": "least",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "leave-L1",
+    "word": "leave",
+    "slug": "leave",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "left-L1",
+    "word": "left",
+    "slug": "left",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "leg-L1",
+    "word": "leg",
+    "slug": "leg",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "less-L1",
+    "word": "less",
+    "slug": "less",
+    "pos": "adj./adv./pron./prep.",
+    "level": 1
+  },
+  {
+    "id": "lesson-L1",
+    "word": "lesson",
+    "slug": "lesson",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "let-L1",
+    "word": "let",
+    "slug": "let",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "letter-L1",
+    "word": "letter",
+    "slug": "letter",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "level-L1",
+    "word": "level",
+    "slug": "level",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "lie-L1",
+    "word": "lie",
+    "slug": "lie",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "life-L1",
+    "word": "life",
+    "slug": "life",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "lift-L1",
+    "word": "lift",
+    "slug": "lift",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "light-L1",
+    "word": "light",
+    "slug": "light",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "like-L1",
+    "word": "like",
+    "slug": "like",
+    "pos": "n./v./prep.",
+    "level": 1
+  },
+  {
+    "id": "likely-L1",
+    "word": "likely",
+    "slug": "likely",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "lily-L1",
+    "word": "lily",
+    "slug": "lily",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "line-L1",
+    "word": "line",
+    "slug": "line",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "lion-L1",
+    "word": "lion",
+    "slug": "lion",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "lip-L1",
+    "word": "lip",
+    "slug": "lip",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "list-L1",
+    "word": "list",
+    "slug": "list",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "listen-L1",
+    "word": "listen",
+    "slug": "listen",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "little-L1",
+    "word": "little",
+    "slug": "little",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "live-L1",
+    "word": "live",
+    "slug": "live",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "long-L1",
+    "word": "long",
+    "slug": "long",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "look-L1",
+    "word": "look",
+    "slug": "look",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "lot-L1",
+    "word": "lot",
+    "slug": "lot",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "loud-L1",
+    "word": "loud",
+    "slug": "loud",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "love-L1",
+    "word": "love",
+    "slug": "love",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "low-L1",
+    "word": "low",
+    "slug": "low",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "lucky-L1",
+    "word": "lucky",
+    "slug": "lucky",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "lunch-L1",
+    "word": "lunch/luncheon",
+    "slug": "lunch",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "machine-L1",
+    "word": "machine",
+    "slug": "machine",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "mad-L1",
+    "word": "mad",
+    "slug": "mad",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "mail-L1",
+    "word": "mail",
+    "slug": "mail",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "make-L1",
+    "word": "make",
+    "slug": "make",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "man-L1",
+    "word": "man",
+    "slug": "man",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "many-L1",
+    "word": "many",
+    "slug": "many",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "map-L1",
+    "word": "map",
+    "slug": "map",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "march-L1",
+    "word": "March/Mar.",
+    "slug": "march",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "market-L1",
+    "word": "market",
+    "slug": "market",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "marry-L1",
+    "word": "marry",
+    "slug": "marry",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "master-L1",
+    "word": "master",
+    "slug": "master",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "match-L1",
+    "word": "match",
+    "slug": "match",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "matter-L1",
+    "word": "matter",
+    "slug": "matter",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "may-L1",
+    "word": "May",
+    "slug": "may",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "maybe-L1",
+    "word": "maybe",
+    "slug": "maybe",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "me-L1",
+    "word": "me",
+    "slug": "me",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "mean-L1",
+    "word": "mean",
+    "slug": "mean",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "meat-L1",
+    "word": "meat",
+    "slug": "meat",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "meet-L1",
+    "word": "meet",
+    "slug": "meet",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "middle-L1",
+    "word": "middle",
+    "slug": "middle",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "mile-L1",
+    "word": "mile",
+    "slug": "mile",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "milk-L1",
+    "word": "milk",
+    "slug": "milk",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "mind-L1",
+    "word": "mind",
+    "slug": "mind",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "minute-L1",
+    "word": "minute",
+    "slug": "minute",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mistake-L1",
+    "word": "mistake",
+    "slug": "mistake",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "moment-L1",
+    "word": "moment",
+    "slug": "moment",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mommy-L1",
+    "word": "mommy/mom",
+    "slug": "mommy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "monday-L1",
+    "word": "Monday/Mon.",
+    "slug": "monday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "money-L1",
+    "word": "money",
+    "slug": "money",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "monkey-L1",
+    "word": "monkey",
+    "slug": "monkey",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "month-L1",
+    "word": "month",
+    "slug": "month",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mountain-L1",
+    "word": "mountain",
+    "slug": "mountain",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mouse-L1",
+    "word": "mouse",
+    "slug": "mouse",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mouth-L1",
+    "word": "mouth",
+    "slug": "mouth",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "move-L1",
+    "word": "move(ment)",
+    "slug": "move",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "movie-L1",
+    "word": "movie",
+    "slug": "movie",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mr-L1",
+    "word": "Mr./mister",
+    "slug": "mr.",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mrs-L1",
+    "word": "Mrs.",
+    "slug": "mrs.",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ms-L1",
+    "word": "Ms.",
+    "slug": "ms.",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "much-L1",
+    "word": "much",
+    "slug": "much",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "mud-L1",
+    "word": "mud",
+    "slug": "mud",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "mug-L1",
+    "word": "mug",
+    "slug": "mug",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "music-L1",
+    "word": "music",
+    "slug": "music",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "must-L1",
+    "word": "must",
+    "slug": "must",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "my-L1",
+    "word": "my",
+    "slug": "my",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "name-L1",
+    "word": "name",
+    "slug": "name",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "nation-L1",
+    "word": "nation",
+    "slug": "nation",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "nature-L1",
+    "word": "nature",
+    "slug": "nature",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "near-L1",
+    "word": "near",
+    "slug": "near",
+    "pos": "v./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "neck-L1",
+    "word": "neck",
+    "slug": "neck",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "need-L1",
+    "word": "need",
+    "slug": "need",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "never-L1",
+    "word": "never",
+    "slug": "never",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "new-L1",
+    "word": "new",
+    "slug": "new",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "news-L1",
+    "word": "news",
+    "slug": "news",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "newspaper-L1",
+    "word": "newspaper",
+    "slug": "newspaper",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "next-L1",
+    "word": "next",
+    "slug": "next",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "nice-L1",
+    "word": "nice",
+    "slug": "nice",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "night-L1",
+    "word": "night",
+    "slug": "night",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "nine-L1",
+    "word": "nine",
+    "slug": "nine",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "nineteen-L1",
+    "word": "nineteen",
+    "slug": "nineteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "ninety-L1",
+    "word": "ninety",
+    "slug": "ninety",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "no-L1",
+    "word": "no/nope",
+    "slug": "no",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "noise-L1",
+    "word": "noise",
+    "slug": "noise",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "noisy-L1",
+    "word": "noisy",
+    "slug": "noisy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "noon-L1",
+    "word": "noon",
+    "slug": "noon",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "nor-L1",
+    "word": "nor",
+    "slug": "nor",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "north-L1",
+    "word": "north",
+    "slug": "north",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "nose-L1",
+    "word": "nose",
+    "slug": "nose",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "not-L1",
+    "word": "not",
+    "slug": "not",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "note-L1",
+    "word": "note",
+    "slug": "note",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "nothing-L1",
+    "word": "nothing",
+    "slug": "nothing",
+    "pos": "n./pron.",
+    "level": 1
+  },
+  {
+    "id": "notice-L1",
+    "word": "notice",
+    "slug": "notice",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "november-L1",
+    "word": "November/Nov.",
+    "slug": "november",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "now-L1",
+    "word": "now",
+    "slug": "now",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "number-L1",
+    "word": "number",
+    "slug": "number",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "nurse-L1",
+    "word": "nurse",
+    "slug": "nurse",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "o-k-L1",
+    "word": "O.K./OK/okay",
+    "slug": "o.k.",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "o-clock-L1",
+    "word": "o’clock",
+    "slug": "o’clock",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ocean-L1",
+    "word": "ocean",
+    "slug": "ocean",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "october-L1",
+    "word": "October/Oct.",
+    "slug": "october",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "of-L1",
+    "word": "of",
+    "slug": "of",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "off-L1",
+    "word": "off",
+    "slug": "off",
+    "pos": "adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "office-L1",
+    "word": "office",
+    "slug": "office",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "officer-L1",
+    "word": "officer",
+    "slug": "officer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "often-L1",
+    "word": "often",
+    "slug": "often",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "oil-L1",
+    "word": "oil",
+    "slug": "oil",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "old-L1",
+    "word": "old",
+    "slug": "old",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "on-L1",
+    "word": "on",
+    "slug": "on",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "once-L1",
+    "word": "once",
+    "slug": "once",
+    "pos": "n./adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "one-L1",
+    "word": "one",
+    "slug": "one",
+    "pos": "n./adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "only-L1",
+    "word": "only",
+    "slug": "only",
+    "pos": "adj./adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "open-L1",
+    "word": "open",
+    "slug": "open",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "or-L1",
+    "word": "or",
+    "slug": "or",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "orange-L1",
+    "word": "orange",
+    "slug": "orange",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "order-L1",
+    "word": "order",
+    "slug": "order",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "other-L1",
+    "word": "other",
+    "slug": "other",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "our-L1",
+    "word": "our(s)",
+    "slug": "our",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "out-L1",
+    "word": "out",
+    "slug": "out",
+    "pos": "n./v./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "outside-L1",
+    "word": "outside",
+    "slug": "outside",
+    "pos": "n./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "over-L1",
+    "word": "over",
+    "slug": "over",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "own-L1",
+    "word": "own",
+    "slug": "own",
+    "pos": "v./adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "page-L1",
+    "word": "page",
+    "slug": "page",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "paint-L1",
+    "word": "paint",
+    "slug": "paint",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pair-L1",
+    "word": "pair",
+    "slug": "pair",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pants-L1",
+    "word": "pants/trousers",
+    "slug": "pants",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "papa-L1",
+    "word": "papa/pop",
+    "slug": "papa",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "paper-L1",
+    "word": "paper",
+    "slug": "paper",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "parent-L1",
+    "word": "parent(s)",
+    "slug": "parent",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "park-L1",
+    "word": "park",
+    "slug": "park",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "part-L1",
+    "word": "part",
+    "slug": "part",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "party-L1",
+    "word": "party",
+    "slug": "party",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pass-L1",
+    "word": "pass",
+    "slug": "pass",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "past-L1",
+    "word": "past",
+    "slug": "past",
+    "pos": "n./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "pay-L1",
+    "word": "pay(ment)",
+    "slug": "pay",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pen-L1",
+    "word": "pen",
+    "slug": "pen",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pencil-L1",
+    "word": "pencil",
+    "slug": "pencil",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "people-L1",
+    "word": "people",
+    "slug": "people",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "perhaps-L1",
+    "word": "perhaps",
+    "slug": "perhaps",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "person-L1",
+    "word": "person",
+    "slug": "person",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "pet-L1",
+    "word": "pet",
+    "slug": "pet",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "piano-L1",
+    "word": "piano",
+    "slug": "piano",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "picture-L1",
+    "word": "picture",
+    "slug": "picture",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pie-L1",
+    "word": "pie",
+    "slug": "pie",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "piece-L1",
+    "word": "piece",
+    "slug": "piece",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "pig-L1",
+    "word": "pig",
+    "slug": "pig",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "place-L1",
+    "word": "place",
+    "slug": "place",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "plan-L1",
+    "word": "plan",
+    "slug": "plan",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "plant-L1",
+    "word": "plant",
+    "slug": "plant",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "play-L1",
+    "word": "play",
+    "slug": "play",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "player-L1",
+    "word": "player",
+    "slug": "player",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "playground-L1",
+    "word": "playground",
+    "slug": "playground",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "please-L1",
+    "word": "please",
+    "slug": "please",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "pocket-L1",
+    "word": "pocket",
+    "slug": "pocket",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "poetry-L1",
+    "word": "poetry",
+    "slug": "poetry",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "point-L1",
+    "word": "point",
+    "slug": "point",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "police-L1",
+    "word": "police",
+    "slug": "police",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "policeman-L1",
+    "word": "policeman/cop",
+    "slug": "policeman",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "pond-L1",
+    "word": "pond",
+    "slug": "pond",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "pool-L1",
+    "word": "pool",
+    "slug": "pool",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "poor-L1",
+    "word": "poor",
+    "slug": "poor",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "popcorn-L1",
+    "word": "popcorn",
+    "slug": "popcorn",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "position-L1",
+    "word": "position",
+    "slug": "position",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "possible-L1",
+    "word": "possible",
+    "slug": "possible",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "power-L1",
+    "word": "power",
+    "slug": "power",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "practice-L1",
+    "word": "practice",
+    "slug": "practice",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "prepare-L1",
+    "word": "prepare",
+    "slug": "prepare",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "pretty-L1",
+    "word": "pretty",
+    "slug": "pretty",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "price-L1",
+    "word": "price",
+    "slug": "price",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "print-L1",
+    "word": "print",
+    "slug": "print",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "problem-L1",
+    "word": "problem",
+    "slug": "problem",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "prove-L1",
+    "word": "prove",
+    "slug": "prove",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "public-L1",
+    "word": "public",
+    "slug": "public",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "pull-L1",
+    "word": "pull",
+    "slug": "pull",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "purple-L1",
+    "word": "purple",
+    "slug": "purple",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "purpose-L1",
+    "word": "purpose",
+    "slug": "purpose",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "push-L1",
+    "word": "push",
+    "slug": "push",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "put-L1",
+    "word": "put",
+    "slug": "put",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "queen-L1",
+    "word": "queen",
+    "slug": "queen",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "question-L1",
+    "word": "question",
+    "slug": "question",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "quick-L1",
+    "word": "quick",
+    "slug": "quick",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "quiet-L1",
+    "word": "quiet",
+    "slug": "quiet",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "quite-L1",
+    "word": "quite",
+    "slug": "quite",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "race-L1",
+    "word": "race(competition)",
+    "slug": "race",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "race-L1-1",
+    "word": "race(ethnicity)",
+    "slug": "race",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "radio-L1",
+    "word": "radio",
+    "slug": "radio",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "railroad-L1",
+    "word": "railroad",
+    "slug": "railroad",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "rain-L1",
+    "word": "rain",
+    "slug": "rain",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rainbow-L1",
+    "word": "rainbow",
+    "slug": "rainbow",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "raise-L1",
+    "word": "raise",
+    "slug": "raise",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rat-L1",
+    "word": "rat",
+    "slug": "rat",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "reach-L1",
+    "word": "reach",
+    "slug": "reach",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "read-L1",
+    "word": "read",
+    "slug": "read",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "ready-L1",
+    "word": "ready",
+    "slug": "ready",
+    "pos": "v./adj.",
+    "level": 1
+  },
+  {
+    "id": "real-L1",
+    "word": "real",
+    "slug": "real",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "reason-L1",
+    "word": "reason",
+    "slug": "reason",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "receive-L1",
+    "word": "receive",
+    "slug": "receive",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "red-L1",
+    "word": "red",
+    "slug": "red",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "remember-L1",
+    "word": "remember",
+    "slug": "remember",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "report-L1",
+    "word": "report",
+    "slug": "report",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rest-L1",
+    "word": "rest",
+    "slug": "rest",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "return-L1",
+    "word": "return",
+    "slug": "return",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rice-L1",
+    "word": "rice",
+    "slug": "rice",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "rich-L1",
+    "word": "rich",
+    "slug": "rich",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "ride-L1",
+    "word": "ride",
+    "slug": "ride",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "right-L1",
+    "word": "right",
+    "slug": "right",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "right-L1-1",
+    "word": "right(legal)",
+    "slug": "right",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "ring-L1",
+    "word": "ring(jewelry)",
+    "slug": "ring",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "ring-L1-1",
+    "word": "ring(sound)",
+    "slug": "ring",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rise-L1",
+    "word": "rise",
+    "slug": "rise",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "river-L1",
+    "word": "river",
+    "slug": "river",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "road-L1",
+    "word": "road",
+    "slug": "road",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "robot-L1",
+    "word": "robot",
+    "slug": "robot",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "rock-L1",
+    "word": "rock(stone)",
+    "slug": "rock",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "roll-L1",
+    "word": "roll",
+    "slug": "roll",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "roof-L1",
+    "word": "roof",
+    "slug": "roof",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "room-L1",
+    "word": "room",
+    "slug": "room",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rooster-L1",
+    "word": "rooster",
+    "slug": "rooster",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "root-L1",
+    "word": "root",
+    "slug": "root",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rope-L1",
+    "word": "rope",
+    "slug": "rope",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rose-L1",
+    "word": "rose",
+    "slug": "rose",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "round-L1",
+    "word": "round",
+    "slug": "round",
+    "pos": "n./v./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "row-L1",
+    "word": "row",
+    "slug": "row",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rub-L1",
+    "word": "rub",
+    "slug": "rub",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "rubber-L1",
+    "word": "rubber",
+    "slug": "rubber",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "rule-L1",
+    "word": "rule",
+    "slug": "rule",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "run-L1",
+    "word": "run",
+    "slug": "run",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "sad-L1",
+    "word": "sad",
+    "slug": "sad",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "safe-L1",
+    "word": "safe",
+    "slug": "safe",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "sail-L1",
+    "word": "sail",
+    "slug": "sail",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sale-L1",
+    "word": "sale",
+    "slug": "sale",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "salt-L1",
+    "word": "salt",
+    "slug": "salt",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "same-L1",
+    "word": "same",
+    "slug": "same",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "sand-L1",
+    "word": "sand",
+    "slug": "sand",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "saturday-L1",
+    "word": "Saturday/Sat.",
+    "slug": "saturday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "save-L1",
+    "word": "save",
+    "slug": "save",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "saw-L1",
+    "word": "saw",
+    "slug": "saw",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "say-L1",
+    "word": "say",
+    "slug": "say",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "scare-L1",
+    "word": "scare",
+    "slug": "scare",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "scene-L1",
+    "word": "scene",
+    "slug": "scene",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "school-L1",
+    "word": "school",
+    "slug": "school",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sea-L1",
+    "word": "sea",
+    "slug": "sea",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "season-L1",
+    "word": "season",
+    "slug": "season",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "seat-L1",
+    "word": "seat",
+    "slug": "seat",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "second-L1",
+    "word": "second",
+    "slug": "second",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "see-L1",
+    "word": "see",
+    "slug": "see",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "seed-L1",
+    "word": "seed",
+    "slug": "seed",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "seem-L1",
+    "word": "seem",
+    "slug": "seem",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "seesaw-L1",
+    "word": "seesaw",
+    "slug": "seesaw",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "self-L1",
+    "word": "self",
+    "slug": "self",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "selfish-L1",
+    "word": "selfish",
+    "slug": "selfish",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "sell-L1",
+    "word": "sell",
+    "slug": "sell",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "send-L1",
+    "word": "send",
+    "slug": "send",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "sense-L1",
+    "word": "sense",
+    "slug": "sense",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sentence-L1",
+    "word": "sentence",
+    "slug": "sentence",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "september-L1",
+    "word": "September/Sept.",
+    "slug": "september",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "serve-L1",
+    "word": "serve",
+    "slug": "serve",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "service-L1",
+    "word": "service",
+    "slug": "service",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "set-L1",
+    "word": "set",
+    "slug": "set",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "seven-L1",
+    "word": "seven",
+    "slug": "seven",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "seventeen-L1",
+    "word": "seventeen",
+    "slug": "seventeen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "seventy-L1",
+    "word": "seventy",
+    "slug": "seventy",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "several-L1",
+    "word": "several",
+    "slug": "several",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "shake-L1",
+    "word": "shake",
+    "slug": "shake",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "shall-L1",
+    "word": "shall",
+    "slug": "shall",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "shape-L1",
+    "word": "shape",
+    "slug": "shape",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "shark-L1",
+    "word": "shark",
+    "slug": "shark",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sharp-L1",
+    "word": "sharp",
+    "slug": "sharp",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "she-L1",
+    "word": "she",
+    "slug": "she",
+    "pos": "n./pron.",
+    "level": 1
+  },
+  {
+    "id": "sheep-L1",
+    "word": "sheep",
+    "slug": "sheep",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sheet-L1",
+    "word": "sheet",
+    "slug": "sheet",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "shine-L1",
+    "word": "shine",
+    "slug": "shine",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "ship-L1",
+    "word": "ship",
+    "slug": "ship",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "shirt-L1",
+    "word": "shirt",
+    "slug": "shirt",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "shoe-L1",
+    "word": "shoe(s)",
+    "slug": "shoe",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "shop-L1-1",
+    "word": "shop",
+    "slug": "shop",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "shop-L1",
+    "word": "shop/store",
+    "slug": "shop",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "shore-L1",
+    "word": "shore",
+    "slug": "shore",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "short-L1",
+    "word": "short",
+    "slug": "short",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "shot-L1",
+    "word": "shot",
+    "slug": "shot",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "shoulder-L1",
+    "word": "shoulder",
+    "slug": "shoulder",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "shout-L1",
+    "word": "shout",
+    "slug": "shout",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "show-L1",
+    "word": "show",
+    "slug": "show",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "shut-L1",
+    "word": "shut",
+    "slug": "shut",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "shy-L1",
+    "word": "shy",
+    "slug": "shy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "sick-L1",
+    "word": "sick",
+    "slug": "sick",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "side-L1",
+    "word": "side",
+    "slug": "side",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sight-L1",
+    "word": "sight",
+    "slug": "sight",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "silly-L1",
+    "word": "silly",
+    "slug": "silly",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "silver-L1",
+    "word": "silver",
+    "slug": "silver",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "simple-L1",
+    "word": "simple",
+    "slug": "simple",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "since-L1",
+    "word": "since",
+    "slug": "since",
+    "pos": "adv./prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "sing-L1",
+    "word": "sing",
+    "slug": "sing",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "singer-L1",
+    "word": "singer",
+    "slug": "singer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sir-L1",
+    "word": "sir",
+    "slug": "sir",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sister-L1",
+    "word": "sister",
+    "slug": "sister",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sit-L1",
+    "word": "sit",
+    "slug": "sit",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "six-L1",
+    "word": "six",
+    "slug": "six",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "sixteen-L1",
+    "word": "sixteen",
+    "slug": "sixteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "sixty-L1",
+    "word": "sixty",
+    "slug": "sixty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "size-L1",
+    "word": "size",
+    "slug": "size",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "skill-L1",
+    "word": "skill",
+    "slug": "skill",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "skin-L1",
+    "word": "skin",
+    "slug": "skin",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sky-L1",
+    "word": "sky",
+    "slug": "sky",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sleep-L1",
+    "word": "sleep",
+    "slug": "sleep",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "slow-L1",
+    "word": "slow",
+    "slug": "slow",
+    "pos": "v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "small-L1",
+    "word": "small",
+    "slug": "small",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "smart-L1",
+    "word": "smart",
+    "slug": "smart",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "smell-L1",
+    "word": "smell",
+    "slug": "smell",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "smile-L1",
+    "word": "smile",
+    "slug": "smile",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "smoke-L1",
+    "word": "smoke",
+    "slug": "smoke",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "snake-L1",
+    "word": "snake",
+    "slug": "snake",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "snow-L1",
+    "word": "snow",
+    "slug": "snow",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "so-L1",
+    "word": "so",
+    "slug": "so",
+    "pos": "adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "soap-L1",
+    "word": "soap",
+    "slug": "soap",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "soda-L1",
+    "word": "soda",
+    "slug": "soda",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sofa-L1",
+    "word": "sofa",
+    "slug": "sofa",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "soft-L1",
+    "word": "soft",
+    "slug": "soft",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "soil-L1",
+    "word": "soil",
+    "slug": "soil",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "some-L1",
+    "word": "some",
+    "slug": "some",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "someone-L1",
+    "word": "someone",
+    "slug": "someone",
+    "pos": "n./pron.",
+    "level": 1
+  },
+  {
+    "id": "something-L1",
+    "word": "something",
+    "slug": "something",
+    "pos": "n./pron.",
+    "level": 1
+  },
+  {
+    "id": "sometimes-L1",
+    "word": "sometimes",
+    "slug": "sometimes",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "son-L1",
+    "word": "son",
+    "slug": "son",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "song-L1",
+    "word": "song",
+    "slug": "song",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "soon-L1",
+    "word": "soon",
+    "slug": "soon",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "sorry-L1",
+    "word": "sorry",
+    "slug": "sorry",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "soul-L1",
+    "word": "soul",
+    "slug": "soul",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sound-L1",
+    "word": "sound",
+    "slug": "sound",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "sound-L1-1",
+    "word": "sound(sound)",
+    "slug": "sound",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "soup-L1",
+    "word": "soup",
+    "slug": "soup",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sour-L1",
+    "word": "sour",
+    "slug": "sour",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "south-L1",
+    "word": "south",
+    "slug": "south",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "space-L1",
+    "word": "space",
+    "slug": "space",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "speak-L1",
+    "word": "speak",
+    "slug": "speak",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "special-L1",
+    "word": "special",
+    "slug": "special",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "speech-L1",
+    "word": "speech",
+    "slug": "speech",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "spell-L1",
+    "word": "spell",
+    "slug": "spell",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "spend-L1",
+    "word": "spend",
+    "slug": "spend",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "spoon-L1",
+    "word": "spoon",
+    "slug": "spoon",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sport-L1",
+    "word": "sport",
+    "slug": "sport",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "spring-L1",
+    "word": "spring",
+    "slug": "spring",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "stair-L1",
+    "word": "stair",
+    "slug": "stair",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "stand-L1",
+    "word": "stand",
+    "slug": "stand",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "star-L1",
+    "word": "star",
+    "slug": "star",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "start-L1",
+    "word": "start",
+    "slug": "start",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "state-L1",
+    "word": "state",
+    "slug": "state",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "state-L1-1",
+    "word": "state(ment)",
+    "slug": "state",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "station-L1",
+    "word": "station",
+    "slug": "station",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "stay-L1",
+    "word": "stay",
+    "slug": "stay",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "step-L1",
+    "word": "step",
+    "slug": "step",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "still-L1",
+    "word": "still",
+    "slug": "still",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "stone-L1",
+    "word": "stone",
+    "slug": "stone",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "stop-L1",
+    "word": "stop",
+    "slug": "stop",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "store-L1",
+    "word": "store",
+    "slug": "store",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "story-L1-1",
+    "word": "story(floor)",
+    "slug": "story",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "story-L1",
+    "word": "story(narrative)",
+    "slug": "story",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "strange-L1",
+    "word": "strange",
+    "slug": "strange",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "street-L1",
+    "word": "street",
+    "slug": "street",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "strong-L1",
+    "word": "strong",
+    "slug": "strong",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "student-L1",
+    "word": "student",
+    "slug": "student",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "study-L1",
+    "word": "study",
+    "slug": "study",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "stupid-L1",
+    "word": "stupid",
+    "slug": "stupid",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "such-L1",
+    "word": "such",
+    "slug": "such",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "sugar-L1",
+    "word": "sugar",
+    "slug": "sugar",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "summer-L1",
+    "word": "summer",
+    "slug": "summer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sun-L1",
+    "word": "sun",
+    "slug": "sun",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sunday-L1",
+    "word": "Sunday/Sun.",
+    "slug": "sunday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "super-L1",
+    "word": "super",
+    "slug": "super",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "supper-L1",
+    "word": "supper",
+    "slug": "supper",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "sure-L1",
+    "word": "sure",
+    "slug": "sure",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "surprise-L1",
+    "word": "surprise",
+    "slug": "surprise",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "sweet-L1",
+    "word": "sweet",
+    "slug": "sweet",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "swim-L1",
+    "word": "swim",
+    "slug": "swim",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "t-shirt-L1",
+    "word": "T-shirt",
+    "slug": "t-shirt",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "table-L1",
+    "word": "table",
+    "slug": "table",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "tail-L1",
+    "word": "tail",
+    "slug": "tail",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "take-L1",
+    "word": "take",
+    "slug": "take",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "tale-L1",
+    "word": "tale",
+    "slug": "tale",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "talk-L1",
+    "word": "talk",
+    "slug": "talk",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "tall-L1",
+    "word": "tall",
+    "slug": "tall",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "taste-L1",
+    "word": "taste",
+    "slug": "taste",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "taxicab-L1",
+    "word": "taxicab/taxi/cab",
+    "slug": "taxicab",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "tea-L1",
+    "word": "tea",
+    "slug": "tea",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "teach-L1",
+    "word": "teach",
+    "slug": "teach",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "teacher-L1",
+    "word": "teacher",
+    "slug": "teacher",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "their-L1",
+    "word": "their(s)",
+    "slug": "their",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "them-L1",
+    "word": "them",
+    "slug": "them",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "then-L1",
+    "word": "then",
+    "slug": "then",
+    "pos": "n./adj./adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "there-L1",
+    "word": "there",
+    "slug": "there",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "these-L1",
+    "word": "these",
+    "slug": "these",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "they-L1",
+    "word": "they",
+    "slug": "they",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "thing-L1",
+    "word": "thing",
+    "slug": "thing",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "think-L1",
+    "word": "think",
+    "slug": "think",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "third-L1",
+    "word": "third",
+    "slug": "third",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "thirteen-L1",
+    "word": "thirteen",
+    "slug": "thirteen",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "thirty-L1",
+    "word": "thirty",
+    "slug": "thirty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "this-L1",
+    "word": "this",
+    "slug": "this",
+    "pos": "adj./adv./pron.",
+    "level": 1
+  },
+  {
+    "id": "those-L1",
+    "word": "those",
+    "slug": "those",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "though-L1",
+    "word": "though",
+    "slug": "though",
+    "pos": "adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "thought-L1",
+    "word": "thought",
+    "slug": "thought",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "thousand-L1",
+    "word": "thousand",
+    "slug": "thousand",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "three-L1",
+    "word": "three",
+    "slug": "three",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "throw-L1",
+    "word": "throw",
+    "slug": "throw",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "thursday-L1",
+    "word": "Thursday/Thurs.",
+    "slug": "thursday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "thus-L1",
+    "word": "thus",
+    "slug": "thus",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "ticket-L1",
+    "word": "ticket",
+    "slug": "ticket",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "tie-L1",
+    "word": "tie",
+    "slug": "tie",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "tiger-L1",
+    "word": "tiger",
+    "slug": "tiger",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "time-L1",
+    "word": "time",
+    "slug": "time",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "tiny-L1",
+    "word": "tiny",
+    "slug": "tiny",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "tire-L1",
+    "word": "tire",
+    "slug": "tire",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "to-L1",
+    "word": "to",
+    "slug": "to",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "today-L1",
+    "word": "today",
+    "slug": "today",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "together-L1",
+    "word": "together",
+    "slug": "together",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "tomorrow-L1",
+    "word": "tomorrow",
+    "slug": "tomorrow",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "tone-L1",
+    "word": "tone",
+    "slug": "tone",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "tonight-L1",
+    "word": "tonight",
+    "slug": "tonight",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "too-L1",
+    "word": "too",
+    "slug": "too",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "tool-L1",
+    "word": "tool",
+    "slug": "tool",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "top-L1",
+    "word": "top",
+    "slug": "top",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "total-L1",
+    "word": "total",
+    "slug": "total",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "touch-L1",
+    "word": "touch",
+    "slug": "touch",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "toward-L1",
+    "word": "toward(s)",
+    "slug": "toward",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "town-L1",
+    "word": "town",
+    "slug": "town",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "tree-L1",
+    "word": "tree",
+    "slug": "tree",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "trip-L1",
+    "word": "trip",
+    "slug": "trip",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "trouble-L1",
+    "word": "trouble",
+    "slug": "trouble",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "try-L1",
+    "word": "try",
+    "slug": "try",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "tuesday-L1",
+    "word": "Tuesday/Tues.",
+    "slug": "tuesday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "tummy-L1",
+    "word": "tummy",
+    "slug": "tummy",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "turn-L1",
+    "word": "turn",
+    "slug": "turn",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "twelve-L1",
+    "word": "twelve",
+    "slug": "twelve",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "twenty-L1",
+    "word": "twenty",
+    "slug": "twenty",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "twice-L1",
+    "word": "twice",
+    "slug": "twice",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "two-L1",
+    "word": "two",
+    "slug": "two",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "uncle-L1",
+    "word": "uncle",
+    "slug": "uncle",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "under-L1",
+    "word": "under",
+    "slug": "under",
+    "pos": "adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "understand-L1",
+    "word": "understand",
+    "slug": "understand",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "unit-L1",
+    "word": "unit",
+    "slug": "unit",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "until-L1",
+    "word": "until/till",
+    "slug": "until",
+    "pos": "prep./conj.",
+    "level": 1
+  },
+  {
+    "id": "up-L1",
+    "word": "up",
+    "slug": "up",
+    "pos": "n./v./adj./adv./prep.",
+    "level": 1
+  },
+  {
+    "id": "upstairs-L1",
+    "word": "upstairs",
+    "slug": "upstairs",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "us-L1",
+    "word": "us",
+    "slug": "us",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "use-L1",
+    "word": "use",
+    "slug": "use",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "useful-L1",
+    "word": "useful",
+    "slug": "useful",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "vegetable-L1",
+    "word": "vegetable",
+    "slug": "vegetable",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "very-L1",
+    "word": "very",
+    "slug": "very",
+    "pos": "adv.",
+    "level": 1
+  },
+  {
+    "id": "view-L1",
+    "word": "view",
+    "slug": "view",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "visit-L1",
+    "word": "visit",
+    "slug": "visit",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "voice-L1",
+    "word": "voice",
+    "slug": "voice",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "wait-L1",
+    "word": "wait",
+    "slug": "wait",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "walk-L1",
+    "word": "walk",
+    "slug": "walk",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "wall-L1",
+    "word": "wall",
+    "slug": "wall",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "want-L1",
+    "word": "want",
+    "slug": "want",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "war-L1",
+    "word": "war",
+    "slug": "war",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "warm-L1",
+    "word": "warm",
+    "slug": "warm",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "wash-L1",
+    "word": "wash",
+    "slug": "wash",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "waste-L1",
+    "word": "waste",
+    "slug": "waste",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "watch-L1",
+    "word": "watch",
+    "slug": "watch",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "water-L1",
+    "word": "water",
+    "slug": "water",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "way-L1",
+    "word": "way",
+    "slug": "way",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "we-L1",
+    "word": "we",
+    "slug": "we",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "weak-L1",
+    "word": "weak",
+    "slug": "weak",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "wear-L1",
+    "word": "wear",
+    "slug": "wear",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "weather-L1",
+    "word": "weather",
+    "slug": "weather",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "wedding-L1",
+    "word": "wedding",
+    "slug": "wedding",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "wednesday-L1",
+    "word": "Wednesday/Wed.",
+    "slug": "wednesday",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "week-L1",
+    "word": "week",
+    "slug": "week",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "weekend-L1",
+    "word": "weekend",
+    "slug": "weekend",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "weigh-L1",
+    "word": "weigh",
+    "slug": "weigh",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "weight-L1",
+    "word": "weight",
+    "slug": "weight",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "welcome-L1",
+    "word": "welcome",
+    "slug": "welcome",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "well-L1",
+    "word": "well",
+    "slug": "well",
+    "pos": "adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "well-L1-1",
+    "word": "well(water source)",
+    "slug": "well",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "west-L1",
+    "word": "west",
+    "slug": "west",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "what-L1",
+    "word": "what",
+    "slug": "what",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "when-L1",
+    "word": "when",
+    "slug": "when",
+    "pos": "adv./pron./conj.",
+    "level": 1
+  },
+  {
+    "id": "where-L1",
+    "word": "where",
+    "slug": "where",
+    "pos": "n./adv./pron./conj.",
+    "level": 1
+  },
+  {
+    "id": "whether-L1",
+    "word": "whether",
+    "slug": "whether",
+    "pos": "conj.",
+    "level": 1
+  },
+  {
+    "id": "which-L1",
+    "word": "which",
+    "slug": "which",
+    "pos": "adj./pron.",
+    "level": 1
+  },
+  {
+    "id": "while-L1",
+    "word": "while",
+    "slug": "while",
+    "pos": "n./v./conj.",
+    "level": 1
+  },
+  {
+    "id": "white-L1",
+    "word": "white",
+    "slug": "white",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "who-L1",
+    "word": "who",
+    "slug": "who",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "whole-L1",
+    "word": "whole",
+    "slug": "whole",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "whom-L1",
+    "word": "whom",
+    "slug": "whom",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "whose-L1",
+    "word": "whose",
+    "slug": "whose",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "why-L1",
+    "word": "why",
+    "slug": "why",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "wide-L1",
+    "word": "wide",
+    "slug": "wide",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "wife-L1",
+    "word": "wife",
+    "slug": "wife",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "will-L1",
+    "word": "will",
+    "slug": "will",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "win-L1",
+    "word": "win",
+    "slug": "win",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "wind-L1-1",
+    "word": "wind",
+    "slug": "wind",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "wind-L1",
+    "word": "wind(air)",
+    "slug": "wind",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "window-L1",
+    "word": "window",
+    "slug": "window",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "wine-L1",
+    "word": "wine",
+    "slug": "wine",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "winter-L1",
+    "word": "winter",
+    "slug": "winter",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "wish-L1",
+    "word": "wish",
+    "slug": "wish",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "with-L1",
+    "word": "with",
+    "slug": "with",
+    "pos": "prep.",
+    "level": 1
+  },
+  {
+    "id": "woman-L1",
+    "word": "woman",
+    "slug": "woman",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "wood-L1",
+    "word": "wood(s)",
+    "slug": "wood",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "word-L1",
+    "word": "word",
+    "slug": "word",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "work-L1",
+    "word": "work",
+    "slug": "work",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "worker-L1",
+    "word": "worker",
+    "slug": "worker",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "world-L1",
+    "word": "world",
+    "slug": "world",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "worm-L1",
+    "word": "worm",
+    "slug": "worm",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "worry-L1",
+    "word": "worry",
+    "slug": "worry",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "worse-L1",
+    "word": "worse",
+    "slug": "worse",
+    "pos": "n./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "worst-L1",
+    "word": "worst",
+    "slug": "worst",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "write-L1",
+    "word": "write",
+    "slug": "write",
+    "pos": "v.",
+    "level": 1
+  },
+  {
+    "id": "writer-L1",
+    "word": "writer",
+    "slug": "writer",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "wrong-L1",
+    "word": "wrong",
+    "slug": "wrong",
+    "pos": "n./v./adj./adv.",
+    "level": 1
+  },
+  {
+    "id": "yam-L1",
+    "word": "yam/sweet potato",
+    "slug": "yam",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "year-L1",
+    "word": "year",
+    "slug": "year",
+    "pos": "n.",
+    "level": 1
+  },
+  {
+    "id": "yellow-L1",
+    "word": "yellow",
+    "slug": "yellow",
+    "pos": "n./v./adj.",
+    "level": 1
+  },
+  {
+    "id": "yes-L1",
+    "word": "yes/yeah",
+    "slug": "yes",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "yesterday-L1",
+    "word": "yesterday",
+    "slug": "yesterday",
+    "pos": "n./adv.",
+    "level": 1
+  },
+  {
+    "id": "yet-L1",
+    "word": "yet",
+    "slug": "yet",
+    "pos": "adv./conj.",
+    "level": 1
+  },
+  {
+    "id": "you-L1",
+    "word": "you",
+    "slug": "you",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "young-L1",
+    "word": "young",
+    "slug": "young",
+    "pos": "n./adj.",
+    "level": 1
+  },
+  {
+    "id": "your-L1",
+    "word": "your(s)",
+    "slug": "your",
+    "pos": "pron.",
+    "level": 1
+  },
+  {
+    "id": "yucky-L1",
+    "word": "yucky",
+    "slug": "yucky",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "yummy-L1",
+    "word": "yummy",
+    "slug": "yummy",
+    "pos": "adj.",
+    "level": 1
+  },
+  {
+    "id": "zero-L1",
+    "word": "zero",
+    "slug": "zero",
+    "pos": "n./v.",
+    "level": 1
+  },
+  {
+    "id": "zoo-L1",
+    "word": "zoo",
+    "slug": "zoo",
+    "pos": "n.",
+    "level": 1
+  }
+]

@@ -1,0 +1,12 @@
+# Build/temp
+.tmp/
+.claude/
+node_modules/
+
+# Pipeline outputs (regeneratable, large)
+data/enriched/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
