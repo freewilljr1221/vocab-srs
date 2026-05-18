@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-05-18T14:31:20.634Z",
+  "built_at": "2026-05-18T14:36:42.409Z",
   "levels": [
     {
       "level": 1,
@@ -44,10 +44,10 @@
     {
       "level": 6,
       "cards": 1052,
-      "with_dict": 654,
+      "with_dict": 952,
       "with_zh": 0,
       "with_partial_zh": 0,
-      "bytes": 367090
+      "bytes": 495001
     }
   ]
 }
