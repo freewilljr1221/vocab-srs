@@ -16,7 +16,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const SRC = path.join(process.cwd(), 'data', 'enriched');
-const DST = path.join(process.cwd(), 'src', 'data');
+const DST = path.join(process.cwd(), 'docs', 'data');
 
 const args = { level: null };
 for (let i = 2; i < process.argv.length; i++) {
