@@ -1,13 +1,13 @@
 {
-  "built_at": "2026-05-18T14:10:17.552Z",
+  "built_at": "2026-05-18T14:22:56.395Z",
   "levels": [
     {
       "level": 1,
       "cards": 1018,
       "with_dict": 981,
-      "with_zh": 145,
+      "with_zh": 205,
       "with_partial_zh": 0,
-      "bytes": 742728
+      "bytes": 749985
     },
     {
       "level": 2,
@@ -36,10 +36,18 @@
     {
       "level": 5,
       "cards": 1055,
-      "with_dict": 24,
+      "with_dict": 1018,
       "with_zh": 0,
       "with_partial_zh": 0,
-      "bytes": 99416
+      "bytes": 585097
+    },
+    {
+      "level": 6,
+      "cards": 1052,
+      "with_dict": 165,
+      "with_zh": 0,
+      "with_partial_zh": 0,
+      "bytes": 161444
     }
   ]
 }

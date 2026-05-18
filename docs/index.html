@@ -162,6 +162,58 @@ button, .tap { touch-action: manipulation; }
 .nav-btn.primary:active { background: var(--accent-dark); }
 .nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
+/* Mode tabs (browse / srs) */
+.mode-tabs {
+  display: flex; gap: 4px; background: var(--bg2);
+  padding: 3px; border-radius: var(--radius); margin-bottom: 12px;
+}
+.mode-tab {
+  flex: 1; padding: 9px 8px; border-radius: 7px;
+  border: none; background: transparent; color: var(--text2);
+  font-size: 13px; font-weight: 500; cursor: pointer;
+  font-family: var(--font); min-height: 38px;
+}
+.mode-tab.active {
+  background: var(--surface); color: var(--text);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* SRS rating */
+.rating-area {
+  display: none; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px; margin-top: 12px;
+}
+.rating-area.show { display: grid; }
+.rate-btn {
+  min-height: 58px; padding: 8px 4px;
+  border-radius: var(--radius); border: none; color: white;
+  font-size: 13px; font-weight: 600; font-family: var(--font);
+  cursor: pointer; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; line-height: 1.2;
+}
+.rate-btn .interval { font-size: 10px; opacity: 0.85; margin-top: 3px; font-weight: 400; }
+.rate-btn:active { transform: scale(0.96); }
+.rate-again { background: var(--again); }
+.rate-hard { background: var(--hard); }
+.rate-good { background: var(--accent); }
+.rate-easy { background: var(--easy); }
+
+/* Done message (SRS finished for today) */
+.done-msg {
+  display: none; text-align: center;
+  padding: 60px 20px; color: var(--text2);
+}
+.done-msg.show { display: block; }
+.done-msg .big { font-size: 48px; margin-bottom: 16px; }
+.done-msg .title { font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.done-msg .sub { font-size: 13px; line-height: 1.7; }
+.done-msg button {
+  margin-top: 18px; padding: 10px 22px; border-radius: var(--radius);
+  border: 1.5px solid var(--border2); background: var(--surface);
+  color: var(--text); font-size: 13px; font-weight: 500;
+  cursor: pointer; font-family: var(--font); min-height: 44px;
+}
+
 /* Loading / empty */
 .center-msg {
   text-align: center; color: var(--text2); font-size: 14px;
@@ -217,6 +269,11 @@ button, .tap { touch-action: manipulation; }
     </select>
   </div>
 
+  <div class="mode-tabs">
+    <button class="mode-tab active" id="tab-srs" data-mode="srs">複習</button>
+    <button class="mode-tab" id="tab-browse" data-mode="browse">瀏覽</button>
+  </div>
+
   <div class="status">
     <span class="badge" id="status-pos">—</span>
     <span class="badge" id="status-progress">— / —</span>
@@ -251,11 +308,25 @@ button, .tap { touch-action: manipulation; }
       </div>
     </div>
 
-    <div class="nav-row">
+    <div class="nav-row" id="nav-row">
       <button class="nav-btn" id="btn-prev">← 上一個</button>
       <button class="nav-btn primary" id="btn-flip">翻面</button>
       <button class="nav-btn" id="btn-next">下一個 →</button>
     </div>
+
+    <div class="rating-area" id="rating-area">
+      <button class="rate-btn rate-again" data-grade="0">Again<span class="interval" id="iv-0">&lt;1d</span></button>
+      <button class="rate-btn rate-hard"  data-grade="1">Hard<span  class="interval" id="iv-1">—</span></button>
+      <button class="rate-btn rate-good"  data-grade="2">Good<span  class="interval" id="iv-2">—</span></button>
+      <button class="rate-btn rate-easy"  data-grade="3">Easy<span  class="interval" id="iv-3">—</span></button>
+    </div>
+  </div>
+
+  <div id="done-area" class="done-msg">
+    <div class="big">🎉</div>
+    <div class="title" id="done-title">今日複習完成</div>
+    <div class="sub" id="done-sub">明天再來繼續累積。</div>
+    <button id="btn-done-browse">改用瀏覽模式</button>
   </div>
 </div>
 
@@ -264,15 +335,108 @@ button, .tap { touch-action: manipulation; }
   'use strict';
 
   // ---------- State ----------
+  const DAILY_NEW_LIMIT = 15;
   const state = {
     level: parseInt(localStorage.getItem('vocab_level') || '1', 10),
-    cards: [],
+    mode: localStorage.getItem('vocab_mode') || 'srs',  // 'srs' | 'browse'
+    allCards: [],   // full level cards (after filter for usable content)
+    cards: [],      // active deck (subset in SRS mode, all in browse)
     idx: 0,
     flipped: false,
-    audio: null,           // HTMLAudioElement, lazily created
-    ttsReady: false,       // becomes true after first user-gesture-triggered speak
+    audio: null,
+    ttsReady: false,
     enUSVoice: null,
+    srsData: loadSRS(),  // { [cardId]: {ease, interval, reps, lapses, due} }
   };
+
+  function loadSRS() {
+    try { return JSON.parse(localStorage.getItem('vocab_srs_v1') || '{}'); }
+    catch { return {}; }
+  }
+  function saveSRS() {
+    try { localStorage.setItem('vocab_srs_v1', JSON.stringify(state.srsData)); } catch {}
+  }
+  function today() {
+    const d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }
+  function addDays(dateStr, n) {
+    const d = new Date(dateStr + 'T00:00:00');
+    d.setDate(d.getDate() + n);
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }
+
+  // SM-2 simplified: grade 0=Again, 1=Hard, 2=Good, 3=Easy
+  // Returns new interval in days (used both for actual rate + preview)
+  function sm2Compute(d, grade) {
+    let ease = d.ease, interval = d.interval, reps = d.reps, lapses = d.lapses;
+    if (grade === 0) {
+      interval = 1; reps = 0; lapses++;
+      ease = Math.max(1.3, ease - 0.2);
+    } else {
+      if (reps === 0) interval = grade === 3 ? 4 : 1;
+      else if (reps === 1) interval = grade === 3 ? 7 : 4;
+      else {
+        const m = grade === 1 ? 1.2 : grade === 2 ? ease : ease * 1.3;
+        interval = Math.max(1, Math.round(interval * m));
+      }
+      if (grade === 1) ease = Math.max(1.3, ease - 0.15);
+      else if (grade === 3) ease = Math.min(3.0, ease + 0.15);
+      reps++;
+    }
+    return { ease, interval, reps, lapses };
+  }
+  function rateCard(grade) {
+    const c = state.cards[state.idx];
+    if (!c) return;
+    const id = String(c.id);
+    const cur = state.srsData[id] || { ease: 2.5, interval: 0, reps: 0, lapses: 0, due: today() };
+    const next = sm2Compute(cur, grade);
+    state.srsData[id] = { ...next, due: addDays(today(), next.interval) };
+    saveSRS();
+    // Advance: remove this card from current SRS session (don't revisit unless 'Again' loops at end)
+    if (grade === 0) {
+      // Move to end of deck so user sees it again this session
+      const removed = state.cards.splice(state.idx, 1)[0];
+      state.cards.push(removed);
+      if (state.idx >= state.cards.length) state.idx = 0;
+    } else {
+      state.cards.splice(state.idx, 1);
+      if (state.idx >= state.cards.length) state.idx = state.cards.length - 1;
+    }
+    if (state.cards.length === 0) { showDone(); return; }
+    renderCard();
+  }
+
+  // Pretty interval label for rating buttons
+  function intervalLabel(days) {
+    if (days < 1) return '<1d';
+    if (days < 30) return days + 'd';
+    if (days < 365) return Math.round(days/30) + 'mo';
+    return Math.round(days/365) + 'y';
+  }
+
+  // Build SRS deck for current level: due cards + capped new cards
+  function buildSrsDeck() {
+    const t = today();
+    const due = [];
+    const fresh = [];
+    for (const c of state.allCards) {
+      const d = state.srsData[String(c.id)];
+      if (!d) fresh.push(c);
+      else if (d.due <= t) due.push(c);
+    }
+    // Shuffle each pile
+    function sh(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+    sh(due); sh(fresh);
+    return [...due, ...fresh.slice(0, DAILY_NEW_LIMIT)];
+  }
 
   // ---------- DOM ----------
   const $ = (id) => document.getElementById(id);
@@ -288,6 +452,13 @@ button, .tap { touch-action: manipulation; }
   const loading = $('loading');
   const empty = $('empty');
   const cardArea = $('card-area');
+  const ratingArea = $('rating-area');
+  const navRow = $('nav-row');
+  const doneArea = $('done-area');
+  const doneTitle = $('done-title');
+  const doneSub = $('done-sub');
+  const tabSrs = $('tab-srs');
+  const tabBrowse = $('tab-browse');
 
   // ---------- Data loading ----------
   async function loadLevel(level) {
@@ -300,31 +471,70 @@ button, .tap { touch-action: manipulation; }
     loading.style.display = 'block';
     empty.style.display = 'none';
     cardArea.style.display = 'none';
+    doneArea.classList.remove('show');
 
     try {
       const res = await fetch(`./data/L${level}.json`, { cache: 'force-cache' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const cards = await res.json();
-      // Keep only cards usable for review (have at least word, ipa OR zh)
-      state.cards = cards.filter(c =>
+      // Keep only cards usable for review (have at least word, dict OR zh)
+      state.allCards = cards.filter(c =>
         c.word && (c.dict_a?.found || c.zh_b?.ok)
       );
 
       loading.style.display = 'none';
-      if (state.cards.length === 0) {
+      if (state.allCards.length === 0) {
         empty.style.display = 'block';
         return;
       }
-      cardArea.style.display = 'block';
-      // Restore last position within this level
-      const savedIdx = parseInt(localStorage.getItem('vocab_idx_L' + level) || '0', 10);
-      state.idx = Math.min(savedIdx, state.cards.length - 1);
-      renderCard();
+      rebuildDeck();
     } catch (err) {
       loading.style.display = 'none';
       empty.style.display = 'block';
       empty.innerHTML = `<div class="big">📡</div>讀取失敗:${err.message}`;
     }
+  }
+
+  // Rebuild deck according to current mode. Called on level change & mode switch.
+  function rebuildDeck() {
+    state.flipped = false;
+    cardInner.classList.remove('flipped');
+    doneArea.classList.remove('show');
+
+    if (state.mode === 'srs') {
+      state.cards = buildSrsDeck();
+      if (state.cards.length === 0) { showDone(); return; }
+      state.idx = 0;
+    } else {
+      state.cards = state.allCards;
+      // restore last position in browse mode
+      const savedIdx = parseInt(localStorage.getItem('vocab_idx_L' + state.level) || '0', 10);
+      state.idx = Math.min(savedIdx, state.cards.length - 1);
+    }
+    cardArea.style.display = 'block';
+    updateRatingVisibility();
+    renderCard();
+  }
+
+  function showDone() {
+    cardArea.style.display = 'none';
+    doneArea.classList.add('show');
+    const t = today();
+    let dueOther = 0, newOther = 0;
+    // count work remaining across whole pool (informational)
+    for (const c of state.allCards) {
+      const d = state.srsData[String(c.id)];
+      if (!d) newOther++;
+      else if (d.due <= t) dueOther++;
+    }
+    doneTitle.textContent = '🎉 L' + state.level + ' 今日複習完成';
+    doneSub.textContent = '已學新卡上限 ' + DAILY_NEW_LIMIT + ' / 天。剩餘新卡 ' + newOther + ' 張,待複習 ' + dueOther + ' 張(下次到期日後出現)。';
+  }
+
+  function updateRatingVisibility() {
+    const showRate = state.mode === 'srs' && state.flipped;
+    ratingArea.classList.toggle('show', showRate);
+    navRow.style.display = state.mode === 'srs' ? 'none' : '';
   }
 
   // ---------- Render ----------
@@ -343,9 +553,28 @@ button, .tap { touch-action: manipulation; }
 
     // Status
     statusPos.textContent = c.pos + ' · L' + c.level;
-    statusProgress.textContent = (state.idx + 1) + ' / ' + state.cards.length;
+    if (state.mode === 'srs') {
+      // Count remaining due+new in current session deck
+      statusProgress.textContent = '剩 ' + state.cards.length + ' 張';
+    } else {
+      statusProgress.textContent = (state.idx + 1) + ' / ' + state.cards.length;
+    }
 
-    localStorage.setItem('vocab_idx_L' + state.level, String(state.idx));
+    if (state.mode === 'browse') {
+      localStorage.setItem('vocab_idx_L' + state.level, String(state.idx));
+    }
+    updateRatingPreview(c);
+  }
+
+  // Update the small interval-preview label inside each rating button
+  function updateRatingPreview(c) {
+    const id = String(c.id);
+    const cur = state.srsData[id] || { ease: 2.5, interval: 0, reps: 0, lapses: 0 };
+    for (let g = 0; g <= 3; g++) {
+      const r = sm2Compute(cur, g);
+      const el = document.getElementById('iv-' + g);
+      if (el) el.textContent = g === 0 ? '<1d' : intervalLabel(r.interval);
+    }
   }
 
   function renderBack(c) {
@@ -389,6 +618,7 @@ button, .tap { touch-action: manipulation; }
   function flip() {
     state.flipped = !state.flipped;
     cardInner.classList.toggle('flipped', state.flipped);
+    updateRatingVisibility();
   }
   function next() {
     if (state.idx < state.cards.length - 1) {
@@ -455,12 +685,39 @@ button, .tap { touch-action: manipulation; }
   $('btn-next').addEventListener('click', (e) => { e.stopPropagation(); next(); });
   speakBtn.addEventListener('click', (e) => { e.stopPropagation(); playWord(); });
 
+  // Rating buttons
+  ratingArea.addEventListener('click', (e) => {
+    const btn = e.target.closest('.rate-btn');
+    if (!btn) return;
+    e.stopPropagation();
+    rateCard(parseInt(btn.dataset.grade, 10));
+  });
+
+  // Mode tabs
+  function setMode(mode) {
+    if (mode === state.mode) return;
+    state.mode = mode;
+    localStorage.setItem('vocab_mode', mode);
+    tabSrs.classList.toggle('active', mode === 'srs');
+    tabBrowse.classList.toggle('active', mode === 'browse');
+    if (state.allCards.length > 0) rebuildDeck();
+  }
+  tabSrs.addEventListener('click', () => setMode('srs'));
+  tabBrowse.addEventListener('click', () => setMode('browse'));
+  $('btn-done-browse').addEventListener('click', () => setMode('browse'));
+  // Apply persisted mode on first load
+  tabSrs.classList.toggle('active', state.mode === 'srs');
+  tabBrowse.classList.toggle('active', state.mode === 'browse');
+
   // Keyboard (for desktop testing)
   document.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); }
-    else if (e.key === 'ArrowRight') next();
-    else if (e.key === 'ArrowLeft') prev();
+    else if (e.key === 'ArrowRight') { if (state.mode === 'browse') next(); }
+    else if (e.key === 'ArrowLeft')  { if (state.mode === 'browse') prev(); }
     else if (e.key === 's' || e.key === 'S') playWord();
+    else if (state.mode === 'srs' && state.flipped && /^[1-4]$/.test(e.key)) {
+      rateCard(parseInt(e.key, 10) - 1);
+    }
   });
 
   // Swipe (touch)

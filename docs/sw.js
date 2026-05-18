@@ -1,5 +1,5 @@
 /* Vocab-SRS service worker — cache-first for shell, stale-while-revalidate for data. */
-const CACHE_VERSION = 'vocab-srs-v1';
+const CACHE_VERSION = 'vocab-srs-v2-srs';
 const SHELL = [
   './',
   './index.html',
