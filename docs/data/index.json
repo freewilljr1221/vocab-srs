@@ -1,13 +1,13 @@
 {
-  "built_at": "2026-05-18T14:30:54.779Z",
+  "built_at": "2026-05-18T14:31:20.634Z",
   "levels": [
     {
       "level": 1,
       "cards": 1018,
       "with_dict": 981,
-      "with_zh": 315,
+      "with_zh": 320,
       "with_partial_zh": 0,
-      "bytes": 762555
+      "bytes": 763096
     },
     {
       "level": 2,
@@ -44,10 +44,10 @@
     {
       "level": 6,
       "cards": 1052,
-      "with_dict": 633,
+      "with_dict": 654,
       "with_zh": 0,
       "with_partial_zh": 0,
-      "bytes": 357582
+      "bytes": 367090
     }
   ]
 }
