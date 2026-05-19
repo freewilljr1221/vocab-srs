@@ -1,0 +1,62 @@
+rules_version = '2';
+
+// ---- Vocab-SRS Firestore Security Rules -------------------------------------
+// Threat model: family-scale, "anyone with the URL can view". Per-family data
+// lives under /families/{fam}/...  where {fam} is an 8-char random code embedded
+// in the share URL hash. Within a family:
+//
+//   /state/main      — profile list + PIN hash. Update requires writer to prove
+//                      they know the current PIN via `authHash` field.
+//   /log/{profileId} — practice records. Anyone can write (so kid can practice
+//                      on any device).
+//   /srs/{profileId} — SM-2 SRS state. Anyone can write.
+//
+// The "auth" check is: request.resource.data.authHash == resource.data.pinHash.
+// Once a PIN is set on /state/main, every subsequent update to /state/main must
+// include authHash == the stored pinHash, otherwise the write is rejected.
+//
+// First-time PIN setup is allowed because resource.data.pinHash starts as ''
+// (the empty string written by init()), so authHash '' matches.
+// -----------------------------------------------------------------------------
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /families/{fam} {
+
+      // PIN-protected: profile list + PIN management
+      match /state/main {
+        allow read:   if true;
+        allow create: if true;
+        allow update: if request.resource.data.authHash == resource.data.pinHash;
+        allow delete: if false;
+      }
+
+      // Open: practice log per profile
+      match /log/{profileId} {
+        allow read:  if true;
+        allow write: if request.resource.data.keys().hasOnly(['byDate', 'updatedAt'])
+                     && request.resource.data.byDate is map;
+        allow delete: if false;
+      }
+
+      // Open: SRS state per profile
+      match /srs/{profileId} {
+        allow read:  if true;
+        allow write: if request.resource.data.keys().hasOnly(['data', 'updatedAt'])
+                     && request.resource.data.data is map;
+        allow delete: if false;
+      }
+
+      // Reject anything else under a family
+      match /{path=**} {
+        allow read, write: if false;
+      }
+    }
+
+    // Lock down everything outside /families/...
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

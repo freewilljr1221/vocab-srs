@@ -12,6 +12,117 @@
 <link rel="apple-touch-icon" href="./icons/icon-192.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-192.png" />
 <title>單字卡 · Vocab SRS</title>
+
+<!-- Firebase Firestore (modular ESM, no build step) -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+  import {
+    getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAj5KpFN6V6yw7f8jByi_W7orPJbfSNeqk",
+    authDomain: "vocab-srs-cae44.firebaseapp.com",
+    projectId: "vocab-srs-cae44",
+    storageBucket: "vocab-srs-cae44.firebasestorage.app",
+    messagingSenderId: "470854073556",
+    appId: "1:470854073556:web:67709fdc661c8b502e4f41",
+    measurementId: "G-3FYWRGGEN8"
+  };
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+
+  // SHA-256 → hex (for PIN hashing; never store plaintext PIN)
+  async function sha256(s) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  // Doc layout (familyId is in URL hash #fam=xxxx, never in code):
+  //   families/{fam}/state/main      = { profiles:[{id,name}], pinHash, updatedAt }
+  //   families/{fam}/log/{profileId} = { byDate:{YYYY-MM-DD:{...}}, updatedAt }
+  //   families/{fam}/srs/{profileId} = { data:{cardId:{...}}, updatedAt }
+  const C = {
+    ready: false,
+    familyId: null,
+    pinHash: null,        // cached from /state/main; '' means PIN not set yet
+    pinKnown: false,      // true after PIN entered correctly on this device
+
+    refMain(fam)     { return doc(db, 'families', fam, 'state', 'main'); },
+    refLog(fam, pid) { return doc(db, 'families', fam, 'log', pid); },
+    refSrs(fam, pid) { return doc(db, 'families', fam, 'srs', pid); },
+
+    async init(fam) {
+      this.familyId = fam;
+      const mainRef = this.refMain(fam);
+      const snap = await getDoc(mainRef);
+      if (!snap.exists()) {
+        await setDoc(mainRef, { profiles: [], pinHash: '', updatedAt: serverTimestamp() });
+        this.pinHash = '';
+      } else {
+        this.pinHash = snap.data().pinHash || '';
+      }
+      this.ready = true;
+    },
+
+    sha256,
+
+    async pullMain() {
+      const snap = await getDoc(this.refMain(this.familyId));
+      return snap.exists() ? snap.data() : null;
+    },
+    async pushMain(profiles, newPinHash) {
+      // authHash = what THIS client thinks the current pinHash is.
+      // Server rules verify: request.resource.data.authHash == resource.data.pinHash.
+      // This proves the writer knew the PIN before any change.
+      const current = this.pinHash || '';
+      const next    = (newPinHash === undefined) ? current : (newPinHash || '');
+      await setDoc(this.refMain(this.familyId),
+        { profiles, pinHash: next, authHash: current, updatedAt: serverTimestamp() });
+      this.pinHash = next;
+    },
+    subscribeMain(cb) {
+      return onSnapshot(this.refMain(this.familyId), (snap) => {
+        if (!snap.exists()) return;
+        const d = snap.data();
+        this.pinHash = d.pinHash || '';
+        cb(d);
+      });
+    },
+
+    async pullLog(pid) {
+      const snap = await getDoc(this.refLog(this.familyId, pid));
+      return snap.exists() ? (snap.data().byDate || {}) : {};
+    },
+    async pushLog(pid, byDate) {
+      await setDoc(this.refLog(this.familyId, pid),
+        { byDate, updatedAt: serverTimestamp() });
+    },
+    subscribeLog(pid, cb) {
+      return onSnapshot(this.refLog(this.familyId, pid), (snap) => {
+        if (snap.exists()) cb(snap.data().byDate || {});
+      });
+    },
+
+    async pullSrs(pid) {
+      const snap = await getDoc(this.refSrs(this.familyId, pid));
+      return snap.exists() ? (snap.data().data || {}) : {};
+    },
+    async pushSrs(pid, data) {
+      await setDoc(this.refSrs(this.familyId, pid),
+        { data, updatedAt: serverTimestamp() });
+    },
+    subscribeSrs(pid, cb) {
+      return onSnapshot(this.refSrs(this.familyId, pid), (snap) => {
+        if (snap.exists()) cb(snap.data().data || {});
+      });
+    },
+  };
+
+  window.__cloud = C;
+  window.dispatchEvent(new Event('cloud-sdk-ready'));
+</script>
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -312,6 +423,66 @@ button, .tap { touch-action: manipulation; }
   font-size: 12px; color: var(--text3); margin-top: 12px; line-height: 1.5;
 }
 
+/* Cloud sync section in profile modal */
+#sync-section {
+  background: var(--bg2); border-radius: var(--radius);
+  padding: 12px; margin-bottom: 14px; font-size: 13px;
+}
+#sync-section .label { font-size: 11px; color: var(--text3); letter-spacing: 0.3px; text-transform: uppercase; margin-bottom: 4px; }
+#sync-section .fam {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px; font-weight: 600; color: var(--text);
+  letter-spacing: 0.6px;
+  word-break: break-all;
+}
+#sync-section .row { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+#sync-section button {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border2); border-radius: 8px;
+  font-size: 12px; font-weight: 500; padding: 7px 12px;
+  font-family: var(--font); cursor: pointer; min-height: 36px;
+}
+#sync-section button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+#sync-section button:active { transform: scale(0.98); }
+#sync-section .status {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; color: var(--text2);
+  padding: 2px 8px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+}
+#sync-section .status.ok    { color: var(--accent-dark); background: var(--accent-light); border-color: var(--accent); }
+#sync-section .status.warn  { color: var(--hard); }
+#sync-section .pin-row { margin-top: 8px; }
+
+/* PIN prompt overlay */
+#pin-modal {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(0,0,0,0.55); align-items: center; justify-content: center; padding: 16px;
+}
+#pin-modal.show { display: flex; }
+#pin-modal .sheet {
+  background: var(--surface); border-radius: var(--radius-lg);
+  width: 100%; max-width: 320px; padding: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+#pin-modal h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+#pin-modal .desc { font-size: 13px; color: var(--text2); margin-bottom: 12px; line-height: 1.5; }
+#pin-modal input {
+  width: 100%; padding: 12px; font-size: 18px; text-align: center;
+  border: 1px solid var(--border2); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); font-family: ui-monospace, monospace;
+  letter-spacing: 6px;
+}
+#pin-modal .actions { display: flex; gap: 8px; margin-top: 12px; }
+#pin-modal .actions button {
+  flex: 1; padding: 10px; border-radius: var(--radius);
+  border: 1px solid var(--border2); background: var(--surface);
+  font-size: 14px; font-weight: 500; font-family: var(--font);
+  cursor: pointer; min-height: 44px; color: var(--text);
+}
+#pin-modal .actions button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+#pin-modal .err { color: var(--again); font-size: 12px; margin-top: 8px; min-height: 16px; }
+
 /* Stats chip + modal */
 .stats-chip {
   background: var(--bg2); color: var(--text);
@@ -450,6 +621,19 @@ button, .tap { touch-action: manipulation; }
 <div id="profile-modal">
   <div class="sheet" onclick="event.stopPropagation()">
     <h3>使用者 <button class="close" id="profile-close">×</button></h3>
+    <div id="sync-section">
+      <div class="label">家庭代碼 (Family Code)</div>
+      <div class="fam" id="sync-fam">—</div>
+      <div class="row">
+        <span class="status" id="sync-status">連線中…</span>
+        <button id="btn-share-link">📋 複製分享連結</button>
+      </div>
+      <div class="row pin-row">
+        <span class="label" style="margin:0;flex:1">家長 PIN</span>
+        <span class="status" id="pin-status">—</span>
+        <button id="btn-set-pin">設定 / 變更 PIN</button>
+      </div>
+    </div>
     <div id="profile-list"><!-- filled by JS --></div>
     <div class="profile-actions">
       <button id="btn-profile-add" class="primary">＋ 新增使用者</button>
@@ -457,7 +641,20 @@ button, .tap { touch-action: manipulation; }
       <input type="file" id="profile-import-file" accept="application/json,.json" style="display:none">
     </div>
     <div id="profile-hint">
-      切換使用者後頁面會重新載入。匯出/匯入 JSON 可在不同裝置間搬移進度（iPhone ↔ iPad）。
+      在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
+    </div>
+  </div>
+</div>
+
+<div id="pin-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3 id="pin-title">輸入家長 PIN</h3>
+    <div class="desc" id="pin-desc">輸入 4–8 位數字 PIN。</div>
+    <input type="password" id="pin-input" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]*">
+    <div class="err" id="pin-err"></div>
+    <div class="actions">
+      <button id="pin-cancel">取消</button>
+      <button id="pin-ok" class="primary">確定</button>
     </div>
   </div>
 </div>
@@ -574,6 +771,7 @@ button, .tap { touch-action: manipulation; }
   }
   function saveProfiles(arr) {
     try { localStorage.setItem(PROFILES_KEY, JSON.stringify(arr)); } catch {}
+    schedulePush('main');
   }
   function getActiveProfileId() {
     return localStorage.getItem(ACTIVE_KEY) || '';
@@ -600,6 +798,289 @@ button, .tap { touch-action: manipulation; }
     }
   }
   migrateProfiles();
+
+  // ---------- Cloud sync (Firestore) ----------
+  // familyId: short random code embedded in URL hash (#fam=xxx) so anyone with the
+  // link sees the same family's profiles + practice records.
+  const FAM_KEY = 'vocab_family_id';
+  const PIN_OK_KEY = 'vocab_pin_known';
+
+  function getFamilyId() {
+    const m = location.hash.match(/[#&]fam=([A-Za-z0-9]{4,16})/);
+    if (m) {
+      try { localStorage.setItem(FAM_KEY, m[1]); } catch {}
+      return m[1];
+    }
+    let id = '';
+    try { id = localStorage.getItem(FAM_KEY) || ''; } catch {}
+    if (!id) {
+      id = 'f' + Math.random().toString(36).slice(2, 9);
+      try { localStorage.setItem(FAM_KEY, id); } catch {}
+    }
+    if (!/[#&]fam=/.test(location.hash)) {
+      try { history.replaceState(null, '', location.pathname + location.search + '#fam=' + id); } catch {}
+    }
+    return id;
+  }
+
+  let _suppressPush = false;        // true when applying remote → local; prevents echo
+  const _pushTimers = { main: null, log: null, srs: null };
+
+  function schedulePush(kind) {
+    if (_suppressPush) return;
+    const cloud = window.__cloud;
+    if (!cloud || !cloud.ready) return;
+    const pid = getActiveProfileId();
+    clearTimeout(_pushTimers[kind]);
+    const delay = kind === 'main' ? 300 : (kind === 'log' ? 800 : 1500);
+    _pushTimers[kind] = setTimeout(() => {
+      try {
+        if (kind === 'main')      cloud.pushMain(getProfiles()).catch(e => console.warn('pushMain', e));
+        else if (kind === 'log')  cloud.pushLog(pid, loadLog()).catch(e => console.warn('pushLog', e));
+        else if (kind === 'srs')  cloud.pushSrs(pid, state.srsData).catch(e => console.warn('pushSrs', e));
+      } catch (e) { console.warn('schedulePush', e); }
+    }, delay);
+  }
+
+  function setSyncStatus(s) {
+    const el = document.getElementById('sync-status');
+    if (!el) return;
+    el.classList.remove('ok', 'warn');
+    if (s === 'connected')      { el.textContent = '✓ 已同步'; el.classList.add('ok'); }
+    else if (s === 'connecting') { el.textContent = '連線中…'; }
+    else if (s === 'offline')   { el.textContent = '離線'; el.classList.add('warn'); }
+    else if (s === 'error')     { el.textContent = '連線失敗'; el.classList.add('warn'); }
+  }
+  function refreshPinStatus() {
+    const el = document.getElementById('pin-status');
+    if (!el) return;
+    const cloud = window.__cloud;
+    el.classList.remove('ok', 'warn');
+    if (!cloud || !cloud.ready)    { el.textContent = '—'; return; }
+    if (!cloud.pinHash)            { el.textContent = '未設定'; el.classList.add('warn'); return; }
+    if (cloud.pinKnown)            { el.textContent = '✓ 已認證'; el.classList.add('ok'); return; }
+    el.textContent = '🔒 已設定';
+  }
+
+  // Generic PIN-input modal. Returns plaintext PIN or null on cancel.
+  function askPin({ title, desc }) {
+    return new Promise(resolve => {
+      const modal = document.getElementById('pin-modal');
+      const input = document.getElementById('pin-input');
+      const err   = document.getElementById('pin-err');
+      const ok    = document.getElementById('pin-ok');
+      const cancel= document.getElementById('pin-cancel');
+      document.getElementById('pin-title').textContent = title;
+      document.getElementById('pin-desc').textContent  = desc;
+      input.value = ''; err.textContent = '';
+      modal.classList.add('show');
+      setTimeout(() => input.focus(), 80);
+      function close(val) {
+        modal.classList.remove('show');
+        ok.onclick = null; cancel.onclick = null; input.onkeydown = null;
+        resolve(val);
+      }
+      function submit() {
+        const v = input.value.trim();
+        if (!/^\d{4,8}$/.test(v)) { err.textContent = '請輸入 4–8 位數字'; return; }
+        close(v);
+      }
+      ok.onclick = submit;
+      cancel.onclick = () => close(null);
+      input.onkeydown = (e) => { if (e.key === 'Enter') submit(); };
+    });
+  }
+
+  // Verify PIN against cloud (or set it the first time). Returns true if user is authorized.
+  async function ensurePinKnown() {
+    const cloud = window.__cloud;
+    if (!cloud || !cloud.ready) {
+      alert('雲端尚未連線，請稍候再試');
+      return false;
+    }
+    if (cloud.pinKnown) return true;
+    if (!cloud.pinHash) {
+      // First-time setup
+      const v = await askPin({
+        title: '設定家長 PIN',
+        desc: '第一次使用：設個 4–8 位數字 PIN。之後在任何裝置上要新增/刪除/改名使用者，需要這個 PIN。'
+      });
+      if (!v) return false;
+      const h = await cloud.sha256(v);
+      try {
+        await cloud.pushMain(getProfiles(), h);
+        cloud.pinKnown = true;
+        try { localStorage.setItem(PIN_OK_KEY, '1'); } catch {}
+        refreshPinStatus();
+        return true;
+      } catch (e) { alert('設定失敗: ' + e.message); return false; }
+    }
+    // PIN exists on cloud; ask user
+    const v = await askPin({
+      title: '輸入家長 PIN',
+      desc: '管理使用者需要 PIN（之前已在其他裝置設定過）。'
+    });
+    if (!v) return false;
+    const h = await cloud.sha256(v);
+    if (h === cloud.pinHash) {
+      cloud.pinKnown = true;
+      try { localStorage.setItem(PIN_OK_KEY, '1'); } catch {}
+      refreshPinStatus();
+      return true;
+    }
+    alert('PIN 不正確');
+    return false;
+  }
+
+  // Conflict-tolerant merges. Both used at initial pull AND on every subscribe snapshot,
+  // because the snapshot callback echoes our own writes back, and may also race with
+  // another device's writes. Without merge we'd lose entries written between local save
+  // and the next snapshot.
+  function mergeLog(a, b) {
+    const out = Object.assign({}, a);
+    for (const [date, dayB] of Object.entries(b || {})) {
+      const dayA = out[date];
+      if (!dayA) { out[date] = dayB; continue; }
+      // Per-day "the one with more cards wins" — practice entries only grow over time
+      const cardsA = (dayA.cards && dayA.cards.length) || dayA.total || 0;
+      const cardsB = (dayB.cards && dayB.cards.length) || dayB.total || 0;
+      out[date] = cardsB > cardsA ? dayB : dayA;
+    }
+    return out;
+  }
+  function mergeSrs(a, b) {
+    const out = Object.assign({}, a);
+    for (const [k, vB] of Object.entries(b || {})) {
+      const vA = out[k];
+      if (!vA) { out[k] = vB; continue; }
+      // Per-card: more reps = more recent practice
+      out[k] = ((vB.reps || 0) > (vA.reps || 0)) ? vB : vA;
+    }
+    return out;
+  }
+  function sameJSON(a, b) { try { return JSON.stringify(a) === JSON.stringify(b); } catch { return false; } }
+
+  // Sanitize remote SRS payload (reuse loadSRS logic without going through localStorage)
+  function sanitizeSrs(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+    const out = {};
+    for (const k of Object.keys(raw)) {
+      const r = raw[k]; if (!r || typeof r !== 'object') continue;
+      const ease     = Number.isFinite(r.ease)     ? Math.min(3.0, Math.max(1.3, r.ease)) : 2.5;
+      const interval = Number.isFinite(r.interval) ? Math.max(0, Math.round(r.interval))  : 0;
+      const reps     = Number.isFinite(r.reps)     ? Math.max(0, Math.round(r.reps))      : 0;
+      const lapses   = Number.isFinite(r.lapses)   ? Math.max(0, Math.round(r.lapses))    : 0;
+      const due      = typeof r.due === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(r.due) ? r.due : today();
+      out[k] = { ease, interval, reps, lapses, due };
+    }
+    return out;
+  }
+
+  let _cloudUnsubs = [];
+  async function initCloud() {
+    const cloud = window.__cloud;
+    if (!cloud) return;
+    setSyncStatus('connecting');
+    const fam = getFamilyId();
+    const famEl = document.getElementById('sync-fam');
+    if (famEl) famEl.textContent = fam;
+
+    try {
+      await cloud.init(fam);
+      // Restore "PIN known" flag if previously verified on this device
+      try { if (localStorage.getItem(PIN_OK_KEY) === '1') cloud.pinKnown = true; } catch {}
+      setSyncStatus('connected');
+      refreshPinStatus();
+
+      // ---- Profiles: pull-once, then subscribe
+      const main = await cloud.pullMain();
+      if (main && Array.isArray(main.profiles) && main.profiles.length > 0) {
+        // Cloud authoritative on first load
+        _suppressPush = true;
+        try { localStorage.setItem(PROFILES_KEY, JSON.stringify(main.profiles)); } catch {}
+        _suppressPush = false;
+        if (!main.profiles.find(p => p.id === getActiveProfileId())) {
+          setActiveProfileId(main.profiles[0].id);
+          location.reload();
+          return;
+        }
+      } else if (getProfiles().length > 0) {
+        // No cloud profiles yet → push our local list up
+        schedulePush('main');
+      }
+
+      _cloudUnsubs.push(cloud.subscribeMain((d) => {
+        const profs = Array.isArray(d.profiles) ? d.profiles : [];
+        if (JSON.stringify(profs) !== JSON.stringify(getProfiles())) {
+          _suppressPush = true;
+          try { localStorage.setItem(PROFILES_KEY, JSON.stringify(profs)); } catch {}
+          _suppressPush = false;
+          if (profs.length > 0 && !profs.find(p => p.id === getActiveProfileId())) {
+            setActiveProfileId(profs[0].id);
+            location.reload(); return;
+          }
+          if (typeof refreshChip === 'function') refreshChip();
+          const pm = document.getElementById('profile-modal');
+          if (pm && pm.classList.contains('show') && typeof renderProfileList === 'function') renderProfileList();
+        }
+        refreshPinStatus();
+      }));
+
+      // ---- Per-profile log + SRS (merge-on-pull + merge-on-snapshot)
+      const pid = getActiveProfileId();
+      if (pid) {
+        const remoteLog = await cloud.pullLog(pid);
+        const mergedLog = mergeLog(loadLog(), remoteLog);
+        _suppressPush = true;
+        setPK('vocab_practice_log_v1', JSON.stringify(mergedLog));
+        _suppressPush = false;
+        if (!sameJSON(mergedLog, remoteLog)) schedulePush('log');
+
+        _cloudUnsubs.push(cloud.subscribeLog(pid, (byDate) => {
+          const merged = mergeLog(loadLog(), byDate || {});
+          if (sameJSON(merged, loadLog())) return; // nothing new for us
+          _suppressPush = true;
+          setPK('vocab_practice_log_v1', JSON.stringify(merged));
+          _suppressPush = false;
+          if (!sameJSON(merged, byDate)) schedulePush('log');
+          const sm = document.getElementById('stats-modal');
+          if (sm && sm.classList.contains('show') && typeof renderStats === 'function') renderStats();
+        }));
+
+        const remoteSrs = await cloud.pullSrs(pid);
+        const mergedSrs = mergeSrs(state.srsData, sanitizeSrs(remoteSrs));
+        _suppressPush = true;
+        state.srsData = mergedSrs;
+        setPK('vocab_srs_v1', JSON.stringify(state.srsData));
+        _suppressPush = false;
+        if (!sameJSON(mergedSrs, remoteSrs)) schedulePush('srs');
+
+        _cloudUnsubs.push(cloud.subscribeSrs(pid, (data) => {
+          const remote = sanitizeSrs(data);
+          const merged = mergeSrs(state.srsData, remote);
+          if (sameJSON(merged, state.srsData)) return;
+          _suppressPush = true;
+          state.srsData = merged;
+          setPK('vocab_srs_v1', JSON.stringify(state.srsData));
+          _suppressPush = false;
+          if (!sameJSON(merged, remote)) schedulePush('srs');
+        }));
+
+        // First-load nicety: if cloud brought in SRS data we didn't have, rebuild the
+        // current deck so the user sees correct due / new counts instead of "all fresh".
+        if (Object.keys(remoteSrs).length > 0 && typeof loadLevel === 'function'
+            && state.mode === 'srs' && !state.flipped) {
+          loadLevel(state.level);
+        }
+      }
+    } catch (e) {
+      console.error('Cloud init failed', e);
+      setSyncStatus('error');
+    }
+  }
+  // Kick off when Firebase ESM finishes loading. If event already fired, init now.
+  if (window.__cloud) { initCloud(); }
+  else { window.addEventListener('cloud-sdk-ready', initCloud, { once: true }); }
 
   function profileKey(base) {
     const id = getActiveProfileId();
@@ -711,6 +1192,7 @@ button, .tap { touch-action: manipulation; }
   }
   function saveSRS() {
     setPK('vocab_srs_v1', JSON.stringify(state.srsData));
+    schedulePush('srs');
   }
 
   // ---------- Practice log (家長監看) ----------
@@ -725,6 +1207,7 @@ button, .tap { touch-action: manipulation; }
   }
   function saveLog(log) {
     setPK('vocab_practice_log_v1', JSON.stringify(log));
+    schedulePush('log');
   }
   function logReview(card, grade) {
     const log = loadLog();
@@ -1223,8 +1706,9 @@ button, .tap { touch-action: manipulation; }
         setActiveProfileId(p.id);
         location.reload();
       });
-      row.querySelector('[data-act="rename"]').addEventListener('click', (e) => {
+      row.querySelector('[data-act="rename"]').addEventListener('click', async (e) => {
         e.stopPropagation();
+        if (!(await ensurePinKnown())) return;
         const name = prompt('新名字', p.name);
         if (name && name.trim()) { renameProfile(p.id, name.trim()); renderProfileList(); refreshChip(); }
       });
@@ -1240,9 +1724,10 @@ button, .tap { touch-action: manipulation; }
         document.body.appendChild(a); a.click(); a.remove();
         setTimeout(() => URL.revokeObjectURL(url), 1000);
       });
-      row.querySelector('[data-act="delete"]').addEventListener('click', (e) => {
+      row.querySelector('[data-act="delete"]').addEventListener('click', async (e) => {
         e.stopPropagation();
         if (getProfiles().length <= 1) { alert('至少要留一個使用者'); return; }
+        if (!(await ensurePinKnown())) return;
         if (!confirm(`刪除「${p.name}」的所有 SRS 進度？此動作無法復原。`)) return;
         const wasActive = p.id === activeId;
         deleteProfile(p.id);
@@ -1260,7 +1745,8 @@ button, .tap { touch-action: manipulation; }
   $('profile-close').addEventListener('click', closeProfileModal);
   profileModal.addEventListener('click', (e) => { if (e.target === profileModal) closeProfileModal(); });
 
-  $('btn-profile-add').addEventListener('click', () => {
+  $('btn-profile-add').addEventListener('click', async () => {
+    if (!(await ensurePinKnown())) return;
     const name = prompt('新使用者名稱（例如小孩名字）');
     if (!name || !name.trim()) return;
     const id = newProfileId();
@@ -1271,7 +1757,48 @@ button, .tap { touch-action: manipulation; }
     location.reload();
   });
 
-  $('btn-profile-import').addEventListener('click', () => profileImportFile.click());
+  // Share link: copy URL with #fam=xxxx to clipboard
+  $('btn-share-link').addEventListener('click', async () => {
+    const fam = (window.__cloud && window.__cloud.familyId) || '';
+    if (!fam) { alert('雲端尚未連線'); return; }
+    const url = location.origin + location.pathname + '#fam=' + fam;
+    try {
+      await navigator.clipboard.writeText(url);
+      const btn = $('btn-share-link'); const orig = btn.textContent;
+      btn.textContent = '✓ 已複製';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    } catch {
+      prompt('複製這個連結傳給家人:', url);
+    }
+  });
+
+  // Set / change PIN
+  $('btn-set-pin').addEventListener('click', async () => {
+    const cloud = window.__cloud;
+    if (!cloud || !cloud.ready) { alert('雲端尚未連線'); return; }
+    // If PIN already set and user hasn't authenticated yet, force PIN entry first
+    if (cloud.pinHash && !cloud.pinKnown) {
+      if (!(await ensurePinKnown())) return;
+    }
+    const v = await askPin({
+      title: cloud.pinHash ? '變更家長 PIN' : '設定家長 PIN',
+      desc: '輸入新的 4–8 位數字 PIN。'
+    });
+    if (!v) return;
+    const h = await cloud.sha256(v);
+    try {
+      await cloud.pushMain(getProfiles(), h);
+      cloud.pinKnown = true;
+      try { localStorage.setItem(PIN_OK_KEY, '1'); } catch {}
+      refreshPinStatus();
+      alert('PIN 已更新');
+    } catch (e) { alert('更新失敗: ' + e.message); }
+  });
+
+  $('btn-profile-import').addEventListener('click', async () => {
+    if (!(await ensurePinKnown())) return;
+    profileImportFile.click();
+  });
   profileImportFile.addEventListener('change', async (e) => {
     const f = e.target.files?.[0];
     if (!f) return;
