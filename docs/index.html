@@ -57,7 +57,9 @@
       const mainRef = this.refMain(fam);
       const snap = await getDoc(mainRef);
       if (!snap.exists()) {
-        await setDoc(mainRef, { profiles: [], pinHash: '', updatedAt: serverTimestamp() });
+        // Empty bootstrap doc. Must include authHash:'' to satisfy the
+        // create-rule check (all fields empty / zero-state).
+        await setDoc(mainRef, { profiles: [], pinHash: '', authHash: '', updatedAt: serverTimestamp() });
         this.pinHash = '';
       } else {
         this.pinHash = snap.data().pinHash || '';
@@ -648,7 +650,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.0.0</span></div>
+    <div id="app-version">v<span id="ver-num">1.0.1</span></div>
   </div>
 </div>
 
