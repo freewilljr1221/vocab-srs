@@ -7,7 +7,7 @@
  * Bumping CACHE_VERSION forces all PWA clients to re-download the shell on
  * next launch, so use it whenever shell HTML/JS/CSS materially changes.
  */
-const CACHE_VERSION = 'vocab-srs-1.0.3';
+const CACHE_VERSION = 'vocab-srs-1.1.0';
 const SHELL = [
   './',
   './index.html',

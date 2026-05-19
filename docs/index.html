@@ -45,6 +45,7 @@
   const C = {
     ready: false,
     familyId: null,
+    familyName: '',       // human-readable name (e.g. "王家"); '' until user sets it
     pinHash: null,        // cached from /state/main; '' means PIN not set yet
     pinKnown: false,      // true after PIN entered correctly on this device
 
@@ -59,10 +60,13 @@
       if (!snap.exists()) {
         // Empty bootstrap doc. Must include authHash:'' to satisfy the
         // create-rule check (all fields empty / zero-state).
-        await setDoc(mainRef, { profiles: [], pinHash: '', authHash: '', updatedAt: serverTimestamp() });
+        await setDoc(mainRef, { profiles: [], pinHash: '', authHash: '', name: '', updatedAt: serverTimestamp() });
         this.pinHash = '';
+        this.familyName = '';
       } else {
-        this.pinHash = snap.data().pinHash || '';
+        const d = snap.data();
+        this.pinHash = d.pinHash || '';
+        this.familyName = d.name || '';
       }
       this.ready = true;
     },
@@ -79,15 +83,27 @@
       // This proves the writer knew the PIN before any change.
       const current = this.pinHash || '';
       const next    = (newPinHash === undefined) ? current : (newPinHash || '');
+      // setDoc fully overwrites — must include cached `name` or it gets wiped.
       await setDoc(this.refMain(this.familyId),
-        { profiles, pinHash: next, authHash: current, updatedAt: serverTimestamp() });
+        { profiles, pinHash: next, authHash: current, name: this.familyName || '', updatedAt: serverTimestamp() });
       this.pinHash = next;
+    },
+    // Rename the family. Re-fetches profiles so we don't clobber concurrent
+    // changes, then writes the doc with the new name.
+    async pushMainName(newName) {
+      const snap = await getDoc(this.refMain(this.familyId));
+      const profiles = snap.exists() ? (snap.data().profiles || []) : [];
+      const current = this.pinHash || '';
+      await setDoc(this.refMain(this.familyId),
+        { profiles, pinHash: current, authHash: current, name: newName, updatedAt: serverTimestamp() });
+      this.familyName = newName;
     },
     subscribeMain(cb) {
       return onSnapshot(this.refMain(this.familyId), (snap) => {
         if (!snap.exists()) return;
         const d = snap.data();
         this.pinHash = d.pinHash || '';
+        this.familyName = d.name || '';
         cb(d);
       });
     },
@@ -460,6 +476,73 @@ button, .tap { touch-action: manipulation; }
 #sync-section .status.ok    { color: var(--accent-dark); background: var(--accent-light); border-color: var(--accent); }
 #sync-section .status.warn  { color: var(--hard); }
 #sync-section .pin-row { margin-top: 8px; }
+#sync-section .fam-name-row {
+  display: flex; align-items: center; gap: 8px;
+}
+#sync-section .fam-name {
+  font-size: 16px; font-weight: 700; color: var(--text);
+  flex: 1; word-break: break-word;
+}
+#sync-section .icon-mini {
+  background: transparent; border: none; padding: 2px 6px; font-size: 14px;
+  cursor: pointer; min-height: 28px; opacity: 0.7;
+}
+#sync-section .icon-mini:active { opacity: 1; transform: scale(0.92); }
+
+/* Switch-family modal */
+#fam-modal {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(0,0,0,0.55); align-items: center; justify-content: center; padding: 16px;
+}
+#fam-modal.show { display: flex; }
+#fam-modal .sheet {
+  background: var(--surface); border-radius: var(--radius-lg);
+  width: 100%; max-width: 380px; padding: 18px;
+  max-height: 90vh; overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+#fam-modal h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#fam-modal h3 .close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text2); padding: 0 4px; }
+#fam-modal .desc { font-size: 12px; color: var(--text2); margin-bottom: 12px; line-height: 1.5; }
+#fam-modal .section-h { font-size: 11px; color: var(--text3); letter-spacing: 0.3px; text-transform: uppercase; margin-bottom: 6px; }
+#fam-modal .fam-row {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg2); border-radius: 10px;
+  padding: 10px 12px; margin-bottom: 6px;
+}
+#fam-modal .fam-row .info { flex: 1; min-width: 0; }
+#fam-modal .fam-row .name { font-size: 14px; font-weight: 600; color: var(--text); word-break: break-word; }
+#fam-modal .fam-row .code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; color: var(--text3); letter-spacing: 0.4px;
+}
+#fam-modal .fam-row .badge {
+  font-size: 10px; background: var(--accent-light); color: var(--accent-dark);
+  border: 1px solid var(--accent); padding: 1px 6px; border-radius: 10px; margin-left: 4px;
+}
+#fam-modal .fam-row button {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border2); border-radius: 8px;
+  font-size: 12px; padding: 6px 10px; min-height: 32px;
+  font-family: var(--font); cursor: pointer;
+}
+#fam-modal .fam-row button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+#fam-modal .fam-row .icon-btn { padding: 4px 8px; }
+#fam-modal .empty-hint { font-size: 12px; color: var(--text3); padding: 8px; text-align: center; }
+#fam-modal .fam-join-row { display: flex; gap: 8px; }
+#fam-modal .fam-join-row input {
+  flex: 1; padding: 10px; font-size: 14px;
+  border: 1px solid var(--border2); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); font-family: ui-monospace, monospace;
+}
+#fam-modal .fam-join-row button {
+  background: var(--accent); color: white; border: 1px solid var(--accent);
+  border-radius: var(--radius); font-size: 14px; padding: 10px 14px;
+  font-family: var(--font); cursor: pointer; min-height: 40px;
+}
 
 /* PIN prompt overlay */
 #pin-modal {
@@ -629,11 +712,17 @@ button, .tap { touch-action: manipulation; }
   <div class="sheet" onclick="event.stopPropagation()">
     <h3>使用者 <button class="close" id="profile-close">×</button></h3>
     <div id="sync-section">
-      <div class="label">家庭代碼 (Family Code)</div>
+      <div class="label">家庭</div>
+      <div class="fam-name-row">
+        <span class="fam-name" id="sync-fam-name">—</span>
+        <button id="btn-fam-rename" class="icon-mini" title="改名">✏️</button>
+      </div>
+      <div class="label" style="margin-top:10px">家庭代碼 (Family Code)</div>
       <div class="fam" id="sync-fam">—</div>
       <div class="row">
         <span class="status" id="sync-status">連線中…</span>
         <button id="btn-share-link">📋 複製分享連結</button>
+        <button id="btn-switch-fam">切換家庭</button>
       </div>
       <div class="row pin-row">
         <span class="label" style="margin:0;flex:1">家長 PIN</span>
@@ -650,7 +739,23 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.0.3</span></div>
+    <div id="app-version">v<span id="ver-num">1.1.0</span></div>
+  </div>
+</div>
+
+<div id="fam-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>切換家庭 <button class="close" id="fam-close">×</button></h3>
+    <div class="desc">
+      切換到另一個家庭，會看到該家庭的使用者與練習紀錄。新家庭的資料不會合併進來。
+    </div>
+    <div class="section-h">已加入的家庭</div>
+    <div id="known-families"><!-- filled by JS --></div>
+    <div class="section-h" style="margin-top:14px">加入新家庭</div>
+    <div class="fam-join-row">
+      <input type="text" id="fam-code-input" placeholder="家庭代碼" autocomplete="off" maxlength="16">
+      <button id="fam-join-ok" class="primary">加入</button>
+    </div>
   </div>
 </div>
 
@@ -821,6 +926,32 @@ button, .tap { touch-action: manipulation; }
   // link sees the same family's profiles + practice records.
   const FAM_KEY = 'vocab_family_id';
   const PIN_OK_KEY = 'vocab_pin_known';
+  const KNOWN_FAMS_KEY = 'vocab_known_families';   // [{code, name}, ...]
+
+  // Known-families list: every family this device has been on, with a
+  // user-chosen nickname. Lives in localStorage; not synced. Used to populate
+  // the "切換家庭" picker so users don't have to re-type codes.
+  function getKnownFamilies() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(KNOWN_FAMS_KEY) || '[]');
+      if (!Array.isArray(raw)) return [];
+      return raw.filter(x => x && typeof x.code === 'string');
+    } catch { return []; }
+  }
+  function saveKnownFamilies(list) {
+    try { localStorage.setItem(KNOWN_FAMS_KEY, JSON.stringify(list)); } catch {}
+  }
+  function upsertKnownFamily(code, name) {
+    if (!code) return;
+    const list = getKnownFamilies();
+    const i = list.findIndex(f => f.code === code);
+    if (i >= 0) {
+      if (name !== undefined && name !== null) list[i].name = name;
+    } else {
+      list.push({ code, name: (name || code) });
+    }
+    saveKnownFamilies(list);
+  }
 
   function getFamilyId() {
     const m = location.hash.match(/[#&]fam=([A-Za-z0-9]{4,16})/);
@@ -882,6 +1013,17 @@ button, .tap { touch-action: manipulation; }
     else if (s === 'connecting') { el.textContent = '連線中…'; }
     else if (s === 'offline')   { el.textContent = '離線'; el.classList.add('warn'); }
     else if (s === 'error')     { el.textContent = '連線失敗'; el.classList.add('warn'); }
+  }
+  function renderSyncSection() {
+    const cloud = window.__cloud;
+    const famEl = document.getElementById('sync-fam');
+    const nameEl = document.getElementById('sync-fam-name');
+    if (famEl) famEl.textContent = (cloud && cloud.familyId) || '—';
+    if (nameEl) {
+      const n = (cloud && cloud.familyName || '').trim();
+      nameEl.textContent = n || '(未命名)';
+      nameEl.style.opacity = n ? '1' : '0.55';
+    }
   }
   function refreshPinStatus() {
     const el = document.getElementById('pin-status');
@@ -1055,15 +1197,18 @@ button, .tap { touch-action: manipulation; }
     if (!cloud) return;
     setSyncStatus('connecting');
     const fam = getFamilyId();
-    const famEl = document.getElementById('sync-fam');
-    if (famEl) famEl.textContent = fam;
+    renderSyncSection();
 
     try {
       await cloud.init(fam);
       // Restore "PIN known" flag if previously verified on this device
       try { if (localStorage.getItem(PIN_OK_KEY) === '1') cloud.pinKnown = true; } catch {}
       setSyncStatus('connected');
+      renderSyncSection();
       refreshPinStatus();
+      // Record this family in the local "known families" list so the
+      // 切換家庭 picker can show it. Preserve any user-set nickname.
+      upsertKnownFamily(fam, cloud.familyName || undefined);
 
       // ---- Profiles: pull-once, then subscribe
       const main = await cloud.pullMain();
@@ -1092,6 +1237,10 @@ button, .tap { touch-action: manipulation; }
           const pm = document.getElementById('profile-modal');
           if (pm && pm.classList.contains('show') && typeof renderProfileList === 'function') renderProfileList();
         }
+        // Cloud-side rename propagates here: refresh the sync section and
+        // keep the local known-families nickname in sync.
+        renderSyncSection();
+        if (cloud.familyName) upsertKnownFamily(cloud.familyId, cloud.familyName);
         refreshPinStatus();
       }));
 
@@ -1853,6 +2002,92 @@ button, .tap { touch-action: manipulation; }
     } catch {
       prompt('複製這個連結傳給家人:', url);
     }
+  });
+
+  // Rename current family (synced to cloud). Requires PIN only if a PIN exists.
+  $('btn-fam-rename').addEventListener('click', async () => {
+    const cloud = window.__cloud;
+    if (!cloud || !cloud.ready) { alert('雲端尚未連線'); return; }
+    if (cloud.pinHash && !(await ensurePinKnown())) return;
+    const cur = cloud.familyName || '';
+    const name = prompt('家庭名稱（例如：王家）', cur);
+    if (name === null) return;
+    const newName = name.trim().slice(0, 40);
+    try {
+      await cloud.pushMainName(newName);
+      upsertKnownFamily(cloud.familyId, newName || cloud.familyId);
+      renderSyncSection();
+    } catch (e) {
+      alert('改名失敗: ' + (e.message || e));
+    }
+  });
+
+  // Switch-family modal
+  const famModal = $('fam-modal');
+  function openFamModal() { renderKnownFamilies(); famModal.classList.add('show'); }
+  function closeFamModal() { famModal.classList.remove('show'); $('fam-code-input').value = ''; }
+  $('btn-switch-fam').addEventListener('click', openFamModal);
+  $('fam-close').addEventListener('click', closeFamModal);
+  famModal.addEventListener('click', (e) => { if (e.target === famModal) closeFamModal(); });
+
+  function renderKnownFamilies() {
+    const cloud = window.__cloud;
+    const list = getKnownFamilies();
+    const container = $('known-families');
+    container.innerHTML = '';
+    if (list.length === 0) {
+      container.innerHTML = '<div class="empty-hint">尚未記錄其他家庭</div>';
+      return;
+    }
+    for (const f of list) {
+      const isActive = cloud && f.code === cloud.familyId;
+      const row = document.createElement('div');
+      row.className = 'fam-row';
+      row.innerHTML = `
+        <div class="info">
+          <div class="name">${escapeHtml(f.name || f.code)}${isActive ? ' <span class="badge">目前</span>' : ''}</div>
+          <div class="code">${escapeHtml(f.code)}</div>
+        </div>
+        ${isActive ? '' : '<button class="primary" data-act="join">切換</button>'}
+        <button class="icon-btn" data-act="remove" title="從清單移除">🗑️</button>
+      `;
+      const joinBtn = row.querySelector('[data-act="join"]');
+      if (joinBtn) joinBtn.addEventListener('click', () => switchToFamily(f.code));
+      row.querySelector('[data-act="remove"]').addEventListener('click', () => {
+        if (isActive) { alert('無法從清單移除目前的家庭'); return; }
+        if (!confirm(`從清單移除「${f.name || f.code}」？\n（雲端資料不會被刪除，可以再輸入代碼加回來）`)) return;
+        saveKnownFamilies(getKnownFamilies().filter(x => x.code !== f.code));
+        renderKnownFamilies();
+      });
+      container.appendChild(row);
+    }
+  }
+
+  // Switching family = swap the family code in localStorage + URL hash, then
+  // full reload. initCloud on the next page rebuilds everything against the
+  // new family (different profiles, log, SRS).
+  function switchToFamily(code) {
+    try { localStorage.setItem(FAM_KEY, code); } catch {}
+    // Replace the hash so the URL after reload also reflects the new family —
+    // matters for share-link copy + browser history.
+    try { history.replaceState(null, '', location.pathname + location.search + '#fam=' + code); } catch {}
+    location.reload();
+  }
+
+  $('fam-join-ok').addEventListener('click', async () => {
+    const code = ($('fam-code-input').value || '').trim();
+    if (!/^[A-Za-z0-9]{4,16}$/.test(code)) {
+      alert('家庭代碼格式不對（4-16 字英數）');
+      return;
+    }
+    const cloud = window.__cloud;
+    if (cloud && code === cloud.familyId) { alert('已經在這個家庭裡'); return; }
+    const existing = getKnownFamilies().find(f => f.code === code);
+    const defaultName = existing ? existing.name : code;
+    const name = prompt('給這個家庭取個名字（之後可以改）', defaultName);
+    if (name === null) return;
+    upsertKnownFamily(code, name.trim() || code);
+    switchToFamily(code);
   });
 
   // Set / change PIN
