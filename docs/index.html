@@ -17,7 +17,7 @@
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
   import {
-    getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp
+    getFirestore, doc, getDoc, setDoc, updateDoc, onSnapshot, serverTimestamp
   } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -80,22 +80,24 @@
     async pushMain(profiles, newPinHash) {
       // authHash = what THIS client thinks the current pinHash is.
       // Server rules verify: request.resource.data.authHash == resource.data.pinHash.
-      // This proves the writer knew the PIN before any change.
+      //
+      // updateDoc (not setDoc) so we only patch the fields we actually changed.
+      // setDoc was overwriting the whole main doc — including `name` from a
+      // stale local cache, which let any profile write undo a concurrent
+      // family-rename from another device (Codex review, 1.2.1).
       const current = this.pinHash || '';
       const next    = (newPinHash === undefined) ? current : (newPinHash || '');
-      // setDoc fully overwrites — must include cached `name` or it gets wiped.
-      await setDoc(this.refMain(this.familyId),
-        { profiles, pinHash: next, authHash: current, name: this.familyName || '', updatedAt: serverTimestamp() });
+      await updateDoc(this.refMain(this.familyId),
+        { profiles, pinHash: next, authHash: current, updatedAt: serverTimestamp() });
       this.pinHash = next;
     },
-    // Rename the family. Re-fetches profiles so we don't clobber concurrent
-    // changes, then writes the doc with the new name.
+    // Rename the family. updateDoc patches only `name` (+ auth + timestamp),
+    // so concurrent profile mutations on another device aren't clobbered by
+    // the rename window (Codex review, 1.2.1).
     async pushMainName(newName) {
-      const snap = await getDoc(this.refMain(this.familyId));
-      const profiles = snap.exists() ? (snap.data().profiles || []) : [];
       const current = this.pinHash || '';
-      await setDoc(this.refMain(this.familyId),
-        { profiles, pinHash: current, authHash: current, name: newName, updatedAt: serverTimestamp() });
+      await updateDoc(this.refMain(this.familyId),
+        { name: newName, authHash: current, updatedAt: serverTimestamp() });
       this.familyName = newName;
     },
     subscribeMain(cb) {
@@ -779,7 +781,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.2.0</span></div>
+    <div id="app-version">v<span id="ver-num">1.2.1</span></div>
   </div>
 </div>
 
@@ -2206,10 +2208,38 @@ button, .tap { touch-action: manipulation; }
   // Switching family = swap the family code in localStorage + URL hash, then
   // full reload. initCloud on the next page rebuilds everything against the
   // new family (different profiles, log, SRS).
-  function switchToFamily(code) {
+  //
+  // Before reload we MUST:
+  //  - flush any debounced pushes for the *current* family (main/log/srs),
+  //    or the reload destroys their setTimeout and any unsynced change is
+  //    lost. Same root cause as the 1.0.3 add-profile bug — but here it
+  //    can also drop log/SRS, not just main.
+  //  - reset PIN-authenticated state on this device. Each family has its
+  //    own PIN; carrying the "authenticated" flag across families lets
+  //    anyone who once knew family A's PIN edit family B without prompt
+  //    (Codex review, 1.2.1).
+  async function switchToFamily(code) {
+    const cloud = window.__cloud;
+    if (cloud && cloud.ready && cloud.familyId !== code) {
+      clearTimeout(_pushTimers.main);
+      clearTimeout(_pushTimers.log);
+      clearTimeout(_pushTimers.srs);
+      const pid = getActiveProfileId();
+      try {
+        await cloud.pushMain(getProfiles());
+        if (pid) {
+          await cloud.pushLog(pid, loadLog());
+          await cloud.pushSrs(pid, state.srsData);
+        }
+      } catch (e) {
+        console.warn('Pre-switch flush failed:', e);
+        if (!confirm('同步到雲端失敗，可能會掉一些最近的變更。仍要切換家庭？')) return;
+      }
+    }
+    // Reset PIN auth — new family, new PIN.
+    try { localStorage.removeItem(PIN_OK_KEY); } catch {}
+    if (cloud) cloud.pinKnown = false;
     try { localStorage.setItem(FAM_KEY, code); } catch {}
-    // Replace the hash so the URL after reload also reflects the new family —
-    // matters for share-link copy + browser history.
     try { history.replaceState(null, '', location.pathname + location.search + '#fam=' + code); } catch {}
     location.reload();
   }
