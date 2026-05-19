@@ -102,7 +102,7 @@ button, .tap { touch-action: manipulation; }
   text-align: center; line-height: 1.15; margin-bottom: 12px;
   word-break: break-word;
 }
-.card-ipa { font-size: 20px; color: var(--text2); margin-bottom: 24px; font-family: 'Charis SIL', 'DejaVu Sans', serif; }
+.card-ipa { font-size: 26px; color: var(--text2); margin-bottom: 24px; font-family: 'Charis SIL', 'DejaVu Sans', serif; letter-spacing: 0.3px; }
 .speak-btn {
   border: 1.5px solid var(--border2); background: transparent;
   border-radius: var(--radius); padding: 12px 24px;
@@ -127,12 +127,12 @@ button, .tap { touch-action: manipulation; }
 }
 .zh-text { font-size: 24px; font-weight: 600; line-height: 1.5; color: var(--text); }
 .def-en {
-  font-size: 15px; color: var(--text2); line-height: 1.65;
-  margin-top: 8px;
+  font-size: 17px; color: var(--text); line-height: 1.6;
+  margin-top: 10px;
 }
 .example-en {
-  font-size: 15px; color: var(--text3); font-style: italic;
-  line-height: 1.65; margin-top: 6px;
+  font-size: 16px; color: var(--text2); font-style: italic;
+  line-height: 1.6; margin-top: 6px;
 }
 .level-tag {
   display: inline-block; font-size: 13px; font-weight: 600;
@@ -309,7 +309,88 @@ button, .tap { touch-action: manipulation; }
 .profile-actions button.primary { background: var(--accent); color: white; border-color: var(--accent); }
 .profile-actions button:active { transform: scale(0.98); }
 #profile-hint {
-  font-size: 11px; color: var(--text3); margin-top: 12px; line-height: 1.5;
+  font-size: 12px; color: var(--text3); margin-top: 12px; line-height: 1.5;
+}
+
+/* Stats chip + modal */
+.stats-chip {
+  background: var(--bg2); color: var(--text);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 6px 12px;
+  font-family: var(--font);
+  cursor: pointer; min-height: 36px;
+}
+.stats-chip:active { transform: scale(0.97); background: var(--accent-light); }
+
+#stats-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.45);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+#stats-modal.show { display: flex; }
+#stats-modal .sheet {
+  background: var(--surface); color: var(--text);
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 460px;
+  max-height: 90vh; overflow-y: auto;
+  padding: 20px 18px calc(20px + var(--safe-bottom));
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+#stats-modal h3 {
+  font-size: 17px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#stats-modal h3 .close { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text2); padding: 0 4px; }
+.stats-h4 {
+  font-size: 14px; font-weight: 600; color: var(--text2);
+  margin: 16px 0 8px; letter-spacing: 0.3px;
+}
+#stats-summary {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px; margin-bottom: 12px;
+}
+#stats-summary .cell {
+  background: var(--bg2); border-radius: var(--radius);
+  padding: 10px 8px; text-align: center;
+}
+#stats-summary .cell .num { font-size: 24px; font-weight: 700; color: var(--accent-dark); line-height: 1.1; }
+#stats-summary .cell .lbl { font-size: 12px; color: var(--text2); margin-top: 4px; }
+#stats-quota {
+  background: var(--bg2); border-radius: var(--radius);
+  padding: 10px 12px; font-size: 13px; line-height: 1.7;
+  color: var(--text2);
+}
+#stats-quota .lv-row {
+  display: flex; align-items: center; gap: 8px; padding: 2px 0;
+}
+#stats-quota .lv-row .lv { font-weight: 600; color: var(--text); min-width: 28px; }
+#stats-quota .lv-row .bar {
+  flex: 1; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+#stats-quota .lv-row .fill { height: 100%; background: var(--accent); }
+#stats-quota .lv-row .fill.done { background: var(--accent-dark); }
+#stats-quota .lv-row .num { font-variant-numeric: tabular-nums; color: var(--text); min-width: 50px; text-align: right; font-size: 13px; }
+#stats-days { display: flex; flex-direction: column; gap: 4px; }
+.day-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 4px; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.day-row.today { background: var(--accent-light); border-radius: 6px; border-bottom-color: transparent; padding-left: 8px; padding-right: 8px; }
+.day-row .date { min-width: 90px; color: var(--text2); }
+.day-row .bar {
+  flex: 1; height: 10px; background: var(--bg2); border-radius: 5px; overflow: hidden;
+}
+.day-row .fill { height: 100%; background: var(--accent); border-radius: 5px; }
+.day-row .num { min-width: 36px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.day-row.empty .num { color: var(--text3); font-weight: 400; }
+#stats-hint {
+  font-size: 11px; color: var(--text3); margin-top: 14px; line-height: 1.5;
 }
 </style>
 </head>
@@ -332,6 +413,17 @@ button, .tap { touch-action: manipulation; }
   </div>
 </div>
 
+<div id="stats-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>📊 練習紀錄 <button class="close" id="stats-close">×</button></h3>
+    <div id="stats-summary"></div>
+    <div id="stats-quota"></div>
+    <h4 class="stats-h4">最近 14 天</h4>
+    <div id="stats-days"></div>
+    <div id="stats-hint">記錄會自動保留最近 90 天。每個使用者的紀錄獨立。</div>
+  </div>
+</div>
+
 <div id="ios-hint">
   <p>點 Safari 下方 <strong>分享 📤</strong> → 選「<strong>加入主畫面</strong>」就裝好了</p>
   <button onclick="this.parentElement.classList.remove('show');localStorage.setItem('ios_hint_dismissed','1')">知道了</button>
@@ -343,6 +435,7 @@ button, .tap { touch-action: manipulation; }
     <button id="profile-chip" class="profile-chip" type="button">
       <span>👤</span><span class="who" id="profile-who">—</span><span class="caret">▾</span>
     </button>
+    <button id="stats-chip" class="stats-chip" type="button" title="練習紀錄">📊</button>
     <div class="spacer"></div>
     <select id="level-select" class="level-select" onchange="onLevelChange()">
       <option value="1">Level 1</option>
@@ -529,7 +622,9 @@ button, .tap { touch-action: manipulation; }
   }
 
   // ---------- State ----------
-  const DAILY_NEW_LIMIT = 15;
+  // Per-level daily new-card limit (家長設定:低 level 多、高 level 少)
+  const DAILY_NEW_LIMIT_BY_LEVEL = { 1: 30, 2: 25, 3: 20, 4: 15, 5: 10, 6: 10 };
+  function dailyNewLimit(lv) { return DAILY_NEW_LIMIT_BY_LEVEL[lv] ?? 15; }
   const state = {
     level: parseInt(getPK('vocab_level', '1'), 10),
     mode: getPK('vocab_mode', 'srs'),  // 'srs' | 'browse'
@@ -568,6 +663,55 @@ button, .tap { touch-action: manipulation; }
   function saveSRS() {
     setPK('vocab_srs_v1', JSON.stringify(state.srsData));
   }
+
+  // ---------- Practice log (家長監看) ----------
+  // Shape: { "YYYY-MM-DD": { total: N, byLevel: {1:n,...}, byGrade: {0:n,1:n,2:n,3:n}, firstAt, lastAt } }
+  function loadLog() {
+    let raw;
+    try { raw = JSON.parse(getPK('vocab_practice_log_v1', '{}')); } catch { return {}; }
+    return (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
+  }
+  function saveLog(log) {
+    setPK('vocab_practice_log_v1', JSON.stringify(log));
+  }
+  function logReview(level, grade) {
+    const log = loadLog();
+    const d = today();
+    const now = new Date().toISOString();
+    if (!log[d]) log[d] = { total: 0, byLevel: {}, byGrade: {0:0,1:0,2:0,3:0}, firstAt: now, lastAt: now };
+    log[d].total++;
+    log[d].byLevel[level] = (log[d].byLevel[level] || 0) + 1;
+    log[d].byGrade[grade] = (log[d].byGrade[grade] || 0) + 1;
+    log[d].lastAt = now;
+    // Trim to last 90 days to keep storage small
+    const keys = Object.keys(log).sort();
+    if (keys.length > 90) {
+      const drop = keys.slice(0, keys.length - 90);
+      for (const k of drop) delete log[k];
+    }
+    saveLog(log);
+  }
+  function todayPracticed(level) {
+    const log = loadLog();
+    const d = log[today()];
+    if (!d) return 0;
+    if (level == null) return d.total;
+    return d.byLevel[level] || 0;
+  }
+  function computeStreak() {
+    const log = loadLog();
+    let streak = 0;
+    let cur = new Date();
+    while (true) {
+      const d = cur.getFullYear() + '-' + String(cur.getMonth()+1).padStart(2,'0') + '-' + String(cur.getDate()).padStart(2,'0');
+      if (log[d] && log[d].total > 0) {
+        streak++;
+        cur.setDate(cur.getDate() - 1);
+      } else break;
+    }
+    return streak;
+  }
+
   function today() {
     const d = new Date();
     return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
@@ -615,6 +759,7 @@ button, .tap { touch-action: manipulation; }
     }
     state.srsData[id] = { ...next, due: addDays(today(), Math.max(1, next.interval)) };
     saveSRS();
+    logReview(state.level, grade);
 
     if (grade === 0) {
       state.sessionLapses[id] = lapseCount + 1;
@@ -667,7 +812,7 @@ button, .tap { touch-action: manipulation; }
       return arr;
     }
     sh(due); sh(fresh);
-    return [...due, ...fresh.slice(0, DAILY_NEW_LIMIT)];
+    return [...due, ...fresh.slice(0, dailyNewLimit(state.level))];
   }
 
   // ---------- DOM ----------
@@ -762,11 +907,12 @@ button, .tap { touch-action: manipulation; }
       else if (d.due <= t) dueOther++;
     }
     doneTitle.textContent = '🎉 L' + state.level + ' 今日複習完成';
-    doneSub.textContent = '已學新卡上限 ' + DAILY_NEW_LIMIT + ' / 天。剩餘新卡 ' + newOther + ' 張,待複習 ' + dueOther + ' 張(下次到期日後出現)。';
+    doneSub.textContent = '今天已完成 ' + (todayPracticed(state.level)) + ' 張。新卡上限 ' + dailyNewLimit(state.level) + ' / 天,剩餘新卡 ' + newOther + ' 張,待複習 ' + dueOther + ' 張(下次到期日後出現)。';
   }
 
   function updateRatingVisibility() {
-    const showRate = state.mode === 'srs' && state.flipped;
+    // SRS mode: rating buttons always visible (前後面都顯示 — 認識的字可以直接按 Easy 跳過)
+    const showRate = state.mode === 'srs';
     ratingArea.classList.toggle('show', showRate);
     navRow.style.display = state.mode === 'srs' ? 'none' : '';
   }
@@ -1088,6 +1234,82 @@ button, .tap { touch-action: manipulation; }
   });
 
   refreshChip();
+
+  // ---------- Stats UI ----------
+  const statsModal = $('stats-modal');
+  const statsSummary = $('stats-summary');
+  const statsQuota = $('stats-quota');
+  const statsDays = $('stats-days');
+
+  function renderStats() {
+    const log = loadLog();
+    const t = today();
+    const todayObj = log[t] || { total: 0, byLevel: {}, byGrade: {0:0,1:0,2:0,3:0} };
+
+    // Week total (last 7 days incl today)
+    let weekTotal = 0;
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(); d.setDate(d.getDate() - i);
+      const key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      if (log[key]) weekTotal += log[key].total;
+    }
+    const streak = computeStreak();
+
+    statsSummary.innerHTML = `
+      <div class="cell"><div class="num">${todayObj.total}</div><div class="lbl">今天</div></div>
+      <div class="cell"><div class="num">${weekTotal}</div><div class="lbl">過去 7 天</div></div>
+      <div class="cell"><div class="num">${streak}</div><div class="lbl">連續天數</div></div>
+    `;
+
+    // Today's per-level quota progress
+    const quotaRows = [];
+    quotaRows.push('<div style="font-weight:600;color:var(--text);margin-bottom:6px;font-size:13px;">今天各 Level 進度</div>');
+    for (let lv = 1; lv <= 6; lv++) {
+      const done = todayObj.byLevel[lv] || 0;
+      const limit = dailyNewLimit(lv);
+      const pct = Math.min(100, (done / limit) * 100);
+      const isDone = done >= limit;
+      quotaRows.push(`
+        <div class="lv-row">
+          <span class="lv">L${lv}</span>
+          <span class="bar"><span class="fill ${isDone?'done':''}" style="width:${pct}%"></span></span>
+          <span class="num">${done} / ${limit}${isDone ? ' ✓' : ''}</span>
+        </div>
+      `);
+    }
+    statsQuota.innerHTML = quotaRows.join('');
+
+    // Last 14 days
+    const dayRows = [];
+    let maxCount = 1;
+    const days = [];
+    for (let i = 13; i >= 0; i--) {
+      const d = new Date(); d.setDate(d.getDate() - i);
+      const key = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+      const count = log[key]?.total || 0;
+      days.push({ key, count, isToday: key === t });
+      if (count > maxCount) maxCount = count;
+    }
+    for (const day of days) {
+      const pct = (day.count / maxCount) * 100;
+      const wd = ['日','一','二','三','四','五','六'][new Date(day.key + 'T00:00:00').getDay()];
+      const mmdd = day.key.slice(5);
+      dayRows.push(`
+        <div class="day-row ${day.count===0?'empty':''} ${day.isToday?'today':''}">
+          <span class="date">${mmdd} (${wd})${day.isToday?' 今天':''}</span>
+          <span class="bar"><span class="fill" style="width:${pct}%"></span></span>
+          <span class="num">${day.count}</span>
+        </div>
+      `);
+    }
+    statsDays.innerHTML = dayRows.join('');
+  }
+
+  function openStatsModal() { renderStats(); statsModal.classList.add('show'); }
+  function closeStatsModal() { statsModal.classList.remove('show'); }
+  $('stats-chip').addEventListener('click', openStatsModal);
+  $('stats-close').addEventListener('click', closeStatsModal);
+  statsModal.addEventListener('click', (e) => { if (e.target === statsModal) closeStatsModal(); });
 
   // ---------- Init ----------
   levelSelect.value = String(state.level);
