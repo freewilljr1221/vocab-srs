@@ -389,6 +389,55 @@ button, .tap { touch-action: manipulation; }
 .day-row .fill { height: 100%; background: var(--accent); border-radius: 5px; }
 .day-row .num { min-width: 36px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
 .day-row.empty .num { color: var(--text3); font-weight: 400; }
+.day-row.clickable { cursor: pointer; }
+.day-row.clickable:active { background: var(--bg2); border-radius: 6px; }
+.day-row.expanded { background: var(--accent-light); border-radius: 6px; border-bottom-color: transparent; padding-left: 8px; padding-right: 8px; }
+.day-row.expanded .num { color: var(--accent-dark); }
+
+.day-cards {
+  display: none;
+  margin: 4px 0 10px;
+  padding: 8px 10px;
+  background: var(--bg2);
+  border-radius: var(--radius);
+}
+.day-cards.show { display: block; }
+.day-cards-head {
+  font-size: 12px; color: var(--text2);
+  padding: 2px 0 8px; border-bottom: 1px solid var(--border);
+  margin-bottom: 4px; font-weight: 500;
+}
+.day-empty {
+  font-size: 12px; color: var(--text3); padding: 6px 0;
+}
+.card-log-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 0; font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+.card-log-row:last-child { border-bottom: none; }
+.card-log-row .t {
+  font-size: 11px; color: var(--text3);
+  font-variant-numeric: tabular-nums; min-width: 38px;
+}
+.card-log-row .w {
+  flex: 1; color: var(--text); font-weight: 500;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.card-log-row .lv {
+  font-size: 10px; color: var(--text2); background: var(--surface);
+  padding: 1px 6px; border-radius: 8px;
+}
+.card-log-row .g {
+  font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 10px; color: white;
+  min-width: 44px; text-align: center;
+}
+.card-log-row .g.g-again { background: var(--again); }
+.card-log-row .g.g-hard  { background: var(--hard); }
+.card-log-row .g.g-good  { background: var(--accent); }
+.card-log-row .g.g-easy  { background: var(--easy); }
+
 #stats-hint {
   font-size: 11px; color: var(--text3); margin-top: 14px; line-height: 1.5;
 }
@@ -418,9 +467,9 @@ button, .tap { touch-action: manipulation; }
     <h3>📊 練習紀錄 <button class="close" id="stats-close">×</button></h3>
     <div id="stats-summary"></div>
     <div id="stats-quota"></div>
-    <h4 class="stats-h4">最近 14 天</h4>
+    <h4 class="stats-h4">最近 14 天 <span style="font-size:11px;color:var(--text3);font-weight:400;">(點某一天可看當天練的單字)</span></h4>
     <div id="stats-days"></div>
-    <div id="stats-hint">記錄會自動保留最近 90 天。每個使用者的紀錄獨立。</div>
+    <div id="stats-hint">記錄會自動保留最近 90 天,跟著使用者 profile 一起匯出。</div>
   </div>
 </div>
 
@@ -665,7 +714,10 @@ button, .tap { touch-action: manipulation; }
   }
 
   // ---------- Practice log (家長監看) ----------
-  // Shape: { "YYYY-MM-DD": { total: N, byLevel: {1:n,...}, byGrade: {0:n,1:n,2:n,3:n}, firstAt, lastAt } }
+  // Shape: { "YYYY-MM-DD": {
+  //   total, byLevel, byGrade, firstAt, lastAt,
+  //   cards: [{w:word, l:level, g:grade, t:HH:MM}, ...]   // chronological, dedup-tracked separately
+  // }}
   function loadLog() {
     let raw;
     try { raw = JSON.parse(getPK('vocab_practice_log_v1', '{}')); } catch { return {}; }
@@ -674,16 +726,20 @@ button, .tap { touch-action: manipulation; }
   function saveLog(log) {
     setPK('vocab_practice_log_v1', JSON.stringify(log));
   }
-  function logReview(level, grade) {
+  function logReview(card, grade) {
     const log = loadLog();
     const d = today();
-    const now = new Date().toISOString();
-    if (!log[d]) log[d] = { total: 0, byLevel: {}, byGrade: {0:0,1:0,2:0,3:0}, firstAt: now, lastAt: now };
+    const now = new Date();
+    const nowIso = now.toISOString();
+    const hhmm = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+    if (!log[d]) log[d] = { total: 0, byLevel: {}, byGrade: {0:0,1:0,2:0,3:0}, firstAt: nowIso, lastAt: nowIso, cards: [] };
+    if (!Array.isArray(log[d].cards)) log[d].cards = []; // back-compat
     log[d].total++;
-    log[d].byLevel[level] = (log[d].byLevel[level] || 0) + 1;
+    log[d].byLevel[card.level] = (log[d].byLevel[card.level] || 0) + 1;
     log[d].byGrade[grade] = (log[d].byGrade[grade] || 0) + 1;
-    log[d].lastAt = now;
-    // Trim to last 90 days to keep storage small
+    log[d].lastAt = nowIso;
+    log[d].cards.push({ w: card.word, l: card.level, g: grade, t: hhmm });
+    // Trim to last 90 days
     const keys = Object.keys(log).sort();
     if (keys.length > 90) {
       const drop = keys.slice(0, keys.length - 90);
@@ -759,7 +815,7 @@ button, .tap { touch-action: manipulation; }
     }
     state.srsData[id] = { ...next, due: addDays(today(), Math.max(1, next.interval)) };
     saveSRS();
-    logReview(state.level, grade);
+    logReview(c, grade);
 
     if (grade === 0) {
       state.sessionLapses[id] = lapseCount + 1;
@@ -1279,7 +1335,7 @@ button, .tap { touch-action: manipulation; }
     }
     statsQuota.innerHTML = quotaRows.join('');
 
-    // Last 14 days
+    // Last 14 days (clickable to expand word list)
     const dayRows = [];
     let maxCount = 1;
     const days = [];
@@ -1294,15 +1350,59 @@ button, .tap { touch-action: manipulation; }
       const pct = (day.count / maxCount) * 100;
       const wd = ['日','一','二','三','四','五','六'][new Date(day.key + 'T00:00:00').getDay()];
       const mmdd = day.key.slice(5);
+      const clickable = day.count > 0;
       dayRows.push(`
-        <div class="day-row ${day.count===0?'empty':''} ${day.isToday?'today':''}">
+        <div class="day-row ${day.count===0?'empty':''} ${day.isToday?'today':''} ${clickable?'clickable':''}" data-date="${day.key}">
           <span class="date">${mmdd} (${wd})${day.isToday?' 今天':''}</span>
           <span class="bar"><span class="fill" style="width:${pct}%"></span></span>
-          <span class="num">${day.count}</span>
+          <span class="num">${day.count}${clickable?' ▸':''}</span>
         </div>
+        <div class="day-cards" id="day-cards-${day.key}"></div>
       `);
     }
     statsDays.innerHTML = dayRows.join('');
+
+    // Wire row clicks → expand/collapse word list for that day
+    statsDays.querySelectorAll('.day-row.clickable').forEach(row => {
+      row.addEventListener('click', () => {
+        const date = row.dataset.date;
+        const target = document.getElementById('day-cards-' + date);
+        if (!target) return;
+        if (target.classList.contains('show')) {
+          target.classList.remove('show'); target.innerHTML = '';
+          row.classList.remove('expanded');
+          return;
+        }
+        target.innerHTML = renderDayCards(log[date]);
+        target.classList.add('show');
+        row.classList.add('expanded');
+      });
+    });
+  }
+
+  // Render per-day card list HTML (chronological, latest first)
+  function renderDayCards(dayObj) {
+    const cards = (dayObj && Array.isArray(dayObj.cards)) ? dayObj.cards.slice() : [];
+    if (cards.length === 0) {
+      return '<div class="day-empty">這天的詳細紀錄不存在(舊版未記錄單字明細)</div>';
+    }
+    // Latest first
+    cards.reverse();
+    const gradeLabel = ['Again','Hard','Good','Easy'];
+    const gradeClass = ['g-again','g-hard','g-good','g-easy'];
+    // Dedup: if same word rated multiple times, show all with timestamps
+    const html = cards.map(c => `
+      <div class="card-log-row">
+        <span class="t">${c.t || ''}</span>
+        <span class="w">${escapeHtml(c.w)}</span>
+        <span class="lv">L${c.l}</span>
+        <span class="g ${gradeClass[c.g] || ''}">${gradeLabel[c.g] || '?'}</span>
+      </div>
+    `).join('');
+    // Summary header
+    const uniq = new Set(cards.map(c => c.w)).size;
+    const head = `<div class="day-cards-head">共 ${cards.length} 次點擊 · ${uniq} 個不同單字</div>`;
+    return head + html;
   }
 
   function openStatsModal() { renderStats(); statsModal.classList.add('show'); }
