@@ -826,6 +826,24 @@ button, .tap { touch-action: manipulation; }
   let _suppressPush = false;        // true when applying remote → local; prevents echo
   const _pushTimers = { main: null, log: null, srs: null };
 
+  // Run `fn` with _suppressPush = true so writes inside it don't trigger cloud push.
+  // Uses try/finally so a thrown exception cannot leave _suppressPush stuck on true
+  // (which would silently disable all future sync). Works for sync and async fn.
+  function withSuppress(fn) {
+    _suppressPush = true;
+    try {
+      const r = fn();
+      if (r && typeof r.then === 'function') {
+        return r.finally(() => { _suppressPush = false; });
+      }
+      _suppressPush = false;
+      return r;
+    } catch (e) {
+      _suppressPush = false;
+      throw e;
+    }
+  }
+
   function schedulePush(kind) {
     if (_suppressPush) return;
     const cloud = window.__cloud;
@@ -937,24 +955,63 @@ button, .tap { touch-action: manipulation; }
   // another device's writes. Without merge we'd lose entries written between local save
   // and the next snapshot.
   function mergeLog(a, b) {
-    const out = Object.assign({}, a);
-    for (const [date, dayB] of Object.entries(b || {})) {
-      const dayA = out[date];
+    // Union per-day cards arrays, dedupe by (word + hh:mm + grade) — same word
+    // reviewed at the same minute with the same grade is the same event. Then
+    // recompute total / byLevel / byGrade from the unioned cards so aggregates
+    // stay consistent. This means: if device A practiced word X at 14:35 and
+    // device B practiced word Y at 14:36 same day, BOTH show up after merge.
+    const out = {};
+    const dates = new Set([...Object.keys(a || {}), ...Object.keys(b || {})]);
+    for (const date of dates) {
+      const dayA = (a && a[date]) || null;
+      const dayB = (b && b[date]) || null;
       if (!dayA) { out[date] = dayB; continue; }
-      // Per-day "the one with more cards wins" — practice entries only grow over time
-      const cardsA = (dayA.cards && dayA.cards.length) || dayA.total || 0;
-      const cardsB = (dayB.cards && dayB.cards.length) || dayB.total || 0;
-      out[date] = cardsB > cardsA ? dayB : dayA;
+      if (!dayB) { out[date] = dayA; continue; }
+      const seen = new Set();
+      const cards = [];
+      for (const c of [...(dayA.cards || []), ...(dayB.cards || [])]) {
+        if (!c || typeof c !== 'object') continue;
+        const key = (c.w || '') + '|' + (c.t || '') + '|' + (c.g ?? '') + '|' + (c.l ?? '');
+        if (seen.has(key)) continue;
+        seen.add(key); cards.push(c);
+      }
+      cards.sort((x, y) => (x.t || '').localeCompare(y.t || ''));
+      const byLevel = {};
+      const byGrade = { 0:0, 1:0, 2:0, 3:0 };
+      for (const c of cards) {
+        if (c.l != null) byLevel[c.l] = (byLevel[c.l] || 0) + 1;
+        if (c.g != null) byGrade[c.g] = (byGrade[c.g] || 0) + 1;
+      }
+      const pickEarlier = (x, y) => (x && y) ? (x < y ? x : y) : (x || y || null);
+      const pickLater   = (x, y) => (x && y) ? (x > y ? x : y) : (x || y || null);
+      out[date] = {
+        total: cards.length,
+        byLevel, byGrade,
+        firstAt: pickEarlier(dayA.firstAt, dayB.firstAt),
+        lastAt:  pickLater(dayA.lastAt,  dayB.lastAt),
+        cards
+      };
     }
     return out;
   }
   function mergeSrs(a, b) {
+    // Per-card: pick the record with the newer lastReviewedAt timestamp.
+    // Falling back to `reps` is wrong because Again resets reps to 0 — an older
+    // record with higher reps would overwrite a newer Again. Records without
+    // lastReviewedAt (pre-cloud-sync) are treated as oldest (Date.now()-90d ish);
+    // they only win if the other side also has no timestamp.
     const out = Object.assign({}, a);
     for (const [k, vB] of Object.entries(b || {})) {
       const vA = out[k];
       if (!vA) { out[k] = vB; continue; }
-      // Per-card: more reps = more recent practice
-      out[k] = ((vB.reps || 0) > (vA.reps || 0)) ? vB : vA;
+      const tA = Number.isFinite(vA.lastReviewedAt) ? vA.lastReviewedAt : 0;
+      const tB = Number.isFinite(vB.lastReviewedAt) ? vB.lastReviewedAt : 0;
+      if (tA === 0 && tB === 0) {
+        // Neither has a timestamp — fall back to "more reps" but warn in console once
+        out[k] = ((vB.reps || 0) > (vA.reps || 0)) ? vB : vA;
+      } else {
+        out[k] = tB > tA ? vB : vA;
+      }
     }
     return out;
   }
@@ -971,7 +1028,9 @@ button, .tap { touch-action: manipulation; }
       const reps     = Number.isFinite(r.reps)     ? Math.max(0, Math.round(r.reps))      : 0;
       const lapses   = Number.isFinite(r.lapses)   ? Math.max(0, Math.round(r.lapses))    : 0;
       const due      = typeof r.due === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(r.due) ? r.due : today();
-      out[k] = { ease, interval, reps, lapses, due };
+      const rec      = { ease, interval, reps, lapses, due };
+      if (Number.isFinite(r.lastReviewedAt)) rec.lastReviewedAt = r.lastReviewedAt;
+      out[k] = rec;
     }
     return out;
   }
@@ -996,9 +1055,7 @@ button, .tap { touch-action: manipulation; }
       const main = await cloud.pullMain();
       if (main && Array.isArray(main.profiles) && main.profiles.length > 0) {
         // Cloud authoritative on first load
-        _suppressPush = true;
-        try { localStorage.setItem(PROFILES_KEY, JSON.stringify(main.profiles)); } catch {}
-        _suppressPush = false;
+        withSuppress(() => { try { localStorage.setItem(PROFILES_KEY, JSON.stringify(main.profiles)); } catch {} });
         if (!main.profiles.find(p => p.id === getActiveProfileId())) {
           setActiveProfileId(main.profiles[0].id);
           location.reload();
@@ -1012,9 +1069,7 @@ button, .tap { touch-action: manipulation; }
       _cloudUnsubs.push(cloud.subscribeMain((d) => {
         const profs = Array.isArray(d.profiles) ? d.profiles : [];
         if (JSON.stringify(profs) !== JSON.stringify(getProfiles())) {
-          _suppressPush = true;
-          try { localStorage.setItem(PROFILES_KEY, JSON.stringify(profs)); } catch {}
-          _suppressPush = false;
+          withSuppress(() => { try { localStorage.setItem(PROFILES_KEY, JSON.stringify(profs)); } catch {} });
           if (profs.length > 0 && !profs.find(p => p.id === getActiveProfileId())) {
             setActiveProfileId(profs[0].id);
             location.reload(); return;
@@ -1031,17 +1086,13 @@ button, .tap { touch-action: manipulation; }
       if (pid) {
         const remoteLog = await cloud.pullLog(pid);
         const mergedLog = mergeLog(loadLog(), remoteLog);
-        _suppressPush = true;
-        setPK('vocab_practice_log_v1', JSON.stringify(mergedLog));
-        _suppressPush = false;
+        withSuppress(() => setPK('vocab_practice_log_v1', JSON.stringify(mergedLog)));
         if (!sameJSON(mergedLog, remoteLog)) schedulePush('log');
 
         _cloudUnsubs.push(cloud.subscribeLog(pid, (byDate) => {
           const merged = mergeLog(loadLog(), byDate || {});
           if (sameJSON(merged, loadLog())) return; // nothing new for us
-          _suppressPush = true;
-          setPK('vocab_practice_log_v1', JSON.stringify(merged));
-          _suppressPush = false;
+          withSuppress(() => setPK('vocab_practice_log_v1', JSON.stringify(merged)));
           if (!sameJSON(merged, byDate)) schedulePush('log');
           const sm = document.getElementById('stats-modal');
           if (sm && sm.classList.contains('show') && typeof renderStats === 'function') renderStats();
@@ -1049,20 +1100,20 @@ button, .tap { touch-action: manipulation; }
 
         const remoteSrs = await cloud.pullSrs(pid);
         const mergedSrs = mergeSrs(state.srsData, sanitizeSrs(remoteSrs));
-        _suppressPush = true;
-        state.srsData = mergedSrs;
-        setPK('vocab_srs_v1', JSON.stringify(state.srsData));
-        _suppressPush = false;
+        withSuppress(() => {
+          state.srsData = mergedSrs;
+          setPK('vocab_srs_v1', JSON.stringify(state.srsData));
+        });
         if (!sameJSON(mergedSrs, remoteSrs)) schedulePush('srs');
 
         _cloudUnsubs.push(cloud.subscribeSrs(pid, (data) => {
           const remote = sanitizeSrs(data);
           const merged = mergeSrs(state.srsData, remote);
           if (sameJSON(merged, state.srsData)) return;
-          _suppressPush = true;
-          state.srsData = merged;
-          setPK('vocab_srs_v1', JSON.stringify(state.srsData));
-          _suppressPush = false;
+          withSuppress(() => {
+            state.srsData = merged;
+            setPK('vocab_srs_v1', JSON.stringify(state.srsData));
+          });
           if (!sameJSON(merged, remote)) schedulePush('srs');
         }));
 
@@ -1186,7 +1237,9 @@ button, .tap { touch-action: manipulation; }
       const reps     = Number.isFinite(r.reps)     ? Math.max(0, Math.round(r.reps))      : 0;
       const lapses   = Number.isFinite(r.lapses)   ? Math.max(0, Math.round(r.lapses))    : 0;
       const due      = typeof r.due === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(r.due) ? r.due : today();
-      out[k] = { ease, interval, reps, lapses, due };
+      const rec      = { ease, interval, reps, lapses, due };
+      if (Number.isFinite(r.lastReviewedAt)) rec.lastReviewedAt = r.lastReviewedAt;
+      out[k] = rec;
     }
     return out;
   }
@@ -1296,7 +1349,11 @@ button, .tap { touch-action: manipulation; }
     } else {
       next = sm2Compute(cur, grade);
     }
-    state.srsData[id] = { ...next, due: addDays(today(), Math.max(1, next.interval)) };
+    state.srsData[id] = {
+      ...next,
+      due: addDays(today(), Math.max(1, next.interval)),
+      lastReviewedAt: Date.now()  // ms epoch — used by mergeSrs to pick newer record on conflict
+    };
     saveSRS();
     logReview(c, grade);
 

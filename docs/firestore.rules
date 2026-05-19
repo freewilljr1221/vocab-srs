@@ -25,9 +25,22 @@ service cloud.firestore {
     match /families/{fam} {
 
       // PIN-protected: profile list + PIN management
+      //
+      // create: only ever allowed for the "empty bootstrap" doc. Closes the race
+      // where an attacker who knows the family URL could create the doc with
+      // their own pinHash *baked in* before the legitimate user. After create,
+      // every change must go through update with a valid authHash.
+      //
+      // update: writer must include authHash == current cloud pinHash. For the
+      // first PIN setup (pinHash still ''), the empty authHash naturally
+      // matches. After a PIN is set, the only way to update profiles or rotate
+      // PIN is to know the current PIN.
       match /state/main {
         allow read:   if true;
-        allow create: if true;
+        allow create: if request.resource.data.pinHash == ''
+                      && request.resource.data.authHash == ''
+                      && request.resource.data.profiles is list
+                      && request.resource.data.profiles.size() == 0;
         allow update: if request.resource.data.authHash == resource.data.pinHash;
         allow delete: if false;
       }
