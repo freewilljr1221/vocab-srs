@@ -544,6 +544,46 @@ button, .tap { touch-action: manipulation; }
   font-family: var(--font); cursor: pointer; min-height: 40px;
 }
 
+/* Color picker modal */
+#color-modal {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(0,0,0,0.55); align-items: center; justify-content: center; padding: 16px;
+}
+#color-modal.show { display: flex; }
+#color-modal .sheet {
+  background: var(--surface); border-radius: var(--radius-lg);
+  width: 100%; max-width: 360px; padding: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+#color-modal h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#color-modal h3 .close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text2); padding: 0 4px; }
+#color-modal .desc { font-size: 12px; color: var(--text2); margin-bottom: 14px; line-height: 1.5; }
+.color-swatches {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.color-swatches .swatch {
+  height: 56px; border-radius: 12px;
+  border: 2px solid transparent; cursor: pointer;
+  font-family: var(--font); font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.08s ease;
+}
+.color-swatches .swatch:active { transform: scale(0.94); }
+.color-swatches .swatch.selected { border-color: var(--text); }
+.color-swatches .swatch.none { background: var(--bg2); color: var(--text3); border-color: var(--border2); }
+
+/* Profile row color stripe */
+.profile-row.has-color { border-left: 4px solid var(--profile-color, transparent); padding-left: 9px; }
+.profile-row .dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--profile-color, transparent);
+  border: 1px solid var(--border2);
+  display: inline-block;
+}
+
 /* PIN prompt overlay */
 #pin-modal {
   display: none; position: fixed; inset: 0; z-index: 2100;
@@ -739,7 +779,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.1.0</span></div>
+    <div id="app-version">v<span id="ver-num">1.2.0</span></div>
   </div>
 </div>
 
@@ -756,6 +796,14 @@ button, .tap { touch-action: manipulation; }
       <input type="text" id="fam-code-input" placeholder="家庭代碼" autocomplete="off" maxlength="16">
       <button id="fam-join-ok" class="primary">加入</button>
     </div>
+  </div>
+</div>
+
+<div id="color-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3 id="color-title">選顏色 <button class="close" id="color-close">×</button></h3>
+    <div class="desc">挑一個顏色給這個使用者，方便一眼分辨。</div>
+    <div class="color-swatches" id="color-swatches"><!-- filled by JS --></div>
   </div>
 </div>
 
@@ -884,12 +932,31 @@ button, .tap { touch-action: manipulation; }
   const PROFILES_KEY = 'vocab_profiles';
   const ACTIVE_KEY = 'vocab_active_profile';
 
+  // Profile color palette. `id` is what gets stored in profile.color; `bg/fg/
+  // border` are the CSS values applied to the chip + row accents. Empty color
+  // (id: '') means "use the default accent theme" — same look as before.
+  const PROFILE_COLORS = [
+    { id: 'blue',   name: '藍', bg: '#DBE9F8', fg: '#1D5DAB', border: '#7AAEE2' },
+    { id: 'green',  name: '綠', bg: '#D9EFE3', fg: '#1B6B4A', border: '#5BB792' },
+    { id: 'yellow', name: '黃', bg: '#FCEFB8', fg: '#7A6300', border: '#E0C04A' },
+    { id: 'pink',   name: '粉', bg: '#FAD9E6', fg: '#A6346B', border: '#E58EB3' },
+    { id: 'red',    name: '紅', bg: '#FAD2D2', fg: '#9F2A2A', border: '#E27474' },
+    { id: 'orange', name: '橘', bg: '#FCE0C0', fg: '#A05D17', border: '#E59B53' },
+  ];
+  function colorById(id) { return PROFILE_COLORS.find(c => c.id === id) || null; }
+
   function getProfiles() {
     let raw;
     try { raw = JSON.parse(localStorage.getItem(PROFILES_KEY) || '[]'); }
     catch { return []; }
     if (!Array.isArray(raw)) return [];
-    return raw.filter(p => p && typeof p.id === 'string' && typeof p.name === 'string');
+    return raw
+      .filter(p => p && typeof p.id === 'string' && typeof p.name === 'string')
+      .map(p => ({                  // normalize: keep color if known, else ''
+        id: p.id,
+        name: p.name,
+        color: (typeof p.color === 'string' && colorById(p.color)) ? p.color : '',
+      }));
   }
   function saveProfiles(arr) {
     try { localStorage.setItem(PROFILES_KEY, JSON.stringify(arr)); } catch {}
@@ -1034,6 +1101,43 @@ button, .tap { touch-action: manipulation; }
     if (!cloud.pinHash)            { el.textContent = '未設定'; el.classList.add('warn'); return; }
     if (cloud.pinKnown)            { el.textContent = '✓ 已認證'; el.classList.add('ok'); return; }
     el.textContent = '🔒 已設定';
+  }
+
+  // Generic color-picker modal. Resolves to a color id (e.g. 'blue'), '' for
+  // "no color", or null on cancel. Used by profile-add and the per-row 🎨
+  // button. Builds swatches on each open so the palette is always fresh and
+  // the current selection is highlighted.
+  function pickColor({ title = '選顏色', current = '' } = {}) {
+    return new Promise(resolve => {
+      const modal = document.getElementById('color-modal');
+      const swatchHost = document.getElementById('color-swatches');
+      const closeBtn = document.getElementById('color-close');
+      document.getElementById('color-title').firstChild.nodeValue = title + ' ';
+      swatchHost.innerHTML = '';
+      function close(val) {
+        modal.classList.remove('show');
+        closeBtn.onclick = null;
+        modal.onclick = null;
+        resolve(val);
+      }
+      const items = [{ id: '', name: '無', isNone: true }, ...PROFILE_COLORS];
+      for (const c of items) {
+        const btn = document.createElement('button');
+        btn.className = 'swatch' + (c.isNone ? ' none' : '') + (c.id === current ? ' selected' : '');
+        btn.dataset.color = c.id;
+        if (!c.isNone) {
+          btn.style.background = c.bg;
+          btn.style.color = c.fg;
+          btn.style.borderColor = (c.id === current) ? c.fg : c.border;
+        }
+        btn.textContent = c.name;
+        btn.addEventListener('click', () => close(c.id));
+        swatchHost.appendChild(btn);
+      }
+      closeBtn.onclick = () => close(null);
+      modal.onclick = (e) => { if (e.target === modal) close(null); };
+      modal.classList.add('show');
+    });
   }
 
   // Generic PIN-input modal. Returns plaintext PIN or null on cancel.
@@ -1362,6 +1466,13 @@ button, .tap { touch-action: manipulation; }
     const p = profs.find(x => x.id === id);
     if (!p) return;
     p.name = String(name).slice(0, 30) || p.name;
+    saveProfiles(profs);
+  }
+  function setProfileColor(id, color) {
+    const profs = getProfiles();
+    const p = profs.find(x => x.id === id);
+    if (!p) return;
+    p.color = (color && colorById(color)) ? color : '';
     saveProfiles(profs);
   }
 
@@ -1901,7 +2012,22 @@ button, .tap { touch-action: manipulation; }
     const p = getProfiles().find(x => x.id === id);
     return p ? p.name : '預設';
   }
-  function refreshChip() { profileWho.textContent = currentProfileName(); }
+  function refreshChip() {
+    profileWho.textContent = currentProfileName();
+    // Tint the chip with the active profile's color, if any. Reset back to
+    // theme defaults when no color is set so the chip looks normal.
+    const p = getProfiles().find(x => x.id === getActiveProfileId());
+    const c = p ? colorById(p.color) : null;
+    if (c) {
+      profileChip.style.background  = c.bg;
+      profileChip.style.color       = c.fg;
+      profileChip.style.borderColor = c.border;
+    } else {
+      profileChip.style.background  = '';
+      profileChip.style.color       = '';
+      profileChip.style.borderColor = '';
+    }
+  }
 
   function renderProfileList() {
     const activeId = getActiveProfileId();
@@ -1909,10 +2035,14 @@ button, .tap { touch-action: manipulation; }
     profileList.innerHTML = '';
     for (const p of profs) {
       const row = document.createElement('div');
-      row.className = 'profile-row' + (p.id === activeId ? ' active' : '');
+      const c = colorById(p.color);
+      row.className = 'profile-row' + (p.id === activeId ? ' active' : '') + (c ? ' has-color' : '');
+      if (c) row.style.setProperty('--profile-color', c.border);
       row.innerHTML = `
         <span style="font-size:16px">${p.id === activeId ? '✓' : '○'}</span>
+        <span class="dot" aria-hidden="true"></span>
         <span class="name"></span>
+        <button class="icon-btn" data-act="color" title="顏色">🎨</button>
         <button class="icon-btn" data-act="export" title="匯出">⇩</button>
         <button class="icon-btn" data-act="rename" title="改名">✎</button>
         <button class="icon-btn danger" data-act="delete" title="刪除">🗑</button>
@@ -1925,6 +2055,14 @@ button, .tap { touch-action: manipulation; }
         if (p.id === activeId) { closeProfileModal(); return; }
         setActiveProfileId(p.id);
         location.reload();
+      });
+      row.querySelector('[data-act="color"]').addEventListener('click', async (e) => {
+        e.stopPropagation();
+        if (!(await ensurePinKnown())) return;
+        const picked = await pickColor({ title: `${p.name} 的顏色`, current: p.color || '' });
+        if (picked === null) return;        // cancelled
+        setProfileColor(p.id, picked);
+        renderProfileList(); refreshChip();
       });
       row.querySelector('[data-act="rename"]').addEventListener('click', async (e) => {
         e.stopPropagation();
@@ -1974,9 +2112,11 @@ button, .tap { touch-action: manipulation; }
     if (!(await ensurePinKnown())) return;
     const name = prompt('新使用者名稱（例如小孩名字）');
     if (!name || !name.trim()) return;
+    // Pick a color now (cancel = no color, still creates the profile).
+    const color = await pickColor({ title: `${name.trim()} 的顏色`, current: '' });
     const id = newProfileId();
     const profs = getProfiles();
-    profs.push({ id, name: name.trim().slice(0, 30) });
+    profs.push({ id, name: name.trim().slice(0, 30), color: color || '' });
     saveProfiles(profs);
     setActiveProfileId(id);
     // Flush to cloud BEFORE reload. saveProfiles only schedules a debounced
