@@ -245,11 +245,93 @@ button, .tap { touch-action: manipulation; }
   padding: 4px 10px; border-radius: 20px; z-index: 998;
 }
 #offline-badge.show { display: block; }
+
+/* Profile chip in topbar */
+.profile-chip {
+  background: var(--accent-light); color: var(--accent-dark);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  font-size: 13px; font-weight: 600;
+  padding: 6px 12px 6px 10px;
+  font-family: var(--font);
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  max-width: 140px;
+}
+.profile-chip .who { max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profile-chip .caret { opacity: 0.6; font-size: 10px; }
+.profile-chip:active { transform: scale(0.97); }
+
+/* Profile modal overlay */
+#profile-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.45);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+#profile-modal.show { display: flex; }
+#profile-modal .sheet {
+  background: var(--surface); color: var(--text);
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 420px;
+  max-height: 90vh; overflow-y: auto;
+  padding: 20px 18px calc(20px + var(--safe-bottom));
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+#profile-modal h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#profile-modal h3 .close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text2); padding: 0 4px; }
+.profile-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 8px; border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.profile-row.active { background: var(--accent-light); border-color: var(--accent); }
+.profile-row .name { flex: 1; font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profile-row .icon-btn {
+  background: transparent; border: none; cursor: pointer;
+  color: var(--text2); font-size: 14px; padding: 6px 8px; border-radius: 6px;
+}
+.profile-row .icon-btn:active { background: var(--bg2); }
+.profile-row .icon-btn.danger { color: var(--again); }
+.profile-actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.profile-actions button {
+  flex: 1; min-width: 120px;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border2); border-radius: var(--radius);
+  font-size: 13px; font-weight: 500; padding: 10px;
+  font-family: var(--font); cursor: pointer;
+}
+.profile-actions button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+.profile-actions button:active { transform: scale(0.98); }
+#profile-hint {
+  font-size: 11px; color: var(--text3); margin-top: 12px; line-height: 1.5;
+}
 </style>
 </head>
 <body>
 
 <div id="offline-badge">離線</div>
+
+<div id="profile-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>使用者 <button class="close" id="profile-close">×</button></h3>
+    <div id="profile-list"><!-- filled by JS --></div>
+    <div class="profile-actions">
+      <button id="btn-profile-add" class="primary">＋ 新增使用者</button>
+      <button id="btn-profile-import">匯入 JSON</button>
+      <input type="file" id="profile-import-file" accept="application/json,.json" style="display:none">
+    </div>
+    <div id="profile-hint">
+      切換使用者後頁面會重新載入。匯出/匯入 JSON 可在不同裝置間搬移進度（iPhone ↔ iPad）。
+    </div>
+  </div>
+</div>
+
 <div id="ios-hint">
   <p>點 Safari 下方 <strong>分享 📤</strong> → 選「<strong>加入主畫面</strong>」就裝好了</p>
   <button onclick="this.parentElement.classList.remove('show');localStorage.setItem('ios_hint_dismissed','1')">知道了</button>
@@ -258,6 +340,9 @@ button, .tap { touch-action: manipulation; }
 <div id="app">
   <div class="topbar">
     <div class="brand">單字卡 <span class="dot">·</span> SRS</div>
+    <button id="profile-chip" class="profile-chip" type="button">
+      <span>👤</span><span class="who" id="profile-who">—</span><span class="caret">▾</span>
+    </button>
     <div class="spacer"></div>
     <select id="level-select" class="level-select" onchange="onLevelChange()">
       <option value="1">Level 1</option>
@@ -334,11 +419,120 @@ button, .tap { touch-action: manipulation; }
 (function() {
   'use strict';
 
+  // ---------- Profiles (multi-user on same device) ----------
+  const PROFILES_KEY = 'vocab_profiles';
+  const ACTIVE_KEY = 'vocab_active_profile';
+
+  function getProfiles() {
+    let raw;
+    try { raw = JSON.parse(localStorage.getItem(PROFILES_KEY) || '[]'); }
+    catch { return []; }
+    if (!Array.isArray(raw)) return [];
+    return raw.filter(p => p && typeof p.id === 'string' && typeof p.name === 'string');
+  }
+  function saveProfiles(arr) {
+    try { localStorage.setItem(PROFILES_KEY, JSON.stringify(arr)); } catch {}
+  }
+  function getActiveProfileId() {
+    return localStorage.getItem(ACTIVE_KEY) || '';
+  }
+  function setActiveProfileId(id) {
+    try { localStorage.setItem(ACTIVE_KEY, id); } catch {}
+  }
+  function newProfileId() {
+    return 'p_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  }
+  // First-run migration: existing single-user keys → namespaced under "預設" profile
+  function migrateProfiles() {
+    if (getProfiles().length > 0 && getActiveProfileId()) return;
+    const id = newProfileId();
+    saveProfiles([{ id, name: '預設' }]);
+    setActiveProfileId(id);
+    const baseKeys = ['vocab_srs_v1', 'vocab_mode', 'vocab_level'];
+    for (let lv = 1; lv <= 6; lv++) baseKeys.push('vocab_idx_L' + lv);
+    for (const k of baseKeys) {
+      const v = localStorage.getItem(k);
+      if (v !== null) {
+        try { localStorage.setItem(k + '__' + id, v); localStorage.removeItem(k); } catch {}
+      }
+    }
+  }
+  migrateProfiles();
+
+  function profileKey(base) {
+    const id = getActiveProfileId();
+    return id ? base + '__' + id : base;
+  }
+  function getPK(base, fallback) {
+    const v = localStorage.getItem(profileKey(base));
+    return v === null ? (fallback ?? null) : v;
+  }
+  function setPK(base, val) {
+    try { localStorage.setItem(profileKey(base), val); } catch {}
+  }
+  // Export active profile as JSON-able object (all keys ending __<id>)
+  function exportProfile(id) {
+    const prof = getProfiles().find(p => p.id === id);
+    if (!prof) return null;
+    const suffix = '__' + id;
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.endsWith(suffix)) {
+        data[k.slice(0, -suffix.length)] = localStorage.getItem(k);
+      }
+    }
+    return { schema: 'vocab-srs-profile-v1', name: prof.name, exportedAt: new Date().toISOString(), data };
+  }
+  // Import: payload = { schema, name, data:{base:value} }. Always creates a NEW profile.
+  function importProfile(payload) {
+    if (!payload || typeof payload !== 'object' || !payload.data || typeof payload.data !== 'object') {
+      throw new Error('檔案格式錯誤');
+    }
+    const id = newProfileId();
+    const name = String(payload.name || '匯入').slice(0, 30) + ' (匯入)';
+    const profs = getProfiles();
+    profs.push({ id, name });
+    saveProfiles(profs);
+    for (const [base, val] of Object.entries(payload.data)) {
+      try { localStorage.setItem(base + '__' + id, String(val)); } catch {}
+    }
+    return { id, name };
+  }
+  function deleteProfile(id) {
+    const profs = getProfiles().filter(p => p.id !== id);
+    saveProfiles(profs);
+    // wipe namespaced keys
+    const suffix = '__' + id;
+    const toRm = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.endsWith(suffix)) toRm.push(k);
+    }
+    for (const k of toRm) localStorage.removeItem(k);
+    // if active profile was deleted, switch to first remaining or create new
+    if (getActiveProfileId() === id) {
+      if (profs.length > 0) setActiveProfileId(profs[0].id);
+      else {
+        const nid = newProfileId();
+        saveProfiles([{ id: nid, name: '預設' }]);
+        setActiveProfileId(nid);
+      }
+    }
+  }
+  function renameProfile(id, name) {
+    const profs = getProfiles();
+    const p = profs.find(x => x.id === id);
+    if (!p) return;
+    p.name = String(name).slice(0, 30) || p.name;
+    saveProfiles(profs);
+  }
+
   // ---------- State ----------
   const DAILY_NEW_LIMIT = 15;
   const state = {
-    level: parseInt(localStorage.getItem('vocab_level') || '1', 10),
-    mode: localStorage.getItem('vocab_mode') || 'srs',  // 'srs' | 'browse'
+    level: parseInt(getPK('vocab_level', '1'), 10),
+    mode: getPK('vocab_mode', 'srs'),  // 'srs' | 'browse'
     allCards: [],   // full level cards (after filter for usable content)
     cards: [],      // active deck (subset in SRS mode, all in browse)
     idx: 0,
@@ -354,7 +548,7 @@ button, .tap { touch-action: manipulation; }
 
   function loadSRS() {
     let raw;
-    try { raw = JSON.parse(localStorage.getItem('vocab_srs_v1') || '{}'); }
+    try { raw = JSON.parse(getPK('vocab_srs_v1', '{}')); }
     catch { return {}; }
     if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
     // Sanitize each record — drop NaN / wrong types so SM-2 can't propagate corruption
@@ -372,7 +566,7 @@ button, .tap { touch-action: manipulation; }
     return out;
   }
   function saveSRS() {
-    try { localStorage.setItem('vocab_srs_v1', JSON.stringify(state.srsData)); } catch {}
+    setPK('vocab_srs_v1', JSON.stringify(state.srsData));
   }
   function today() {
     const d = new Date();
@@ -504,7 +698,7 @@ button, .tap { touch-action: manipulation; }
     state.idx = 0;
     state.flipped = false;
     cardInner.classList.remove('flipped');
-    localStorage.setItem('vocab_level', String(level));
+    setPK('vocab_level', String(level));
 
     loading.style.display = 'block';
     empty.style.display = 'none';
@@ -548,7 +742,7 @@ button, .tap { touch-action: manipulation; }
     } else {
       state.cards = state.allCards;
       // restore last position in browse mode
-      const savedIdx = parseInt(localStorage.getItem('vocab_idx_L' + state.level) || '0', 10);
+      const savedIdx = parseInt(getPK('vocab_idx_L' + state.level, '0'), 10);
       state.idx = Math.min(savedIdx, state.cards.length - 1);
     }
     cardArea.style.display = 'block';
@@ -601,7 +795,7 @@ button, .tap { touch-action: manipulation; }
     }
 
     if (state.mode === 'browse') {
-      localStorage.setItem('vocab_idx_L' + state.level, String(state.idx));
+      setPK('vocab_idx_L' + state.level, String(state.idx));
     }
     updateRatingPreview(c);
   }
@@ -745,7 +939,7 @@ button, .tap { touch-action: manipulation; }
   function setMode(mode) {
     if (mode === state.mode) return;
     state.mode = mode;
-    localStorage.setItem('vocab_mode', mode);
+    setPK('vocab_mode', mode);
     tabSrs.classList.toggle('active', mode === 'srs');
     tabBrowse.classList.toggle('active', mode === 'browse');
     if (state.allCards.length > 0) rebuildDeck();
@@ -789,6 +983,111 @@ button, .tap { touch-action: manipulation; }
   });
 
   window.onLevelChange = () => loadLevel(parseInt(levelSelect.value, 10));
+
+  // ---------- Profile UI ----------
+  const profileChip = $('profile-chip');
+  const profileWho = $('profile-who');
+  const profileModal = $('profile-modal');
+  const profileList = $('profile-list');
+  const profileImportFile = $('profile-import-file');
+
+  function currentProfileName() {
+    const id = getActiveProfileId();
+    const p = getProfiles().find(x => x.id === id);
+    return p ? p.name : '預設';
+  }
+  function refreshChip() { profileWho.textContent = currentProfileName(); }
+
+  function renderProfileList() {
+    const activeId = getActiveProfileId();
+    const profs = getProfiles();
+    profileList.innerHTML = '';
+    for (const p of profs) {
+      const row = document.createElement('div');
+      row.className = 'profile-row' + (p.id === activeId ? ' active' : '');
+      row.innerHTML = `
+        <span style="font-size:16px">${p.id === activeId ? '✓' : '○'}</span>
+        <span class="name"></span>
+        <button class="icon-btn" data-act="export" title="匯出">⇩</button>
+        <button class="icon-btn" data-act="rename" title="改名">✎</button>
+        <button class="icon-btn danger" data-act="delete" title="刪除">🗑</button>
+      `;
+      row.querySelector('.name').textContent = p.name;
+      row.dataset.id = p.id;
+      // Tap row body (not buttons) to switch
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('.icon-btn')) return;
+        if (p.id === activeId) { closeProfileModal(); return; }
+        setActiveProfileId(p.id);
+        location.reload();
+      });
+      row.querySelector('[data-act="rename"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const name = prompt('新名字', p.name);
+        if (name && name.trim()) { renameProfile(p.id, name.trim()); renderProfileList(); refreshChip(); }
+      });
+      row.querySelector('[data-act="export"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const payload = exportProfile(p.id);
+        if (!payload) return;
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'vocab-srs-' + p.name.replace(/[^\w一-龥]+/g, '_') + '.json';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+      row.querySelector('[data-act="delete"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (getProfiles().length <= 1) { alert('至少要留一個使用者'); return; }
+        if (!confirm(`刪除「${p.name}」的所有 SRS 進度？此動作無法復原。`)) return;
+        const wasActive = p.id === activeId;
+        deleteProfile(p.id);
+        if (wasActive) location.reload();
+        else { renderProfileList(); refreshChip(); }
+      });
+      profileList.appendChild(row);
+    }
+  }
+
+  function openProfileModal() { renderProfileList(); profileModal.classList.add('show'); }
+  function closeProfileModal() { profileModal.classList.remove('show'); }
+
+  profileChip.addEventListener('click', openProfileModal);
+  $('profile-close').addEventListener('click', closeProfileModal);
+  profileModal.addEventListener('click', (e) => { if (e.target === profileModal) closeProfileModal(); });
+
+  $('btn-profile-add').addEventListener('click', () => {
+    const name = prompt('新使用者名稱（例如小孩名字）');
+    if (!name || !name.trim()) return;
+    const id = newProfileId();
+    const profs = getProfiles();
+    profs.push({ id, name: name.trim().slice(0, 30) });
+    saveProfiles(profs);
+    setActiveProfileId(id);
+    location.reload();
+  });
+
+  $('btn-profile-import').addEventListener('click', () => profileImportFile.click());
+  profileImportFile.addEventListener('change', async (e) => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    try {
+      const text = await f.text();
+      const payload = JSON.parse(text);
+      const { id, name } = importProfile(payload);
+      setActiveProfileId(id);
+      alert(`已匯入：${name}。即將重新載入。`);
+      location.reload();
+    } catch (err) {
+      alert('匯入失敗：' + err.message);
+    } finally {
+      profileImportFile.value = '';
+    }
+  });
+
+  refreshChip();
 
   // ---------- Init ----------
   levelSelect.value = String(state.level);

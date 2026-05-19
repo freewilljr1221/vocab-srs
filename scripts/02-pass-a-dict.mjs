@@ -308,10 +308,12 @@ async function processLevel(level) {
   const existing = await loadEnriched(level);
   const existingMap = new Map((existing || []).map(c => [c.id, c]));
 
-  // Merge: prefer skeleton structure, carry over existing dict_a if present
+  // Merge: prefer skeleton structure, carry over ALL existing enrichment
+  // (dict_a, zh_b, and any future passes). Skeleton fields overwrite prev's
+  // base fields (id/word/slug/pos/level), so a skeleton edit still propagates.
   let cards = skeleton.map(s => {
     const prev = existingMap.get(s.id);
-    return prev ? { ...s, dict_a: prev.dict_a } : { ...s };
+    return prev ? { ...prev, ...s } : { ...s };
   });
 
   if (args.limit) cards = cards.slice(0, args.limit);
