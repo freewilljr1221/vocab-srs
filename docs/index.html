@@ -650,7 +650,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.0.2</span></div>
+    <div id="app-version">v<span id="ver-num">1.0.3</span></div>
   </div>
 </div>
 
@@ -1802,8 +1802,13 @@ button, .tap { touch-action: manipulation; }
         if (!confirm(`刪除「${p.name}」的所有 SRS 進度？此動作無法復原。`)) return;
         const wasActive = p.id === activeId;
         deleteProfile(p.id);
-        if (wasActive) location.reload();
-        else { renderProfileList(); refreshChip(); }
+        if (wasActive) {
+          // Same flush-before-reload pattern as add: otherwise the debounced
+          // push doesn't fire and cloud overwrites the deletion on next init.
+          try { await window.__cloud.pushMain(getProfiles()); }
+          catch (err) { alert('刪除同步雲端失敗: ' + (err.message || err)); return; }
+          location.reload();
+        } else { renderProfileList(); refreshChip(); }
       });
       profileList.appendChild(row);
     }
@@ -1825,6 +1830,13 @@ button, .tap { touch-action: manipulation; }
     profs.push({ id, name: name.trim().slice(0, 30) });
     saveProfiles(profs);
     setActiveProfileId(id);
+    // Flush to cloud BEFORE reload. saveProfiles only schedules a debounced
+    // push (300 ms); location.reload() fires immediately and destroys the
+    // pending timer. Without this await, initCloud on the next page would
+    // pull the (still-old) cloud profile list and overwrite our local one,
+    // silently dropping the new profile. Same risk for delete-active below.
+    try { await window.__cloud.pushMain(profs); }
+    catch (e) { alert('儲存到雲端失敗: ' + (e.message || e)); return; }
     location.reload();
   });
 
