@@ -1,5 +1,13 @@
-/* Vocab-SRS service worker — cache-first for shell, stale-while-revalidate for data. */
-const CACHE_VERSION = 'vocab-srs-v9-merge-fix';
+/* Vocab-SRS service worker — cache-first for shell, stale-while-revalidate for data.
+ *
+ * Versioning: semver MAJOR.MINOR.PATCH.
+ *   MAJOR — breaking schema / storage / sync changes (rare)
+ *   MINOR — new user-visible features
+ *   PATCH — bug fixes, copy / style tweaks
+ * Bumping CACHE_VERSION forces all PWA clients to re-download the shell on
+ * next launch, so use it whenever shell HTML/JS/CSS materially changes.
+ */
+const CACHE_VERSION = 'vocab-srs-1.0.0';
 const SHELL = [
   './',
   './index.html',
