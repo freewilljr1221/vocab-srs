@@ -126,9 +126,17 @@ children.push(new Paragraph({
 // Intro
 children.push(P([
   T('這份文件假設你'), TB('剛裝好 Windows,什麼都沒裝'),
-  T(',跟著做完,你的家人就能在 iPhone / Android / iPad 上練 7000 字英文單字,跨裝置自動同步。'),
+  T(',跟著做完,你的家人就能在 iPhone / Android / iPad 上練 '),
+  TB('6,255 字英文單字'),
+  T(' (Level 1–6,每級約 1,000 字,字庫已預先打包在 repo 裡),跨裝置自動同步。'),
 ]));
 children.push(P([TB('全程不需要寫程式、不需要安裝 Git、Node.js、Python。'), T(' 只需要瀏覽器。')]));
+children.push(P([
+  TB('字庫已經打包好'),
+  T(' —— 6,255 字的英文單字、中文翻譯、字典定義、發音音檔網址,全部已經放在 '),
+  IC('docs/data/L1.json'), T(' ~ '), IC('L6.json'),
+  T(' (共約 4.3 MB),fork 過去就有,不用自己跑任何資料生成腳本。'),
+]));
 children.push(P('完成後你會有:'));
 children.push(BULLET('一個你自己的 Firebase 雲端資料庫 (免費方案夠用)'));
 children.push(BULLET([T('一個 GitHub 網址 (例如 '), IC('https://你的帳號.github.io/vocab-srs/'), T(')')]));
@@ -346,7 +354,7 @@ children.push(H2('9.1 切換使用者'));
 children.push(P([T('右上角 '), TB('👤 圖示'), T(' → 點頭像選使用者。每個使用者的進度、SRS 排程獨立。')]));
 
 children.push(H2('9.2 選等級'));
-children.push(P([T('右上角 '), TB('Level 下拉選單'), T(',從 L01 (最簡單) 到 L70。每級 100 字。')]));
+children.push(P([T('右上角 '), TB('Level 下拉選單'), T(',從 Level 1 (最簡單) 到 Level 6。每級約 1,000 字,合計 6,255 字,字庫已內建在程式碼裡,不用自己準備。')]));
 
 children.push(H2('9.3 練習卡片'));
 children.push(P([T('中間是英文單字,'), TB('按一下卡片翻到中文翻譯'), T('。下方三個按鈕:')]));
