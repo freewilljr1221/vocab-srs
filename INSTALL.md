@@ -1,0 +1,379 @@
+# Vocab-SRS 完整安裝指南（給技術小白）
+
+這份文件假設你**剛裝好 Windows，什麼都沒裝**，跟著做完，你的家人就能在 iPhone / Android / iPad 上練 7000 字英文單字，跨裝置自動同步。
+
+**全程不需要寫程式、不需要安裝 Git、Node.js、Python。** 只需要瀏覽器。
+
+完成後你會有：
+
+- 一個你自己的 Firebase 雲端資料庫（免費方案夠用）
+- 一個 GitHub 網址（例如 `https://你的帳號.github.io/vocab-srs/`）
+- 一個分享給家人的家庭網址（例如 `https://你的帳號.github.io/vocab-srs/#fam=abc123xy`）
+- 家人手機桌面上的單字卡 App 圖示
+
+預計耗時：**30–45 分鐘**。
+
+---
+
+## 目錄
+
+1. [準備工作（5 分鐘）](#1-準備工作5-分鐘)
+2. [Fork 程式碼到你的 GitHub（3 分鐘）](#2-fork-程式碼到你的-github3-分鐘)
+3. [建立 Firebase 專案（10 分鐘）](#3-建立-firebase-專案10-分鐘)
+4. [部署 Firestore 安全規則（5 分鐘）](#4-部署-firestore-安全規則5-分鐘)
+5. [把 Firebase 設定填進程式碼（5 分鐘）](#5-把-firebase-設定填進程式碼5-分鐘)
+6. [鎖定 API Key（重要！3 分鐘）](#6-鎖定-api-key重要3-分鐘)
+7. [開啟 GitHub Pages（2 分鐘）](#7-開啟-github-pages2-分鐘)
+8. [手機安裝 App + 分享家庭網址](#8-手機安裝-app--分享家庭網址)
+9. [使用說明](#9-使用說明)
+10. [疑難排解](#10-疑難排解)
+
+---
+
+## 1. 準備工作（5 分鐘）
+
+### 1.1 需要的帳號
+
+開兩個帳號，全部免費。如果你已經有，跳過。
+
+| 帳號 | 網址 | 用途 |
+|------|------|------|
+| **Google 帳號** | <https://accounts.google.com/signup> | 之後拿來登入 Firebase |
+| **GitHub 帳號** | <https://github.com/signup> | 放網頁程式碼，免費架設網站 |
+
+### 1.2 需要的瀏覽器
+
+電腦上裝 **Google Chrome** 或 **Microsoft Edge**（Windows 內建就有 Edge，可直接用）。
+
+> ⚠️ 不要用 Internet Explorer。
+
+不需要安裝任何程式（不需要 Git、不需要 Python、不需要 Node.js）。
+
+---
+
+## 2. Fork 程式碼到你的 GitHub（3 分鐘）
+
+「Fork」= 把別人的程式碼複製一份到你的帳號下，之後你可以自由修改。
+
+1. 用瀏覽器開啟原始專案：<https://github.com/freewilljr1221/vocab-srs>
+2. **登入你的 GitHub 帳號**（右上角 Sign in）。
+3. 在專案頁面的**右上角**，按綠色或灰色的 **「Fork」** 按鈕。
+4. 出現 "Create a new fork" 畫面：
+   - **Owner**：選你自己的帳號
+   - **Repository name**：保留 `vocab-srs` 就好（也可以改名，但下面網址都會跟著變）
+   - 其他不用動
+5. 按下方綠色 **「Create fork」** 按鈕。
+6. 等 5–10 秒，網頁跳到 `https://github.com/你的帳號/vocab-srs`，左上角會出現「forked from freewilljr1221/vocab-srs」字樣，表示完成。
+
+**現在這份程式碼是你的了。** 之後所有修改都在你的 fork 上做，原作者看不到。
+
+---
+
+## 3. 建立 Firebase 專案（10 分鐘）
+
+Firebase 是 Google 提供的免費後端服務，這裡只用「Firestore 資料庫」這一塊，免費額度遠遠用不完（家庭用一輩子都不會超）。
+
+### 3.1 建立專案
+
+1. 用瀏覽器開 <https://console.firebase.google.com/>
+2. 用你的 **Google 帳號** 登入。
+3. 點 **「新增專案 (Add project)」** 大方框。
+4. **專案名稱**：輸入 `vocab-srs`（或任何你喜歡的名字）。下面會自動顯示一個 Project ID，例如 `vocab-srs-abc12`，記下這個 ID（後面會用到）。
+5. 按 **「繼續」**。
+6. **Google Analytics**：問你要不要啟用，**選「不啟用 (Disable)」**，不需要。按 **「建立專案」**。
+7. 等 20–30 秒，按 **「繼續」** 進入專案首頁。
+
+### 3.2 啟用 Firestore 資料庫
+
+1. 左側選單找 **「建構 (Build)」 → 「Firestore Database」**。
+2. 中間按 **「建立資料庫 (Create database)」**。
+3. **位置 (Location)**：選離你最近的，例如 `asia-east1 (台灣)` 或 `asia-northeast1 (東京)`。**選了就不能改**。
+4. **安全規則模式**：選 **「以正式版模式啟動 (Start in production mode)」**（不要選測試模式，會有 30 天到期）。按 **「啟用」**。
+5. 等 30 秒，資料庫建立完成。
+
+### 3.3 註冊一個 Web 應用，拿到設定金鑰
+
+1. 回到專案首頁（左上角點專案名稱）。
+2. 中間有一排圖示「快速開始」，**找到 `</>` 圖示（網頁應用）**，點一下。
+3. **應用程式暱稱 (App nickname)**：輸入 `vocab-srs-web`，**不要勾**「Firebase Hosting」。
+4. 按 **「註冊應用程式」**。
+5. 下一個畫面會顯示一段程式碼，**最重要的就是這一段**：
+
+   ```js
+   const firebaseConfig = {
+     apiKey: "AIzaSy...一串很長的字...",
+     authDomain: "vocab-srs-abc12.firebaseapp.com",
+     projectId: "vocab-srs-abc12",
+     storageBucket: "vocab-srs-abc12.firebasestorage.app",
+     messagingSenderId: "123456789012",
+     appId: "1:123456789012:web:abcdef..."
+   };
+   ```
+
+   **把這整段複製起來，貼到 Windows 內建的記事本暫存。** 等下要用。
+
+6. 按 **「繼續前往主控台」**。
+
+---
+
+## 4. 部署 Firestore 安全規則（5 分鐘）
+
+「安全規則」決定誰能讀寫你的資料庫。這份規則限制：只有知道家庭 PIN 的人能改使用者列表，每個家庭資料互相隔離。
+
+**有兩種方法，挑一種：**
+
+### 方法 A：網頁貼上（推薦，給技術小白）
+
+1. 用瀏覽器開你 fork 的程式碼裡的這個檔案：
+   `https://github.com/你的帳號/vocab-srs/blob/main/docs/firestore.rules`
+2. 點右上角 **「Copy raw file」** 按鈕（看起來像兩個方框疊在一起的圖示），複製整個檔案內容。
+3. 回到 Firebase Console，左側選單 **「Firestore Database」 → 上方分頁 「規則 (Rules)」**。
+4. **刪掉**編輯框裡所有現有內容。
+5. **貼上**你剛複製的內容。
+6. 按右上角藍色 **「發佈 (Publish)」** 按鈕。
+7. 等 5 秒，看到 "Rules published" 訊息就完成。
+
+### 方法 B：用 Firebase CLI（給比較有經驗的人）
+
+如果你之後常會改規則，可以裝 Firebase CLI 比較方便。
+
+1. **安裝 Node.js**：到 <https://nodejs.org/> 下載 LTS 版本（左邊那個綠色按鈕），下載 `.msi` 檔，雙擊一路按 Next 安裝完。
+2. **開啟 PowerShell**（按 Windows 鍵 → 輸入 `powershell` → Enter）。
+3. 輸入指令安裝 Firebase CLI：
+   ```powershell
+   npm install -g firebase-tools
+   ```
+   等 1–2 分鐘。
+4. 登入 Firebase：
+   ```powershell
+   firebase login
+   ```
+   會跳出瀏覽器，用你的 Google 帳號登入。
+5. 下載你 fork 的程式碼到電腦（GitHub 網頁右上角綠色 Code 按鈕 → Download ZIP → 解壓縮）。
+6. PowerShell 切換到解壓縮的資料夾，例如：
+   ```powershell
+   cd C:\Users\你的名字\Downloads\vocab-srs-main
+   ```
+7. 部署規則：
+   ```powershell
+   firebase deploy --only firestore:rules --project=你的-project-id
+   ```
+   （Project ID 在 Firebase Console 專案首頁 → 齒輪 → 專案設定，例如 `vocab-srs-abc12`）
+
+---
+
+## 5. 把 Firebase 設定填進程式碼（5 分鐘）
+
+把第 3.3 步複製到記事本的 `firebaseConfig` 區塊，貼到 `docs/index.html`。
+
+### 5.1 在 GitHub 網頁直接編輯（不用下載）
+
+1. 用瀏覽器開：
+   `https://github.com/你的帳號/vocab-srs/blob/main/docs/index.html`
+2. 右上角有個鉛筆圖示 **「Edit this file (Edit in place)」**，點下去（如果是 GitHub 新版，可能要先點「.」進入 web editor，但鉛筆方式比較簡單）。
+3. **按 Ctrl + F** 在檔案內搜尋 `firebaseConfig`。
+4. 找到這一段（大約在檔案最上面，第 23–31 行）：
+
+   ```js
+   const firebaseConfig = {
+     apiKey: "AIzaSyAj5KpFN6V6yw7f8jByi_W7orPJbfSNeqk",
+     authDomain: "vocab-srs-cae44.firebaseapp.com",
+     projectId: "vocab-srs-cae44",
+     storageBucket: "vocab-srs-cae44.firebasestorage.app",
+     messagingSenderId: "470854073556",
+     appId: "1:470854073556:web:5d6d1a26b8a8f1c1f4ac2e",
+     measurementId: "G-3FYWRGGEN8"
+   };
+   ```
+
+5. **整段刪掉**（從 `const firebaseConfig = {` 到 `};` 共 9 行）。
+6. **貼上**你在第 3.3 步複製的那段（你自己的 Firebase 設定）。
+7. 往下捲，找到綠色按鈕 **「Commit changes...」**，點下去。
+8. 跳出對話框，**Commit message** 隨便輸入例如「填入我的 Firebase 設定」，按 **「Commit changes」**。
+
+完成。
+
+> ⚠️ 重要：**`apiKey` 不是密碼**，被別人看到沒關係，這是 Firebase 設計上就會公開。下一步（第 6 步）才是真正的安全控制。
+
+---
+
+## 6. 鎖定 API Key（重要！3 分鐘）
+
+雖然 apiKey 公開沒關係，但要避免別人用你的 apiKey 在他們的網站亂打 Firebase 害你超過免費額度。
+
+1. 開 <https://console.cloud.google.com/apis/credentials>
+2. 上方確認**專案是你剛建的 `vocab-srs-abc12`**（左上角下拉選單切換）。
+3. 在 **「API 金鑰 (API Keys)」** 區塊，找到名字像 `Browser key (auto created by Firebase)` 那個，點名字進去。
+4. **「應用程式限制 (Application restrictions)」**：
+   - 選 **「HTTP referrers (網站) (HTTP referrers (web sites))」**
+   - 下方 **新增 (ADD AN ITEM)**，輸入：
+     ```
+     https://你的帳號.github.io/*
+     ```
+     （把「你的帳號」換成你的 GitHub 帳號小寫）
+   - 再 ADD AN ITEM 一次，輸入 `localhost/*`（這樣你之後在電腦本機開檔案測試也能用）。
+5. **「API 限制 (API restrictions)」**：
+   - 選 **「限制金鑰 (Restrict key)」**
+   - 下拉勾選 **「Cloud Firestore API」**、**「Firebase Installations API」**、**「Firebase Cloud Messaging API」**（後兩個可選，但勾了不會壞）
+6. 按下方 **「儲存 (Save)」**。
+
+完成後就算 apiKey 被人撿走也沒用，因為只有你的網域能用。
+
+---
+
+## 7. 開啟 GitHub Pages（2 分鐘）
+
+GitHub Pages = 免費網站代管，把你的 `docs/` 資料夾變成一個公開網址。
+
+1. 開你的 fork：`https://github.com/你的帳號/vocab-srs`
+2. 上方分頁 **「Settings」**。
+3. 左側選單 **「Pages」**。
+4. **「Source」**：選 **`Deploy from a branch`**。
+5. **「Branch」**：
+   - 左下拉選 `main`
+   - 右下拉選 `/docs`
+6. 按 **「Save」**。
+7. 等 1–3 分鐘，重新整理頁面，最上方會出現綠色框：
+   ```
+   ✓ Your site is live at https://你的帳號.github.io/vocab-srs/
+   ```
+8. **點那個連結**，應該會看到單字卡 App 載入畫面。
+
+如果一直顯示 "Building..."，再等一下，最多 5 分鐘。
+
+---
+
+## 8. 手機安裝 App + 分享家庭網址
+
+### 8.1 你自己先開一次，產生家庭代碼
+
+1. 用**手機**開上面那個 GitHub Pages 網址：`https://你的帳號.github.io/vocab-srs/`
+2. 第一次開會自動產生一個家庭代碼，網址會變成：
+   ```
+   https://你的帳號.github.io/vocab-srs/#fam=abcd1234
+   ```
+3. 看畫面**右上角**，按 **使用者圖示 👤 → 「設定」**。
+4. 在「家庭」區塊**改一個好記的名字**（例如「王家」），按確認。
+5. 新增使用者：**輸入名字（小孩名）+ 選顏色**。
+6. 第一個使用者新增時會要你**設一個 4–8 位數字 PIN**。**記好這個 PIN**，之後新增使用者、改名都會用到。
+
+### 8.2 把網址分享給家人
+
+直接把**含 `#fam=xxxxxxxx` 的完整網址** 用 LINE / Messenger 傳給家人。
+
+> ⚠️ 不要傳沒有 `#fam=` 的網址，那會讓對方建一個新家庭。
+
+### 8.3 家人手機安裝 App
+
+**iPhone / iPad：**
+
+1. 用 **Safari**（不要用 Chrome！iOS 只有 Safari 能裝 PWA）開那個 `#fam=` 網址。
+2. 下方分享圖示 ⬆（中間方框加向上箭頭）。
+3. 往下滑找 **「加入主畫面 (Add to Home Screen)」**，按。
+4. 名字保留「單字卡」，右上角 **「新增」**。
+5. 桌面就會出現單字卡圖示，跟一般 App 一樣用。
+
+**Android：**
+
+1. 用 **Chrome** 開那個 `#fam=` 網址。
+2. 右上角三點 ⋮ 選單。
+3. 選 **「安裝應用程式 (Install app)」** 或 **「加到主畫面」**。
+4. 確認，桌面出現圖示。
+
+---
+
+## 9. 使用說明
+
+### 9.1 切換使用者
+
+右上角 **👤 圖示** → 點頭像選使用者。每個使用者的進度、SRS 排程獨立。
+
+### 9.2 選等級
+
+右上角 **Level 下拉選單**，從 L01 (最簡單) 到 L70。每級 100 字。
+
+### 9.3 練習卡片
+
+中間是英文單字，**按一下卡片翻到中文翻譯**。下方三個按鈕：
+
+| 按鈕 | 意思 | SRS 行為 |
+|------|------|---------|
+| ❌ **忘記** | 不會 | 隔天再考 |
+| 😐 **普通** | 想了一下才會 | 隔幾天再考 |
+| ✅ **熟悉** | 秒答 | 拉長間隔，1 週、2 週、1 個月... |
+
+SRS = Spaced Repetition System，依據你的反應自動排下次複習日期。
+
+### 9.4 查看練習紀錄
+
+右上角 **📊 圖示** → 看每日練習數量、總熟悉字數。
+
+### 9.5 加 / 改使用者
+
+右上角 **👤 → 設定**：
+
+- ➕ 新增使用者（要 PIN）
+- ✏️ 改名（要 PIN）
+- 🎨 改顏色（要 PIN）
+- 🗑 刪除（要 PIN，會刪光該使用者所有紀錄）
+
+PIN 設定一次後**全家庭共用**。在任何裝置上要管理使用者都要打 PIN。
+
+### 9.6 切換家庭（很少用到）
+
+右上角 **👤 → 設定 → 切換家庭**。如果你同時管理多個家庭（例如自己家 + 表妹家）用得到，一般用戶不會用到。
+
+### 9.7 跨裝置同步
+
+只要不同裝置開的是**同一個 `#fam=` 網址**，資料自動同步：
+
+- 爸爸手機加了使用者 → 媽媽手機自動看到
+- 小孩在 iPad 練了 20 個字 → 在 iPhone 也看到一樣的紀錄
+- 同步延遲約 1 秒
+
+---
+
+## 10. 疑難排解
+
+### Q: 網址打開全白 / 一直轉圈
+
+- 確認第 5 步的 `firebaseConfig` **整段都換對了**，沒有少貼某幾行。
+- 確認 Firestore 已建立（第 3.2 步）。
+- 用桌機 Chrome 開網址 → 按 F12 → 看 Console 紅字，那是錯誤訊息。
+
+### Q: 加使用者沒反應 / 點下去沒動
+
+- 重新整理頁面（iPhone Safari 是下拉刷新；PWA 圖示要關掉重開）。
+- 確認 Firestore Rules 已部署（第 4 步）。
+
+### Q: 兩支手機看到的使用者不一樣
+
+- 確認**兩支都用 `#fam=xxxxxxxx` 同一個網址**。
+- 在 PWA 圖示（沒網址列那個）裡看不到家庭代碼，可以從右上角 👤 → 設定 → 家庭區塊看代碼是不是一致。
+
+### Q: 忘記 PIN
+
+- 目前沒有忘記 PIN 重設功能。如果真的忘了，要用瀏覽器直接到 Firebase Console → Firestore Database → 找到 `families/你的家庭代碼/state/main` 文件 → 把 `pinHash` 欄位改成空字串 `""`，就能重新設 PIN。
+
+### Q: 我想改程式 / 修 bug
+
+- 在 GitHub 網頁直接改 `docs/index.html` → Commit → 等 1 分鐘 GitHub Pages 自動重新部署。
+- 如果改了 HTML/CSS/JS 結構，記得把 `docs/sw.js` 裡 `CACHE_VERSION` 數字往上加（例如 1.2.2 → 1.2.3），不然瀏覽器會吃舊版快取。
+
+### Q: Firebase 會收錢嗎？
+
+家庭使用量遠遠在免費額度（Spark Plan）內：
+
+- 每日 50,000 次讀取（你全家一輩子也用不完）
+- 每日 20,000 次寫入
+- 1 GB 儲存空間
+
+要超過很難，可以放心。如果你怕，到 Firebase Console → 左下齒輪 → 用量與計費 → 確認還在 Spark Plan 就好。
+
+---
+
+## 完成！
+
+如果哪一步卡住，把錯誤訊息或畫面截圖傳給我。
+
+— 維護者：freewilljr1221
