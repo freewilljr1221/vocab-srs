@@ -250,6 +250,7 @@ button, .tap { touch-action: manipulation; }
 .pos-zh {
   background: var(--bg2); border-radius: var(--radius);
   padding: 14px 16px; margin-bottom: 12px;
+  width: 100%; box-sizing: border-box;
 }
 .pos-badge {
   display: inline-block; font-size: 14px; font-weight: 600;
@@ -263,8 +264,10 @@ button, .tap { touch-action: manipulation; }
 }
 .example-en {
   font-size: 16px; color: var(--text2); font-style: italic;
-  line-height: 1.6; margin-top: 6px;
+  line-height: 1.6; margin-top: 10px;
 }
+/* Blank-line-style gap between two examples of the same POS */
+.example-en + .example-en { margin-top: 18px; }
 .level-tag {
   display: inline-block; font-size: 13px; font-weight: 600;
   background: var(--bg2); color: var(--text2);
