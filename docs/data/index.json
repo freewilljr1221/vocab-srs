@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-05-19T05:13:02.169Z",
+  "built_at": "2026-06-13T11:55:37.057Z",
   "levels": [
     {
       "level": 1,
@@ -7,7 +7,7 @@
       "with_dict": 986,
       "with_zh": 1018,
       "with_partial_zh": 0,
-      "bytes": 846862
+      "bytes": 872309
     },
     {
       "level": 2,
@@ -15,7 +15,7 @@
       "with_dict": 1025,
       "with_zh": 1030,
       "with_partial_zh": 0,
-      "bytes": 763652
+      "bytes": 799499
     },
     {
       "level": 3,
@@ -23,7 +23,7 @@
       "with_dict": 1046,
       "with_zh": 1053,
       "with_partial_zh": 0,
-      "bytes": 756401
+      "bytes": 795976
     },
     {
       "level": 4,
@@ -31,7 +31,7 @@
       "with_dict": 1042,
       "with_zh": 1047,
       "with_partial_zh": 0,
-      "bytes": 688619
+      "bytes": 741129
     },
     {
       "level": 5,
@@ -39,7 +39,7 @@
       "with_dict": 1047,
       "with_zh": 1055,
       "with_partial_zh": 0,
-      "bytes": 712894
+      "bytes": 772912
     },
     {
       "level": 6,
@@ -47,7 +47,7 @@
       "with_dict": 1044,
       "with_zh": 1052,
       "with_partial_zh": 0,
-      "bytes": 640355
+      "bytes": 709631
     }
   ]
 }

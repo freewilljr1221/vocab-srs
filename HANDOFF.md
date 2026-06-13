@@ -17,7 +17,7 @@
 | **01 CSV→Skeleton** | 6255 卡,id/word/slug/pos/level | ✅ 完成 |
 | **02 Pass A Dictionary** | IPA / MP3 / 英英 / 英例 | ✅ L1-L5 ~96%,L6 ~90% (剩 rate_limited 可 resume) |
 | **03 Pass B 中文翻譯** | zh_by_pos / zh_main | 🟡 L1 31% (320/1018),L2-L6 = 0(被 Nvidia 429 卡住) |
-| **Pass C 中文例句** | 還沒寫腳本 | ⏸ 規劃中 |
+| **Pass C 英文例句** | 補滿例句 (1 POS→2 句 / 多 POS→每 POS 1 句) | ✅ 全 6 級 0 缺口 (Session 4, Haiku 生成) |
 | **10 Build Ship** | 壓縮 + 複製到 docs/data/ | ✅ 工具好了 |
 
 ### 前端 (docs/)
@@ -185,6 +185,28 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
 6. **無 AI 教練**: 拿掉了,因為前端直呼 Anthropic API 不可行 (沒 key + CORS),需要 backend proxy。日後想加就部署 Cloudflare Worker
 7. **TTS + MP3 雙軌**: MP3 first (從 dictionaryapi.dev),失敗 fallback `speechSynthesis`
 8. **無付費 API**: Free Dictionary (公開 CC BY-SA 3.0) + Nvidia NIM 免費 (60 RPM)
+
+---
+
+## Session 4 增量更新 (2026-06-13)
+
+### 已交付 — Pass C 英文例句（全 6 級補滿）
+- **規則**：1 個詞性 → 2 句例句；2+ 個詞性 → 每詞性 1 句。缺口按**宣告 POS**（`c.pos` 拆 `/`）對 `dict_a.meanings` bucket 計算（與前端顯示一致）。
+- **生成方式**：**不走 MiniMax，改用 Claude Haiku subagents**（量大、規格明確）。主 agent (Opus) 抽查品質。
+- **新腳本**（仿 `pb-claude-*` 三件套）：
+  - `scripts/04a-pc-examples-extract.mjs` — 掃 enriched 找缺口 → compact batch
+  - `scripts/04b-pc-examples-merge.mjs` — 生成結果 append 回 `dict_a.meanings[].examples`（dedupe，每 bucket cap 3，找不到 bucket 就建）
+  - chunk 用既有 `pb-claude-split.mjs`
+- **流程**：extract → split(200) → 20 個 Haiku subagent 生成 → 驗證(JSON/覆蓋/句數) → merge 有效檔 → re-extract 抓殘留 → 補生成(chunk 100) → merge → 確認 **0 缺口**。共生成 ~5500 句，enriched 內例句總數 18785。
+- **build-ship 修正**：原本 `dict_a.found===false` 的卡（dict 404 專有名詞/縮寫）會被丟掉整個 meanings，導致替它們生成的例句在 ship 時消失。改成**只要有 meanings 就 ship**（前端 `renderBack` 本來就不看 `found`）。ship 端 0 缺口、16269 句。
+- **前端** `docs/index.html` `renderBack`：`exPerPos = posList.length===1 ? 2 : 1`，迴圈渲染多句 `.example-en`（原本只 `examples[0]`）。
+- **資料修正**：`afraid-L1` 的 pos 是大寫 `Adj.`（來源 typo，導致前端 `posLong` 對不到、背面整個不顯示），已正規化為 `adj.`（skeleton + enriched）。全庫掃描確認只此一張非標準 POS。
+- **版本**：sw.js `CACHE_VERSION` 1.2.2 → **1.3.0**（MINOR，新功能），index.html `ver-num` 同步。
+- **驗證**：本地 preview 實機確認 `according to`(prep. 單POS)→2 句、`finger`(n./v.)→每詞性 1 句。
+
+### 待辦（延續）
+- `sw.js`/`manifest.json` 仍待 Codex review（本 session 未送；本次只動 `CACHE_VERSION` 字串）。
+- Pass C 腳本（04a/04b）本身未送 Codex review。
 
 ---
 
