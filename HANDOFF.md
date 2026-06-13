@@ -212,10 +212,15 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
 - 改檔：`docs/index.html`（卡片 CSS 整段 + 正面加 `#card-pos`/`#card-gem` + renderBack 包 `.back-scroll` + renderCard 填徽記）、`docs/sw.js` `CACHE_VERSION` → 1.4.0。
 - 驗證：本地 preview computed-style 確認正反面字體/顏色/邊框/側線/捲動容器皆如預期（preview 截圖在此環境逾時，改用 eval 量測）。
 
+### 已交付 — 深色科技格線頁底（v1.4.1）
+- 配合恆深卡片，**app 固定為深色**：移除 `@media (prefers-color-scheme: dark)`，`:root` 直接用深色 palette（`--bg #080b14`、`--surface #161c28`…）。
+- body 套**科技格線底**（純 CSS 雙層 linear-gradient，22px，淡青線；零圖檔/零流量）。
+- 下拉箭頭 svg fill 由 `#6b6860` 改 `#a8a59f`（深底下可見）。版本 → 1.4.1（PATCH）。
+
 ### 待辦（延續）
 - `sw.js`/`manifest.json` 仍待 Codex review（本 session 未送；本次只動 `CACHE_VERSION` 字串）。
 - Pass C 腳本（04a/04b）本身未送 Codex review。
-- TCG 皮膚的 CSS／JS 改動未送 Codex review。
+- TCG 皮膚 + 深色頁底的 CSS／JS 改動未送 Codex review。
 
 ---
 
