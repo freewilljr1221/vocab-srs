@@ -30,18 +30,21 @@ function slimCard(c) {
   const out = {
     id: c.id, word: c.word, pos: c.pos, level: c.level,
   };
-  if (c.dict_a?.found) {
-    const d = c.dict_a;
+  const d = c.dict_a || {};
+  // Trim each POS bucket to 2 defs + 2 examples to keep payload lean.
+  // Ship meanings whenever present — incl. dict-404 cards that still got
+  // generated examples (renderBack reads meanings regardless of `found`).
+  const meanings = (d.meanings || []).map(m => ({
+    pos: m.pos,
+    definitions: (m.definitions || []).slice(0, 2),
+    examples: (m.examples || []).slice(0, 2),
+  }));
+  if (d.found || meanings.length > 0) {
     out.dict_a = {
-      found: true,
+      found: !!d.found,
       ipa_us: d.ipa_us || null,
       audio_url: d.audio_url || null,
-      // Trim each POS bucket to 2 defs + 2 examples to keep payload lean
-      meanings: (d.meanings || []).map(m => ({
-        pos: m.pos,
-        definitions: (m.definitions || []).slice(0, 2),
-        examples: (m.examples || []).slice(0, 2),
-      })),
+      meanings,
       synonyms: (d.synonyms || []).slice(0, 5),
     };
   } else {
