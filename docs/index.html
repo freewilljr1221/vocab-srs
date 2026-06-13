@@ -145,11 +145,12 @@
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* App is always dark to match the always-dark TCG card (tech-grid page bg) */
 :root {
-  --bg: #f8f7f4; --bg2: #f0ede8; --surface: #ffffff;
-  --text: #1a1917; --text2: #6b6860; --text3: #a8a59f;
-  --accent: #1D9E75; --accent-light: #E1F5EE; --accent-dark: #0F6E56;
-  --border: rgba(0,0,0,0.10); --border2: rgba(0,0,0,0.18);
+  --bg: #080b14; --bg2: #11151f; --surface: #161c28;
+  --text: #f0ede8; --text2: #a8a59f; --text3: #6b6860;
+  --accent: #1D9E75; --accent-light: #0a3d2a; --accent-dark: #5DCAA5;
+  --border: rgba(255,255,255,0.10); --border2: rgba(255,255,255,0.18);
   --again: #E24B4A; --hard: #EF9F27; --easy: #378ADD;
   --radius: 10px; --radius-lg: 14px;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
@@ -158,17 +159,14 @@
   --safe-left: env(safe-area-inset-left);
   --safe-right: env(safe-area-inset-right);
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1917; --bg2: #222120; --surface: #2a2927;
-    --text: #f0ede8; --text2: #a8a59f; --text3: #6b6860;
-    --border: rgba(255,255,255,0.10); --border2: rgba(255,255,255,0.18);
-    --accent-light: #0a3d2a; --accent-dark: #5DCAA5;
-  }
-}
 html, body { height: 100%; }
 body {
-  font-family: var(--font); background: var(--bg); color: var(--text);
+  font-family: var(--font); color: var(--text);
+  background-color: #080b14;
+  background-image:
+    linear-gradient(rgba(120,200,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,200,255,0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none; user-select: none;
   overscroll-behavior-y: contain;
@@ -192,7 +190,7 @@ button, .tap { touch-action: manipulation; }
   color: var(--text); border-radius: var(--radius);
   font-size: 16px; padding: 10px 14px; font-family: var(--font);
   -webkit-appearance: none; appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M6 8L0 0h12z' fill='%236b6860'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M6 8L0 0h12z' fill='%23a8a59f'/></svg>");
   background-repeat: no-repeat; background-position: right 10px center;
   padding-right: 30px;
 }
@@ -823,7 +821,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.4.0</span></div>
+    <div id="app-version">v<span id="ver-num">1.4.1</span></div>
   </div>
 </div>
 
