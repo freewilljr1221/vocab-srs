@@ -204,9 +204,18 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
 - **版本**：sw.js `CACHE_VERSION` 1.2.2 → **1.3.0**（MINOR，新功能），index.html `ver-num` 同步。
 - **驗證**：本地 preview 實機確認 `according to`(prep. 單POS)→2 句、`finger`(n./v.)→每詞性 1 句。
 
+### 已交付 — TCG 卡牌皮膚（v1.4.0）
+- 卡片改成**原創 TCG 風深色皮膚**（全自製，零侵權素材）：深色星空卡面 + **靜態彩色漸層邊框**（mask 圓角，無閃卡動畫）+ 正面詞性膠囊/等級寶石/漸層發音鈕；背面深色面板，例句帶彩色側線（單詞性 2 句時第一句青、第二句紫）。
+- **字體全走系統字**（流量 0 KB）：標題 `ui-rounded`、IPA/定義/例句 `ui-serif`、中文沿用 `--font`（已含 PingFang/微軟正黑）。**不引入任何網頁字體**（尤其不載 CJK web font）。
+- 卡片為**恆定深色物件**（不隨 app light/dark 反轉），內部色 hardcode。
+- 背面捲動：`#card-back` 不捲，內容包進 `.back-scroll`（inset 3px，在 ring 內），多詞性長卡捲動時邊框固定。
+- 改檔：`docs/index.html`（卡片 CSS 整段 + 正面加 `#card-pos`/`#card-gem` + renderBack 包 `.back-scroll` + renderCard 填徽記）、`docs/sw.js` `CACHE_VERSION` → 1.4.0。
+- 驗證：本地 preview computed-style 確認正反面字體/顏色/邊框/側線/捲動容器皆如預期（preview 截圖在此環境逾時，改用 eval 量測）。
+
 ### 待辦（延續）
 - `sw.js`/`manifest.json` 仍待 Codex review（本 session 未送；本次只動 `CACHE_VERSION` 字串）。
 - Pass C 腳本（04a/04b）本身未送 Codex review。
+- TCG 皮膚的 CSS／JS 改動未送 Codex review。
 
 ---
 
