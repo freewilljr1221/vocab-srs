@@ -16,7 +16,7 @@
 |------|------|------|
 | **01 CSV→Skeleton** | 6255 卡,id/word/slug/pos/level | ✅ 完成 |
 | **02 Pass A Dictionary** | IPA / MP3 / 英英 / 英例 | ✅ L1-L5 ~96%,L6 ~90% (剩 rate_limited 可 resume) |
-| **03 Pass B 中文翻譯** | zh_by_pos / zh_main | 🟡 L1 31% (320/1018),L2-L6 = 0(被 Nvidia 429 卡住) |
+| **03 Pass B 中文翻譯** | zh_by_pos / zh_main | ✅ 100% (6255;5855 via Claude-inline `pb-claude-*` + 400 早期 MiniMax)。NIM 腳本 `03-pass-b-zh.mjs` 已刪除 |
 | **Pass C 英文例句** | 補滿例句 (1 POS→2 句 / 多 POS→每 POS 1 句) | ✅ 全 6 級 0 缺口 (Session 4, Haiku 生成) |
 | **10 Build Ship** | 壓縮 + 複製到 docs/data/ | ✅ 工具好了 |
 
@@ -90,7 +90,9 @@ for lv in 2 3 4 5 6; do
 done
 #    註:concurrency 從 5 降到 3 — Free Dictionary 限流嚴
 
-# B. Pass B 中文翻譯 (重點!)
+# B. Pass B 中文翻譯 — ✅ 已完成,以下 runbook 作廢 (MiniMax 已退役 2026-06-16)
+#    未來補翻一律走 pb-claude-extract → split → Haiku subagent → pb-claude-merge。
+#    下方 NIM/429 指令僅留作歷史參考,別再執行。
 #    Session 3 試跑 L1 → 320 OK / 195 token截斷 / 503 卡 429
 #    Nvidia API 持續 429 可能是日配額,先確認:
 curl -sS -X POST 'https://integrate.api.nvidia.com/v1/chat/completions' \
@@ -126,7 +128,7 @@ for lv in 1 2 3 4 5 6; do
 done
 ```
 
-**估時**:Pass A 剩餘 ~10 min,Pass B 全 6 levels ~8-12 hr(分次跑沒關係)
+**估時**:Pass A 剩餘 ~10 min(Pass B 已完成)
 
 ### 階段 2:推資料到線上
 
@@ -293,7 +295,7 @@ C:\HansDB\Vocab-SRS\
 ├── scripts/                    ← 資料管線 (Node.js, no deps)
 │   ├── 01-csv-to-skeleton.mjs  ← CSV → 骨架 JSON
 │   ├── 02-pass-a-dict.mjs      ← Free Dictionary 抓 IPA/MP3/英英/英例
-│   ├── 03-pass-b-zh.mjs        ← MiniMax M2.7 翻中文
+│   ├── pb-claude-{extract,split,merge}.mjs ← Pass B 繁中（Claude-inline + Haiku subagent）
 │   └── 10-build-ship.mjs       ← enriched → docs/data (slim)
 │
 ├── data/
@@ -317,7 +319,7 @@ C:\HansDB\Vocab-SRS\
 ## 重要環境
 
 - Node v24.15.0 (有 built-in fetch)
-- `NVIDIA_API_KEY` 在環境變數 (MiniMax M2.7 via Nvidia NIM,OpenAI 相容)
+- `NVIDIA_API_KEY` = diffusiongemma key (Machine scope,2026-06-16)。Pass B 已完成走 Claude-inline 路徑;舊 NIM 腳本 (`03-pass-b-zh.mjs`,MiniMax) 已刪除
 - API endpoint: `https://integrate.api.nvidia.com/v1/chat/completions`
 - Model: `minimaxai/minimax-m2.7` (注意 `.7`)
 - Reasoning model,有 `reasoning_content` 欄位,要給 `max_tokens >= 1500`

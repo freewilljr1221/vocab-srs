@@ -1,5 +1,6 @@
 # Vocab-SRS — 單字複習 PWA（本機 repo 原則）
 
+> 🗺️ 完整檔案地圖／資料管線／部署見 `C:\HansDB\Vocab-SRS\AI-README.md`（給 AI；非公開 `README.md`）。
 > 本檔＝精簡入口。**逐 session 的現況／待辦／資料管線進度以 `HANDOFF.md` 為 canonical**（每次 session 開頭先讀它）；本檔只放不常變的架構／慣例／部署，不重複 HANDOFF 內容。
 > Global `~\.claude\CLAUDE.md` 通用原則仍適用（Codex 管 code review、Gemini 管搜尋、`<200` 行等），不在此重述。
 
@@ -34,7 +35,7 @@
 
 ## 環境
 
-Node v24（built-in fetch）；`NVIDIA_API_KEY`（`minimaxai/minimax-m2.7` via Nvidia NIM，OpenAI 相容，60 RPM，reasoning model 需 `max_tokens ≥ 1500`）。本地測 PWA：`cd docs && python -m http.server 8000`。
+Node v24（built-in fetch）；`NVIDIA_API_KEY`（2026-06-16 起 = **diffusiongemma** key，Machine scope）。Pass B 中翻**已完成**（6255 卡，走 **Claude-inline** 路徑 `pb-claude-extract/split/merge` + Haiku subagent）；舊 NIM 腳本 `03-pass-b-zh.mjs`（MiniMax）已刪除。本地測 PWA：`cd docs && python -m http.server 8000`。
 
 ## 慣例
 
