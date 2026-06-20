@@ -23,7 +23,7 @@
 |---|---|
 | `HANDOFF.md` | **session context 唯一真相**（現況快照／待辦／管線進度） |
 | `audit-index.md` | 舊 index.html 的 Opus 審查（參考） |
-| `scripts/0{1,2,3}-*.mjs`、`10-build-ship.mjs` | Node 資料管線（CSV→骨架→Pass A 字典→Pass B 中翻→ship） |
+| `scripts/*.mjs` | Node 資料管線（CSV→骨架→Pass A 字典→Pass B 繁中→ship；明細見 AI-README §2） |
 | `data/skeleton/L{1..6}.json` | 基準骨架（commit） |
 | `data/enriched/L{1..6}.json` | Pass 全量（**.gitignore**） |
 | `docs/` | **GH Pages 部署目標**（PWA 入口 + slim data，commit） |
@@ -31,11 +31,11 @@
 
 ## 重要設計決定（不要改）
 
-多 POS 一張卡／字根+衍生一張卡（`accomplish(ment)`）／跨 level 同形異義保留多卡／資料**按 level lazy load**（不合併，iOS 開機快）／**SRS state key = card id**（非 word，跨 level 同形字獨立）／無 AI 教練（前端直呼 API 不可行，需 backend proxy）／只用免費 API（Free Dictionary CC BY-SA 3.0 + Nvidia NIM MiniMax）。
+多 POS 一張卡／字根+衍生一張卡（`accomplish(ment)`）／跨 level 同形異義保留多卡／資料**按 level lazy load**（不合併，iOS 開機快）／**SRS state key = card id**（非 word，跨 level 同形字獨立）／無 AI 教練（前端直呼 API 不可行，需 backend proxy）／字典資料只用免費 API（Free Dictionary，CC BY-SA 3.0）。
 
 ## 環境
 
-Node v24（built-in fetch）；`NVIDIA_API_KEY`（2026-06-16 起 = **diffusiongemma** key，Machine scope）。Pass B 中翻**已完成**（6255 卡，走 **Claude-inline** 路徑 `pb-claude-extract/split/merge` + Haiku subagent）；舊 NIM 腳本 `03-pass-b-zh.mjs`（MiniMax）已刪除。本地測 PWA：`cd docs && python -m http.server 8000`。
+Node v24（built-in fetch）。Pass B 繁中走 **Claude-inline** 管線（`pb-claude-extract/split/merge` + Haiku subagent）；翻譯 key 與進度狀態見 `HANDOFF.md`＋`HansKey.md`，本檔不重述。本地測 PWA：`cd docs && python -m http.server 8000`。
 
 ## 慣例
 

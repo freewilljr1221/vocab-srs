@@ -105,10 +105,10 @@ CSV
 | 項目 | 值 |
 |---|---|
 | Runtime | Node v24（built-in fetch，無 npm deps） |
-| 翻譯 API | Pass B 中翻**已完成**，走 **Claude-inline**（`pb-claude-extract/split/merge` + Haiku subagent）。`NVIDIA_API_KEY` = diffusiongemma（Machine scope）；舊 NIM 腳本 `03-pass-b-zh.mjs`（MiniMax）已刪除 |
+| 翻譯 API | Pass B 繁中走 **Claude-inline** 管線（`pb-claude-*` + Haiku subagent）；翻譯 key 見 HansKey、進度見 HANDOFF |
 | 字典 API | Free Dictionary（CC BY-SA 3.0，免費） |
 | 同步 | Firestore（family-scale，`docs\firestore.rules`） |
-| key 總表 | 見 `C:\HansDB\HansKey.md`（`NVIDIA_API_KEY` Machine scope = **diffusiongemma**，2026-06-16 起；MiniMax 已除役） |
+| key 總表 | 見 `C:\HansDB\HansKey.md`（翻譯用 `NVIDIA_API_KEY`） |
 | 本地測 | `cd C:\HansDB\Vocab-SRS\docs && python -m http.server 8000` |
 
 ---
@@ -135,7 +135,7 @@ cd C:\HansDB\Vocab-SRS\docs && python -m http.server 8000
 3. **SRS state key = card id**（非 word）；跨 level 同形字獨立卡。
 4. 資料按 level lazy load（不合併，iOS 開機快）。
 5. 無 AI 教練（前端直呼 API 不可行，需 backend proxy）；只用免費 API。
-6. `NVIDIA_API_KEY` = **diffusiongemma**（Machine scope）；Pass B 已完成走 **Claude-inline**，舊 NIM 腳本（MiniMax）已退役。
+6. **Pass B 舊路徑（NIM/MiniMax `03-pass-b-zh.mjs`）已退役** —— 一律走 `pb-claude-*`，勿再呼叫舊腳本；key／進度見 HANDOFF＋HansKey。
 
 ---
 
