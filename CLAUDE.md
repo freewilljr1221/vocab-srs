@@ -13,7 +13,7 @@
 
 ## ⚠️ 最重要的雷
 
-- **部署目標＝`docs/`**（GH Pages source ＝ `main` / `/docs`，push `main` 自動部署）。**根目錄的 `index.html`／`sw.js`／`manifest.json` 是舊版 —— 不要部署、不要當正式改。**
+- **部署目標＝`docs/`**（GH Pages source ＝ `main` / `/docs`，push `main` 自動部署）。根目錄的舊版 `index.html`／`sw.js`／`manifest.json`／`icons\` 已於 2026-07-07 刪除，正式檔只在 `docs\`。
 - 路徑全用相對（`./...`）—— GH Pages 在子路徑 `/vocab-srs/`。
 - PWA 更新後**必須關掉 PWA 再開**才會載新版（SW cache-first shell）。
 
