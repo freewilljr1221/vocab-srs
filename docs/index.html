@@ -784,6 +784,105 @@ button, .tap { touch-action: manipulation; }
 #stats-hint {
   font-size: 11px; color: var(--text3); margin-top: 14px; line-height: 1.5;
 }
+
+/* Hard-review modal (#hard-modal) + search modal (#search-modal) — same sheet
+   skin as #stats-modal, kept separate so each can size its own list area. */
+#hard-modal, #search-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.45);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+#hard-modal.show, #search-modal.show { display: flex; }
+#hard-modal .sheet, #search-modal .sheet {
+  background: var(--surface); color: var(--text);
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 460px;
+  max-height: 90vh; overflow-y: auto;
+  padding: 20px 18px calc(20px + var(--safe-bottom));
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+#hard-modal h3, #search-modal h3 {
+  font-size: 17px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#hard-modal h3 .close, #search-modal h3 .close {
+  background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text2); padding: 0 4px;
+}
+
+/* Hard-review rows */
+.hard-row, .search-row {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; text-align: left;
+  padding: 10px 8px; border-radius: var(--radius);
+  border: none; border-bottom: 1px solid var(--border);
+  background: transparent; color: var(--text);
+  font-family: var(--font); font-size: 14px;
+  cursor: pointer; min-height: 44px;
+}
+.hard-row:last-child, .search-row:last-child { border-bottom: none; }
+.hard-row:active, .search-row:active { background: var(--bg2); }
+.hard-row .word, .search-row .word {
+  flex: 1; font-weight: 600; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hard-row .lv, .search-row .lv {
+  font-size: 11px; color: var(--text2); background: var(--surface);
+  padding: 2px 8px; border-radius: 10px; flex-shrink: 0;
+}
+.hard-row .seen {
+  font-size: 12px; color: var(--text3); flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.search-row .pos { font-size: 12px; color: var(--text2); flex-shrink: 0; }
+.search-row .zh {
+  font-size: 12px; color: var(--text3); flex-shrink: 1; min-width: 0;
+  max-width: 35%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+#hard-hint, #search-hint {
+  font-size: 11px; color: var(--text3); margin-top: 14px; line-height: 1.5;
+}
+
+/* Search input + status line */
+#search-input {
+  width: 100%; padding: 12px 14px; font-size: 16px;
+  border: 1px solid var(--border2); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); font-family: var(--font);
+  margin-bottom: 10px; min-height: 44px;
+}
+#search-status {
+  font-size: 12px; color: var(--text3); margin-bottom: 6px; min-height: 16px;
+}
+#search-status.retry { cursor: pointer; text-decoration: underline; }
+
+/* Card viewer modal — layered above every other modal so it can open on top
+   of #hard-modal / #search-modal (backdrop click closes only the viewer). */
+#viewer-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 2600;
+  background: rgba(0,0,0,0.55);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+#viewer-modal.show { display: flex; }
+#viewer-modal .sheet {
+  background: var(--surface); color: var(--text);
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 420px;
+  max-height: 90vh; overflow-y: auto;
+  padding: 20px 18px calc(20px + var(--safe-bottom));
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+#viewer-modal h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#viewer-modal h3 .close { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text2); padding: 0 4px; }
+/* Viewer's TCG card is a smaller clone of the main card — reuses .card-wrap /
+   .card-inner / .card-face etc (all class-scoped, no ID clashes possible). */
+#viewer-modal .card-wrap { margin-bottom: 0; }
+#viewer-modal .card-inner { min-height: 360px; }
 </style>
 </head>
 <body>
@@ -821,7 +920,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.4.1</span></div>
+    <div id="app-version">v<span id="ver-num">1.5.0</span></div>
   </div>
 </div>
 
@@ -873,6 +972,54 @@ button, .tap { touch-action: manipulation; }
   </div>
 </div>
 
+<div id="hard-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>📌 難字回顧 <button class="close" id="hard-close">×</button></h3>
+    <div class="mode-tabs" id="hard-tabs">
+      <button class="mode-tab active" id="hard-tab-again" data-grade="0" type="button">Again</button>
+      <button class="mode-tab" id="hard-tab-hard" data-grade="1" type="button">Hard</button>
+    </div>
+    <div id="hard-list"><!-- filled by JS --></div>
+    <div id="hard-empty" class="center-msg" style="display:none;padding:36px 12px;font-size:14px;">
+      這裡會列出你最近按過 Again / Hard 的單字
+    </div>
+    <div id="hard-hint">點單字可以打開卡片複習(不會影響複習紀錄)。</div>
+  </div>
+</div>
+
+<div id="search-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>🔍 搜尋單字 <button class="close" id="search-close">×</button></h3>
+    <input type="search" id="search-input" placeholder="輸入英文單字…" autocomplete="off" aria-label="搜尋英文單字">
+    <div id="search-status">載入單字庫…</div>
+    <div id="search-list"><!-- filled by JS --></div>
+  </div>
+</div>
+
+<div id="viewer-modal">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <h3>單字卡 <button class="close" id="viewer-close">×</button></h3>
+    <div class="card-wrap">
+      <div class="card-inner" id="viewer-card-inner">
+        <!-- Front -->
+        <div class="card-face">
+          <div class="tcg-pos" id="viewer-card-pos"></div>
+          <div class="tcg-gem" id="viewer-card-gem"></div>
+          <div class="card-word" id="viewer-card-word">—</div>
+          <div class="card-ipa" id="viewer-card-ipa"></div>
+          <button class="speak-btn" id="viewer-speak-btn" type="button">🔊 發音</button>
+          <div class="audio-fail" id="viewer-audio-fail">⚠️ 此字無音檔,改用語音合成</div>
+          <div class="card-hint">點卡片翻面看答案</div>
+        </div>
+        <!-- Back -->
+        <div class="card-face card-back" id="viewer-card-back">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="ios-hint">
   <p>點 Safari 下方 <strong>分享 📤</strong> → 選「<strong>加入主畫面</strong>」就裝好了</p>
   <button onclick="this.parentElement.classList.remove('show');localStorage.setItem('ios_hint_dismissed','1')">知道了</button>
@@ -885,6 +1032,8 @@ button, .tap { touch-action: manipulation; }
       <span>👤</span><span class="who" id="profile-who">—</span><span class="caret">▾</span>
     </button>
     <button id="stats-chip" class="stats-chip" type="button" title="練習紀錄">📊</button>
+    <button id="hard-chip" class="stats-chip" type="button" title="難字回顧">📌</button>
+    <button id="search-chip" class="stats-chip" type="button" title="搜尋單字">🔍</button>
     <div class="spacer"></div>
     <select id="level-select" class="level-select" onchange="onLevelChange()">
       <option value="1">Level 1</option>
@@ -1753,6 +1902,20 @@ button, .tap { touch-action: manipulation; }
   const tabSrs = $('tab-srs');
   const tabBrowse = $('tab-browse');
 
+  // ---------- Shared level-data cache (card viewer / hard-review / search) ----------
+  // Separate from loadLevel()'s own fetch below: loadLevel filters to
+  // "usable" cards for the review deck, while these features need the raw,
+  // unfiltered per-level array (e.g. to look up a card by exact word).
+  const levelCache = {};
+  async function getLevelCards(lv) {
+    if (levelCache[lv]) return levelCache[lv];
+    const res = await fetch(`./data/L${lv}.json`, { cache: 'force-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const cards = await res.json();
+    levelCache[lv] = cards;
+    return cards;
+  }
+
   // ---------- Data loading ----------
   async function loadLevel(level) {
     state.level = level;
@@ -1878,7 +2041,9 @@ button, .tap { touch-action: manipulation; }
     }
   }
 
-  function renderBack(c) {
+  // Build the back-face HTML for a card. Shared by the main card (renderBack)
+  // and the read-only card viewer, so both stay visually identical.
+  function buildBackHtml(c) {
     const zhByPos = c.zh_b?.zh_by_pos || {};
     const meanings = c.dict_a?.meanings || [];
     const posList = c.pos.split('/').map(s => s.trim()).filter(Boolean);
@@ -1908,7 +2073,11 @@ button, .tap { touch-action: manipulation; }
       html.push('</div>');
     }
 
-    cardBack.innerHTML = '<div class="back-scroll">' + html.join('') + '</div>';
+    return '<div class="back-scroll">' + html.join('') + '</div>';
+  }
+
+  function renderBack(c) {
+    cardBack.innerHTML = buildBackHtml(c);
   }
 
   function escapeHtml(s) {
@@ -1937,24 +2106,30 @@ button, .tap { touch-action: manipulation; }
   }
 
   // ---------- Audio (MP3 first, TTS fallback) ----------
-  function playWord() {
-    const c = state.cards[state.idx];
-    if (!c) return;
-    audioFail.classList.remove('show');
+  // Shared by the main card's speak-btn AND the read-only card viewer, so both
+  // play through the same Audio element / TTS voice picking logic.
+  function speakCard(card, audioFailEl) {
+    if (!card) return;
+    if (audioFailEl) audioFailEl.classList.remove('show');
 
-    const url = c.dict_a?.audio_url;
+    const url = card.dict_a?.audio_url;
     if (url) {
       if (!state.audio) state.audio = new Audio();
       state.audio.src = url;
-      state.audio.play().catch(() => speakTTS(c.word));
+      state.audio.play().catch(() => speakTTS(card.word, false, audioFailEl));
     } else {
-      speakTTS(c.word, /*silentFallback*/ true);
+      speakTTS(card.word, /*silentFallback*/ true, audioFailEl);
     }
   }
 
-  function speakTTS(word, silentFallback) {
+  function playWord() {
+    const c = state.cards[state.idx];
+    speakCard(c, audioFail);
+  }
+
+  function speakTTS(word, silentFallback, audioFailEl) {
     if (!('speechSynthesis' in window)) {
-      if (!silentFallback) audioFail.classList.add('show');
+      if (!silentFallback && audioFailEl) audioFailEl.classList.add('show');
       return;
     }
     // Cancel any in-flight utterance (iOS sometimes stalls)
@@ -1964,7 +2139,7 @@ button, .tap { touch-action: manipulation; }
     u.rate = 0.95;
     if (state.enUSVoice) u.voice = state.enUSVoice;
     state.ttsReady = true;
-    if (silentFallback) audioFail.classList.add('show');
+    if (silentFallback && audioFailEl) audioFailEl.classList.add('show');
     window.speechSynthesis.speak(u);
   }
 
@@ -2473,6 +2648,227 @@ button, .tap { touch-action: manipulation; }
   $('stats-chip').addEventListener('click', openStatsModal);
   $('stats-close').addEventListener('click', closeStatsModal);
   statsModal.addEventListener('click', (e) => { if (e.target === statsModal) closeStatsModal(); });
+
+  // ---------- Card viewer modal (read-only; opened from 難字回顧 + 搜尋) ----------
+  // Never touches SRS state or the practice log — it's a lookup-only clone of
+  // the main card, layered above whichever list modal opened it.
+  const viewerModal = $('viewer-modal');
+  const viewerCardInner = $('viewer-card-inner');
+  const viewerCardWord = $('viewer-card-word');
+  const viewerCardIpa = $('viewer-card-ipa');
+  const viewerCardPos = $('viewer-card-pos');
+  const viewerCardGem = $('viewer-card-gem');
+  const viewerCardBack = $('viewer-card-back');
+  const viewerSpeakBtn = $('viewer-speak-btn');
+  const viewerAudioFail = $('viewer-audio-fail');
+  let viewerFlipped = false;
+  let viewerCard = null;   // the currently-displayed card, for the speak button
+
+  async function openCardViewer(word, level) {
+    let cards;
+    try {
+      cards = await getLevelCards(level);
+    } catch {
+      alert('讀取失敗');
+      return;
+    }
+    const c = cards.find(x => x.word === word);
+    if (!c) { alert('找不到這張卡'); return; }
+
+    viewerCard = c;
+    viewerFlipped = false;
+    viewerCardInner.classList.remove('flipped');
+    viewerCardWord.textContent = c.word;
+    viewerCardIpa.textContent = c.dict_a?.ipa_us || '';
+    viewerCardPos.textContent = (c.pos || '').toUpperCase();
+    viewerCardGem.innerHTML = '<span>L' + c.level + '</span>';
+    viewerAudioFail.classList.remove('show');
+    viewerCardBack.innerHTML = buildBackHtml(c);
+    viewerModal.classList.add('show');
+  }
+  function closeCardViewer() { viewerModal.classList.remove('show'); }
+
+  viewerCardInner.addEventListener('click', () => {
+    viewerFlipped = !viewerFlipped;
+    viewerCardInner.classList.toggle('flipped', viewerFlipped);
+  });
+  viewerSpeakBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    speakCard(viewerCard, viewerAudioFail);
+  });
+  $('viewer-close').addEventListener('click', closeCardViewer);
+  viewerModal.addEventListener('click', (e) => { if (e.target === viewerModal) closeCardViewer(); });
+
+  // ---------- 難字回顧 (recent Again / Hard words) ----------
+  const hardModal = $('hard-modal');
+  const hardList = $('hard-list');
+  const hardEmpty = $('hard-empty');
+  const hardTabAgain = $('hard-tab-again');
+  const hardTabHard = $('hard-tab-hard');
+  let hardActiveGrade = 0;   // 0 = Again tab, 1 = Hard tab
+
+  function renderHardList() {
+    const log = loadLog();
+    const dates = Object.keys(log).sort().reverse();  // newest day first
+    const rows = [];
+    const seen = new Set();  // dedupe by word+level, keep most recent occurrence
+    outer:
+    for (const d of dates) {
+      const dayObj = log[d];
+      const cards = Array.isArray(dayObj.cards) ? dayObj.cards : [];
+      // Stored chronologically ascending — walk backwards for most-recent-first
+      for (let i = cards.length - 1; i >= 0; i--) {
+        const entry = cards[i];
+        if (entry.g !== hardActiveGrade) continue;
+        const key = entry.w + '|' + entry.l;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        rows.push({ w: entry.w, l: entry.l, date: d, t: entry.t || '' });
+        if (rows.length >= 30) break outer;
+      }
+    }
+
+    if (rows.length === 0) {
+      hardList.innerHTML = '';
+      hardEmpty.style.display = 'block';
+      return;
+    }
+    hardEmpty.style.display = 'none';
+    hardList.innerHTML = rows.map(r => {
+      const [y, m, day] = r.date.split('-');
+      const mmdd = parseInt(m, 10) + '/' + parseInt(day, 10);
+      return `
+        <button class="hard-row" type="button" data-word="${escapeHtml(r.w)}" data-level="${r.l}">
+          <span class="word">${escapeHtml(r.w)}</span>
+          <span class="lv">L${r.l}</span>
+          <span class="seen">${mmdd} ${escapeHtml(r.t)}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
+  function setHardTab(grade) {
+    hardActiveGrade = grade;
+    hardTabAgain.classList.toggle('active', grade === 0);
+    hardTabHard.classList.toggle('active', grade === 1);
+    renderHardList();
+  }
+  function openHardModal() {
+    renderHardList();  // rebuild every open — log changes as user reviews
+    hardModal.classList.add('show');
+  }
+  function closeHardModal() { hardModal.classList.remove('show'); }
+
+  hardTabAgain.addEventListener('click', () => setHardTab(0));
+  hardTabHard.addEventListener('click', () => setHardTab(1));
+  hardList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.hard-row');
+    if (!btn) return;
+    openCardViewer(btn.dataset.word, parseInt(btn.dataset.level, 10));
+  });
+  $('hard-chip').addEventListener('click', openHardModal);
+  $('hard-close').addEventListener('click', closeHardModal);
+  hardModal.addEventListener('click', (e) => { if (e.target === hardModal) closeHardModal(); });
+
+  // ---------- 搜尋 (search across all 6 levels) ----------
+  const searchModal = $('search-modal');
+  const searchInput = $('search-input');
+  const searchStatus = $('search-status');
+  const searchList = $('search-list');
+  let searchIndex = null;    // flat [{word, wordLower, level, pos, zh}], built lazily
+  let searchLoadPromise = null;
+
+  function loadSearchIndex() {
+    if (searchIndex) return Promise.resolve(searchIndex);
+    if (searchLoadPromise) return searchLoadPromise;
+    searchStatus.classList.remove('retry');
+    searchStatus.textContent = '載入單字庫…';
+    searchLoadPromise = Promise.all([1, 2, 3, 4, 5, 6].map(lv => getLevelCards(lv)))
+      .then(lists => {
+        const idx = [];
+        lists.forEach((cards, i) => {
+          const lv = i + 1;
+          for (const c of cards) {
+            if (!c.word) continue;
+            idx.push({
+              word: c.word,
+              wordLower: c.word.toLowerCase(),
+              level: lv,
+              pos: c.pos || '',
+              zh: c.zh_b?.zh_main || '',
+            });
+          }
+        });
+        searchIndex = idx;
+        return idx;
+      })
+      .catch(err => {
+        searchStatus.textContent = '載入失敗,點此重試';
+        searchStatus.classList.add('retry');
+        throw err;
+      })
+      .finally(() => { searchLoadPromise = null; });
+    return searchLoadPromise;
+  }
+
+  function renderSearchResults() {
+    if (!searchIndex) return;
+    const q = searchInput.value.trim().toLowerCase();
+    if (!q) {
+      searchList.innerHTML = '';
+      searchStatus.classList.remove('retry');
+      searchStatus.textContent = `共 ${searchIndex.length} 字,輸入開頭字母搜尋`;
+      return;
+    }
+    const starts = [];
+    const includes = [];
+    for (const e of searchIndex) {
+      if (e.wordLower.startsWith(q)) starts.push(e);
+      else if (e.wordLower.includes(q)) includes.push(e);
+    }
+    const results = starts.concat(includes);
+    const capped = results.length > 50;
+    const shown = results.slice(0, 50);
+
+    searchStatus.classList.remove('retry');
+    if (shown.length === 0) {
+      searchList.innerHTML = '';
+      searchStatus.textContent = '沒有找到符合的單字';
+      return;
+    }
+    searchStatus.textContent = capped ? '顯示前 50 筆,請輸入更多字母' : `共 ${results.length} 筆`;
+    searchList.innerHTML = shown.map(e => `
+      <button class="search-row" type="button" data-word="${escapeHtml(e.word)}" data-level="${e.level}">
+        <span class="word">${escapeHtml(e.word)}</span>
+        <span class="pos">${escapeHtml(e.pos)}</span>
+        <span class="lv">L${e.level}</span>
+        <span class="zh">${escapeHtml(e.zh)}</span>
+      </button>
+    `).join('');
+  }
+
+  function openSearchModal() {
+    searchModal.classList.add('show');
+    setTimeout(() => searchInput.focus(), 80);
+    loadSearchIndex().then(renderSearchResults).catch(() => {});
+  }
+  function closeSearchModal() { searchModal.classList.remove('show'); }
+
+  searchInput.addEventListener('input', () => {
+    if (!searchIndex) return;  // still loading (or failed) — ignore until ready
+    renderSearchResults();
+  });
+  searchStatus.addEventListener('click', () => {
+    if (!searchIndex) loadSearchIndex().then(renderSearchResults).catch(() => {});
+  });
+  searchList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.search-row');
+    if (!btn) return;
+    openCardViewer(btn.dataset.word, parseInt(btn.dataset.level, 10));
+  });
+  $('search-chip').addEventListener('click', openSearchModal);
+  $('search-close').addEventListener('click', closeSearchModal);
+  searchModal.addEventListener('click', (e) => { if (e.target === searchModal) closeSearchModal(); });
 
   // ---------- Init ----------
   levelSelect.value = String(state.level);
