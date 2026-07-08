@@ -159,7 +159,7 @@
   --safe-left: env(safe-area-inset-left);
   --safe-right: env(safe-area-inset-right);
 }
-html, body { height: 100%; }
+html, body { height: 100%; overflow-x: hidden; }
 body {
   font-family: var(--font); color: var(--text);
   background-color: #080b14;
@@ -883,6 +883,20 @@ button, .tap { touch-action: manipulation; }
    .card-inner / .card-face etc (all class-scoped, no ID clashes possible). */
 #viewer-modal .card-wrap { margin-bottom: 0; }
 #viewer-modal .card-inner { min-height: 360px; }
+
+/* ≤520px: the 4 chips + level select can't fit alongside the brand — hide the
+   brand and tighten spacing so the topbar never exceeds the viewport.
+   MUST stay at the end of the stylesheet: it overrides .profile-chip /
+   .stats-chip base rules declared later than the "Top bar" section, and
+   media queries don't add specificity — source order decides. */
+@media (max-width: 520px) {
+  .topbar { gap: 8px; }
+  .brand { display: none; }
+  .profile-chip { padding: 6px 9px 6px 8px; min-width: 0; }
+  .profile-chip .who { max-width: 56px; }
+  .stats-chip { padding: 6px 9px; font-size: 15px; }
+  .level-select { font-size: 15px; padding: 9px 26px 9px 10px; background-position: right 8px center; }
+}
 </style>
 </head>
 <body>
@@ -920,7 +934,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.5.0</span></div>
+    <div id="app-version">v<span id="ver-num">1.5.1</span></div>
   </div>
 </div>
 
