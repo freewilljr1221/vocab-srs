@@ -30,7 +30,7 @@
 | `docs\icons\icon-{192,512}.png` | png | PWA 圖示 |
 | `docs\firestore.rules` | rules | **Firestore 安全規則**（家庭級同步：「有 URL 即可看」、per-family 資料） |
 
-> 🚨 **根目錄的 `index.html`／`sw.js`／`manifest.json`／`icons\` 是舊版 —— 不要部署、不要當正式改。** 只動 `docs\`。
+> 根目錄的舊版 `index.html`／`sw.js`／`manifest.json`／`icons\` 已於 2026-07-07 刪除（原漂移風險源）；PWA 檔只在 `docs\`。
 
 ### 資料管線 — `C:\HansDB\Vocab-SRS\scripts\`（Node .mjs）
 | 路徑 | 類型 | 管線步驟 |
@@ -130,7 +130,7 @@ cd C:\HansDB\Vocab-SRS\docs && python -m http.server 8000
 
 ## 8. 雷區 / 鐵則（速記，完整見 CLAUDE.md + HANDOFF.md）
 
-1. ⚠️ **部署只動 `docs\`**；根目錄 `index.html/sw.js/manifest.json` 是舊版，勿碰。
+1. ⚠️ **部署只動 `docs\`**（根目錄舊版 PWA 檔已於 2026-07-07 刪除）。
 2. 路徑全相對（`./...`）—— GH Pages 在子路徑 `/vocab-srs/`。
 3. **SRS state key = card id**（非 word）；跨 level 同形字獨立卡。
 4. 資料按 level lazy load（不合併，iOS 開機快）。
@@ -146,4 +146,4 @@ cd C:\HansDB\Vocab-SRS\docs && python -m http.server 8000
 - 改卡片 schema → 同步 `scripts\*` 管線 + `data\skeleton` + `docs\data` 重生。
 - **逐 session 進度一律回寫 `HANDOFF.md`**（session 真相，不在 memory/CLAUDE 重抄）。
 - 寫檔前 `git status --short` → 有改動先 `git diff` 確認。
-> 注意：**根 vs docs 雙份 `index.html/sw.js/manifest.json`** 是最大漂移風險源 —— 永遠只改 docs 版。
+> 根 vs docs 雙份 PWA 檔的漂移風險已於 2026-07-07 解除（根層舊版刪除）；PWA 檔一律只在 `docs\`。
