@@ -934,7 +934,7 @@ button, .tap { touch-action: manipulation; }
     <div id="profile-hint">
       在另一支手機開分享連結，就能看到同樣的使用者與練習紀錄。新增 / 刪除 / 改名使用者需要家長 PIN。
     </div>
-    <div id="app-version">v<span id="ver-num">1.5.3</span></div>
+    <div id="app-version">v<span id="ver-num">1.6.0</span></div>
   </div>
 </div>
 
@@ -2120,10 +2120,12 @@ button, .tap { touch-action: manipulation; }
     }
   }
 
-  // ---------- Audio (MP3 first, TTS fallback) ----------
+  // ---------- Audio (self-hosted MP3 first, TTS fallback) ----------
   // Shared by the main card's speak-btn AND the read-only card viewer, so both
   // play through the same Audio element / TTS voice picking logic.
-  const MP3_TIMEOUT_MS = 1500;
+  // MP3s are generated per card id by scripts/11-gen-audio.py. <audio> starts inside
+  // the tap and ignores the iOS silent switch; Safari's speechSynthesis can be mute.
+  const MP3_TIMEOUT_MS = 4000;
   let speakToken = 0;  // bumped on every speak/stop; stale async fallbacks compare against it
   const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
                  (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
@@ -2163,42 +2165,24 @@ button, .tap { touch-action: manipulation; }
     if (audioFailEl) audioFailEl.classList.remove('show');
     const token = ++speakToken;
 
-    const url = card.dict_a?.audio_url;
-    dbg('tap', card.word, 'mp3=' + !!url, 'mp3Down=' + !!state.mp3Down);
-    // Once MP3 has failed this session, speak TTS synchronously inside the tap:
-    // iOS drops speechSynthesis.speak() calls made outside a user gesture.
-    if (!url || state.mp3Down) {
-      speakTTS(card.word, /*silentFallback*/ !url, audioFailEl);
-      return;
-    }
+    const url = './audio/' + encodeURIComponent(card.id) + '.mp3';
+    dbg('tap', card.word, url);
 
-    unlockTTS();
     if (!state.audio) state.audio = new Audio();
     const audio = state.audio;
     let settled = false;
     const fallback = (why) => {
       if (settled || token !== speakToken) return;  // user moved on or tapped again
       settled = true;
-      state.mp3Down = true;
       dbg('mp3 fail:', why);
       audio.pause();
-      speakTTS(card.word, false, audioFailEl);
+      speakTTS(card.word, /*silentFallback*/ true, audioFailEl);
     };
-    // MP3 host can hang without ever rejecting play(), so don't wait on it forever.
+    // A slow network can leave play() pending indefinitely, so don't wait on it forever.
     const timer = setTimeout(() => fallback('timeout'), MP3_TIMEOUT_MS);
     audio.onplaying = () => { settled = true; clearTimeout(timer); dbg('mp3 playing'); };
     audio.src = url;
     audio.play().catch(err => { clearTimeout(timer); fallback(err.name); });
-  }
-
-  // A silent utterance spoken during the tap unlocks iOS speechSynthesis, so the
-  // async MP3-failure fallback above can still produce sound.
-  function unlockTTS() {
-    if (state.ttsReady || !('speechSynthesis' in window)) return;
-    const u = new SpeechSynthesisUtterance(' ');
-    u.volume = 0;
-    window.speechSynthesis.speak(u);
-    state.ttsReady = true;
   }
 
   function playWord() {
