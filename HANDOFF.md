@@ -163,7 +163,7 @@ schema 設計:每張卡加 `examples_zh` 欄位,跟 `dict_a.meanings[].examples`
    - showDone 時 ratingArea.show 殘留(Session 3 修了一半,確認)
    - 跨 tab 競爭(同步寫 srsData)— 可加 storage event listener
    - browse idx=-1 latent 邊界
-   - iOS speechSynthesis 在 PWA standalone 偶發空 voices — 加 warm-up retry
+   - ~~iOS speechSynthesis 在 PWA standalone 偶發空 voices — 加 warm-up retry~~（作廢：v1.6.0 改自帶 MP3，見 2026-10-17 增量更新）
 
 ### 階段 5:部署狀態 ✅
 
@@ -185,8 +185,33 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
 4. **斜線並列字** (slug fix): `actor/actress` → display 保留斜線,slug 取 `actor` 一個拼法做 dict 查
 5. **資料分檔**: 不合併成單一檔,**lazy load by level**,iOS PWA 開機更快
 6. **無 AI 教練**: 拿掉了,因為前端直呼 Anthropic API 不可行 (沒 key + CORS),需要 backend proxy。日後想加就部署 Cloudflare Worker
-7. **TTS + MP3 雙軌**: MP3 first (從 dictionaryapi.dev),失敗 fallback `speechSynthesis`
+7. **TTS + MP3 雙軌**: MP3 first,失敗 fallback `speechSynthesis`。**2026-10-17 起 MP3 改自帶**（`docs/audio/<card id>.mp3`，由 `scripts/11-gen-audio.py` 產生），不再依賴 dictionaryapi.dev；iOS Safari 的網頁 TTS 可能完全不出聲，所以 MP3 是主要路徑
 8. **無付費 API**: Free Dictionary (公開 CC BY-SA 3.0) + Nvidia NIM 免費 (60 RPM)
+
+---
+
+## 2026-10-17 增量更新 — 發音改自帶 MP3（v1.5.2 → v1.6.0）
+
+### 問題與根因
+- **電腦**：換卡後第一次按發音，念的是上一張的字。根因：舊的 `play().catch` 閉包抓的是上一張卡；換卡時 pending 的 `play()` 被 AbortError 中斷 → 用舊字念 TTS。
+- **dictionaryapi.dev 整站連不上**（MP3 和 API 都 timeout）→ 實際上一直在念 TTS，不是 MP3。
+- **iPhone 完全沒聲音**：① TTS fallback 在 `.catch` 裡非同步呼叫，iOS 不接受非手勢觸發的 `speak()`；② 修掉 ① 之後，`?debug` log 顯示 `tts start → tts end` 正常，但沒有聲音（靜音已關、音量已調大；系統「朗讀所選範圍」和 YouTube 都有聲音）→ **Safari 網頁 TTS 本身在這台 iOS 不出聲**，app 端繞不過去。
+
+### 已交付
+| 版本 | 內容 |
+|---|---|
+| v1.5.2 | speak token 擋掉過期的 fallback；MP3 1.5s timeout；`renderCard` 換卡呼叫 `stopAudio()` |
+| v1.5.3 | iOS 不強制指定 voice；只在忙碌時 `cancel()`、paused 時 `resume()`；保留 utterance 引用；**`?debug` 顯示發音 log**（`#audio-debug`，iPhone 除錯用，保留） |
+| v1.6.0 | **自帶 MP3**：`scripts/11-gen-audio.py`（edge-tts `en-US-AriaNeural`）→ `docs/audio/<card id>.mp3` 共 6255 個、77 MB；前端先播本地 MP3（4s timeout），失敗才退回 TTS；`sw.js` 對 `/audio/` 不攔截（Safari 的 Range request 不能吃快取的完整 200 回應）；拿掉靜音 TTS unlock（會壓低 MP3 音量） |
+
+- **驗證**：iPhone Safari、主畫面 PWA、LINE 內建瀏覽器都有聲音（log 顯示 `mp3 playing`，4G 下按下到出聲約 0.6s）。
+- **念法正規化**（`spoken_text()`）：`accomplish(ment)`→accomplish, accomplishment；`ring(jewelry)` 括號詞義不念；`April/Apr.` 去掉縮寫；`salesperson/man/woman` 展開。改規則後先跑 `--dry-run` 檢查。
+- **新增或改 card id 時要補跑** `python -X utf8 scripts/11-gen-audio.py`（可續跑，已存在的檔會跳過）；id 改名的話，舊檔要手動清掉。
+- `dict_a.audio_url` 欄位前端已不再使用（資料裡還留著）。
+
+### 注意
+- **Review**：v1.5.2 由 Codex review；v1.5.3、v1.6.0 因 Codex 額度用完（2026-11-15 重置），由 Claude review。
+- **全域 pre-commit hook 很慢**（`~\.git-hooks\pre-commit`）：它用 `file -` 的輸出找 "binary" 字樣，但 MP3／PNG 的輸出不含這個字 → 每個檔都被當文字檔掃 11 個 pattern。commit 6255 個 MP3 花了約 70 分鐘。之後批次重產音檔的 commit 要有心理準備；使用者決定暫時不改 hook。
 
 ---
 
@@ -260,7 +285,7 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
    - showDone 時 ratingArea.show 可能殘留 (已部分修)
    - 跨 tab 競爭(同步寫 srsData)
    - browse idx=-1 latent 邊界
-   - iOS speechSynthesis 在 PWA standalone 偶發空 voices
+   - ~~iOS speechSynthesis 在 PWA standalone 偶發空 voices~~（作廢：v1.6.0 改自帶 MP3）
 4. **PWA 更新通知**:目前推新版本後使用者要關掉 PWA 重開才會載到新 index.html。可加 update prompt
 5. **Pass C (例句翻譯) 未做**
 
@@ -273,7 +298,7 @@ PWA 更新後**必須關掉 PWA 再開**(雙擊 home → 上滑)才會載新版,
 
 1. **小品質瑕疵**: 個別中翻不夠精準 (e.g. `above (adj.) → 天上的` 應 `上述的`)。Pass D 可做「品質審查」用 MiniMax 自我評分,我們再決定要不要做
 2. **Free Dict 13 字真 404** (L1): `for`, `kite`, `touch`, `Mrs.`, `o'clock`, `every`, `look`, `be`, `is` 等。MiniMax 可以填中翻但沒英英、沒英例。Pass C 想想要不要也讓 MiniMax 生英例
-3. **MP3 license**: dictionaryapi.dev 的音檔是 wiktionary 來的,**CC BY-SA 3.0**。商用上要在 about 頁面標 attribution
+3. **MP3 license**: ~~dictionaryapi.dev 的音檔是 wiktionary 來的,CC BY-SA 3.0~~ → 2026-10-17 起改用 edge-tts（呼叫微軟 Edge 線上語音的非官方工具）產生的音檔，**授權屬灰色地帶**；目前家用、非商用。要商用就得換有明確授權的 TTS
 4. **iPad split-view**: 沒測過,可能要再加 `@media (orientation: landscape)` breakpoint
 5. **localStorage 不會跨裝置同步**: 之後想跨機同步 SRS 進度,要寫 export/import JSON
 6. **資料體積**: L1 ship = 718 KB (含完整 dict)。6 levels 全 ship ~4 MB。gzip 後 ~700 KB。iOS PWA 首屏只載 L1,可以接受
@@ -296,7 +321,8 @@ C:\HansDB\Vocab-SRS\
 │   ├── 01-csv-to-skeleton.mjs  ← CSV → 骨架 JSON
 │   ├── 02-pass-a-dict.mjs      ← Free Dictionary 抓 IPA/MP3/英英/英例
 │   ├── pb-claude-{extract,split,merge}.mjs ← Pass B 繁中（Claude-inline + Haiku subagent）
-│   └── 10-build-ship.mjs       ← enriched → docs/data (slim)
+│   ├── 10-build-ship.mjs       ← enriched → docs/data (slim)
+│   └── 11-gen-audio.py         ← edge-tts → docs/audio/<card id>.mp3 (可續跑)
 │
 ├── data/
 │   ├── skeleton/L{1..6}.json   ← 不動,基準 (commit 進 repo)
@@ -307,7 +333,8 @@ C:\HansDB\Vocab-SRS\
 │   ├── sw.js                   ← Service Worker (v3-srs-fixes)
 │   ├── manifest.json
 │   ├── icons/                  ← icon-192.png, icon-512.png
-│   └── data/L{1..6}.json       ← 由 10-build-ship.mjs 產生 (slim,commit)
+│   ├── data/L{1..6}.json       ← 由 10-build-ship.mjs 產生 (slim,commit)
+│   └── audio/<card id>.mp3     ← 由 11-gen-audio.py 產生 (6255 個,77 MB,commit)
 │
 └── logs/                       ← 每張卡每個 Pass 的成敗紀錄 (.gitignore)
     ├── passA.jsonl
