@@ -22,6 +22,7 @@
 - `scripts\02-pass-a-dict.mjs`（字典欄位：IPA/POS/定義/例句）
 - `scripts\pb-claude-{extract,split,merge}.mjs`（繁中欄位 `zh_b`；Pass B canonical 路徑 + Haiku subagent）
 - `scripts\10-build-ship.mjs`（slim 組裝 → `docs\data\`）
+- `scripts\11-gen-audio.py`（音檔以 **card id** 命名 → 改 id 規則或新增卡片要重跑，`docs\audio\` 舊檔要清）
 - `data\skeleton\L{1..6}.json`（commit）＋ `docs\data\L{1..6}.json` + `index.json`（重生）
 - `docs\index.html` 前端讀取/渲染卡片的程式（欄位名對齊）
 - `AI-README.md` §2 資料管線表
@@ -57,7 +58,7 @@
 
 ```
 改前端      → 只動 docs\；bump docs\sw.js；相對路徑；關 PWA 再開
-改卡片schema → scripts 01/02/03(+pb-claude) → 10-build-ship → data\skeleton + docs\data 重生 → 前端渲染對齊
+改卡片schema → scripts 01/02/03(+pb-claude) → 10-build-ship → 11-gen-audio → data\skeleton + docs\data + docs\audio 重生 → 前端渲染對齊
 改資料源    → 對應 scripts pass + AI-README §6 + HansKey.md（NVIDIA_API_KEY = diffusiongemma）
 部署        → push main 自動發 docs\
 session進度 → 回寫 HANDOFF.md（不入 memory/CLAUDE）

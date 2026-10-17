@@ -27,6 +27,7 @@
 | `docs\sw.js` | js | Service Worker（cache-first shell） |
 | `docs\manifest.json` | json | PWA manifest |
 | `docs\data\L{1..6}.json` + `index.json` | json | slim 卡片資料（按 level lazy load） |
+| `docs\audio\<card id>.mp3` | mp3 | **自帶發音檔**（6255 個，`11-gen-audio.py` 產生；前端優先播，失敗才退回 TTS；SW 不攔截） |
 | `docs\icons\icon-{192,512}.png` | png | PWA 圖示 |
 | `docs\firestore.rules` | rules | **Firestore 安全規則**（家庭級同步：「有 URL 即可看」、per-family 資料） |
 
@@ -38,6 +39,7 @@
 | `scripts\01-csv-to-skeleton.mjs` | mjs | CSV → 基準骨架 |
 | `scripts\02-pass-a-dict.mjs` | mjs | Pass A：字典（IPA/POS/定義/例句，Free Dictionary API） |
 | `scripts\10-build-ship.mjs` | mjs | 組裝 + slim → 出 `docs\data\` |
+| `scripts\11-gen-audio.py` | py | 發音 MP3 → `docs\audio\`（edge-tts `en-US-AriaNeural`；可續跑；`--dry-run` 看念法） |
 | `scripts\pb-claude-{extract,split,merge}.mjs` | mjs | **Pass B 繁中翻譯（canonical）**：抽取 `!zh_b.ok` → 切分 → Haiku subagent 翻 → merge 回寫 `zh_b`（`source=claude-inline`） |
 | `scripts\build-docx.js` | js | 產 親戚安裝包的兩份 Word 文件 |
 
@@ -72,6 +74,7 @@ CSV
   → scripts/02-pass-a-dict      → data/enriched/ (字典: Free Dictionary API)
   → scripts/pb-claude-{extract,split,merge} → data/enriched/ (繁中: Claude-inline + Haiku subagent；canonical)
   → scripts/10-build-ship       → docs/data/L{1..6}.json + index.json (slim, commit)
+  → scripts/11-gen-audio.py     → docs/audio/<card id>.mp3 (edge-tts, commit；新增卡片後要補跑)
 部署: push main → GH Pages 自動發佈 docs/ → https://freewilljr1221.github.io/vocab-srs/
 前端: docs/index.html (vanilla JS) 按 level lazy load docs/data/，SM-2 排程，SW cache-first
 同步: Firestore（家庭級，docs/firestore.rules）

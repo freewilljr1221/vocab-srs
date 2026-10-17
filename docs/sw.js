@@ -7,7 +7,7 @@
  * Bumping CACHE_VERSION forces all PWA clients to re-download the shell on
  * next launch, so use it whenever shell HTML/JS/CSS materially changes.
  */
-const CACHE_VERSION = 'vocab-srs-1.5.3';
+const CACHE_VERSION = 'vocab-srs-1.6.0';
 const SHELL = [
   './',
   './index.html',
@@ -37,6 +37,9 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
   // Skip cross-origin (audio MP3s from dictionaryapi.dev) — let browser handle directly
   if (url.origin !== self.location.origin) return;
+  // Pronunciation MP3s: bypass the SW. Safari's <audio> sends Range requests and
+  // can't play a cached full 200 response; the browser HTTP cache handles these.
+  if (url.pathname.includes('/audio/')) return;
 
   // Data files: stale-while-revalidate so new pipeline runs propagate
   if (url.pathname.includes('/data/')) {
